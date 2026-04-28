@@ -1,9 +1,12 @@
 package net.kingproductions.splitbornAPI;
 
+import java.util.UUID;
+
 public interface Profile {
 
-    int getXP();
+    UUID getUUID();
 
+    int getXP();
     void setXP(int xp);
 
 }
