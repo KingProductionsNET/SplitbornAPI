@@ -17,7 +17,7 @@ public final class SplitbornAPI{
 
     public static Profile getProfile(UUID uuid) {
         if (provider == null) {
-            throw new IllegalStateException("SplitbornAPI not initialized!");
+            throw new IllegalStateException("SplitbornAPI not initialized");
         }
         return provider.getProfile(uuid);
     }
