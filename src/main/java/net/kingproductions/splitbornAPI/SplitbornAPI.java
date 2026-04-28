@@ -9,7 +9,6 @@ public final class SplitbornAPI{
     private static ProfileProvider provider;
 
     private SplitbornAPI() {}
-    // CORE gibt hier seine Logik rein
     public static void init(ProfileProvider p) {
         provider = p;
     }
