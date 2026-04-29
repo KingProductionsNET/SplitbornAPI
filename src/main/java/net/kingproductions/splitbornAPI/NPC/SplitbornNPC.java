@@ -4,7 +4,7 @@ import org.bukkit.entity.EntityType;
 
 public class SplitbornNPC {
 
-    private final NPC_ID ID;
+    private NPC_ID ID;
 
     private EntityType type = null;
 

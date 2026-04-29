@@ -14,10 +14,10 @@ public class NPCInteractEvent extends Event {
     }
 
     private final Player player;
-    private final String npcId;
+    private final NPC_ID npcId;
     private final ClickType clickType;
 
-    public NPCInteractEvent(Player player, String npcId, ClickType clickType) {
+    public NPCInteractEvent(Player player, NPC_ID npcId, ClickType clickType) {
         this.player = player;
         this.npcId = npcId;
         this.clickType = clickType;
@@ -27,7 +27,7 @@ public class NPCInteractEvent extends Event {
         return player;
     }
 
-    public String getNPCID() {
+    public NPC_ID getNPCID() {
         return npcId;
     }
 
