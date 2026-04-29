@@ -1,7 +1,9 @@
 package net.kingproductions.splitbornAPI.ItemContainer;
 
+import org.bukkit.inventory.ItemStack;
+
 public interface SplitbornItemProvider {
 
-    SplitbornItem getItem(Item_ID itemId);
+    ItemStack getItem(Item_ID itemId);
 
 }
