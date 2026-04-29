@@ -17,7 +17,6 @@ public class SplitbornNPC {
     public SplitbornNPC(NPC_ID npcId) {
         this.id = npcId;
     }
-
     public SplitbornNPC setSkin(String value, String signature){
         Value = value;
         Signature = signature;
@@ -26,5 +25,12 @@ public class SplitbornNPC {
     public SplitbornNPC setEntityType(EntityType eT){
         type = eT;
         return this;
+    }
+
+    public String getSkin_Value(){
+        return Value;
+    }
+    public String getSkin_Signature(){
+        return Signature;
     }
 }
