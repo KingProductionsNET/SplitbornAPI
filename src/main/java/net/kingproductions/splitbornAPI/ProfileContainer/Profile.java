@@ -9,6 +9,6 @@ public interface Profile {
     void setXP(int xp);
 
     boolean getBoolean(String Path);
-    boolean getString(String Path);
-    boolean getInteger(String Path);
+    String getString(String Path);
+    int getInteger(String Path);
 }
