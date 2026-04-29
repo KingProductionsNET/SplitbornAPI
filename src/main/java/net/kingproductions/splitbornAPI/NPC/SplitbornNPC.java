@@ -13,8 +13,9 @@ public class SplitbornNPC {
     private String Signature = "lCurX5AoIFE+Lkn5s8/2Sx7DriYVPRkNh0my8TJvPbtozrbAhXGUsBfvVJnn4mjhErBGzf0OzLjPBYUXUeyHSqflRNjMsskcvJU1Kk6aeJilA6DpM8Ep19t6jKE5hu7kWAb8+q0sSc+4gS5BZaHAIXuEZPVImxbj5PdkjiZp2CKvCDyMCHl9lm0JNZwnL0lPPxb9WT+v9fhgWwzZlVgfevJCvssjs/tye9gi6tG0WtmK6P4PVJLJrj3m277abjRiIgXaMmytqpwhn24QiBHUj3MOCZH95GuAQaeknnz34ow9vgsbiTCr8ClUHw1E4fND42xGnuGOthAZmY/IycJr4bGEc3Idbm9xAA7Mq4SFCXi9/EAAu9Dj++WJ2FNCQZ9MZ6x3nJ/ybVL+6A7hsQ2/ew4qZi3aTb2fiDCgokyXtZhXX8CBqWy8l8gBJmwvTPLgvPloJMZ3F9CHu8h0qlorA0r9TphYunP5FX5KtYKfzCEr367l/XZMU8PE1xkY5iF2xFJB3wVFz7WvnnyyHJvLdH2I+EI3kMM+utf2qYgkhKphTtO87vIFzn6U6JhTDh/eZ93wdCzNoqbmz5WSyaR+VARFyEs7OdwNZaR3MpN46Ymx5u48fJZCmhzH5ouvL+wLjuI0j9ZZqkg1eC+2bhPPeqvwkMyxt6y9hwRcktiZ6fE=";
 
     private String Name = "§cUnknown";
-
     private Entity BukkitEntity = null;
+
+    private boolean lookClose = false;
 
     public SplitbornNPC(NPC_ID npcId) {
         this.ID = npcId;
@@ -36,6 +37,10 @@ public class SplitbornNPC {
         BukkitEntity = e;
         return this;
     }
+    public SplitbornNPC setLookClose(boolean b){
+        lookClose = b;
+        return this;
+    }
 
     public String getSkin_Value(){
         return Value;
@@ -51,6 +56,12 @@ public class SplitbornNPC {
     }
     public Entity getBukkitEntity(){
         return BukkitEntity;
+    }
+    public EntityType getEntityType(){
+        return type;
+    }
+    public boolean getLookClose(){
+        return lookClose;
     }
 
 
