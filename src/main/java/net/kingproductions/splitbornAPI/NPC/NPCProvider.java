@@ -4,6 +4,6 @@ import org.bukkit.Location;
 
 public interface NPCProvider {
 
-    SplitbornNPC spawnNPC(NPC_ID id, Location location);
+    SplitbornNPC spawnNPC(SplitbornNPC splitbornNPC, Location spawnLocation);
 
 }
