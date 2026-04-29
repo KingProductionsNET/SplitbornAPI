@@ -1,0 +1,29 @@
+package net.kingproductions.splitbornAPI.ItemContainer;
+
+public enum Item_ID {
+    MENU,
+    GLEAMS,
+    SEEDER,
+    CHUP_SKIN,
+    SWEEPIS_MASK,
+    SWEEPIS_TUNIC,
+    SWEEPIS_PANTS,
+    SWEEPIS_SABATONS,
+    CHUP_FLUFF,
+    QUIVERING_PEBBLE,
+    TIMID_CHARM,
+    HALF_EATEN_BERRY,
+    CHUPS_TEAR,
+    MASTER_KEY,
+    ZENTIS_U7,
+    FUNNY_SWORD,
+
+    SLEEPY_HAT,
+    PAJAMA_CHEST,
+    BLANKET_CAPE,
+    FLUFFY_SLIPPERS,
+
+    WEIRD_KELP,
+    ENERGY_ORB
+
+}

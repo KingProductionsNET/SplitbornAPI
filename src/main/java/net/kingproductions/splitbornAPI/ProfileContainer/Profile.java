@@ -1,4 +1,4 @@
-package net.kingproductions.splitbornAPI;
+package net.kingproductions.splitbornAPI.ProfileContainer;
 
 import java.util.UUID;
 
