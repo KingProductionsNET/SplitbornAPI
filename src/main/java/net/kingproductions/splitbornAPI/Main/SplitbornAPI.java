@@ -38,10 +38,10 @@ public final class SplitbornAPI extends JavaPlugin {
         return splitbornItemProvider.getItem(itemId);
     }
 
-    public static SplitbornNPC spawnNPC(SplitbornNPC id, Location location) {
+    public static SplitbornNPC spawnNPC(SplitbornNPC id) {
         if (npcProvider == null) throw new IllegalStateException("API not initialized!");
 
-        return npcProvider.spawnNPC(id, location);
+        return npcProvider.spawnNPC(id);
     }
 
     @Override
