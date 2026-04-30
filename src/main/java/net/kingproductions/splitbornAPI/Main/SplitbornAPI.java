@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.Main;
 
 import net.kingproductions.splitbornAPI.Commands.NPCCommandAction;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
+import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
@@ -66,7 +67,7 @@ public final class SplitbornAPI extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getPluginCommand("nca").setExecutor(new NPCCommandAction());
-
+        Bukkit.getPluginManager().registerEvents(new HideManager(), this);
         plugin = this;
     }
 
