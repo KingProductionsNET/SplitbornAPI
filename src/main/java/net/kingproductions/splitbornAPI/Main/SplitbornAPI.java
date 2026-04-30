@@ -18,6 +18,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static ProfileProvider profileProvider;
     private static SplitbornItemProvider splitbornItemProvider;
     private static NPCProvider npcProvider;
+    private static HelperProvider helperProvider;
 
     public SplitbornAPI() {}
 
@@ -25,6 +26,7 @@ public final class SplitbornAPI extends JavaPlugin {
         profileProvider = p;
         splitbornItemProvider = i;
         npcProvider = n;
+        helperProvider = h;
     }
 
     public static Profile getProfile(UUID uuid) {
@@ -40,6 +42,11 @@ public final class SplitbornAPI extends JavaPlugin {
     public static SplitbornNPC spawnNPC(SplitbornNPC id) {
         if (npcProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return npcProvider.spawnNPC(id);
+    }
+
+    public static HelperProvider getHelper() {
+        if (helperProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        return helperProvider;
     }
 
 
