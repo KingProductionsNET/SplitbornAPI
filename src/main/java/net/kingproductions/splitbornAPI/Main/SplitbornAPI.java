@@ -62,6 +62,7 @@ public final class SplitbornAPI extends JavaPlugin {
 
 
 
+
     @Override
     public void onEnable() {
         Bukkit.getPluginCommand("nca").setExecutor(new NPCCommandAction());
