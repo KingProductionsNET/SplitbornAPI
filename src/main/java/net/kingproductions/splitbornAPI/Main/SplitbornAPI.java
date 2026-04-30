@@ -1,17 +1,20 @@
 package net.kingproductions.splitbornAPI.Main;
 
+import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
 import net.kingproductions.splitbornAPI.Commands.NPCCommandAction;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
+import net.kingproductions.splitbornAPI.LocationsContainer.LocationSpawnPoints;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
 import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.ProfileContainer.ProfileProvider;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestProvider;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,6 +25,7 @@ import java.util.UUID;
 public final class SplitbornAPI extends JavaPlugin {
     public static Plugin plugin;
     public static Random random = new Random();
+    public static World world_splitborn = Bukkit.getWorld("world");
 
     private static final String API_NOT_FOUND_STRING = "Splitborn API not found!";
 
@@ -70,9 +74,15 @@ public final class SplitbornAPI extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        plugin = this;
+
         Bukkit.getPluginCommand("nca").setExecutor(new NPCCommandAction());
         Bukkit.getPluginManager().registerEvents(new HideManager(), this);
-        plugin = this;
+        Bukkit.getPluginManager().registerEvents(new BlockInteraction(), this);
+
+        Bukkit.getScheduler().runTask(plugin, () ->{
+            LocationSpawnPoints.InitializeLocations();
+        });
     }
 
     @Override
