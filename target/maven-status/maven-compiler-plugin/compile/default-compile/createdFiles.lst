@@ -9,6 +9,7 @@ net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI$2.class
 net\kingproductions\splitbornAPI\ItemContainer\Item_Paths.class
 net\kingproductions\splitbornAPI\Builder\ItemBuilder.class
 net\kingproductions\splitbornAPI\HideManagerContainer\HideManager.class
+net\kingproductions\splitbornAPI\CommandBlockContainer\CommandBlockProvider.class
 net\kingproductions\splitbornAPI\ItemContainer\SplitbornItemProvider.class
 net\kingproductions\splitbornAPI\Main\API_NOT_FOUND.class
 net\kingproductions\splitbornAPI\QuestContainer\QuestProvider.class
@@ -17,6 +18,7 @@ net\kingproductions\splitbornAPI\CosmeticTourContainer\CosmeticTour$1.class
 net\kingproductions\splitbornAPI\NPC\NPCInteractEvent.class
 net\kingproductions\splitbornAPI\CosmeticTourContainer\CosmeticTour.class
 net\kingproductions\splitbornAPI\ItemContainer\Item_Category.class
+net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NBS_FILE_NAMES.class
 net\kingproductions\splitbornAPI\NPC\NPC_ID.class
 net\kingproductions\splitbornAPI\TeleportContainer\FancyTeleportForEntity.class
 net\kingproductions\splitbornAPI\Builder\ArmorStandBuilder$1.class
@@ -26,6 +28,7 @@ net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI$1.class
 net\kingproductions\splitbornAPI\Builder\CustomSkull.class
 net\kingproductions\splitbornAPI\NPC\SplitbornNPC.class
 net\kingproductions\splitbornAPI\NPC\NPCInteractEvent$ClickType.class
+net\kingproductions\splitbornAPI\CommandBlockContainer\COMMAND_ID.class
 net\kingproductions\splitbornAPI\DialogueContainer\EasyDialogue.class
 net\kingproductions\splitbornAPI\ProfileContainer\ProfileProvider.class
 net\kingproductions\splitbornAPI\Builder\ArmorStandBuilder.class

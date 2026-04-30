@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Main;
 
+import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
 import net.kingproductions.splitbornAPI.Commands.NPCCommandAction;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
@@ -29,15 +30,17 @@ public final class SplitbornAPI extends JavaPlugin {
     private static NPCProvider npcProvider;
     private static HelperProvider helperProvider;
     private static QuestProvider questProvider;
+    private static CommandBlockProvider commandBlockProvider;
 
     public SplitbornAPI() {}
 
-    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q) {
+    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q, CommandBlockProvider c) {
         profileProvider = p;
         splitbornItemProvider = i;
         npcProvider = n;
         helperProvider = h;
         questProvider = q;
+        commandBlockProvider = c;
     }
 
     public static Profile getProfile(UUID uuid) {
@@ -60,9 +63,10 @@ public final class SplitbornAPI extends JavaPlugin {
         if (questProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return questProvider;
     }
-
-
-
+    public static CommandBlockProvider BlockCommand(){
+        if (commandBlockProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        return commandBlockProvider;
+    }
 
     @Override
     public void onEnable() {
