@@ -10,14 +10,14 @@ import java.util.*;
 
 public class BlockInteraction implements Listener {
 
-    public static Map<UUID, List<Location>> usersAllowedInteractionLocation = new HashMap<>();
+    public static Map<UUID, List<Location>> usersAllowedInteractionLocations = new HashMap<>();
 
     @EventHandler
     public void onInteract(PlayerInteractEvent event){
         Player player = event.getPlayer();
 
         if (event.getClickedBlock() != null){
-            List<Location> list = usersAllowedInteractionLocation.getOrDefault(player.getUniqueId(), new ArrayList<>());
+            List<Location> list = usersAllowedInteractionLocations.getOrDefault(player.getUniqueId(), new ArrayList<>());
 
             for (Location loc : list){
                 if (event.getClickedBlock().getLocation().equals(loc)){

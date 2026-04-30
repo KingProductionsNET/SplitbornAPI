@@ -10,7 +10,9 @@ public enum Quests {
     MEET_BONSAI,
     ELIMINATE_THE_CREATURE,
     FIND_ANDREWS_TOY,
-    DEFEAT_ROTMAW;
+    DEFEAT_ROTMAW,
+
+    DEFAULT_NONE;
 
 
 }
