@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Main;
 
+import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
@@ -20,7 +21,7 @@ public final class SplitbornAPI extends JavaPlugin {
 
     public SplitbornAPI() {}
 
-    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n) {
+    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h) {
         profileProvider = p;
         splitbornItemProvider = i;
         npcProvider = n;
@@ -37,10 +38,11 @@ public final class SplitbornAPI extends JavaPlugin {
     }
 
     public static SplitbornNPC spawnNPC(SplitbornNPC id) {
-        if (npcProvider == null) throw new IllegalStateException("API not initialized!");
-
+        if (npcProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return npcProvider.spawnNPC(id);
     }
+
+
 
     @Override
     public void onEnable() {
