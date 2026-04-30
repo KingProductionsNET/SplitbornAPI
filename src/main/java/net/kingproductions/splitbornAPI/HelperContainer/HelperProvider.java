@@ -46,5 +46,6 @@ public interface HelperProvider {
     void handleBuyProcess(Player player, ItemStack BuyItem);
     void applyInventoryLook(Inventory inv, Material material, boolean TopBottom_Full);
     void applyImmortality(Entity e);
+    void updatePlayersScoreboard(Player player);
 
 }

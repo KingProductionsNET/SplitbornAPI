@@ -5,5 +5,6 @@ import org.bukkit.entity.Player;
 public interface CommandBlockProvider {
 
     void BlockCommand(Player player, COMMAND_ID commandId);
+    void UnblockCommand(Player player, COMMAND_ID commandId);
 
 }
