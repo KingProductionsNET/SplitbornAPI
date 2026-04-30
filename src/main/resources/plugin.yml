@@ -2,3 +2,6 @@ name: SplitbornAPI
 main: net.kingproductions.splitbornAPI.Main.SplitbornAPI
 version: '1.0.1'
 api-version: '1.21.11'
+
+commands:
+  nca:
