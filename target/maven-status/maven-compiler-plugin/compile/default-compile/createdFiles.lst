@@ -1,0 +1,11 @@
+net\kingproductions\splitbornAPI\Main\SplitbornAPI.class
+net\kingproductions\splitbornAPI\NPC\NPCInteractEvent.class
+net\kingproductions\splitbornAPI\NPC\NPCProvider.class
+net\kingproductions\splitbornAPI\ProfileContainer\Profile.class
+net\kingproductions\splitbornAPI\NPC\NPC_ID.class
+net\kingproductions\splitbornAPI\ItemContainer\Item_ID.class
+net\kingproductions\splitbornAPI\NPC\SplitbornNPC.class
+net\kingproductions\splitbornAPI\NPC\NPCInteractEvent$ClickType.class
+net\kingproductions\splitbornAPI\ItemContainer\SplitbornItemProvider.class
+net\kingproductions\splitbornAPI\Main\API_NOT_FOUND.class
+net\kingproductions\splitbornAPI\ProfileContainer\ProfileProvider.class

@@ -19,7 +19,6 @@ import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.random;
 
 public class CosmeticTour implements Listener {
-
     private final int INGORE = 10;
 
     private Player Passenger;

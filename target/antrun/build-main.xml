@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <copy file="C:\Users\johan\Desktop\MC\Plugins_KingProductionsNET\SplitbornAPI\target/splitbornapi-1.0-SNAPSHOT.jar" todir="C:\Users\johan/Desktop/MC/Server - Splitborn (1.21.11)/plugins" />
+  </target>
+</project>
