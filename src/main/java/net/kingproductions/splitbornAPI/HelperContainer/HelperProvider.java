@@ -15,7 +15,6 @@ public interface HelperProvider {
 
     void addToFreeActionBar(Player player, String Text);
     boolean completedTutorial(Player player);
-    void StartNotReadyDialogue(Player player, String Prefix, Entity entity);
     void setEntitySize(LivingEntity entity, double size);
     void DebugMessage(String Message);
     ItemStack DUMMY_GLEAMS();
@@ -36,8 +35,6 @@ public interface HelperProvider {
     String getArrowSymbol();
     String getLocationSymbol();
     boolean playerHasActiveQuest(Player player);
-    void SendInQuestDialogue(Player player, Entity NPC);
-    void SendNoDialogueYet(Player player, Entity NPC);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
     void fireworkForLevelUpgrade(Player player);
     void upgradePlayersLevel(Player player, int eventXP);
