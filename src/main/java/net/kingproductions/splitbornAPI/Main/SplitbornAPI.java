@@ -2,7 +2,6 @@ package net.kingproductions.splitbornAPI.Main;
 
 import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
-import net.kingproductions.splitbornAPI.Commands.NPCCommandAction;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
@@ -26,7 +25,7 @@ import java.util.UUID;
 public final class SplitbornAPI extends JavaPlugin {
     public static Plugin plugin;
     public static Random random = new Random();
-    public static World world_splitborn = Bukkit.getWorld("world");
+    public static World world_splitborn = null;
 
     private static final String API_NOT_FOUND_STRING = "Splitborn API not found!";
 
@@ -83,9 +82,12 @@ public final class SplitbornAPI extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
+        world_splitborn = Bukkit.getWorld("world");
+
         Bukkit.getPluginCommand("nca").setExecutor(new NPCCommandAction());
         Bukkit.getPluginManager().registerEvents(new HideManager(), this);
         Bukkit.getPluginManager().registerEvents(new BlockInteraction(), this);
+        Bukkit.getPluginManager().registerEvents(new EasyDialogue(), this);
 
         Bukkit.getScheduler().runTask(plugin, () ->{
             LocationSpawnPoints.InitializeLocations();

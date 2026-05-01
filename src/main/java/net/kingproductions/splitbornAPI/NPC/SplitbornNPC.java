@@ -2,8 +2,16 @@ package net.kingproductions.splitbornAPI.NPC;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.TextDisplay;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class SplitbornNPC {
+
+    public static Map<UUID, List<TextDisplay>> NPCsAssignedArmorStands = new HashMap<>();
 
     private NPC_ID ID;
 
