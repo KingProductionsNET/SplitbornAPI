@@ -84,10 +84,8 @@ public final class SplitbornAPI extends JavaPlugin {
 
         world_splitborn = Bukkit.getWorld("world");
 
-        Bukkit.getPluginCommand("nca").setExecutor(new NPCCommandAction());
         Bukkit.getPluginManager().registerEvents(new HideManager(), this);
         Bukkit.getPluginManager().registerEvents(new BlockInteraction(), this);
-        Bukkit.getPluginManager().registerEvents(new EasyDialogue(), this);
 
         Bukkit.getScheduler().runTask(plugin, () ->{
             LocationSpawnPoints.InitializeLocations();

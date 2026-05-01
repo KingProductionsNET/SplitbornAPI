@@ -1,6 +1,5 @@
 net\kingproductions\splitbornAPI\EventContainer\Events.class
 net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI.class
-net\kingproductions\splitbornAPI\Commands\NPCCommandAction.class
 net\kingproductions\splitbornAPI\NPC\NPCProvider.class
 net\kingproductions\splitbornAPI\RewardContainer\LOCATION_REWARD_DATA.class
 net\kingproductions\splitbornAPI\DatabankContainer\DATABANK_PATHS.class
@@ -22,7 +21,6 @@ net\kingproductions\splitbornAPI\NPC\NPC_ID.class
 net\kingproductions\splitbornAPI\LocationsContainer\Locations.class
 net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI$1.class
 net\kingproductions\splitbornAPI\Builder\CustomSkull.class
-net\kingproductions\splitbornAPI\DialogueContainer\EasyDialogue.class
 net\kingproductions\splitbornAPI\RewardContainer\LEVEL_REWARD_DATA.class
 net\kingproductions\splitbornAPI\MysteriesContainer\Mysteries.class
 net\kingproductions\splitbornAPI\Builder\ArmorStandBuilder.class
