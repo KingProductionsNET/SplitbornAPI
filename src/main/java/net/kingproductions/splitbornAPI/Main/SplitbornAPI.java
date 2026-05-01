@@ -13,6 +13,7 @@ import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.ProfileContainer.ProfileProvider;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestProvider;
+import net.kingproductions.splitbornAPI.Util.UtilProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.inventory.ItemStack;
@@ -35,16 +36,18 @@ public final class SplitbornAPI extends JavaPlugin {
     private static HelperProvider helperProvider;
     private static QuestProvider questProvider;
     private static CommandBlockProvider commandBlockProvider;
+    private static UtilProvider utilProvider;
 
     public SplitbornAPI() {}
 
-    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q, CommandBlockProvider c) {
+    public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q, CommandBlockProvider c, UtilProvider u) {
         profileProvider = p;
         splitbornItemProvider = i;
         npcProvider = n;
         helperProvider = h;
         questProvider = q;
         commandBlockProvider = c;
+        utilProvider = u;
     }
 
     public static Profile getProfile(UUID uuid) {
@@ -70,6 +73,10 @@ public final class SplitbornAPI extends JavaPlugin {
     public static CommandBlockProvider BlockCommand(){
         if (commandBlockProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return commandBlockProvider;
+    }
+    public static UtilProvider getUtil(){
+        if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        return utilProvider;
     }
 
     @Override
