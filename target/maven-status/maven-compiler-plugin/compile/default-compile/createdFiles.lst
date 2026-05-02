@@ -5,6 +5,7 @@ net\kingproductions\splitbornAPI\RewardContainer\LOCATION_REWARD_DATA.class
 net\kingproductions\splitbornAPI\DatabankContainer\DATABANK_PATHS.class
 net\kingproductions\splitbornAPI\HelperContainer\HelperProvider.class
 net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI$2.class
+net\kingproductions\splitbornAPI\QuestContainer\QuestData.class
 net\kingproductions\splitbornAPI\RewardContainer\NPC_REWARD_DATA.class
 net\kingproductions\splitbornAPI\RewardReasonContainer\REWARD_REASON.class
 net\kingproductions\splitbornAPI\Builder\ItemBuilder.class
@@ -39,6 +40,7 @@ net\kingproductions\splitbornAPI\Main\SplitbornAPI.class
 net\kingproductions\splitbornAPI\CosmeticTourContainer\CosmeticTour$1.class
 net\kingproductions\splitbornAPI\NPC\NPCInteractEvent.class
 net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NBS_FILE_NAMES.class
+net\kingproductions\splitbornAPI\QuestContainer\QuestCreator.class
 net\kingproductions\splitbornAPI\TeleportContainer\FancyTeleportForEntity.class
 net\kingproductions\splitbornAPI\GuaridanContainer\Guardians.class
 net\kingproductions\splitbornAPI\VoidGateContainer\VOID_GATE_ID.class

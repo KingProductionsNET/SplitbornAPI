@@ -13,19 +13,11 @@ import static com.mongodb.client.model.Filters.eq;
 
 public class QuestCreator {
 
-    public static void InitializeQuest(MongoCollection<Document> collection){
+    public static Set<QuestData> getQuestData(){
         Set<QuestData> set = new HashSet<>();
         set.add(QUEST_Chup_Hunter());
         set.add(QUEST_Defeat_Rotmaw());
-
-        for (QuestData questData : set){
-            String ID = questData.getQuestID().toString();
-            String Location = questData.getQuestLocation().toString();
-            String Material = questData.getDisplayMaterial().toString();
-
-            Document QUEST_DATA = new Document("_id", ID).append("location", Location).append("material", Material);
-            collection.replaceOne(eq("_id", ID), QUEST_DATA, new ReplaceOptions().upsert(true));
-        }
+        return set;
     }
 
     private static QuestData QUEST_Chup_Hunter(){
