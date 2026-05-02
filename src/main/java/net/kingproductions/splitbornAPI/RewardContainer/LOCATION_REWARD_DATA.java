@@ -13,6 +13,9 @@ public class LOCATION_REWARD_DATA {
     public static int getGleamReward(Locations location){
         int gleamReward = 0;
 
+        if (location.equals(Locations.Hearthgrove)){
+            gleamReward = 500;
+        }
         if (location.equals(Locations.The_Fold)){
             gleamReward = 1000;
         }
@@ -23,6 +26,10 @@ public class LOCATION_REWARD_DATA {
     public static int getXPReward(Locations location){
         int xpReward = 0;
 
+
+        if (location.equals(Locations.Hearthgrove)){
+            xpReward = 100;
+        }
         if (location.equals(Locations.The_Fold)){
             xpReward = 100;
         }
