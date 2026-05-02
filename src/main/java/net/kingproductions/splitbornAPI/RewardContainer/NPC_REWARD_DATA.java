@@ -32,6 +32,9 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.BONSAI)){
 
         }
+        if (npcId.equals(NPC_ID.AREO)){
+            map.put(Item_ID.ZENTIS_U7, 1);
+        }
 
         return map;
     }
