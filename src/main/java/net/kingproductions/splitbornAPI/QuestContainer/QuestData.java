@@ -7,8 +7,7 @@ public class QuestData {
 
     private Quests questID;
     private Locations questLocation;
-    private static Material material;
-
+    private Material material;
 
     public QuestData setQuestID(Quests quest){
         questID = quest;

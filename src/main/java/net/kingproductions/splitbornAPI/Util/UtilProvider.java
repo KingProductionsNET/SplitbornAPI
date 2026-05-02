@@ -12,7 +12,7 @@ public interface UtilProvider {
 
     Location getLocationFromMongo(String locationKey);
     TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text);
-    String getFancyProgressBar(int current, int max, char filledChar, char emptyChar);
+    String getFancyProgressBar(int current, int max, String filledChar, String emptyChar);
     List<Location> getNearbyBlockLocations(Location centerLoc, int scanRadius, Material material);
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);
     Location getRandomSurfaceLocation(Location center, int radius);
