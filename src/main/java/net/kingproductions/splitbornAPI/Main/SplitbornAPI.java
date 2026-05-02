@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.Main;
 
 import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
+import net.kingproductions.splitbornAPI.CosmeticTourContainer.CosmeticTour;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
@@ -9,6 +10,7 @@ import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
 import net.kingproductions.splitbornAPI.LocationsContainer.LocationSpawnPoints;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
 import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
+import net.kingproductions.splitbornAPI.OneTimeRewardInventory.One_Time_Reward_Inventory;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.ProfileContainer.ProfileProvider;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestProvider;
@@ -86,6 +88,9 @@ public final class SplitbornAPI extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new HideManager(), this);
         Bukkit.getPluginManager().registerEvents(new BlockInteraction(), this);
+
+        Bukkit.getPluginManager().registerEvents(new One_Time_Reward_Inventory(), this);
+        Bukkit.getPluginManager().registerEvents(new CosmeticTour(), this);
 
         Bukkit.getScheduler().runTask(plugin, () ->{
             LocationSpawnPoints.InitializeLocations();
