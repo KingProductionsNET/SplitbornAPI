@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.RewardContainer;
 import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
+import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,25 +31,14 @@ public class ACHIEVEMENT_REWARD_DATA {
 
         return xpReward;
     }
-
-    public static Map<Item_ID, Integer> handleRewardLogic(ACHIEVEMENT_ID achievementId){
+    public static Map<Item_ID, Integer> getExtraRewards(ACHIEVEMENT_ID achievementId){
         Map<Item_ID, Integer> map = new HashMap<>();
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)){
-            map.put(Item_ID.ZENTIS_U7, 7);
+
+        if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)){
+            map.put(Item_ID.CHUP_FLUFF, 60);
         }
 
         return map;
-    }
-
-    public static List<String> getRewardsAsList(ACHIEVEMENT_ID achievementId){
-        List<String> list = new ArrayList<>();
-        for (Item_ID itemId : handleRewardLogic(achievementId).keySet()){
-            int amount = handleRewardLogic(achievementId).get(itemId);
-
-            list.add(SplitbornAPI.getHelper().getListingSymbol() + "§b" + amount + "x " + SplitbornAPI.getItem(itemId).getItemMeta().getDisplayName());
-        }
-
-        return list;
     }
 
 }

@@ -1,9 +1,13 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
+import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class QUEST_REWARDS_DATA {
 
@@ -27,10 +31,14 @@ public class QUEST_REWARDS_DATA {
         return xpReward;
     }
 
-    public static List<String> getExtraRewards(Quests quest){
-        List<String> list = new ArrayList<>();
+    public static Map<Item_ID, Integer> getExtraRewards(Quests quest){
+        Map<Item_ID, Integer> map = new HashMap<>();
 
-        return list;
+        if (quest.equals(Quests.Chup_Hunter)){
+            map.put(Item_ID.SWEEPIS_MASK, 1);
+        }
+
+        return map;
     }
 
 }

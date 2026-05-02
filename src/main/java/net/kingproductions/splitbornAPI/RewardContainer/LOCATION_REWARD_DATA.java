@@ -39,14 +39,4 @@ public class LOCATION_REWARD_DATA {
         return map;
     }
 
-    public static List<String> getBenefits(Locations location){
-        List<String> list = new ArrayList<>();
-        if (location.equals(Locations.The_Fold)){
-            list.add("§6Access §7to §cGrug");
-            list.add("§6Access §7to §eChups");
-        }
-
-        return list;
-    }
-
 }

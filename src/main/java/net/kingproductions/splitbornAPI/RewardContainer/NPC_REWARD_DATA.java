@@ -26,11 +26,11 @@ public class NPC_REWARD_DATA {
         return xpReward;
     }
 
-    public static Map<Item_ID, Integer> extraRewards(NPC_ID npcId){
+    public static Map<Item_ID, Integer> getExtraRewards(NPC_ID npcId){
         Map<Item_ID, Integer> map = new HashMap<>();
 
         if (npcId.equals(NPC_ID.BONSAI)){
-            map.put(Item_ID.SWEEPIS_MASK, 1);
+
         }
 
         return map;
