@@ -1,6 +1,7 @@
 net\kingproductions\splitbornAPI\EventContainer\Events.class
 net\kingproductions\splitbornAPI\NoteBlockAPIContainer\NoteBlockAPI.class
 net\kingproductions\splitbornAPI\NPC\NPCProvider.class
+net\kingproductions\splitbornAPI\CuriosityContainer\CuriosityData.class
 net\kingproductions\splitbornAPI\RewardContainer\LOCATION_REWARD_DATA.class
 net\kingproductions\splitbornAPI\DatabankContainer\DATABANK_PATHS.class
 net\kingproductions\splitbornAPI\HelperContainer\HelperProvider.class
@@ -55,4 +56,5 @@ net\kingproductions\splitbornAPI\OneTimeRewardInventory\One_Time_Reward_Inventor
 net\kingproductions\splitbornAPI\NPC\NPCInteractEvent$ClickType.class
 net\kingproductions\splitbornAPI\CommandBlockContainer\COMMAND_ID.class
 net\kingproductions\splitbornAPI\RewardContainer\QUEST_REWARDS_DATA.class
+net\kingproductions\splitbornAPI\CuriosityContainer\CuriosityCreator.class
 net\kingproductions\splitbornAPI\ProfileContainer\ProfileProvider.class
