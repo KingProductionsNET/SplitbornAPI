@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.CuriosityContainer;
 
+import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import org.bukkit.Material;
 
 public class CuriosityData {
@@ -7,6 +8,7 @@ public class CuriosityData {
     private Curiosities ID;
     private Material material;
     private String skullValue;
+    private Locations location;
 
     public CuriosityData setID(Curiosities c){
         ID = c;
@@ -21,6 +23,10 @@ public class CuriosityData {
         skullValue = s;
         return this;
     }
+    public CuriosityData setLocation(Locations l){
+        location = l;
+        return this;
+    }
 
     public Curiosities getID(){
         return ID;
@@ -32,6 +38,9 @@ public class CuriosityData {
 
     public String getSkullValue(){
         return skullValue;
+    }
+    public Locations getLocation(){
+        return location;
     }
 
 }
