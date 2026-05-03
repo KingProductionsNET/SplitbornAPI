@@ -17,6 +17,7 @@ public class QuestCreator {
         Set<QuestData> set = new HashSet<>();
         set.add(QUEST_Chup_Hunter());
         set.add(QUEST_Defeat_Rotmaw());
+        set.add(QUEST_Eliminate_The_Creator());
         return set;
     }
 
@@ -33,6 +34,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.DEFEAT_ROTMAW);
         questData.setQuestLocation(Locations.Hearthgrove);
         questData.setDisplayMaterial(Material.IRON_SWORD);
+
+        return questData;
+    }
+    private static QuestData QUEST_Eliminate_The_Creator(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.ELIMINATE_THE_CREATURE);
+        questData.setQuestLocation(Locations.Hearthgrove);
+        questData.setDisplayMaterial(Material.DRIED_KELP);
 
         return questData;
     }
