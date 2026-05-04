@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 
+import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -100,7 +101,7 @@ public class CosmeticTour implements Listener {
             startSegment(Passenger, Shuttle, startLocation, firstTarget, Speed, iter);
         }
 
-//        if (!Music.equalsIgnoreCase("-")) NoteBlockAPI.Play(Passenger, Music, true);
+        if (!Music.equalsIgnoreCase("-")) NoteBlockAPI.Play(Passenger, Music, true);
     }
 
     private void startSegment(Player passenger, Entity shuttle, Location loc1, Location loc2, int speed, Iterator<Location> remainingLocations) {
@@ -169,22 +170,6 @@ public class CosmeticTour implements Listener {
                 playGallop ++;
             }
         }.runTaskTimer(plugin, 0L, 1L);
-    }
-
-    public void lookAt(Entity entity, Location target) {
-        Location loc = entity.getLocation();
-        double dx = target.getX() - loc.getX();
-        double dy = target.getY() - loc.getY();
-        double dz = target.getZ() - loc.getZ();
-
-        float yaw = (float) Math.toDegrees(Math.atan2(-dx, dz));
-
-        double distanceXZ = Math.sqrt(dx * dx + dz * dz);
-        float pitch = (float) Math.toDegrees(-Math.atan2(dy, distanceXZ));
-
-        loc.setYaw(yaw);
-        loc.setPitch(pitch);
-        entity.teleport(loc);
     }
 
     @EventHandler
