@@ -44,5 +44,9 @@ public interface HelperProvider {
     void applyInventoryLook(Inventory inv, Material material, boolean TopBottom_Full);
     void applyImmortality(Entity e);
     void updatePlayersScoreboard(Player player);
+    String getLoreReady_Health(int value);
+    String getLoreReady_Stamina(int value);
+    String getLoreReady_Speed(int value);
+    String getLoreReady_AttackDamage(int value);
 
 }
