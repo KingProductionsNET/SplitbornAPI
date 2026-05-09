@@ -1,6 +1,8 @@
 package net.kingproductions.splitbornAPI.Builder;
 
+import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Paths;
+import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -18,6 +20,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -97,14 +100,25 @@ public class ItemBuilder {
         List<String> lore = meta.getLore();
         if (lore == null || lore.isEmpty()) return null;
 
-        int BuyPrice = ItemBuilder.getHiddenValueInt(meta, Item_Paths.NPC_BUY_PRICE_PATH.toString());
-        if (BuyPrice == 0){
-            return new ItemBuilder(Material.BEDROCK).setDisplayName("§cNot allowed to sell.").build();
-        }
+        String raw = ItemBuilder.getHiddenValueString(meta, Item_Paths.NPC_BUY_PRICE_PATH.toString());
+        String[] costList = raw.split(",");
 
         lore.add("");
         lore.add("§7Cost:");
-        lore.add("§6" + BuyPrice + " Gleams §e\uD83D\uDD25");
+        for (String Item_String : costList){
+            int lastUnderscore = Item_String.lastIndexOf("_");
+
+            String ItemID = Item_String.substring(0, lastUnderscore);
+            int Amount = Integer.parseInt(Item_String.substring(lastUnderscore + 1));
+
+            if (ItemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())){
+                lore.add("§6" + Amount + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+                continue;
+            }
+
+            ItemStack finalItem = SplitbornAPI.getItem(Item_ID.valueOf(ItemID));
+            lore.add("§7" + Amount + "x " + finalItem.getItemMeta().getDisplayName());
+        }
         lore.add("");
         lore.add("§eClick to purchase.");
         meta.setLore(lore);
@@ -156,7 +170,8 @@ public class ItemBuilder {
             Meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             Meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             Meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-            itemMeta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
+            Meta.addItemFlags(ItemFlag.HIDE_DYE);
+            Meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             Meta.setUnbreakable(true);
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
@@ -173,7 +188,8 @@ public class ItemBuilder {
             meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-            itemMeta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
+            meta.addItemFlags(ItemFlag.HIDE_DYE);
+            meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             meta.setUnbreakable(true);
             meta.setLore(itemMeta.getLore());
 
@@ -188,6 +204,7 @@ public class ItemBuilder {
             itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+            itemMeta.addItemFlags(ItemFlag.HIDE_DYE);
             itemMeta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             itemMeta.setUnbreakable(true);
 
