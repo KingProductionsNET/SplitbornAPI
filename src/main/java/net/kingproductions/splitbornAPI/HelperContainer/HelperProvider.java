@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.HelperContainer;
 
+import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -49,5 +50,6 @@ public interface HelperProvider {
     String getLoreReady_Speed(int value);
     String getLoreReady_AttackDamage(int value);
     boolean isValidSplitbornItem(ItemStack itemStack);
+    Item_ID getItemStacksItemID(ItemStack itemStack);
 
 }
