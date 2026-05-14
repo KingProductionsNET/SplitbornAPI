@@ -101,6 +101,10 @@ public class ItemBuilder {
         if (lore == null || lore.isEmpty()) return null;
 
         String raw = ItemBuilder.getHiddenValueString(meta, Item_Paths.NPC_BUY_PRICE_PATH.toString());
+        if (raw.equalsIgnoreCase("0")){
+            return new ItemBuilder(Material.BEDROCK).setDisplayName(meta.getDisplayName() + " NO PRICE SET!").build();
+        }
+
         String[] costList = raw.split(",");
 
         lore.add("");

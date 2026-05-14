@@ -15,19 +15,17 @@ public class ACHIEVEMENT_REWARD_DATA {
     public static int getGleamReward(ACHIEVEMENT_ID achievementId){
         int gleamReward = 0;
 
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)){
-            gleamReward = 1000;
-        }
-
+        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) gleamReward = 4000;
+        if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) gleamReward = 2000;
         return gleamReward;
     }
 
     public static int getXPReward(ACHIEVEMENT_ID achievementId){
         int xpReward = 0;
 
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)){
-            xpReward = 1000;
-        }
+        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 500;
+
 
         return xpReward;
     }

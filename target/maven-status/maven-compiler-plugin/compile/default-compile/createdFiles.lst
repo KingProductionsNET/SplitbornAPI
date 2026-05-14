@@ -12,6 +12,7 @@ net\kingproductions\splitbornAPI\RewardReasonContainer\REWARD_REASON.class
 net\kingproductions\splitbornAPI\Builder\ItemBuilder.class
 net\kingproductions\splitbornAPI\HideManagerContainer\HideManager.class
 net\kingproductions\splitbornAPI\LocationsContainer\LocationSpawnPoints.class
+net\kingproductions\splitbornAPI\CategoryRewardBuilderContainer\CategoryRewardBuilder$1.class
 net\kingproductions\splitbornAPI\ItemContainer\SplitbornItemProvider.class
 net\kingproductions\splitbornAPI\RewardContainer\ACHIEVEMENT_REWARD_DATA.class
 net\kingproductions\splitbornAPI\QuestContainer\QuestProvider.class

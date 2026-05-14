@@ -14,8 +14,10 @@ import net.kingproductions.splitbornAPI.QuestContainer.Quests;
 import net.kingproductions.splitbornAPI.RewardReasonContainer.REWARD_REASON;
 import net.kingproductions.splitbornAPI.VoidGateContainer.VOID_GATE_ID;
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -145,6 +147,38 @@ public class CategoryRewardBuilder {
                     player.sendMessage("§6§lDELIVERY BOX! §8→ §b" + amount + "x " + SplitbornAPI.getItem(itemId).getItemMeta().getDisplayName());
                 }, 30);
             }
+
+            new BukkitRunnable(){
+                int Time = 3;
+                float f  = 1F;
+
+                @Override
+                public void run() {
+                    if (Time == 0){
+                        this.cancel();
+                        return;
+                    }
+
+                    switch (Time){
+                        case 3:
+                            player.sendTitle("§6§lDeli", "", 0, 10, 3);
+                            break;
+                        case 2:
+                            player.sendTitle("§6§lDelivery", "", 0, 10, 3);
+                            break;
+                        case 1:
+                            player.sendTitle("§6§lDelivery", "§eBox", 0, 10, 3);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1F, f);
+
+                    f += 0.3F;
+                    Time --;
+                }
+            }.runTaskTimer(plugin, 0, 10);
         }
 
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");

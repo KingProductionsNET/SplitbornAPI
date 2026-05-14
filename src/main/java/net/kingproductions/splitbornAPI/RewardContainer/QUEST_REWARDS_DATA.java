@@ -14,9 +14,9 @@ public class QUEST_REWARDS_DATA {
     public static int getGleamReward(Quests quest){
         int gleamReward = 0;
 
-        if (quest.equals(Quests.Chup_Hunter)){
-            gleamReward = 1000;
-        }
+        if (quest.equals(Quests.Chup_Hunter)) gleamReward = 1000;
+        if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 5000;
+        if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 1250;
 
         return gleamReward;
     }
@@ -24,9 +24,9 @@ public class QUEST_REWARDS_DATA {
     public static int getXPReward(Quests quest){
         int xpReward = 0;
 
-        if (quest.equals(Quests.Chup_Hunter)){
-            xpReward = 100;
-        }
+        if (quest.equals(Quests.Chup_Hunter)) xpReward = 100;
+        if (quest.equals(Quests.DEFEAT_ROTMAW)) xpReward = 300;
+        if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) xpReward = 250;
 
         return xpReward;
     }
