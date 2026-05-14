@@ -49,6 +49,7 @@ net\kingproductions\splitbornAPI\VoidGateContainer\VOID_GATE_ID.class
 net\kingproductions\splitbornAPI\Builder\ArmorStandBuilder$1.class
 net\kingproductions\splitbornAPI\MobContainer\Mob_ID.class
 net\kingproductions\splitbornAPI\RewardContainer\KILL_LOG_REWARD_DATA.class
+net\kingproductions\splitbornAPI\SupplyContainer\SUPPLY_ID.class
 net\kingproductions\splitbornAPI\TeleportContainer\EntityTour$1.class
 net\kingproductions\splitbornAPI\ProfileContainer\Profile.class
 net\kingproductions\splitbornAPI\CuriosityContainer\Curiosities.class
