@@ -8,6 +8,7 @@ import org.bukkit.entity.TextDisplay;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 public interface UtilProvider {
 
@@ -17,6 +18,6 @@ public interface UtilProvider {
     List<Location> getNearbyBlockLocations(Location centerLoc, int scanRadius, Material material);
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);
     Location getRandomSurfaceLocation(Location center, int radius);
-    List<UUID> getAllRegisteredUUID();
+    void getAllRegisteredUUID(Consumer<List<UUID>> callback);
 
 }
