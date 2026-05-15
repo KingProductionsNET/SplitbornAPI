@@ -19,5 +19,6 @@ public interface UtilProvider {
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);
     Location getRandomSurfaceLocation(Location center, int radius);
     void getAllRegisteredUUID(Consumer<List<UUID>> callback);
+    void setObjectIntoDB(String CollectionName, String ID, String oPath, Object o, boolean replace);
 
 }
