@@ -11,6 +11,7 @@ public enum Quests {
     ELIMINATE_THE_CREATURE,
     FIND_ANDREWS_TOY,
     DEFEAT_ROTMAW,
+    THE_LOST_CARAVAN,
 
     DEFAULT_NONE;
 
