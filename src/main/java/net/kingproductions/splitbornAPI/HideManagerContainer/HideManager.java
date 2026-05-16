@@ -18,40 +18,41 @@ public class HideManager implements Listener {
 
     public static void HideEntityForUnworthy(Entity entity, Player worthyPlayer)  {
         List<UUID> list = playersPacketEntities.getOrDefault(worthyPlayer.getUniqueId(), new ArrayList<>());
+
         list.add(entity.getUniqueId());
-
         playersPacketEntities.put(worthyPlayer.getUniqueId(), list);
-
-        for (Player online : Bukkit.getOnlinePlayers()){
+        for (Player online : Bukkit.getOnlinePlayers()) {
             if (online.getUniqueId().equals(worthyPlayer.getUniqueId())) continue;
-            online.hideEntity(plugin, entity );
+            online.hideEntity(plugin, entity);
         }
     }
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent event){
+    public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
         List<UUID> hideList = new ArrayList<>();
-        for (UUID uuid : playersPacketEntities.keySet()){
+        for (UUID uuid : playersPacketEntities.keySet()) {
             if (uuid.equals(player.getUniqueId())) continue;
-
             List<UUID> otherPlayersEntities = playersPacketEntities.get(uuid);
-            for (UUID oUUID : otherPlayersEntities){
-                if (Bukkit.getEntity(oUUID) == null){
-                    otherPlayersEntities.remove(oUUID);
-                    playersPacketEntities.put(player.getUniqueId(), otherPlayersEntities);
+            if (otherPlayersEntities == null) continue;
+            Iterator<UUID> iterator = otherPlayersEntities.iterator();
+            while (iterator.hasNext()) {
+                UUID oUUID = iterator.next();
+                Entity entity = Bukkit.getEntity(oUUID);
 
+                if (entity == null) {
+                    iterator.remove();
                     continue;
                 }
 
                 hideList.add(oUUID);
             }
         }
-        for (UUID uuid : hideList){
+
+        for (UUID uuid : hideList) {
             Entity entityToHide = Bukkit.getEntity(uuid);
             if (entityToHide == null) continue;
-
             player.hideEntity(plugin, entityToHide);
         }
 
