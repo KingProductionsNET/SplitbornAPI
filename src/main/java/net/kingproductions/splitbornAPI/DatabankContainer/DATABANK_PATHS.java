@@ -65,5 +65,4 @@ public enum DATABANK_PATHS {
     SUPPLY_LEVEL,
     SUPPLY_BONUS_CHANCE
 
-
 }
