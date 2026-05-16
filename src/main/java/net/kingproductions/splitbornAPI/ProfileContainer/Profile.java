@@ -25,7 +25,7 @@ public interface Profile {
     void setSPEED(int amount);
     void setMAX_STAMINA(int amount);
     void setSupplyLevel(int i);
-    void setSupplyBonusChance(int i);
+    void setSupplyBonusChance(double i);
     void setClaimedSupplies(int i);
 
 
