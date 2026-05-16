@@ -11,23 +11,30 @@ public interface Profile {
     int getXP();
     void setXP(int xp);
 
-    boolean getBoolean(String Path);
-    String getString(String Path);
-    int getInteger(String Path);
-
     int getGleams();
     int getLevel();
     int getMAX_HEALTH();
     int getSpeed();
     int getMAX_STAMINA();
+    int getSupplyLevel();
+    int getSupplyBonusChance();
+    int getClaimedSupplies();
 
-    void setBoolean(String path, boolean b);
-    void setString(String path, String s);
-    void setInteger(String path, int i);
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
     void setSPEED(int amount);
     void setMAX_STAMINA(int amount);
+    void setSupplyLevel(int i);
+    void setSupplyBonusChance(int i);
+    void setClaimedSupplies(int i);
+
+
+    void setBoolean(String path, boolean b);
+    void setString(String path, String s);
+    void setInteger(String path, int i);
+    boolean getBoolean(String Path);
+    String getString(String Path);
+    int getInteger(String Path);
 
     void addUnclaimedItem(Item_ID itemId, int Amount);
 
