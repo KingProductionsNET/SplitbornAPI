@@ -17,7 +17,7 @@ public interface Profile {
     int getSpeed();
     int getMAX_STAMINA();
     int getSupplyLevel();
-    int getSupplyBonusChance();
+    double getSupplyBonusChance();
     int getClaimedSupplies();
 
     void setGleams(int amount);
