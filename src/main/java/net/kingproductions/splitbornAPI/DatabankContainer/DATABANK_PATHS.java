@@ -26,10 +26,6 @@ public enum DATABANK_PATHS {
     ATTACK_DAMAGE,
     NAME,
 
-    GLOBAL_DISCOVERED_REALMS,
-    hearthgrove_completed_quests,
-    hearthgrove_allies_met,
-    hearthgrove_sealed_void_gate,
     AREA_DISCOVERED_PATH_,
 
     FRIEND_REQUESTS_ENABLED,
