@@ -1,191 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My API Documentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SplitbornAPI Docs</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      display: flex;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, red, orange);
+  color: white;
+  display: flex;
+}
 
-    /* Sidebar */
-    .sidebar {
-      width: 260px;
-      background: #111827;
-      height: 100vh;
-      padding: 20px;
-      position: fixed;
-    }
+/* Sidebar */
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  overflow-y: auto;
+}
 
-    .sidebar h2 {
-      color: #38bdf8;
-      font-size: 20px;
-    }
+.sidebar h2 {
+  margin-bottom: 15px;
+}
 
-    .sidebar a {
-      display: block;
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 10px 0;
-      padding: 8px;
-      border-radius: 6px;
-    }
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
 
-    .sidebar a:hover {
-      background: #1f2937;
-    }
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+}
 
-    /* Main content */
-    .content {
-      margin-left: 280px;
-      padding: 30px;
-      max-width: 900px;
-    }
+/* Main */
+.main {
+  margin-left: 290px;
+  padding: 30px;
+  max-width: 900px;
+}
 
-    h1, h2, h3 {
-      color: #38bdf8;
-    }
+/* Header image */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+.header img {
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
 
-    code {
-      background: #0b1220;
-      padding: 3px 6px;
-      border-radius: 5px;
-      color: #facc15;
-    }
+.header p {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-    pre {
-      background: #0b1220;
-      padding: 15px;
-      border-radius: 10px;
-      overflow-x: auto;
-      color: #f8fafc;
-    }
+/* Sections */
+.section {
+  background: rgba(0,0,0,0.35);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
 
-    .endpoint {
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
-      margin-bottom: 20px;
-    }
+.section h1 {
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
 
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #2563eb;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      margin-left: 8px;
-    }
-  </style>
+/* Code */
+pre {
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+code {
+  color: #ffe600;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>My API Docs</h2>
-    <a href="#intro">Introduction</a>
-    <a href="#auth">Authentication</a>
-    <a href="#endpoint1">Get User</a>
-    <a href="#endpoint2">Create User</a>
-    <a href="#examples">Examples</a>
-  </div>
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>SplitbornAPI</h2>
 
-  <!-- Main Content -->
-  <div class="content">
+  <a href="#npc">NPC Creation</a>
+  <a href="#item">Item Creation</a>
+  <a href="#curiosity">Curiosity Creation</a>
+  <a href="#userprofile">User Profile</a>
+  <a href="#entityhide">Entity Hide Usage</a>
+  <a href="#userrewards">User Rewards</a>
+  <a href="#util">Util Provider</a>
+  <a href="#helper">Helper</a>
+  <a href="#onetime">One Time Rewards</a>
+  <a href="#teleport">Smooth Entity Teleport</a>
+  <a href="#tour">Player Tour</a>
+</div>
 
-    <h1>API Documentation</h1>
-    <p>Welcome to the official API documentation. This API allows you to manage users and retrieve data easily.</p>
+<!-- Main -->
+<div class="main">
 
-    <!-- Intro -->
-    <div class="card" id="intro">
-      <h2>Introduction</h2>
-      <p>This API is built for simplicity and speed. Base URL:</p>
-      <code>https://api.example.com/v1</code>
+<!-- HEADER -->
+<div class="header">
+  <img src="blob:https://imgur.com/108610e8-f894-4b4c-81b4-07b70f7e9563" alt="Header Image">
+  <p>
+    Congratulations: If you are reading this you are probably a KingProductions Developer (or just have the link of this website)
+  </p>
+</div>
 
-      <img src="https://via.placeholder.com/800x300" alt="API Banner">
-    </div>
+<!-- NPC -->
+<div class="section" id="npc">
+<h1>SplitbornAPI - NPC Creation</h1>
 
-    <!-- Auth -->
-    <div class="card" id="auth">
-      <h2>Authentication</h2>
-      <p>All requests require an API key:</p>
-      <pre>Authorization: Bearer YOUR_API_KEY</pre>
-    </div>
+<h3>How To Create A NPC?</h3>
 
-    <!-- Endpoint 1 -->
-    <div class="card endpoint" id="endpoint1">
-      <h2>Get User <span class="tag">GET</span></h2>
-      <p>Fetch a user by ID.</p>
+<p><b>Step 1:</b></p>
+<p>
+Go into the SplitbornAPI's NPC folder and add the name of your NPC into the NPC_ID enum class. Keep the name in caps so it matches the enum feeling.
+</p>
 
-      <pre>
-GET /users/{id}
-      </pre>
+<p><b>Step 2:</b></p>
+<p>
+Create a new folder in Splitborn's NPC plugin named after your NPC name. After that create your main NPC class.
+</p>
 
-      <h3>Example Response</h3>
-      <pre>
-{
-  "id": 1,
-  "name": "John Doe",
-  "email": "john@example.com"
+<p>Example sub-classes:</p>
+<ul>
+  <li>NPC_DATA</li>
+  <li>NPC_DIALOGUES</li>
+  <li>NPC_FUNCTIONS</li>
+  <li>NPC_INVENTORY</li>
+  <li>NPC_NCA</li>
+</ul>
+
+<p><b>Step 3:</b></p>
+
+<pre><code>
+private static final String Skin_Signature = "OCIx1T2jJJqTsdGUYMEcg5LABYtqxGxK8REh...";
+private static final String Skin_Value = "ewogICJ0aW1lc3RhbXAiOiAxNzcxNTMx...";
+private static final String NAME = "§lAndrew";
+</code></pre>
+
+<p><b>Step 4: Spawn Function</b></p>
+
+<pre><code>
+public static void Spawn(){
+    SplitbornNPC npc = new SplitbornNPC(NPC_ID.ANDREW);
+    npc.setName(NAME);
+    npc.setSkin(Skin_Value, Skin_Signature);
+    npc.setLookClose(true);
+    SplitbornAPI.spawnNPC(npc);
 }
-      </pre>
-    </div>
+</code></pre>
 
-    <!-- Endpoint 2 -->
-    <div class="card endpoint" id="endpoint2">
-      <h2>Create User <span class="tag">POST</span></h2>
-      <p>Create a new user.</p>
+<p><b>Step 5: Click Function</b></p>
 
-      <pre>
-POST /users
-Content-Type: application/json
-      </pre>
+<pre><code>
+private static void clickAction(Player player, Entity entity){
+    Profile profile = SplitbornAPI.getProfile(player.getUniqueId());
 
-      <h3>Request Body</h3>
-      <pre>
-{
-  "name": "John Doe",
-  "email": "john@example.com"
+    boolean MetAlly = profile.getBoolean(DATABANK_PATHS.ALLY_MET_PATH_ + NPC_ID.ANDREW);
+    boolean CompletedQuest = profile.getBoolean(DATABANK_PATHS.COMPLETED_QUEST_PATH_ + Quests.DEFEAT_ROTMAW);
+
+    if (MetAlly && !CompletedQuest){
+        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player);
+        return;
+    }
+
+    if (!MetAlly){
+        ANDREW_DIALOGUES.NEW_PART_1(player);
+        return;
+    }
+
+    ANDREW_INVENTORIES.ShopInventory(player);
 }
-      </pre>
-    </div>
+</code></pre>
 
-    <!-- Examples -->
-    <div class="card" id="examples">
-      <h2>Example Usage</h2>
-      <p>JavaScript fetch example:</p>
+<p><b>Step 6:</b> NPC Event</p>
 
-      <pre>
-fetch("https://api.example.com/v1/users/1", {
-  headers: {
-    "Authorization": "Bearer YOUR_API_KEY"
-  }
-})
-.then(res => res.json())
-.then(data => console.log(data));
-      </pre>
-    </div>
+<pre><code>
+@EventHandler
+public void onClick(NPCInteractEvent event){
+    Player player = event.getPlayer();
 
-  </div>
+    if (event.getNPCID().equals(NPC_ID.ANDREW)){
+        clickAction(player, event.getBukkitEntity());
+    }
+}
+</code></pre>
+
+<p><b>Step 7:</b> Spawn Registration</p>
+
+<pre><code>
+ANDREW_MAIN.Spawn();
+</code></pre>
+
+<p><b>Step 8:</b> Register class in main plugin class</p>
+
+<p><b>BONUS: Dialogue</b></p>
+
+<pre><code>
+new EasyDialogue()
+    .setPrefix(NAME)
+    .setTalkSpeed(30)
+    .setSound(Sound.ENTITY_GHAST_AMBIENT)
+    .talkPitch(2)
+    .addText(List.of(
+        "§fOh, you actually want to meet him?",
+        "I mean here!"
+    ))
+    .applyEndAction(player1 -> {
+        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player1);
+    })
+    .Start(player, ANDREW_MAIN.ENTITY);
+</code></pre>
+
+</div>
+
+<!-- PLACEHOLDERS -->
+<div class="section" id="item"><h1>SplitbornAPI - Item Creation</h1><p>Coming soon</p></div>
+<div class="section" id="curiosity"><h1>SplitbornAPI - Curiosity Creation</h1><p>Coming soon</p></div>
+<div class="section" id="userprofile"><h1>SplitbornAPI - User Profile</h1><p>Coming soon</p></div>
+<div class="section" id="entityhide"><h1>SplitbornAPI - Entity Hide Usage</h1><p>Coming soon</p></div>
+<div class="section" id="userrewards"><h1>SplitbornAPI - User Rewards</h1><p>Coming soon</p></div>
+<div class="section" id="util"><h1>SplitbornAPI - Util Provider</h1><p>Coming soon</p></div>
+<div class="section" id="helper"><h1>SplitbornAPI - Helper</h1><p>Coming soon</p></div>
+<div class="section" id="onetime"><h1>SplitbornAPI - One Time Rewards</h1><p>Coming soon</p></div>
+<div class="section" id="teleport"><h1>SplitbornAPI - Smooth Entity Teleport</h1><p>Coming soon</p></div>
+<div class="section" id="tour"><h1>SplitbornAPI - Player Tour</h1><p>Coming soon</p></div>
+
+</div>
 
 </body>
 </html>
