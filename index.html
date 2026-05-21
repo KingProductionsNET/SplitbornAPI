@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SplitbornAPI Docs</title>
 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff6b6b, #ffb347);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #d97706, #f97316, #fb923c);
   color: white;
   display: flex;
 }
@@ -35,11 +38,16 @@ body {
   text-decoration: none;
   padding: 10px;
   border-radius: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  transition: all 0.25s ease;
+  position: relative;
 }
 
+/* Hover animation */
 .sidebar a:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
+  transform: translateX(6px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
 }
 
 /* Main */
@@ -52,30 +60,26 @@ body {
 /* Header */
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+.header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
 }
 
 .header img {
-  width: 340px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  width: 220px;
+  border-radius: 16px;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* Improved welcome text */
-.welcome {
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
+/* Congrats */
 .congrats {
   color: #00ff88;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.emoji {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 /* Sections */
@@ -84,6 +88,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 25px;
+  font-family: 'Inter', sans-serif;
 }
 
 .section h1 {
@@ -91,28 +96,49 @@ body {
   padding-bottom: 6px;
 }
 
-/* Code blocks */
+/* CODE BLOCKS */
 pre {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
   padding: 15px;
   border-radius: 10px;
   overflow-x: auto;
+  position: relative;
 }
 
+/* Java text white */
 code {
-  color: #ffe66d;
+  font-family: 'Fira Code', monospace;
+  color: white;
 }
 
-/* Sidebar title */
-.sidebar h2 {
-  color: #fff;
+/* Copy button */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #22c55e;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-btn:hover {
+  background: #16a34a;
+}
+
+/* Bonus image */
+.bonus-img {
+  width: 160px;
+  margin-top: 15px;
+  border-radius: 12px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
   <h2>SplitbornAPI ⚡</h2>
 
@@ -129,19 +155,20 @@ code {
   <a href="#tour">Player Tour</a>
 </div>
 
-<!-- Main -->
 <div class="main">
 
 <!-- HEADER -->
 <div class="header">
 
-  <img src="https://i.imgur.com/I6O6Mzh.png" alt="Header Image">
+  <div class="congrats">🎉 Congratulations 🎉</div>
 
-  <div class="welcome">
-    <div class="congrats">🎉 Congratulations 🎉</div>
-    If you are reading this, you are probably a <b>KingProductions Developer</b>  
+  <p>
+    If you are reading this, you are probably a <b>KingProductions Developer</b><br>
     (or you simply have access to this website link 😄)
-  </div>
+  </p>
+
+  <!-- IMAGE MOVED BELOW TEXT -->
+  <img src="https://i.imgur.com/I6O6Mzh.png" alt="Header Image">
 
 </div>
 
@@ -149,124 +176,61 @@ code {
 <div class="section" id="npc">
 <h1>SplitbornAPI - NPC Creation 🧠</h1>
 
-<h3>How to create an NPC?</h3>
+<p><b>Step 1:</b> Add NPC to enum</p>
 
-<p><b>Step 1:</b></p>
-<p>
-Go into the SplitbornAPI NPC folder and add your NPC name into the <b>NPC_ID enum class</b>. Keep the name in uppercase to match enum style.
-</p>
+<pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>
+NPC_ID.ANDREW
+</code></pre>
 
-<p><b>Step 2:</b></p>
-<p>
-Create a new folder in the Splitborn NPC plugin named after your NPC. Then create your main NPC class.
-</p>
+<p><b>Step 2:</b> Create structure</p>
 
-<p>Optional structure inside the folder:</p>
-<ul>
-  <li>NPC_DATA 📦</li>
-  <li>NPC_DIALOGUES 💬</li>
-  <li>NPC_FUNCTIONS ⚙️</li>
-  <li>NPC_INVENTORY 🎒</li>
-  <li>NPC_NCA (click actions) 🖱️</li>
-</ul>
+<pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>
+NPC_DATA
+NPC_DIALOGUES
+NPC_FUNCTIONS
+NPC_INVENTORY
+NPC_NCA
+</code></pre>
 
 <p><b>Step 3:</b> Skin setup</p>
 
-<pre><code>
+<pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>
 private static final String Skin_Signature = "...";
 private static final String Skin_Value = "...";
 private static final String NAME = "§lAndrew";
 </code></pre>
 
-<p><b>Step 4:</b> Spawn function</p>
+<p><b>Step 4:</b> Spawn</p>
 
-<pre><code>
-public static void Spawn(){
-    SplitbornNPC npc = new SplitbornNPC(NPC_ID.ANDREW);
-    npc.setName(NAME);
-    npc.setSkin(Skin_Value, Skin_Signature);
-    npc.setLookClose(true);
-    SplitbornAPI.spawnNPC(npc);
-}
+<pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>
+SplitbornAPI.spawnNPC(npc);
 </code></pre>
 
-<p><b>Step 5:</b> Click function</p>
+<p><b>Bonus: Dialogue System</b></p>
 
-<pre><code>
-private static void clickAction(Player player, Entity entity){
-    Profile profile = SplitbornAPI.getProfile(player.getUniqueId());
-
-    boolean metAlly = profile.getBoolean("ALLY_MET");
-    boolean completedQuest = profile.getBoolean("QUEST_DONE");
-
-    if (metAlly && !completedQuest){
-        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player);
-        return;
-    }
-
-    if (!metAlly){
-        ANDREW_DIALOGUES.NEW_PART_1(player);
-        return;
-    }
-
-    ANDREW_INVENTORIES.ShopInventory(player);
-}
-</code></pre>
-
-<p><b>Step 6:</b> Event listener</p>
-
-<pre><code>
-@EventHandler
-public void onClick(NPCInteractEvent event){
-    Player player = event.getPlayer();
-
-    if (event.getNPCID().equals(NPC_ID.ANDREW)){
-        clickAction(player, event.getBukkitEntity());
-    }
-}
-</code></pre>
-
-<p><b>Step 7:</b> Spawn registration</p>
-
-<pre><code>
-ANDREW_MAIN.Spawn();
-</code></pre>
-
-<p><b>Step 8:</b> Register in main plugin class</p>
-
-<p><b>🎁 Bonus: Dialogue system</b></p>
-
-<pre><code>
+<pre><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>
 new EasyDialogue()
     .setPrefix(NAME)
-    .setTalkSpeed(30)
-    .setSound(Sound.ENTITY_GHAST_AMBIENT)
-    .talkPitch(2)
-    .addText(List.of(
-        "§fOh, you actually want to meet him?",
-        "I mean here!"
-    ))
-    .applyEndAction(player -> {
-        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player);
-    })
-    .Start(player, ANDREW_MAIN.ENTITY);
 </code></pre>
 
-</div>
-
-<!-- PLACEHOLDERS -->
-<div class="section" id="item"><h1>SplitbornAPI - Item Creation 📦</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="curiosity"><h1>SplitbornAPI - Curiosity Creation 🔍</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="userprofile"><h1>SplitbornAPI - User Profile 👤</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="entityhide"><h1>SplitbornAPI - Entity Hide Usage 👻</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="userrewards"><h1>SplitbornAPI - User Rewards 🏆</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="util"><h1>SplitbornAPI - Util Provider 🧰</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="helper"><h1>SplitbornAPI - Helper 🛠️</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="onetime"><h1>SplitbornAPI - One Time Rewards 🎁</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="teleport"><h1>SplitbornAPI - Smooth Entity Teleport ✨</h1><p>Coming soon 🚧</p></div>
-<div class="section" id="tour"><h1>SplitbornAPI - Player Tour 🧭</h1><p>Coming soon 🚧</p></div>
+<img class="bonus-img" src="https://i.imgur.com/7mb1f4N.png">
 
 </div>
+
+<!-- placeholders -->
+<div class="section"><h1>Item Creation</h1><p>Coming soon</p></div>
+<div class="section"><h1>Curiosity Creation</h1><p>Coming soon</p></div>
+
+</div>
+
+<script>
+function copyCode(btn){
+  const code = btn.nextElementSibling.innerText;
+  navigator.clipboard.writeText(code);
+  btn.innerText = "Copied!";
+  setTimeout(()=> btn.innerText="Copy", 1200);
+}
+</script>
 
 </body>
 </html>
