@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, red, orange);
+  background: linear-gradient(135deg, #ff6b6b, #ffb347);
   color: white;
   display: flex;
 }
@@ -49,22 +49,33 @@ body {
   max-width: 900px;
 }
 
-/* Header image */
+/* Header */
 .header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .header img {
-  width: 320px;
+  width: 340px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-.header p {
-  margin-top: 15px;
-  font-size: 16px;
+/* Improved welcome text */
+.welcome {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.congrats {
+  color: #00ff88;
+  font-size: 22px;
   font-weight: bold;
+}
+
+.emoji {
+  font-size: 20px;
 }
 
 /* Sections */
@@ -76,20 +87,25 @@ body {
 }
 
 .section h1 {
-  color: white;
   border-bottom: 2px solid white;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
-/* Code */
+/* Code blocks */
 pre {
   background: rgba(0,0,0,0.5);
   padding: 15px;
   border-radius: 10px;
   overflow-x: auto;
 }
+
 code {
-  color: #ffe600;
+  color: #ffe66d;
+}
+
+/* Sidebar title */
+.sidebar h2 {
+  color: #fff;
 }
 </style>
 </head>
@@ -98,7 +114,7 @@ code {
 
 <!-- Sidebar -->
 <div class="sidebar">
-  <h2>SplitbornAPI</h2>
+  <h2>SplitbornAPI ⚡</h2>
 
   <a href="#npc">NPC Creation</a>
   <a href="#item">Item Creation</a>
@@ -118,46 +134,51 @@ code {
 
 <!-- HEADER -->
 <div class="header">
-  <img src="blob:https://imgur.com/108610e8-f894-4b4c-81b4-07b70f7e9563" alt="Header Image">
-  <p>
-    Congratulations: If you are reading this you are probably a KingProductions Developer (or just have the link of this website)
-  </p>
+
+  <img src="https://i.imgur.com/I6O6Mzh.png" alt="Header Image">
+
+  <div class="welcome">
+    <div class="congrats">🎉 Congratulations 🎉</div>
+    If you are reading this, you are probably a <b>KingProductions Developer</b>  
+    (or you simply have access to this website link 😄)
+  </div>
+
 </div>
 
 <!-- NPC -->
 <div class="section" id="npc">
-<h1>SplitbornAPI - NPC Creation</h1>
+<h1>SplitbornAPI - NPC Creation 🧠</h1>
 
-<h3>How To Create A NPC?</h3>
+<h3>How to create an NPC?</h3>
 
 <p><b>Step 1:</b></p>
 <p>
-Go into the SplitbornAPI's NPC folder and add the name of your NPC into the NPC_ID enum class. Keep the name in caps so it matches the enum feeling.
+Go into the SplitbornAPI NPC folder and add your NPC name into the <b>NPC_ID enum class</b>. Keep the name in uppercase to match enum style.
 </p>
 
 <p><b>Step 2:</b></p>
 <p>
-Create a new folder in Splitborn's NPC plugin named after your NPC name. After that create your main NPC class.
+Create a new folder in the Splitborn NPC plugin named after your NPC. Then create your main NPC class.
 </p>
 
-<p>Example sub-classes:</p>
+<p>Optional structure inside the folder:</p>
 <ul>
-  <li>NPC_DATA</li>
-  <li>NPC_DIALOGUES</li>
-  <li>NPC_FUNCTIONS</li>
-  <li>NPC_INVENTORY</li>
-  <li>NPC_NCA</li>
+  <li>NPC_DATA 📦</li>
+  <li>NPC_DIALOGUES 💬</li>
+  <li>NPC_FUNCTIONS ⚙️</li>
+  <li>NPC_INVENTORY 🎒</li>
+  <li>NPC_NCA (click actions) 🖱️</li>
 </ul>
 
-<p><b>Step 3:</b></p>
+<p><b>Step 3:</b> Skin setup</p>
 
 <pre><code>
-private static final String Skin_Signature = "OCIx1T2jJJqTsdGUYMEcg5LABYtqxGxK8REh...";
-private static final String Skin_Value = "ewogICJ0aW1lc3RhbXAiOiAxNzcxNTMx...";
+private static final String Skin_Signature = "...";
+private static final String Skin_Value = "...";
 private static final String NAME = "§lAndrew";
 </code></pre>
 
-<p><b>Step 4: Spawn Function</b></p>
+<p><b>Step 4:</b> Spawn function</p>
 
 <pre><code>
 public static void Spawn(){
@@ -169,21 +190,21 @@ public static void Spawn(){
 }
 </code></pre>
 
-<p><b>Step 5: Click Function</b></p>
+<p><b>Step 5:</b> Click function</p>
 
 <pre><code>
 private static void clickAction(Player player, Entity entity){
     Profile profile = SplitbornAPI.getProfile(player.getUniqueId());
 
-    boolean MetAlly = profile.getBoolean(DATABANK_PATHS.ALLY_MET_PATH_ + NPC_ID.ANDREW);
-    boolean CompletedQuest = profile.getBoolean(DATABANK_PATHS.COMPLETED_QUEST_PATH_ + Quests.DEFEAT_ROTMAW);
+    boolean metAlly = profile.getBoolean("ALLY_MET");
+    boolean completedQuest = profile.getBoolean("QUEST_DONE");
 
-    if (MetAlly && !CompletedQuest){
+    if (metAlly && !completedQuest){
         ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player);
         return;
     }
 
-    if (!MetAlly){
+    if (!metAlly){
         ANDREW_DIALOGUES.NEW_PART_1(player);
         return;
     }
@@ -192,7 +213,7 @@ private static void clickAction(Player player, Entity entity){
 }
 </code></pre>
 
-<p><b>Step 6:</b> NPC Event</p>
+<p><b>Step 6:</b> Event listener</p>
 
 <pre><code>
 @EventHandler
@@ -205,15 +226,15 @@ public void onClick(NPCInteractEvent event){
 }
 </code></pre>
 
-<p><b>Step 7:</b> Spawn Registration</p>
+<p><b>Step 7:</b> Spawn registration</p>
 
 <pre><code>
 ANDREW_MAIN.Spawn();
 </code></pre>
 
-<p><b>Step 8:</b> Register class in main plugin class</p>
+<p><b>Step 8:</b> Register in main plugin class</p>
 
-<p><b>BONUS: Dialogue</b></p>
+<p><b>🎁 Bonus: Dialogue system</b></p>
 
 <pre><code>
 new EasyDialogue()
@@ -225,8 +246,8 @@ new EasyDialogue()
         "§fOh, you actually want to meet him?",
         "I mean here!"
     ))
-    .applyEndAction(player1 -> {
-        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player1);
+    .applyEndAction(player -> {
+        ANDREW_FUNCTIONS.NEW_HANDLE_WALL_OPEN_ANIMATION(player);
     })
     .Start(player, ANDREW_MAIN.ENTITY);
 </code></pre>
@@ -234,16 +255,16 @@ new EasyDialogue()
 </div>
 
 <!-- PLACEHOLDERS -->
-<div class="section" id="item"><h1>SplitbornAPI - Item Creation</h1><p>Coming soon</p></div>
-<div class="section" id="curiosity"><h1>SplitbornAPI - Curiosity Creation</h1><p>Coming soon</p></div>
-<div class="section" id="userprofile"><h1>SplitbornAPI - User Profile</h1><p>Coming soon</p></div>
-<div class="section" id="entityhide"><h1>SplitbornAPI - Entity Hide Usage</h1><p>Coming soon</p></div>
-<div class="section" id="userrewards"><h1>SplitbornAPI - User Rewards</h1><p>Coming soon</p></div>
-<div class="section" id="util"><h1>SplitbornAPI - Util Provider</h1><p>Coming soon</p></div>
-<div class="section" id="helper"><h1>SplitbornAPI - Helper</h1><p>Coming soon</p></div>
-<div class="section" id="onetime"><h1>SplitbornAPI - One Time Rewards</h1><p>Coming soon</p></div>
-<div class="section" id="teleport"><h1>SplitbornAPI - Smooth Entity Teleport</h1><p>Coming soon</p></div>
-<div class="section" id="tour"><h1>SplitbornAPI - Player Tour</h1><p>Coming soon</p></div>
+<div class="section" id="item"><h1>SplitbornAPI - Item Creation 📦</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="curiosity"><h1>SplitbornAPI - Curiosity Creation 🔍</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="userprofile"><h1>SplitbornAPI - User Profile 👤</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="entityhide"><h1>SplitbornAPI - Entity Hide Usage 👻</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="userrewards"><h1>SplitbornAPI - User Rewards 🏆</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="util"><h1>SplitbornAPI - Util Provider 🧰</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="helper"><h1>SplitbornAPI - Helper 🛠️</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="onetime"><h1>SplitbornAPI - One Time Rewards 🎁</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="teleport"><h1>SplitbornAPI - Smooth Entity Teleport ✨</h1><p>Coming soon 🚧</p></div>
+<div class="section" id="tour"><h1>SplitbornAPI - Player Tour 🧭</h1><p>Coming soon 🚧</p></div>
 
 </div>
 
