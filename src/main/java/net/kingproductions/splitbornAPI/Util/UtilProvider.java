@@ -20,5 +20,6 @@ public interface UtilProvider {
     Location getRandomSurfaceLocation(Location center, int radius);
     void getAllRegisteredUUID(Consumer<List<UUID>> callback);
     void setObjectIntoDB(String CollectionName, String ID, String oPath, Object o, boolean replace);
+    Object getDBObject(String CollectionName, String path);
 
 }
