@@ -5,6 +5,7 @@ public enum Locations {
     Hearthgrove,
     The_Fold,
     Doomrest,
-    The_Beyond;
+    The_Beyond,
+    Sporewood;
 
 }
