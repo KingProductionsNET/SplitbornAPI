@@ -28,7 +28,6 @@ public interface Profile {
     void setSupplyBonusChance(double i);
     void setClaimedSupplies(int i);
 
-
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
     void setInteger(String path, int i);
