@@ -18,6 +18,7 @@ public class QuestCreator {
         set.add(QUEST_Chup_Hunter());
         set.add(QUEST_Defeat_Rotmaw());
         set.add(QUEST_Eliminate_The_Creator());
+        set.add(QUEST_The_Lost_Caravan());
         return set;
     }
 
@@ -42,6 +43,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.ELIMINATE_THE_CREATURE);
         questData.setQuestLocation(Locations.Hearthgrove);
         questData.setDisplayMaterial(Material.DRIED_KELP);
+
+        return questData;
+    }
+    private static QuestData QUEST_The_Lost_Caravan(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.THE_LOST_CARAVAN);
+        questData.setQuestLocation(Locations.Hearthgrove);
+        questData.setDisplayMaterial(Material.BARREL);
 
         return questData;
     }

@@ -59,7 +59,7 @@ public class NoteBlockAPI {
                         this.cancel();
                     }
                 }
-            }.runTaskTimer(plugin, 0, 10);
+            }.runTaskTimer(plugin, 0, 1);
         }
 
         List<EntitySongPlayer> list = playersSongs.getOrDefault(player.getUniqueId(), new ArrayList<>());
