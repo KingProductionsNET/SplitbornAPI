@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.Util;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.TextDisplay;
 
@@ -21,5 +22,6 @@ public interface UtilProvider {
     void getAllRegisteredUUID(Consumer<List<UUID>> callback);
     void setObjectIntoDB(String CollectionName, String ID, String oPath, Object o, boolean replace);
     Object getDBObject(String CollectionName, String oPath, String path);
+    void arcMove(Entity e, Location loc1, Location loc2);
 
 }
