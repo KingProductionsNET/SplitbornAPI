@@ -2,6 +2,6 @@ package net.kingproductions.splitbornAPI.SupplyContainer;
 
 public enum SUPPLY_ID {
 
-    NEAR_ACTION_HOUSE
+    NEAR_ACTION_HOUSE,NEAR_WATERFALL,NEAR_BLUE_MUSHROOM,NEAR_SPOREWOOD,NEAR_CAVE_BOSS
 
 }
