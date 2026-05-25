@@ -17,6 +17,7 @@ public class ACHIEVEMENT_REWARD_DATA {
 
         if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) gleamReward = 4000;
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) gleamReward = 2000;
+        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) gleamReward = 500;
         return gleamReward;
     }
 
@@ -24,7 +25,8 @@ public class ACHIEVEMENT_REWARD_DATA {
         int xpReward = 0;
 
         if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 1000;
-        if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 500;
+        if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 200;
+        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
 
 
         return xpReward;
