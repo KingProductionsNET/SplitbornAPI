@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -10,6 +11,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -104,10 +106,12 @@ public class CosmeticTour implements Listener {
         if (!Music.equalsIgnoreCase("-")) NoteBlockAPI.Play(Passenger, Music, true);
     }
 
+    private static final Map<UUID, UUID> playersShuttle = new HashMap<>();
+
     private void startSegment(Player passenger, Entity shuttle, Location loc1, Location loc2, int speed, Iterator<Location> remainingLocations) {
         if (passenger == null || shuttle == null) return;
         isInATour.add(Passenger);
-
+        playersShuttle.put(Passenger.getUniqueId(), shuttle.getUniqueId());
 
         double distance = loc1.distance(loc2);
         int points = (int) (distance * INGORE);
@@ -118,7 +122,7 @@ public class CosmeticTour implements Listener {
 
             @Override
             public void run() {
-                if (passenger == null || !passenger.isOnline()){
+                if (!passenger.isOnline()){
                     shuttle.remove();
                     this.cancel();
                     return;
@@ -175,5 +179,18 @@ public class CosmeticTour implements Listener {
     @EventHandler
     public void noExit(PlayerToggleSneakEvent event){
         if (isInATour.contains(event.getPlayer())) event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event){
+        Player player = event.getPlayer();
+
+        UUID uuid = playersShuttle.getOrDefault(player.getUniqueId(), null);
+        if (uuid != null){
+            Entity e = Bukkit.getEntity(uuid);
+
+            if (e != null) e.remove();
+            playersShuttle.remove(player.getUniqueId());
+        }
     }
 }

@@ -218,6 +218,7 @@ public class CategoryRewardBuilder {
         if (reason.equals(REWARD_REASON.ACHIEVEMENT)){
             DatabankPath = DATABANK_PATHS.ACHIEVEMENT_UNLOCKED_PATH_.toString();
             inputAssistForDatabank = achievementId.toString();
+            NoteBlockAPI.Play(player, NBS_FILE_NAMES.ACHIEVEMENT.toString(), false);
         }
         if (reason.equals(REWARD_REASON.SEALED_VOID_GATE)){
             DatabankPath = DATABANK_PATHS.SEALED_VOID_GATE_PATH_.toString();
