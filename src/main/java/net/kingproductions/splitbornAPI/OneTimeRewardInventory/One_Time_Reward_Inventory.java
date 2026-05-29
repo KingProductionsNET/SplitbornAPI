@@ -34,6 +34,8 @@ public class One_Time_Reward_Inventory implements Listener {
     public static final Map<UUID, Consumer<Player>> on_Claim_Action = new HashMap<>();
 
     public static void Inventory(Player player, Item_ID itemId, int Amount, Consumer<Player> c){
+        on_Claim_Action.remove(player.getUniqueId());
+
         Inventory inv = Bukkit.createInventory(player, 5*9, Title);
         for (int i = 0; i < inv.getSize(); i++) inv.setItem(i, new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE).setDisplayName("§e").build());
         for (int i = 10; i <= inv.getSize() - 10; i++){
@@ -194,6 +196,9 @@ public class One_Time_Reward_Inventory implements Listener {
         player.sendTitle("§8[§c§l!§8]", "", 10, 30, 10);
 
         closeAnimation.add(player.getUniqueId());
+
+        Consumer<Player> c = on_Claim_Action.getOrDefault(player.getUniqueId(), null);
+        if (c != null) c.accept(player);
     }
 
     @EventHandler

@@ -12,6 +12,7 @@ public enum Quests {
     FIND_ANDREWS_TOY,
     DEFEAT_ROTMAW,
     THE_LOST_CARAVAN,
+    LAZY_FISHER,
 
     DEFAULT_NONE;
 
