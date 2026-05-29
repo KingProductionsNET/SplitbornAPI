@@ -25,6 +25,8 @@ public enum DATABANK_PATHS {
     FIRST_JOINED,
     ATTACK_DAMAGE,
     NAME,
+    RANGE,
+    REEL_SPEED,
 
     AREA_DISCOVERED_PATH_,
 
