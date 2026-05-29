@@ -11,6 +11,8 @@ public enum Item_Paths {
     SPEED_PATH,
     STAMINA_PATH,
     HEALTH_PATH,
+    RANGE_PATH,
+    REEL_SPEED_PATH,
 
     ITEM_RARITY_PATH,
 
