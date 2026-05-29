@@ -51,6 +51,8 @@ public interface HelperProvider {
     String getLoreReady_Stamina(int value);
     String getLoreReady_Speed(int value);
     String getLoreReady_AttackDamage(int value);
+    String getLoreReady_Range(int value);
+    String getLoreReady_ReelSpeed(int value);
     boolean isValidSplitbornItem(ItemStack itemStack);
     Item_ID getItemStacksItemID(ItemStack itemStack);
 
