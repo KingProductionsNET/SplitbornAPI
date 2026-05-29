@@ -35,6 +35,8 @@ public interface HelperProvider {
     String getEquipmentBonusSymbol();
     String getArrowSymbol();
     String getLocationSymbol();
+    String getRangeSymbol();
+    String getReelSpeedSymbol();
     boolean playerHasActiveQuest(Player player);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
     void fireworkForLevelUpgrade(Player player);

@@ -19,6 +19,8 @@ public interface Profile {
     int getSupplyLevel();
     double getSupplyBonusChance();
     int getClaimedSupplies();
+    int getRange();
+    int getReelSpeed();
 
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
@@ -27,6 +29,8 @@ public interface Profile {
     void setSupplyLevel(int i);
     void setSupplyBonusChance(double i);
     void setClaimedSupplies(int i);
+    void setRange(int i);
+    void setReelSpeed(int i);
 
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
