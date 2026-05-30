@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Util;
 
+import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -23,5 +24,7 @@ public interface UtilProvider {
     void setObjectIntoDB(String CollectionName, String ID, String oPath, Object o, boolean replace);
     Object getDBObject(String CollectionName, String oPath, String path);
     void arcMove(Entity e, Location loc1, Location loc2, int speed);
+    void boostTo(Entity e, Location targetLoc, double strength);
+    void spawnRPGMob(Mob_ID mobId);
 
 }

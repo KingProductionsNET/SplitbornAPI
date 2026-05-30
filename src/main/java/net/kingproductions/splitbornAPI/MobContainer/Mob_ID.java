@@ -2,6 +2,6 @@ package net.kingproductions.splitbornAPI.MobContainer;
 
 public enum Mob_ID {
 
-    CHUP,ZEMTEX
+    CHUP,ZEMTEX,SPEEDY_TURTLE
 
 }
