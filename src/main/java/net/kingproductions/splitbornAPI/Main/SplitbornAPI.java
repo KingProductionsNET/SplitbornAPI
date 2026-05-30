@@ -8,6 +8,7 @@ import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
 import net.kingproductions.splitbornAPI.LocationsContainer.LocationSpawnPoints;
+import net.kingproductions.splitbornAPI.MobContainer.RPGMobProvider;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
 import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
 import net.kingproductions.splitbornAPI.OneTimeRewardInventory.One_Time_Reward_Inventory;
