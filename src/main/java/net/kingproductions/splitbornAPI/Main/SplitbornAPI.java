@@ -52,6 +52,9 @@ public final class SplitbornAPI extends JavaPlugin {
         commandBlockProvider = c;
         utilProvider = u;
     }
+    public static void initRPGMobs(RPGMobProvider r){
+        rpgMobProvider = r;
+    }
 
     public static Profile getProfile(UUID uuid) {
         if (profileProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
@@ -81,9 +84,9 @@ public final class SplitbornAPI extends JavaPlugin {
         if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return utilProvider;
     }
-    public static void initRPGMobs(RPGMobProvider r){
+    public static RPGMobProvider getMobSystem(){
         if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
-        rpgMobProvider = r;
+        return rpgMobProvider;
     }
 
     @Override
