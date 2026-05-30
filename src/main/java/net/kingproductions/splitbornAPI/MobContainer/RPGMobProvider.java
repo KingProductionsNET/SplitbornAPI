@@ -5,6 +5,6 @@ import org.bukkit.entity.Entity;
 
 public interface RPGMobProvider {
 
-    Entity spawnRPGMob(Mob_ID mobId, Location spawnLocation);
+    Entity spawnMob(Mob_ID mobId, Location spawnLocation);
 
 }

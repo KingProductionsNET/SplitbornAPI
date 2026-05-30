@@ -39,6 +39,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static QuestProvider questProvider;
     private static CommandBlockProvider commandBlockProvider;
     private static UtilProvider utilProvider;
+    private static RPGMobProvider rpgMobProvider;
 
     public SplitbornAPI() {}
 
@@ -79,6 +80,10 @@ public final class SplitbornAPI extends JavaPlugin {
     public static UtilProvider getUtil(){
         if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return utilProvider;
+    }
+    public static void initRPGMobs(RPGMobProvider r){
+        if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        rpgMobProvider = r;
     }
 
     @Override
