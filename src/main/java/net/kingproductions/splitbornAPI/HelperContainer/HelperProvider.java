@@ -62,5 +62,6 @@ public interface HelperProvider {
     Locations getBukkitLocationsSplitbornLocation(Location location);
     int getPlayersTotalDamage(Player player);
     boolean isRPGMob(Entity e);
+    void markInventoryChanged(Player player);
 
 }
