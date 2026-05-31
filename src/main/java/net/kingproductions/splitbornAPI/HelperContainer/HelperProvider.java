@@ -61,5 +61,6 @@ public interface HelperProvider {
     Location customDeserialize(String string);
     Locations getBukkitLocationsSplitbornLocation(Location location);
     int getPlayersTotalDamage(Player player);
+    boolean isRPGMob(Entity e);
 
 }
