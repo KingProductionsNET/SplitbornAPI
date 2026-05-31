@@ -40,5 +40,6 @@ public interface Profile {
     int getInteger(String Path);
 
     void addUnclaimedItem(Item_ID itemId, int Amount);
+    boolean getSetting_Drop_Announcement(int tier);
 
 }
