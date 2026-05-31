@@ -57,5 +57,7 @@ public interface HelperProvider {
     boolean isValidSplitbornItem(ItemStack itemStack);
     Item_ID getItemStacksItemID(ItemStack itemStack);
     Locations getPlayersLocation(Player player);
+    String customSerialize(Location location);
+    Location customDeserialize(String string);
 
 }
