@@ -59,5 +59,6 @@ public interface HelperProvider {
     Locations getPlayersLocation(Player player);
     String customSerialize(Location location);
     Location customDeserialize(String string);
+    Locations getBukkitLocationsSplitbornLocation(Location location);
 
 }
