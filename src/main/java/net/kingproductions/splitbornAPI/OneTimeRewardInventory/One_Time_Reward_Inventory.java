@@ -101,7 +101,7 @@ public class One_Time_Reward_Inventory implements Listener {
                             if (!claimedReward.contains(player.getUniqueId())) player.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 0.1F, pitch);
 
                             if (!latestChangedSlot.isEmpty()){
-                                inv.setItem(latestChangedSlot.getFirst(), new ItemBuilder(Material.CYAN_STAINED_GLASS_PANE).setDisplayName("").build());
+                                inv.setItem(latestChangedSlot.getFirst(), new ItemBuilder(Material.CYAN_STAINED_GLASS_PANE).setDisplayName("§e").build());
                                 latestChangedSlot.clear();
                             }
 
