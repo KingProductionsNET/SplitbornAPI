@@ -34,6 +34,7 @@ public class FishingEvent extends Event implements Cancellable {
         return player;
     }
 
+
     public boolean isAboutToCatchSomething() {
         return isAboutToCatchSomething;
     }
@@ -43,6 +44,13 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public void setModifiedItemDrop(ItemStack i){
         this.modifiedItemDrop = i;
+    }
+
+    public Entity getModifiedEntityDrop(){
+        return modifiedEntityDrop;
+    }
+    public ItemStack getModifiedItemDrop(){
+        return modifiedItemDrop;
     }
 
     @Override
