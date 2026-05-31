@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.FishingContainer;
 
 import net.kingproductions.splitbornAPI.NPC.NPCInteractEvent;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
@@ -22,12 +23,15 @@ public class FishingEvent extends Event implements Cancellable {
     private Entity modifiedEntityDrop;
     private ItemStack modifiedItemDrop;
 
-    public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop) {
+    private Location hookLocation;
+
+    public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop, Location hookLocation) {
         this.player = player;
         this.isAboutToCatchSomething = isAboutToCatchSomething;
         this.cancelled = cancelled;
         this.modifiedEntityDrop = modifiedEntityDrop;
         this.modifiedItemDrop = modifiedItemDrop;
+        this.hookLocation = hookLocation;
     }
 
     public Player getPlayer() {
@@ -51,6 +55,9 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public ItemStack getModifiedItemDrop(){
         return modifiedItemDrop;
+    }
+    public Location getHookLocation(){
+        return hookLocation;
     }
 
     @Override
