@@ -71,7 +71,7 @@ public class One_Time_Reward_Inventory implements Listener {
         rotatingSlots.add(21);
 
         for (int animationSlot : rotatingSlots){
-            inv.setItem(animationSlot, new ItemBuilder(Material.CYAN_STAINED_GLASS_PANE).setDisplayName("").build());
+            inv.setItem(animationSlot, new ItemBuilder(Material.YELLOW_STAINED_GLASS_PANE).setDisplayName("§e").build());
         }
 
         new BukkitRunnable(){
@@ -97,11 +97,11 @@ public class One_Time_Reward_Inventory implements Listener {
                         float pitch = f;
 
                         Bukkit.getScheduler().runTaskLater(plugin, () ->{
-                            inv.setItem(animationSlot, new ItemBuilder(Material.BLUE_STAINED_GLASS_PANE).setDisplayName("§e").build());
+                            inv.setItem(animationSlot, new ItemBuilder(Material.ORANGE_STAINED_GLASS_PANE).setDisplayName("§e").build());
                             if (!claimedReward.contains(player.getUniqueId())) player.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 0.1F, pitch);
 
                             if (!latestChangedSlot.isEmpty()){
-                                inv.setItem(latestChangedSlot.getFirst(), new ItemBuilder(Material.CYAN_STAINED_GLASS_PANE).setDisplayName("§e").build());
+                                inv.setItem(latestChangedSlot.getFirst(), new ItemBuilder(Material.YELLOW_STAINED_GLASS_PANE).setDisplayName("§e").build());
                                 latestChangedSlot.clear();
                             }
 
@@ -113,13 +113,13 @@ public class One_Time_Reward_Inventory implements Listener {
                     }
 
                     Bukkit.getScheduler().runTaskLater(plugin, () ->{
-                        inv.setItem(rotatingSlots.getFirst(), new ItemBuilder(Material.BLUE_STAINED_GLASS_PANE).setDisplayName("§e").build());
+                        inv.setItem(rotatingSlots.getFirst(), new ItemBuilder(Material.ORANGE_STAINED_GLASS_PANE).setDisplayName("§e").build());
                         if (!claimedReward.contains(player.getUniqueId())) player.playSound(player.getLocation(), Sound.BLOCK_BELL_RESONATE, 0.1F, f);
 
                         for (int animationSlot : rotatingSlots){
                             if (animationSlot == rotatingSlots.getFirst()) continue;
 
-                            inv.setItem(animationSlot, new ItemBuilder(Material.CYAN_STAINED_GLASS_PANE).setDisplayName("").build());
+                            inv.setItem(animationSlot, new ItemBuilder(Material.YELLOW_STAINED_GLASS_PANE).setDisplayName("").build());
                         }
 
                         f = 0.2F;
