@@ -38,6 +38,8 @@ public interface HelperProvider {
     String getLocationSymbol();
     String getRangeSymbol();
     String getReelSpeedSymbol();
+    String getTerrestrialSymbol();
+    String getAquaticSymbol();
     boolean playerHasActiveQuest(Player player);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
     void fireworkForLevelUpgrade(Player player);
