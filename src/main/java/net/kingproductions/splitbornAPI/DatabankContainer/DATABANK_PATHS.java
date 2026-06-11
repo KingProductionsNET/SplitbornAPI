@@ -37,6 +37,7 @@ public enum DATABANK_PATHS {
     FRIENDS_SINCE_PATH,
 
     KILLS_,
+    DEATH_,
 
     KILL_LOG_LEVEL_,
 
