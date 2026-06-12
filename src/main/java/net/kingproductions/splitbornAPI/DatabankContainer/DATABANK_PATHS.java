@@ -69,5 +69,5 @@ public enum DATABANK_PATHS {
     FRIENDS,
     FRIEND_REQUESTS,
 
-
+    KILL_LOG_CLAIMED_
 }
