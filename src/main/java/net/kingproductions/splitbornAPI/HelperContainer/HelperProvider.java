@@ -66,5 +66,6 @@ public interface HelperProvider {
     boolean isRPGMob(Entity e);
     void markInventoryChanged(Player player);
     int getPlayersExtraReelSpeed(Player player);
+    String formatInteger(int i);
 
 }
