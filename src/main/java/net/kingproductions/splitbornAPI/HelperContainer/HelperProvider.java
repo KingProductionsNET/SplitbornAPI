@@ -65,5 +65,6 @@ public interface HelperProvider {
     int getPlayersTotalDamage(Player player);
     boolean isRPGMob(Entity e);
     void markInventoryChanged(Player player);
+    int getPlayersExtraReelSpeed(Player player);
 
 }
