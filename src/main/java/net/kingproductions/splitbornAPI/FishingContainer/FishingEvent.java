@@ -22,16 +22,20 @@ public class FishingEvent extends Event implements Cancellable {
 
     private Entity modifiedEntityDrop;
     private ItemStack modifiedItemDrop;
-
     private Location hookLocation;
 
-    public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop, Location hookLocation) {
+    private Entity fishedEntity;
+    private ItemStack fishedItemStack;
+
+    public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop, Location hookLocation, Entity fishedEntity, ItemStack fishedItem) {
         this.player = player;
         this.isAboutToCatchSomething = isAboutToCatchSomething;
         this.cancelled = cancelled;
         this.modifiedEntityDrop = modifiedEntityDrop;
         this.modifiedItemDrop = modifiedItemDrop;
         this.hookLocation = hookLocation;
+        this.fishedEntity = fishedEntity;
+        this.fishedItemStack = fishedItem;
     }
 
     public Player getPlayer() {
@@ -59,6 +63,8 @@ public class FishingEvent extends Event implements Cancellable {
     public Location getHookLocation(){
         return hookLocation;
     }
+    public Entity getFishedEntity(){return fishedEntity;}
+    public ItemStack getFishedItemStack(){return fishedItemStack;}
 
     @Override
     public boolean isCancelled() {

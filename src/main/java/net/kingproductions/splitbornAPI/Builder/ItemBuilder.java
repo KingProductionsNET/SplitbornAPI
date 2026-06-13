@@ -116,7 +116,7 @@ public class ItemBuilder {
             int Amount = Integer.parseInt(Item_String.substring(lastUnderscore + 1));
 
             if (ItemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())){
-                lore.add("§6" + Amount + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+                lore.add("§6" + SplitbornAPI.getHelper().formatInteger(Amount) + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
                 continue;
             }
 
