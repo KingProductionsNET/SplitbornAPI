@@ -67,5 +67,6 @@ public interface HelperProvider {
     void markInventoryChanged(Player player);
     int getPlayersExtraReelSpeed(Player player);
     String formatInteger(int i);
+    String getTimeAgo(String longAsString);
 
 }

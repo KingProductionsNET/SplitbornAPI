@@ -234,6 +234,8 @@ public class CategoryRewardBuilder {
         profileData.setGleams(profileData.getGleams() + GleamReward);
 
         profileData.setBoolean(DatabankPath + inputAssistForDatabank, true);
+        profileData.setString(DatabankPath + inputAssistForDatabank + "_time", String.valueOf(System.currentTimeMillis()));
+
         SplitbornAPI.getHelper().updatePlayersScoreboard(player);
     }
 }
