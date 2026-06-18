@@ -71,5 +71,7 @@ public enum DATABANK_PATHS {
 
     KILL_LOG_CLAIMED_,
 
-    TOTAL_CATCHES
+    TOTAL_CATCHES,
+
+    BONUS_ITEM_
 }
