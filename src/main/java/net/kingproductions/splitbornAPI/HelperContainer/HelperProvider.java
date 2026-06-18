@@ -69,5 +69,6 @@ public interface HelperProvider {
     String formatInteger(int i);
     String getTimeAgo(String longAsString);
     String getPlayersDisplayName(Player player);
+    String getPlayersRankAsString(Player player);
 
 }
