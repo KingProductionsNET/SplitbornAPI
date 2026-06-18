@@ -68,5 +68,6 @@ public interface HelperProvider {
     int getPlayersExtraReelSpeed(Player player);
     String formatInteger(int i);
     String getTimeAgo(String longAsString);
+    String getPlayersDisplayName(Player player);
 
 }
