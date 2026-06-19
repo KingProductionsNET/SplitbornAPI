@@ -18,13 +18,15 @@ public class DamageEvent extends Event implements Cancellable {
     private final Entity damager;
     private final Mob_ID mobId;
     private boolean cancelled;
+    private final int damage;
 
-    public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damager, Mob_ID mobId){
+    public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damager, Mob_ID mobId, int damage){
         this.player = player;
         this.reason = reason;
         this.cancelled = cancelled;
         this.damager = damager;
         this.mobId = mobId;
+        this.damage = damage;
     }
 
     public Player getPlayer(){
@@ -38,6 +40,9 @@ public class DamageEvent extends Event implements Cancellable {
     }
     public Mob_ID getMobId(){
         return mobId;
+    }
+    public int getDamage(){
+        return damage;
     }
 
     @Override
