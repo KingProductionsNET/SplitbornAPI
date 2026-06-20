@@ -44,6 +44,7 @@ public enum Item_ID {
     SLOTH_KINGS_ROD,
     ILL_FISH_TOMORROW_ROD,
 
-    ALCHEMICAL_AIR
+    ALCHEMICAL_AIR,
+    HOT_CROSSBOW
 
 }
