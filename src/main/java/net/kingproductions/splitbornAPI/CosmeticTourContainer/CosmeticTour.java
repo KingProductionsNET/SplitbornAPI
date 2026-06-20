@@ -116,6 +116,8 @@ public class CosmeticTour implements Listener {
         double distance = loc1.distance(loc2);
         int points = (int) (distance * INGORE);
 
+        passenger.setInvulnerable(true);
+
         new BukkitRunnable() {
             int currentPoint = 0;
             int playGallop = 0;
@@ -124,6 +126,7 @@ public class CosmeticTour implements Listener {
             public void run() {
                 if (!passenger.isOnline()){
                     shuttle.remove();
+                    passenger.setInvulnerable(false);
                     this.cancel();
                     return;
                 }
@@ -147,6 +150,8 @@ public class CosmeticTour implements Listener {
                         if (consumer != null){
                             consumer.accept(Passenger);
                         }
+
+                        passenger.setInvulnerable(false);
                     }
                     return;
                 }
