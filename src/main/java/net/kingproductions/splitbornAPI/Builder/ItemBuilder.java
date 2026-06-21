@@ -110,27 +110,39 @@ public class ItemBuilder {
 
         lore.add("");
         lore.add("§7Cost:");
-        for (String Item_String : costList){
-            int lastUnderscore = Item_String.lastIndexOf("_");
+        List<String> gleamLore = new ArrayList<>();
+        List<String> essenceLore = new ArrayList<>();
+        List<String> itemLore = new ArrayList<>();
 
-            String ItemID = Item_String.substring(0, lastUnderscore);
-            int Amount = Integer.parseInt(Item_String.substring(lastUnderscore + 1));
+        for (String itemString : costList) {
+            int lastUnderscore = itemString.lastIndexOf("_");
 
-            try {
-                Essence_ID essenceId = Essence_ID.valueOf(ItemID);
+            String itemID = itemString.substring(0, lastUnderscore);
+            int amount = Integer.parseInt(itemString.substring(lastUnderscore + 1));
 
-                lore.add("§e" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString()) + " §dEssence" + SplitbornAPI.getHelper().getEssenceSymbol());
-                continue;
-            } catch (Exception ignore){}
-
-            if (ItemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())){
-                lore.add("§6" + SplitbornAPI.getHelper().formatInteger(Amount) + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+            if (itemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())) {
+                gleamLore.add("§6" + SplitbornAPI.getHelper().formatInteger(amount)
+                        + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
                 continue;
             }
 
-            ItemStack finalItem = SplitbornAPI.getItem(Item_ID.valueOf(ItemID));
-            lore.add("§7" + Amount + "x " + finalItem.getItemMeta().getDisplayName());
+            try {
+                Essence_ID essenceId = Essence_ID.valueOf(itemID);
+
+                essenceLore.add("§e" + SplitbornAPI.getHelper().formatInteger(amount)
+                        + " §d" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString())
+                        + " Essence" + SplitbornAPI.getHelper().getEssenceSymbol());
+                continue;
+            } catch (Exception ignore) {}
+
+            ItemStack finalItem = SplitbornAPI.getItem(Item_ID.valueOf(itemID));
+            itemLore.add("§7" + amount + "x " + finalItem.getItemMeta().getDisplayName());
         }
+
+// Add in desired order
+        lore.addAll(gleamLore);
+        lore.addAll(essenceLore);
+        lore.addAll(itemLore);
         lore.add("");
         lore.add("§eClick to purchase.");
         meta.setLore(lore);
