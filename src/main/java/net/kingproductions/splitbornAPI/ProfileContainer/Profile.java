@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.ProfileContainer;
 
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import org.bukkit.entity.Player;
 
@@ -43,5 +44,8 @@ public interface Profile {
     boolean getSetting_Drop_Announcement(int tier);
 
     String getPlayersRankAsString();
+
+    void setEssence(Essence_ID essence);
+    int getEssence(Essence_ID essenceId);
 
 }
