@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Builder;
 
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Paths;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
@@ -114,6 +115,13 @@ public class ItemBuilder {
 
             String ItemID = Item_String.substring(0, lastUnderscore);
             int Amount = Integer.parseInt(Item_String.substring(lastUnderscore + 1));
+
+            try {
+                Essence_ID essenceId = Essence_ID.valueOf(ItemID);
+
+                lore.add("§e" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString()) + " §dEssence" + SplitbornAPI.getHelper().getEssenceSymbol());
+                continue;
+            } catch (Exception ignore){}
 
             if (ItemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())){
                 lore.add("§6" + SplitbornAPI.getHelper().formatInteger(Amount) + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
