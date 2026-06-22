@@ -35,7 +35,6 @@ public final class SplitbornAPI extends JavaPlugin {
     private static final String API_NOT_FOUND_STRING = "Splitborn API not found!";
 
     private static ProfileProvider profileProvider;
-    private static SplitbornItemProvider splitbornItemProvider;
     private static NPCProvider npcProvider;
     private static HelperProvider helperProvider;
     private static QuestProvider questProvider;
@@ -49,7 +48,7 @@ public final class SplitbornAPI extends JavaPlugin {
 
     public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q, CommandBlockProvider c, UtilProvider u) {
         profileProvider = p;
-        splitbornItemProvider = i;
+        itemProviders.add(i);
         npcProvider = n;
         helperProvider = h;
         questProvider = q;
