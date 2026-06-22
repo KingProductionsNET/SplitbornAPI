@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.HelperContainer;
 
+import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
@@ -73,8 +74,9 @@ public interface HelperProvider {
     boolean bonusItemIsActive(Player player, Item_ID itemId);
     void fillInventory(Inventory inventory, Material material);
     Rarities getItemsRarity(ItemStack itemStack);
-    boolean isWearing(Item_ID itemId);
-    boolean isHolding(Item_ID itemId);
-    boolean inventoryContains(Item_ID itemId);
+    boolean isWearing(Player player, Item_ID itemId);
+    boolean isHolding(Player player, Item_ID itemId);
+    boolean inventoryContains(Player player, Item_ID itemId);
+    Item_Category getItemCategory(Item_ID itemId);
 
 }
