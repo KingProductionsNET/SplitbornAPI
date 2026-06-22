@@ -48,6 +48,7 @@ public interface Profile {
 
     void setEssence(Essence_ID essence, int amount);
     int getEssence(Essence_ID essenceId);
-    Stat getStat(Stat stat);
+    int getBaseStatValue(Stat stat);
+    int getFullStatValue(Stat stat);
 
 }
