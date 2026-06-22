@@ -73,5 +73,8 @@ public interface HelperProvider {
     boolean bonusItemIsActive(Player player, Item_ID itemId);
     void fillInventory(Inventory inventory, Material material);
     Rarities getItemsRarity(ItemStack itemStack);
+    boolean isWearing(Item_ID itemId);
+    boolean isHolding(Item_ID itemId);
+    boolean inventoryContains(Item_ID itemId);
 
 }
