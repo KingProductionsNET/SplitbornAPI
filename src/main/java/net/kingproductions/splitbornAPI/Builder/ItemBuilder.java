@@ -139,7 +139,6 @@ public class ItemBuilder {
             itemLore.add("§7" + amount + "x " + finalItem.getItemMeta().getDisplayName());
         }
 
-// Add in desired order
         lore.addAll(gleamLore);
         lore.addAll(essenceLore);
         lore.addAll(itemLore);
@@ -153,8 +152,7 @@ public class ItemBuilder {
     }
 
     public ItemBuilder setColor(Color color) {
-        if (itemMeta instanceof LeatherArmorMeta) {
-            LeatherArmorMeta leatherMeta = (LeatherArmorMeta) itemMeta;
+        if (itemMeta instanceof LeatherArmorMeta leatherMeta) {
             leatherMeta.setColor(color);
         }
         return this;

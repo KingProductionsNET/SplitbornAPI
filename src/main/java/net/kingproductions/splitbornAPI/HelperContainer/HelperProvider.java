@@ -70,5 +70,6 @@ public interface HelperProvider {
     String getTimeAgo(String longAsString);
     String getPlayersDisplayName(Player player);
     boolean bonusItemIsActive(Player player, Item_ID itemId);
+    void fillInventory(Inventory inventory, Material material);
 
 }
