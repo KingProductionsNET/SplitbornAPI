@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.HelperContainer;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
+import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
@@ -71,5 +72,6 @@ public interface HelperProvider {
     String getPlayersDisplayName(Player player);
     boolean bonusItemIsActive(Player player, Item_ID itemId);
     void fillInventory(Inventory inventory, Material material);
+    Rarities getItemsRarity(ItemStack itemStack);
 
 }

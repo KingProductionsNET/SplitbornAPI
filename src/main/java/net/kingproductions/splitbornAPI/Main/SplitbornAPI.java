@@ -70,7 +70,7 @@ public final class SplitbornAPI extends JavaPlugin {
         for (SplitbornItemProvider provider : itemProviders){
             ItemStack item = provider.getItem(itemId);
 
-            if(item != null){
+            if (item != null){
                 return item;
             }
         }
