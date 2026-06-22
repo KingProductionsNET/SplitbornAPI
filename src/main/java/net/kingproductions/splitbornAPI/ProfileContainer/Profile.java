@@ -46,7 +46,9 @@ public interface Profile {
 
     String getPlayersRankAsString();
 
-    void setEssence(Essence_ID essence, int amount);
+    void addEssence(Essence_ID essence, int amount);
+    void removeEssence(Essence_ID essenceId, int Amount);
+
     int getEssence(Essence_ID essenceId);
     int getBaseStatValue(Stat stat);
     int getFullStatValue(Stat stat);
