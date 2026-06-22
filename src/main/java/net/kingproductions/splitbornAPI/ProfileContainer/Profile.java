@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.ProfileContainer;
 
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
@@ -47,5 +48,6 @@ public interface Profile {
 
     void setEssence(Essence_ID essence, int amount);
     int getEssence(Essence_ID essenceId);
+    Stat getStat(Stat stat);
 
 }
