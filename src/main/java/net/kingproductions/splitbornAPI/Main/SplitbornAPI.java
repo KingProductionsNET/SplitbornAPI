@@ -22,6 +22,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
@@ -41,6 +43,8 @@ public final class SplitbornAPI extends JavaPlugin {
     private static UtilProvider utilProvider;
     private static RPGMobProvider rpgMobProvider;
 
+    private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
+
     public SplitbornAPI() {}
 
     public static void init(ProfileProvider p, SplitbornItemProvider i, NPCProvider n, HelperProvider h, QuestProvider q, CommandBlockProvider c, UtilProvider u) {
@@ -55,14 +59,24 @@ public final class SplitbornAPI extends JavaPlugin {
     public static void initRPGMobs(RPGMobProvider r){
         rpgMobProvider = r;
     }
+    public static void addItemProvider(SplitbornItemProvider s){
+        itemProviders.add(s);
+    }
 
     public static Profile getProfile(UUID uuid) {
         if (profileProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return profileProvider.getProfile(uuid);
     }
-    public static ItemStack getItem(Item_ID itemId) {
-        if (splitbornItemProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
-        return splitbornItemProvider.getItem(itemId);
+    public static ItemStack getItem(Item_ID itemId){
+        for (SplitbornItemProvider provider : itemProviders){
+            ItemStack item = provider.getItem(itemId);
+
+            if(item != null){
+                return item;
+            }
+        }
+
+        throw new API_NOT_FOUND("Item not found: " + itemId);
     }
     public static SplitbornNPC spawnNPC(SplitbornNPC id) {
         if (npcProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
