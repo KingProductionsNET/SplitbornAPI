@@ -19,6 +19,7 @@ public class QuestCreator {
         set.add(QUEST_Defeat_Rotmaw());
         set.add(QUEST_Eliminate_The_Creator());
         set.add(QUEST_The_Lost_Caravan());
+        set.add(QUEST_Lazy_Fisher());
         return set;
     }
 
@@ -51,6 +52,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.THE_LOST_CARAVAN);
         questData.setQuestLocation(Locations.Hearthgrove);
         questData.setDisplayMaterial(Material.BARREL);
+
+        return questData;
+    }
+    private static QuestData QUEST_Lazy_Fisher(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.LAZY_FISHER);
+        questData.setQuestLocation(Locations.Hearthgrove);
+        questData.setDisplayMaterial(Material.FISHING_ROD);
 
         return questData;
     }
