@@ -2,7 +2,6 @@ package net.kingproductions.splitbornAPI.DamageEventContainer;
 
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
@@ -15,16 +14,16 @@ public class DamageEvent extends Event implements Cancellable {
 
     private final Player player;
     private final DAMAGE_REASON reason;
-    private final Entity damager;
+    private final Entity damagedMob;
     private final Mob_ID mobId;
     private boolean cancelled;
     private final int damage;
 
-    public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damager, Mob_ID mobId, int damage){
+    public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damagedMob, Mob_ID mobId, int damage){
         this.player = player;
         this.reason = reason;
         this.cancelled = cancelled;
-        this.damager = damager;
+        this.damagedMob = damagedMob;
         this.mobId = mobId;
         this.damage = damage;
     }
@@ -35,8 +34,8 @@ public class DamageEvent extends Event implements Cancellable {
     public DAMAGE_REASON getDamageReason(){
         return reason;
     }
-    public Entity getDamager(){
-        return damager;
+    public Entity getMob(){
+        return damagedMob;
     }
     public Mob_ID getMobId(){
         return mobId;
@@ -65,8 +64,9 @@ public class DamageEvent extends Event implements Cancellable {
     }
 
     public enum DAMAGE_REASON{
-        MOB,
-        DROWNING,
+        PLAYER_DAMAGED_MOB,
+        PLAYER_DROWNING,
+        MOB_DAMAGED_PLAYER,
         UNKNOWN
     }
 }
