@@ -1,6 +1,8 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
+import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
 import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests;
 
@@ -25,6 +27,11 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 200;
 
         return xpReward;
+    }
+    public static Map<Essence_ID, Integer> getEssenceRewards(Curiosities curiosities){
+        Map<Essence_ID, Integer> map = new HashMap<>();
+
+        return map;
     }
 
     public static Map<Item_ID, Integer> getExtraRewards(Curiosities curiosity){

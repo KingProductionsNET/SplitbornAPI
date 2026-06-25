@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.CategoryRewardBuilderContainer;
 import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
 import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.DatabankContainer.DATABANK_PATHS;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
@@ -11,6 +12,7 @@ import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NBS_FILE_NAMES;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests;
+import net.kingproductions.splitbornAPI.RewardContainer.*;
 import net.kingproductions.splitbornAPI.RewardReasonContainer.REWARD_REASON;
 import net.kingproductions.splitbornAPI.VoidGateContainer.VOID_GATE_ID;
 import org.bukkit.Bukkit;
@@ -32,9 +34,10 @@ public class CategoryRewardBuilder {
 
     private int XPReward = 0;
     private int GleamReward = 0;
+    private Map<Item_ID, Integer> ExtraRewards;
+    private Map<Essence_ID, Integer> EssenceRewards;
 
     private List<String> BenefitList;
-    private Map<Item_ID, Integer> ExtraRewards;
     private String InfoText;
 
     private Quests quest;
@@ -46,9 +49,6 @@ public class CategoryRewardBuilder {
 
     public void setBenefits(List<String> list){
         BenefitList = list;
-    }
-    public void setExtraReward(Map<Item_ID, Integer> list){
-        ExtraRewards = list;
     }
 
     public void setQuest(Quests t){
@@ -70,13 +70,6 @@ public class CategoryRewardBuilder {
         curiosities = c;
     }
 
-    public void setGleamReward(int Amount){
-        GleamReward = Amount;
-    }
-    public void setXPReward(int Amount){
-        XPReward = Amount;
-    }
-
     public void applyOnTarget(Player player, REWARD_REASON reason){
         Profile profileData = SplitbornAPI.getProfile(player.getUniqueId());
 
@@ -94,6 +87,11 @@ public class CategoryRewardBuilder {
 
                 rewardReasonText.add("You have completed a task");
                 rewardReasonText.add("and were rewarded for it!");
+
+                GleamReward = QUEST_REWARDS_DATA.getGleamReward(quest);
+                XPReward = QUEST_REWARDS_DATA.getXPReward(quest);
+                EssenceRewards = QUEST_REWARDS_DATA.getEssenceRewards(quest);
+                ExtraRewards = QUEST_REWARDS_DATA.getExtraRewards(quest);
             }
             if (rewardReason.equals(REWARD_REASON.AREA)){
                 InfoText = location.toString();
@@ -102,6 +100,10 @@ public class CategoryRewardBuilder {
                 rewardReasonText.add("You have discovered an area");
                 rewardReasonText.add("and were rewarded for it!");
 
+                GleamReward = LOCATION_REWARD_DATA.getGleamReward(location);
+                XPReward = LOCATION_REWARD_DATA.getXPReward(location);
+                EssenceRewards = LOCATION_REWARD_DATA.getEssenceRewards(location);
+                ExtraRewards = LOCATION_REWARD_DATA.getExtraRewards(location);
             }
             if (rewardReason.equals(REWARD_REASON.NPC)){
                 InfoText = npcId.toString();
@@ -109,6 +111,11 @@ public class CategoryRewardBuilder {
 
                 rewardReasonText.add("You have met an ally");
                 rewardReasonText.add("and were rewarded for it!");
+
+                GleamReward = NPC_REWARD_DATA.getGleamReward(npcId);
+                XPReward = NPC_REWARD_DATA.getXPReward(npcId);
+                EssenceRewards = NPC_REWARD_DATA.getEssenceRewards(npcId);
+                ExtraRewards = NPC_REWARD_DATA.getExtraRewards(npcId);
             }
             if (rewardReason.equals(REWARD_REASON.ACHIEVEMENT)){
                 InfoText = achievementId.toString();
@@ -116,6 +123,11 @@ public class CategoryRewardBuilder {
 
                 rewardReasonText.add("You have unlocked an achievement");
                 rewardReasonText.add("and were rewarded for it!");
+
+                GleamReward = ACHIEVEMENT_REWARD_DATA.getGleamReward(achievementId);
+                XPReward = ACHIEVEMENT_REWARD_DATA.getXPReward(achievementId);
+                EssenceRewards = ACHIEVEMENT_REWARD_DATA.getEssenceRewards(achievementId);
+                ExtraRewards = ACHIEVEMENT_REWARD_DATA.getExtraRewards(achievementId);
             }
             if (rewardReason.equals(REWARD_REASON.SEALED_VOID_GATE)){
                 InfoText = voidGateId.toString();
@@ -130,13 +142,27 @@ public class CategoryRewardBuilder {
 
                 rewardReasonText.add("You found a curiosity");
                 rewardReasonText.add("and were rewarded for it!");
+
+                GleamReward = CURIOSITIES_REWARD_DATA.getGleamReward(curiosities);
+                XPReward = CURIOSITIES_REWARD_DATA.getXPReward(curiosities);
+                EssenceRewards = CURIOSITIES_REWARD_DATA.getEssenceRewards(curiosities);
+                ExtraRewards = CURIOSITIES_REWARD_DATA.getExtraRewards(curiosities);
             }
         }
 
         List<String> extraRewardsAsString = new ArrayList<>();
 
+        if (EssenceRewards != null && !EssenceRewards.isEmpty()){
+            for (Essence_ID essenceId : EssenceRewards.keySet()){
+                int Amount = EssenceRewards.get(essenceId);
+
+                profileData.addEssence(essenceId, Amount);
+            }
+        }
         if (ExtraRewards != null && !ExtraRewards.isEmpty()){
             for (Item_ID itemId : ExtraRewards.keySet()){
+
+
                 ItemStack preItem = SplitbornAPI.getItem(itemId);
                 int amount = ExtraRewards.get(itemId);
 
@@ -144,41 +170,9 @@ public class CategoryRewardBuilder {
                 profileData.addUnclaimedItem(itemId, amount);
 
                 Bukkit.getScheduler().runTaskLater(plugin, () ->{
-                    player.sendMessage("§6§lDELIVERY BOX! §8→ §b" + amount + "x " + SplitbornAPI.getItem(itemId).getItemMeta().getDisplayName());
+                    player.sendMessage("§6§lDELIVERY BOX! §7A reward has been added to your delivery box. §8→ §8(§7" + amount + "x " + SplitbornAPI.getItem(itemId).getItemMeta().getDisplayName() + "§8)");
                 }, 30);
             }
-
-            new BukkitRunnable(){
-                int Time = 3;
-                float f  = 1F;
-
-                @Override
-                public void run() {
-                    if (Time == 0){
-                        this.cancel();
-                        return;
-                    }
-
-                    switch (Time){
-                        case 3:
-                            player.sendTitle("§6§lDeli", "", 0, 10, 3);
-                            break;
-                        case 2:
-                            player.sendTitle("§6§lDelivery", "", 0, 10, 3);
-                            break;
-                        case 1:
-                            player.sendTitle("§6§lDelivery", "§eBox", 0, 10, 3);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1F, f);
-
-                    f += 0.3F;
-                    Time --;
-                }
-            }.runTaskTimer(plugin, 0, 10);
         }
 
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");
@@ -191,9 +185,9 @@ public class CategoryRewardBuilder {
             player.sendMessage("");
         }
         player.sendMessage("§7Rewards:");
-        for (String rewardsAsString : extraRewardsAsString) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + rewardsAsString);
         player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§7Gleams: §6+" + GleamReward + SplitbornAPI.getHelper().getGleamSymbol());
         if (XPReward != 0) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§7Splitborn XP §b+" + XPReward);
+        for (String rewardsAsString : extraRewardsAsString) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + rewardsAsString);
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");
 
         if (reason.equals(REWARD_REASON.CURIOSITY)){

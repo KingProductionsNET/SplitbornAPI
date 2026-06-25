@@ -1,5 +1,7 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
+import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests;
@@ -33,6 +35,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.LAZY_FISHER)) xpReward = 500;
 
         return xpReward;
+    }
+
+    public static Map<Essence_ID, Integer> getEssenceRewards(Quests quests){
+        Map<Essence_ID, Integer> map = new HashMap<>();
+
+        return map;
     }
 
     public static Map<Item_ID, Integer> getExtraRewards(Quests quest){

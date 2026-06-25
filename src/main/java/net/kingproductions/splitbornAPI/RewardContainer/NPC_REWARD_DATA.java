@@ -1,5 +1,7 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
+import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 
@@ -30,6 +32,12 @@ public class NPC_REWARD_DATA {
 
 
         return xpReward;
+    }
+
+    public static Map<Essence_ID, Integer> getEssenceRewards(NPC_ID npcId){
+        Map<Essence_ID, Integer> map = new HashMap<>();
+
+        return map;
     }
 
     public static Map<Item_ID, Integer> getExtraRewards(NPC_ID npcId){

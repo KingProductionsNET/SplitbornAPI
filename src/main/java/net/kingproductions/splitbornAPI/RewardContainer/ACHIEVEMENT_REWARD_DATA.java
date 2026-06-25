@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
 import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
@@ -28,8 +29,16 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 200;
         if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
 
-
         return xpReward;
+    }
+    public static Map<Essence_ID, Integer> getEssenceRewards(ACHIEVEMENT_ID achievementId){
+        Map<Essence_ID, Integer> map = new HashMap<>();
+
+        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)){
+            map.put(Essence_ID.SEED, 10);
+        }
+
+        return map;
     }
     public static Map<Item_ID, Integer> getExtraRewards(ACHIEVEMENT_ID achievementId){
         Map<Item_ID, Integer> map = new HashMap<>();

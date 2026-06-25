@@ -26,6 +26,24 @@ public class HideManager implements Listener {
             online.hideEntity(plugin, entity);
         }
     }
+    public static void UnhideEntityForEveryone(Entity e){
+        for (UUID uuid : playersPacketEntities.keySet()){
+            List<UUID> list = playersPacketEntities.getOrDefault(uuid, new ArrayList<>());
+
+            if (!list.isEmpty() && list.contains(e.getUniqueId())){
+                list.remove(e.getUniqueId());
+                playersPacketEntities.put(uuid, list);
+
+                break;
+            }
+        }
+
+        Bukkit.getScheduler().runTaskLater(plugin, () ->{
+            for (Player player : Bukkit.getOnlinePlayers()){
+                player.showEntity(plugin, e);
+            }
+        }, 10);
+    }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
