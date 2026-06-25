@@ -44,7 +44,7 @@ public class NPC_REWARD_DATA {
         Map<Item_ID, Integer> map = new HashMap<>();
 
         if (npcId.equals(NPC_ID.BONSAI)){
-
+            map.put(Item_ID.SWEEPIS_MASK, 1);
         }
         if (npcId.equals(NPC_ID.AREO)){
             map.put(Item_ID.ZENTIS_U7, 1);

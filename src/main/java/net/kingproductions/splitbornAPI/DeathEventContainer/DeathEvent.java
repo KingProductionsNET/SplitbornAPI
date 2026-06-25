@@ -64,6 +64,7 @@ public class DeathEvent extends Event implements Cancellable {
     public enum DEATH_REASON {
         MOB,
         DROWNED,
+        YOURSELF,
         UNKNOWN
     }
 }
