@@ -37,6 +37,10 @@ public class NPC_REWARD_DATA {
     public static Map<Essence_ID, Integer> getEssenceRewards(NPC_ID npcId){
         Map<Essence_ID, Integer> map = new HashMap<>();
 
+        if (npcId.equals(NPC_ID.BONSAI)){
+            map.put(Essence_ID.SEED, 10);
+        }
+
         return map;
     }
 

@@ -157,6 +157,7 @@ public class CategoryRewardBuilder {
                 int Amount = EssenceRewards.get(essenceId);
 
                 profileData.addEssence(essenceId, Amount);
+                extraRewardsAsString.add("§e" + SplitbornAPI.getHelper().formatInteger(Amount) + " §d" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString()) + " Essence" + SplitbornAPI.getHelper().getEssenceSymbol());
             }
         }
         if (ExtraRewards != null && !ExtraRewards.isEmpty()){
@@ -166,7 +167,7 @@ public class CategoryRewardBuilder {
                 ItemStack preItem = SplitbornAPI.getItem(itemId);
                 int amount = ExtraRewards.get(itemId);
 
-                extraRewardsAsString.add(preItem.getItemMeta().getDisplayName() + " §7(" + amount + "x)");
+                extraRewardsAsString.add("§8(§7" + amount + "x§8) " + preItem.getItemMeta().getDisplayName());
                 profileData.addUnclaimedItem(itemId, amount);
 
                 Bukkit.getScheduler().runTaskLater(plugin, () ->{
@@ -185,8 +186,8 @@ public class CategoryRewardBuilder {
             player.sendMessage("");
         }
         player.sendMessage("§7Rewards:");
-        player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§7Gleams: §6+" + GleamReward + SplitbornAPI.getHelper().getGleamSymbol());
-        if (XPReward != 0) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§7Splitborn XP §b+" + XPReward);
+        player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§6" + GleamReward + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+        if (XPReward != 0) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§b" + XPReward + " §bSplitborn XP");
         for (String rewardsAsString : extraRewardsAsString) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + rewardsAsString);
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");
 
