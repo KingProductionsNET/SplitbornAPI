@@ -53,6 +53,8 @@ public enum Item_ID {
     CHALLENGER_BOOTS,
     CHALLENGERS_EYE,
 
-    CAVE_SHARD
+    CAVE_SHARD,
+
+    CHOSNI_SLAYER
 
 }
