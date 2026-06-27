@@ -6,6 +6,7 @@ public enum Locations {
     The_Fold,
     Doomrest,
     The_Beyond,
-    Sporewood;
+    Sporewood,
+    Ashvein_Mine;
 
 }
