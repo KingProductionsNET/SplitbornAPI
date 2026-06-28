@@ -33,8 +33,6 @@ public class HideManager implements Listener {
             if (!list.isEmpty() && list.contains(e.getUniqueId())){
                 list.remove(e.getUniqueId());
                 playersPacketEntities.put(uuid, list);
-
-                break;
             }
         }
 
@@ -73,7 +71,5 @@ public class HideManager implements Listener {
             if (entityToHide == null) continue;
             player.hideEntity(plugin, entityToHide);
         }
-
-        player.setGameMode(GameMode.ADVENTURE);
     }
 }
