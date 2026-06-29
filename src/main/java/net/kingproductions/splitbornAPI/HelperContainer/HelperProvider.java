@@ -42,6 +42,7 @@ public interface HelperProvider {
     String getReelSpeedSymbol();
     String getTerrestrialSymbol();
     String getAquaticSymbol();
+    String getLeapSymbol();
     boolean playerHasActiveQuest(Player player);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
     void fireworkForLevelUpgrade(Player player);
