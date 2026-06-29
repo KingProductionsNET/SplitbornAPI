@@ -34,6 +34,7 @@ public interface Profile {
     void setClaimedSupplies(int i);
     void setRange(int i);
     void setReelSpeed(int i);
+    void setLeap(int i);
 
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
