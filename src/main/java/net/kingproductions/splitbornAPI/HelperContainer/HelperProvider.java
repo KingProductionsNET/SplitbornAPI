@@ -79,5 +79,6 @@ public interface HelperProvider {
     boolean isHolding(Player player, Item_ID itemId);
     boolean inventoryContains(Player player, Item_ID itemId);
     Item_Category getItemCategory(Item_ID itemId);
+    void addSplitbornXP(Player player, int Amount);
 
 }
