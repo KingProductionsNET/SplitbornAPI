@@ -51,6 +51,8 @@ public interface Profile {
     void addEssence(Essence_ID essence, int amount);
     void removeEssence(Essence_ID essenceId, int Amount);
 
+    void addSplitbornXP(int Amount);
+
     int getEssence(Essence_ID essenceId);
     int getBaseStatValue(Stat stat);
     int getFullStatValue(Stat stat);
