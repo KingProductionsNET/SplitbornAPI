@@ -27,6 +27,7 @@ public enum DATABANK_PATHS {
     NAME,
     RANGE,
     REEL_SPEED,
+    LEAP,
 
     AREA_DISCOVERED_PATH_,
 
