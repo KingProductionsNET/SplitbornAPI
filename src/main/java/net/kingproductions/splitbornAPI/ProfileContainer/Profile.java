@@ -23,6 +23,7 @@ public interface Profile {
     int getClaimedSupplies();
     int getRange();
     int getReelSpeed();
+    int getLeap();
 
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
