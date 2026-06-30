@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.HelperContainer;
 
+import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
@@ -80,5 +81,7 @@ public interface HelperProvider {
     boolean inventoryContains(Player player, Item_ID itemId);
     Item_Category getItemCategory(Item_ID itemId);
     void addSplitbornXP(Player player, int Amount);
+    String getEmblemIcon(EmblemID emblemID);
+    String getEmblem(EmblemID emblemID);
 
 }
