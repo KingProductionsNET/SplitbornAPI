@@ -40,6 +40,10 @@ public class QUEST_REWARDS_DATA {
     public static Map<Essence_ID, Integer> getEssenceRewards(Quests quests){
         Map<Essence_ID, Integer> map = new HashMap<>();
 
+        if (quests.equals(Quests.DEFEAT_ROTMAW)){
+            map.put(Essence_ID.CHALLENGE, 500);
+        }
+
         return map;
     }
 

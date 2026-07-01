@@ -169,10 +169,6 @@ public class CategoryRewardBuilder {
 
                 extraRewardsAsString.add("§8(§7" + amount + "x§8) " + preItem.getItemMeta().getDisplayName());
                 profileData.addUnclaimedItem(itemId, amount);
-
-                Bukkit.getScheduler().runTaskLater(plugin, () ->{
-                    player.sendMessage("§6§lDELIVERY BOX! §7A reward has been added to your delivery box. §8→ §8(§7" + amount + "x " + SplitbornAPI.getItem(itemId).getItemMeta().getDisplayName() + "§8)");
-                }, 30);
             }
         }
 
