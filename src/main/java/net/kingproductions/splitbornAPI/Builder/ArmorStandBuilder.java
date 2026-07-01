@@ -166,7 +166,7 @@ public class ArmorStandBuilder{
         armorStand.setCustomName(CustomName);
         armorStand.setCustomNameVisible(customNameVisible);
 
-//        KingEntities.add(armorStand);
+        armorStand.setPersistent(true);
 
         if (helmet != null) armorStand.getEquipment().setHelmet(helmet);
         if (chestplate != null) armorStand.getEquipment().setChestplate(chestplate);
