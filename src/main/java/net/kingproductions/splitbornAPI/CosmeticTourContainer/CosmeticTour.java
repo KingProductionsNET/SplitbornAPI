@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 
+import net.kingproductions.splitbornAPI.AbilityCastEventContainer.AbilityCastEvent;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -11,8 +12,10 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.*;
@@ -103,6 +106,8 @@ public class CosmeticTour implements Listener {
             startSegment(Passenger, Shuttle, startLocation, firstTarget, Speed, iter);
         }
 
+        Passenger.setMetadata("ON_TOUR", new FixedMetadataValue(plugin, ""));
+
         if (!Music.equalsIgnoreCase("-")) NoteBlockAPI.Play(Passenger, Music, true);
     }
 
@@ -152,6 +157,8 @@ public class CosmeticTour implements Listener {
                         }
 
                         passenger.setInvulnerable(false);
+
+                        Passenger.removeMetadata("ON_TOUR", plugin);
                     }
                     return;
                 }
@@ -197,5 +204,10 @@ public class CosmeticTour implements Listener {
             if (e != null) e.remove();
             playersShuttle.remove(player.getUniqueId());
         }
+    }
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event){
+        event.getPlayer().removeMetadata("ON_TOUR", plugin);
     }
 }

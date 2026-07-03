@@ -8,11 +8,13 @@ import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
 import java.util.List;
 
@@ -83,5 +85,6 @@ public interface HelperProvider {
     void addSplitbornXP(Player player, int Amount);
     String getEmblemIcon(EmblemID emblemID);
     String getEmblem(EmblemID emblemID);
+    Arrow spawnBowArrow(Player shooter, Location spawnLocation, Vector direction, int speed, boolean visibleForEveryone);
 
 }
