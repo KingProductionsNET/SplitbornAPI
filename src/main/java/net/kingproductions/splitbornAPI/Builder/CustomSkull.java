@@ -47,7 +47,7 @@ public class CustomSkull {
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
 
         if (meta != null) {
-            PlayerProfile profile = Bukkit.createPlayerProfile(UUID.randomUUID(), null);
+            PlayerProfile profile = Bukkit.createPlayerProfile(UUID.fromString("a6aacb74-ea1d-4b70-ad73-fd6cb9d48c43"), null);
             PlayerTextures textures = profile.getTextures();
 
             try {

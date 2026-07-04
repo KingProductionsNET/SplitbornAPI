@@ -8,6 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
@@ -16,7 +17,7 @@ public class FancyTeleportForEntity {
     public static Set<UUID> immediatelyStop = new HashSet<>();
     public static Set<UUID> entityNotPathingAnymore = new HashSet<>();
 
-    public static void Start(Entity entity, Location loc2, int speed) {
+    public static void Start(Entity entity, Location loc2, int speed, Consumer<Entity> consumer) {
         entityNotPathingAnymore.add(entity.getUniqueId());
 
         if (entity == null || loc2 == null || loc2.getWorld() == null) return;
@@ -48,6 +49,10 @@ public class FancyTeleportForEntity {
 
                 if (entity.getLocation().distance(loc2) <= 0.5) {
                     entityNotPathingAnymore.remove(entity.getUniqueId());
+
+                    if (consumer != null){
+                        consumer.accept(entity);
+                    }
                     cancel();
                     return;
                 }
