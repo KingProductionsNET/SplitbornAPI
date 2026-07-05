@@ -65,6 +65,7 @@ public class DeathEvent extends Event implements Cancellable {
         MOB,
         DROWNED,
         YOURSELF,
-        UNKNOWN
+        UNKNOWN,
+        CUSTOM
     }
 }
