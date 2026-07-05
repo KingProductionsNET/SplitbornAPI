@@ -8,10 +8,7 @@ import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.entity.Arrow;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
@@ -88,5 +85,6 @@ public interface HelperProvider {
     Arrow spawnBowArrow(Player shooter, Location spawnLocation, Vector direction, int speed, boolean visibleForEveryone);
     boolean blockIsBetween(Location loc1, Location loc2);
     int getPlayersItemCountInWholeInventory(Player player, Item_ID itemId);
+    void applyDummyDamage(Player target, int Damage, String CustomName);
 
 }
