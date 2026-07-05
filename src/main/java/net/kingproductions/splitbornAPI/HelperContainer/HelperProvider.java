@@ -86,5 +86,6 @@ public interface HelperProvider {
     String getEmblemIcon(EmblemID emblemID);
     String getEmblem(EmblemID emblemID);
     Arrow spawnBowArrow(Player shooter, Location spawnLocation, Vector direction, int speed, boolean visibleForEveryone);
+    boolean blockIsBetween(Location loc1, Location loc2);
 
 }
