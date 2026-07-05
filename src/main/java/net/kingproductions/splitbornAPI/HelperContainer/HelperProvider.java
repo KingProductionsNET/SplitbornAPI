@@ -42,6 +42,7 @@ public interface HelperProvider {
     String getReelSpeedSymbol();
     String getTerrestrialSymbol();
     String getAquaticSymbol();
+    String getMoltenSymbol();
     String getLeapSymbol();
     boolean playerHasActiveQuest(Player player);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
@@ -86,5 +87,6 @@ public interface HelperProvider {
     boolean blockIsBetween(Location loc1, Location loc2);
     int getPlayersItemCountInWholeInventory(Player player, Item_ID itemId);
     void applyDummyDamage(Player target, int Damage, String CustomName);
+    void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
 
 }
