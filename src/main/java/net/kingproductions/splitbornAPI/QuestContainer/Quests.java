@@ -13,6 +13,8 @@ public enum Quests {
     DEFEAT_ROTMAW,
     THE_LOST_CARAVAN,
     LAZY_FISHER,
+
+    COOLING_CORE,
     ITS_GETTING_HOT_IN_HERE,
 
     DEFAULT_NONE;

@@ -20,6 +20,7 @@ public class QuestCreator {
         set.add(QUEST_Eliminate_The_Creator());
         set.add(QUEST_The_Lost_Caravan());
         set.add(QUEST_Lazy_Fisher());
+        set.add(QUEST_Its_Getting_Hot_In_Here());
         return set;
     }
 
@@ -60,6 +61,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.LAZY_FISHER);
         questData.setQuestLocation(Locations.Hearthgrove);
         questData.setDisplayMaterial(Material.FISHING_ROD);
+
+        return questData;
+    }
+    private static QuestData QUEST_Its_Getting_Hot_In_Here(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.ITS_GETTING_HOT_IN_HERE);
+        questData.setQuestLocation(Locations.Ashvein_Mine);
+        questData.setDisplayMaterial(Material.LAVA_BUCKET);
 
         return questData;
     }
