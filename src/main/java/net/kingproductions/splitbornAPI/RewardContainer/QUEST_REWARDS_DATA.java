@@ -21,6 +21,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 1250;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 2000;
         if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 500;
+        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 1000;
 
         return gleamReward;
     }
@@ -33,6 +34,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) xpReward = 250;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) xpReward = 300;
         if (quest.equals(Quests.LAZY_FISHER)) xpReward = 500;
+        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) xpReward = 300;
 
         return xpReward;
     }

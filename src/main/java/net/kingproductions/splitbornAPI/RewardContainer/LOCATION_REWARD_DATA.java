@@ -21,6 +21,12 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.The_Fold)){
             gleamReward = 1000;
         }
+        if (location.equals(Locations.Sporewood)){
+            gleamReward = 1000;
+        }
+        if (location.equals(Locations.Ashvein_Mine)){
+            gleamReward = 3000;
+        }
 
         return gleamReward;
     }
@@ -34,6 +40,12 @@ public class LOCATION_REWARD_DATA {
         }
         if (location.equals(Locations.The_Fold)){
             xpReward = 100;
+        }
+        if (location.equals(Locations.Sporewood)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Ashvein_Mine)){
+            xpReward = 200;
         }
 
         return xpReward;

@@ -21,6 +21,7 @@ public class QuestCreator {
         set.add(QUEST_The_Lost_Caravan());
         set.add(QUEST_Lazy_Fisher());
         set.add(QUEST_Its_Getting_Hot_In_Here());
+        set.add(QUEST_CoolingCore());
         return set;
     }
 
@@ -69,6 +70,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.ITS_GETTING_HOT_IN_HERE);
         questData.setQuestLocation(Locations.Ashvein_Mine);
         questData.setDisplayMaterial(Material.LAVA_BUCKET);
+
+        return questData;
+    }
+    private static QuestData QUEST_CoolingCore(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.COOLING_CORE);
+        questData.setQuestLocation(Locations.Ashvein_Mine);
+        questData.setDisplayMaterial(Material.BLUE_ICE);
 
         return questData;
     }
