@@ -15,6 +15,7 @@ public class NPC_REWARD_DATA {
 
         if (npcId.equals(NPC_ID.BONSAI)) gleamReward = 1000;
         if (npcId.equals(NPC_ID.GRUG)) gleamReward = 500;
+        if (npcId.equals(NPC_ID.WELPH)) gleamReward = 500;
         if (npcId.equals(NPC_ID.ANDREW)) gleamReward = 2000;
         if (npcId.equals(NPC_ID.AREO)) gleamReward = 600;
         if (npcId.equals(NPC_ID.STEPHEN)) gleamReward = 1500;
@@ -33,6 +34,7 @@ public class NPC_REWARD_DATA {
 
         if (npcId.equals(NPC_ID.BONSAI)) xpReward = 200;
         if (npcId.equals(NPC_ID.GRUG)) xpReward = 250;
+        if (npcId.equals(NPC_ID.WELPH)) xpReward = 250;
         if (npcId.equals(NPC_ID.ANDREW)) xpReward = 300;
         if (npcId.equals(NPC_ID.AREO)) xpReward = 100;
         if (npcId.equals(NPC_ID.STEPHEN)) xpReward = 200;

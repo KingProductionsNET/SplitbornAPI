@@ -53,6 +53,7 @@ public interface HelperProvider {
     void handleBuyProcess(Player player, ItemStack BuyItem);
     void applyInventoryLook(Inventory inv, Material material, boolean TopBottom_Full);
     void applyImmortality(Entity e);
+    void removeImmortality(Entity e);
     void updatePlayersScoreboard(Player player);
     String getLoreReady_Health(int value);
     String getLoreReady_Stamina(int value);
