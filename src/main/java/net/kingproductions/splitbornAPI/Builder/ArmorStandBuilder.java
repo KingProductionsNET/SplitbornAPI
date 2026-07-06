@@ -28,6 +28,7 @@ public class ArmorStandBuilder{
     private EulerAngle headPose, bodyPose, leftArmPose, rightArmPose, leftLegPose, rightLegPose;
     private boolean enabledSpin = false;
     private boolean customNameVisible = false;
+    private boolean spinAndHover = false;
 
     private String CustomName = "§e";
 
@@ -145,6 +146,10 @@ public class ArmorStandBuilder{
         this.rightLegPose = angle;
         return this;
     }
+    public ArmorStandBuilder setSpinAndHover(boolean b){
+        this.spinAndHover = b;
+        return this;
+    }
 
     public ArmorStand build(World world) {
         if (location == null) throw new IllegalStateException("ERROR - PLEASE REPORT THIS (135 - ArmorStandBuilder)");
@@ -185,21 +190,37 @@ public class ArmorStandBuilder{
         armorStand.addEquipmentLock(EquipmentSlot.HEAD, ArmorStand.LockType.REMOVING_OR_CHANGING);
         armorStand.addEquipmentLock(EquipmentSlot.HEAD, ArmorStand.LockType.ADDING_OR_CHANGING);
 
-        new BukkitRunnable(){
+        if (enabledSpin){
+            new BukkitRunnable(){
 
-            @Override
-            public void run() {
-                if (enabledSpin){
+                @Override
+                public void run() {
                     if (armorStand.isDead()){
                         this.cancel();
                         return;
                     }
                     EulerAngle oldRot = armorStand.getHeadPose();
-                    EulerAngle newRot = oldRot.add(0f, 0.5f, 0.f);
+                    EulerAngle newRot = oldRot.add(0f, 0.2f, 0.f);
                     armorStand.setHeadPose(newRot);
                 }
-            }
-        }.runTaskTimer(plugin, 0, 1);
+            }.runTaskTimer(plugin, 0, 1);
+        }
+
+        if (spinAndHover){
+            new BukkitRunnable(){
+
+                @Override
+                public void run() {
+                    if (armorStand.isDead()){
+                        this.cancel();
+                        return;
+                    }
+                    EulerAngle oldRot = armorStand.getHeadPose();
+                    EulerAngle newRot = oldRot.add(0f, 0.2f, 0.f);
+                    armorStand.setHeadPose(newRot);
+                }
+            }.runTaskTimer(plugin, 0, 1);
+        }
 
         return armorStand;
     }
