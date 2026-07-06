@@ -208,6 +208,8 @@ public class ArmorStandBuilder{
 
         if (spinAndHover){
             new BukkitRunnable(){
+                int ticks = 0;
+                boolean goingUp = true;
 
                 @Override
                 public void run() {
@@ -218,6 +220,16 @@ public class ArmorStandBuilder{
                     EulerAngle oldRot = armorStand.getHeadPose();
                     EulerAngle newRot = oldRot.add(0f, 0.2f, 0.f);
                     armorStand.setHeadPose(newRot);
+
+                    if (ticks >= 20) {
+                        goingUp = !goingUp;
+                        ticks = 0;
+                    }
+
+                    double yOffset = goingUp ? 0.03 : -0.03;
+                    armorStand.teleport(armorStand.getLocation().clone().add(0, yOffset, 0));
+
+                    ticks++;
                 }
             }.runTaskTimer(plugin, 0, 1);
         }
