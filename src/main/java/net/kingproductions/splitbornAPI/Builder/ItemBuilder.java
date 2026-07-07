@@ -96,7 +96,65 @@ public class ItemBuilder {
         return "0";
     }
 
+    @Deprecated
     public static ItemStack TransformItem_NPC_BUY(ItemStack stack){
+        ItemMeta meta = stack.getItemMeta();
+        List<String> lore = meta.getLore();
+        if (lore == null || lore.isEmpty()) return null;
+
+        String raw = ItemBuilder.getHiddenValueString(meta, Item_Paths.NPC_BUY_PRICE_PATH.toString());
+        if (raw.equalsIgnoreCase("0")){
+            return new ItemBuilder(Material.BEDROCK).setDisplayName(meta.getDisplayName() + " NO PRICE SET!").build();
+        }
+
+        String[] costList = raw.split(",");
+
+        lore.add("");
+        lore.add("§7Cost:");
+        List<String> gleamLore = new ArrayList<>();
+        List<String> essenceLore = new ArrayList<>();
+        List<String> itemLore = new ArrayList<>();
+
+        for (String itemString : costList) {
+            int lastUnderscore = itemString.lastIndexOf("_");
+
+            String itemID = itemString.substring(0, lastUnderscore);
+            int amount = Integer.parseInt(itemString.substring(lastUnderscore + 1));
+
+            if (itemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())) {
+                gleamLore.add("§6" + SplitbornAPI.getHelper().formatInteger(amount)
+                        + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+                continue;
+            }
+
+            try {
+                Essence_ID essenceId = Essence_ID.valueOf(itemID);
+
+                essenceLore.add("§e" + SplitbornAPI.getHelper().formatInteger(amount)
+                        + " §d" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString())
+                        + " Essence" + SplitbornAPI.getHelper().getEssenceSymbol());
+                continue;
+            } catch (Exception ignore) {}
+
+            ItemStack finalItem = SplitbornAPI.getItem(Item_ID.valueOf(itemID));
+            itemLore.add("§7" + amount + "x " + finalItem.getItemMeta().getDisplayName());
+        }
+
+        lore.addAll(gleamLore);
+        lore.addAll(essenceLore);
+        lore.addAll(itemLore);
+        lore.add("");
+        lore.add("§eClick to purchase.");
+        meta.setLore(lore);
+
+        stack.setItemMeta(meta);
+
+        return stack;
+    }
+
+    public static ItemStack getShopItem(Item_ID itemId){
+        ItemStack stack = SplitbornAPI.getItem(itemId);
+
         ItemMeta meta = stack.getItemMeta();
         List<String> lore = meta.getLore();
         if (lore == null || lore.isEmpty()) return null;
