@@ -6,6 +6,7 @@ import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.*;
@@ -89,5 +90,6 @@ public interface HelperProvider {
     int getPlayersItemCountInWholeInventory(Player player, Item_ID itemId);
     void applyDummyDamage(Player target, int Damage, String CustomName);
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
+    void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration);
 
 }
