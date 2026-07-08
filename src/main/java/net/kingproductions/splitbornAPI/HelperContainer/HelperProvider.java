@@ -94,5 +94,6 @@ public interface HelperProvider {
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
     void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration);
     void applyHeat(Player player, int Amount);
+    List<Item_ID> getPlayersEquippedBonusItems(Player player);
 
 }
