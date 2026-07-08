@@ -93,5 +93,6 @@ public interface HelperProvider {
     void applyDummyDamage(Player target, int Damage, String CustomName);
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
     void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration);
+    void applyHeat(Player player, int Amount);
 
 }
