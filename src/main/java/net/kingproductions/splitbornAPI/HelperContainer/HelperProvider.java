@@ -95,5 +95,6 @@ public interface HelperProvider {
     void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration);
     void applyHeat(Player player, int Amount);
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
+    int getCooldownInSeconds(long timestamp, int cooldown);
 
 }
