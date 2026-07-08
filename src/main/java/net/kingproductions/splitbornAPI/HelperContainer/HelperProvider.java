@@ -96,5 +96,6 @@ public interface HelperProvider {
     void applyHeat(Player player, int Amount);
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
     int getCooldownInSeconds(long timestamp, int cooldown);
+    void sendCooldownMessage(Player player, int Cooldown);
 
 }
