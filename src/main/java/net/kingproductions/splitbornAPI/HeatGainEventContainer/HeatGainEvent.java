@@ -18,6 +18,13 @@ public class HeatGainEvent extends Event implements Cancellable {
         this.heatGainAmount = Amount;
     }
 
+    public Player getPlayer(){
+        return player;
+    }
+    public int getAmount(){
+        return heatGainAmount;
+    }
+
     @Override
     public boolean isCancelled() {
         return cancelled;
