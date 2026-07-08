@@ -14,6 +14,7 @@ public enum Item_Paths {
     RANGE_PATH,
     REEL_SPEED_PATH,
     LEAP_PATH,
+    HEAT_PATH,
 
     ITEM_RARITY_PATH,
 
