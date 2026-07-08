@@ -33,6 +33,7 @@ public interface HelperProvider {
     String getEssenceSymbol();
     String getHeartSymbol();
     String getListingSymbol();
+    String getHeatSymbol();
     String getAttackDamageSymbol();
     String getSpeedSymbol();
     String getStaminaSymbol();
