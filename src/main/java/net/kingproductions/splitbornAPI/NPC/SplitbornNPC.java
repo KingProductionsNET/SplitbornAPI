@@ -21,6 +21,7 @@ public class SplitbornNPC {
     private String Name = "§cUnknown";
     private Entity BukkitEntity = null;
     private boolean lookClose = false;
+    private boolean seeThroughWall = false;
     private float viewRange;
 
     public SplitbornNPC(NPC_ID npcId) {
@@ -51,6 +52,10 @@ public class SplitbornNPC {
         viewRange = f;
         return this;
     }
+    public SplitbornNPC setSeeThroughWall(boolean b){
+        this.seeThroughWall = b;
+        return this;
+    }
 
     public float getTitleViewRange(){return viewRange;}
     public String getSkin_Value(){
@@ -73,6 +78,9 @@ public class SplitbornNPC {
     }
     public boolean getLookClose(){
         return lookClose;
+    }
+    public boolean getSeeThroughWall(){
+        return seeThroughWall;
     }
 
 
