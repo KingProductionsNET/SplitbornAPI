@@ -97,5 +97,6 @@ public interface HelperProvider {
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
     int getCooldownInSeconds(long timestamp, int cooldown);
     void sendCooldownMessage(Player player, int Cooldown);
+    boolean isImmortal(Entity e);
 
 }
