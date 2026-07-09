@@ -15,6 +15,7 @@ public enum Quests {
     LAZY_FISHER,
 
     COOLING_CORE,
+    HEAT_CORE,
     ITS_GETTING_HOT_IN_HERE,
 
     DEFAULT_NONE;
