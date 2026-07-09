@@ -11,9 +11,7 @@ import java.util.UUID;
 
 public class SplitbornNPC {
 
-    public static Map<UUID, List<TextDisplay>> NPCsAssignedArmorStands = new HashMap<>();
-
-    private NPC_ID ID;
+    private final NPC_ID ID;
 
     private EntityType type = null;
 
@@ -22,8 +20,8 @@ public class SplitbornNPC {
 
     private String Name = "§cUnknown";
     private Entity BukkitEntity = null;
-
     private boolean lookClose = false;
+    private float viewRange;
 
     public SplitbornNPC(NPC_ID npcId) {
         this.ID = npcId;
@@ -49,7 +47,12 @@ public class SplitbornNPC {
         lookClose = b;
         return this;
     }
+    public SplitbornNPC setTitleViewRange(float f){
+        viewRange = f;
+        return this;
+    }
 
+    public float getTitleViewRange(){return viewRange;}
     public String getSkin_Value(){
         return Value;
     }
