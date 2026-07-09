@@ -66,6 +66,7 @@ public class DeathEvent extends Event implements Cancellable {
         DROWNED,
         YOURSELF,
         UNKNOWN,
+        OVERHEAT,
         CUSTOM
     }
 }
