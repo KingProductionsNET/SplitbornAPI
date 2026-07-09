@@ -86,6 +86,8 @@ public enum Item_ID {
     STABILIZED_MOLTEN_RING,
 
     UNSTABLE_CAKE,
+    STABILIZED_CAKE,
+
     HEAT_ANCHOR,
     BURNING_CHARM
 
