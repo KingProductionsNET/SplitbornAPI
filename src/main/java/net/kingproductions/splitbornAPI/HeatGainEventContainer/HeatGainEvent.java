@@ -11,6 +11,7 @@ public class HeatGainEvent extends Event implements Cancellable {
 
     private final Player player;
     private final int heatGainAmount;
+    private int heatModifier;
     private boolean cancelled;
 
     public HeatGainEvent(Player player, int Amount){
@@ -22,7 +23,10 @@ public class HeatGainEvent extends Event implements Cancellable {
         return player;
     }
     public int getAmount(){
-        return heatGainAmount;
+        return (heatGainAmount + heatModifier);
+    }
+    public void addHeat(int amount){
+        heatModifier += amount;
     }
 
     @Override
