@@ -22,6 +22,7 @@ public class QuestCreator {
         set.add(QUEST_Lazy_Fisher());
         set.add(QUEST_Its_Getting_Hot_In_Here());
         set.add(QUEST_CoolingCore());
+        set.add(QUEST_HeatCore());
         return set;
     }
 
@@ -78,6 +79,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.COOLING_CORE);
         questData.setQuestLocation(Locations.Ashvein_Mine);
         questData.setDisplayMaterial(Material.BLUE_ICE);
+
+        return questData;
+    }
+    private static QuestData QUEST_HeatCore(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.HEAT_CORE);
+        questData.setQuestLocation(Locations.Ashvein_Mine);
+        questData.setDisplayMaterial(Material.BLAZE_POWDER);
 
         return questData;
     }

@@ -25,6 +25,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.KAY_TINFOIL)) gleamReward = 2500;
         if (npcId.equals(NPC_ID.CALI_THE_GREAT)) gleamReward = 500;
         if (npcId.equals(NPC_ID.VIORICT)) gleamReward = 1000;
+        if (npcId.equals(NPC_ID.DEBY)) gleamReward = 1000;
 
         return gleamReward;
     }
@@ -44,6 +45,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.KAY_TINFOIL)) xpReward = 300;
         if (npcId.equals(NPC_ID.CALI_THE_GREAT)) xpReward = 150;
         if (npcId.equals(NPC_ID.VIORICT)) xpReward = 300;
+        if (npcId.equals(NPC_ID.DEBY)) xpReward = 300;
 
 
         return xpReward;
