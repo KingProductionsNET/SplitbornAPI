@@ -16,6 +16,7 @@ public interface UtilProvider {
 
     Location getLocationFromMongo(String locationKey);
     TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text);
+    TextDisplay spawnNPCTextDisplay(Location spawnLocation, boolean seeThrough, String Text, float viewRange);
     String getFancyProgressBar(int current, int max, String filledChar, String emptyChar);
     List<Location> getNearbyBlockLocations(Location centerLoc, int scanRadius, Material material);
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);
