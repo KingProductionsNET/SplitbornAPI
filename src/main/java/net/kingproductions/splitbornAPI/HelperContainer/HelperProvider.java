@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
+import net.kingproductions.splitbornAPI.MobContainer.MobCategory;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
@@ -98,5 +99,6 @@ public interface HelperProvider {
     int getCooldownInSeconds(long timestamp, int cooldown);
     void sendCooldownMessage(Player player, int Cooldown);
     boolean isImmortal(Entity e);
+    MobCategory getMobCategory(Item_ID itemId);
 
 }
