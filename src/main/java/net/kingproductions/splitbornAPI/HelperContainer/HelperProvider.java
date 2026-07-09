@@ -99,6 +99,6 @@ public interface HelperProvider {
     int getCooldownInSeconds(long timestamp, int cooldown);
     void sendCooldownMessage(Player player, int Cooldown);
     boolean isImmortal(Entity e);
-    MobCategory getMobCategory(Item_ID itemId);
+    MobCategory getMobCategory(Mob_ID mobId);
 
 }
