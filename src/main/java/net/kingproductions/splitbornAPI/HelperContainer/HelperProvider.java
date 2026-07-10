@@ -97,7 +97,7 @@ public interface HelperProvider {
     void applyHeat(Player player, int Amount);
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
     void setItemCooldownForPlayer(Player player, Item_ID itemId, int Amount);
-    int getCooldownInSeconds(Item_ID itemId);
+    int getCooldownInSeconds(Player player, Item_ID itemId);
     void sendCooldownMessage(Player player, Item_ID itemId);
     boolean isImmortal(Entity e);
     MobCategory getMobCategory(Mob_ID mobId);
