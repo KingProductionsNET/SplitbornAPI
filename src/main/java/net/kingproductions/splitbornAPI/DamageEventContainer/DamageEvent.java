@@ -73,6 +73,7 @@ public class DamageEvent extends Event implements Cancellable {
         MOB_DAMAGED_PLAYER,
         HEAT,
         EMBER_PIT,
+        CUSTOM,
         UNKNOWN
     }
 }

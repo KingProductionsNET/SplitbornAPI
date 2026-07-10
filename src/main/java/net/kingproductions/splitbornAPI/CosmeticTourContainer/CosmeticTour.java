@@ -84,6 +84,8 @@ public class CosmeticTour implements Listener {
 
     public void Start() {
         if (Passenger == null || connectionPoints.isEmpty()) return;
+        if (Passenger.hasMetadata("ON_TOUR")) return;
+
         Location startLocation = connectionPoints.getFirst();
 
         LivingEntity Shuttle = (LivingEntity) startLocation.getWorld().spawn(startLocation, TourGuide.getEntityClass());
@@ -94,10 +96,8 @@ public class CosmeticTour implements Listener {
 
         Passenger.playSound(Passenger.getLocation(), Sound.BLOCK_ANVIL_LAND, 1F, random.nextFloat());
 
-        //!!!!
         Passenger.setSneaking(false);
         Shuttle.addPassenger(Passenger);
-        //!!!!
 
         Iterator<Location> iter = connectionPoints.iterator();
         iter.next();
