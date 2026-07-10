@@ -101,5 +101,6 @@ public interface HelperProvider {
     boolean isImmortal(Entity e);
     MobCategory getMobCategory(Mob_ID mobId);
     Mob_ID getMobID(Entity e);
+    int getPlayersCurrentHeat(Player player);
 
 }
