@@ -153,6 +153,10 @@ public class ItemBuilder {
     }
 
     public static ItemStack getShopItem(Item_ID itemId){
+        if (itemId == null){
+            return new ItemBuilder(Material.BEDROCK).setDisplayName("§cNO ITEM_ID SET!").build();
+        }
+
         ItemStack stack = SplitbornAPI.getItem(itemId);
 
         ItemMeta meta = stack.getItemMeta();
