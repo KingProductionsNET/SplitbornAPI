@@ -104,5 +104,6 @@ public interface HelperProvider {
     Mob_ID getMobID(Entity e);
     int getPlayersCurrentHeat(Player player);
     boolean playerIsOnTour(Player player);
+    ItemStack getPlaceholderLockedItemForNPCShop(List<String> description);
 
 }
