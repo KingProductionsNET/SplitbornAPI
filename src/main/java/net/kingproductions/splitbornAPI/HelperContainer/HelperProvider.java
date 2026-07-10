@@ -96,6 +96,7 @@ public interface HelperProvider {
     void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration);
     void applyHeat(Player player, int Amount);
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
+    void setItemCooldownForPlayer(Player player, Item_ID itemId, int Amount);
     int getCooldownInSeconds(long timestamp, int cooldown);
     void sendCooldownMessage(Player player, int Cooldown);
     boolean isImmortal(Entity e);
