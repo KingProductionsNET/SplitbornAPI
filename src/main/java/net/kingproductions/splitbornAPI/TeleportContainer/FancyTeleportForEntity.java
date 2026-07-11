@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.TeleportContainer;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.ItemDisplay;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -47,7 +48,7 @@ public class FancyTeleportForEntity {
                     return;
                 }
 
-                if (entity.getLocation().distance(loc2) <= 0.5) {
+                if (entity.getLocation().distance(loc2) <= 1) {
                     entityNotPathingAnymore.remove(entity.getUniqueId());
 
                     if (consumer != null){
@@ -77,11 +78,11 @@ public class FancyTeleportForEntity {
                         return;
                     }
 
-                    Location nextLocation = new Location(loc1.getWorld(), x, y, z);
+                    Location nextLocation = new Location(loc1.getWorld(), x, y, z, entity.getYaw(), entity.getPitch());
 
-                    nextLocation.setDirection(
-                            loc2.toVector().subtract(nextLocation.toVector())
-                    );
+                    if (!(entity instanceof ItemDisplay)){
+                        nextLocation.setDirection(loc2.toVector().subtract(nextLocation.toVector()));
+                    }
 
                     entity.teleport(nextLocation);
 

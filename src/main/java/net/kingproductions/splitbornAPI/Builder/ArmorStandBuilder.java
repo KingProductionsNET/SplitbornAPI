@@ -197,22 +197,6 @@ public class ArmorStandBuilder{
 
         if (enabledSpin){
             new BukkitRunnable(){
-
-                @Override
-                public void run() {
-                    if (armorStand.isDead()){
-                        this.cancel();
-                        return;
-                    }
-                    EulerAngle oldRot = armorStand.getHeadPose();
-                    EulerAngle newRot = oldRot.add(0f, 0.2f, 0.f);
-                    armorStand.setHeadPose(newRot);
-                }
-            }.runTaskTimer(plugin, 0, 1);
-        }
-
-        if (enabledSpin){
-            new BukkitRunnable(){
                 int ticks = 0;
 
                 @Override
