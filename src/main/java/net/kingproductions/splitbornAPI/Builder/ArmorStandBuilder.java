@@ -27,6 +27,7 @@ public class ArmorStandBuilder{
     private ItemStack helmet, chestplate, leggings, boots, mainHand, offHand;
     private EulerAngle headPose, bodyPose, leftArmPose, rightArmPose, leftLegPose, rightLegPose;
     private boolean enabledSpin = false;
+    private boolean enableHover = false;
     private boolean customNameVisible = false;
     private boolean spinAndHover = false;
 
@@ -64,11 +65,6 @@ public class ArmorStandBuilder{
 
     public ArmorStandBuilder setGravity(boolean hasGravity){
         this.hasGravity = hasGravity;
-        return this;
-    }
-
-    public ArmorStandBuilder enableSpin(boolean enabledSpin){
-        this.enabledSpin = enabledSpin;
         return this;
     }
 
@@ -150,6 +146,15 @@ public class ArmorStandBuilder{
         this.spinAndHover = b;
         return this;
     }
+    public ArmorStandBuilder setSpin(boolean b){
+        this.enabledSpin = b;
+        return this;
+    }
+
+    public ArmorStandBuilder setHover(boolean b){
+        this.enableHover = b;
+        return this;
+    }
 
     public ArmorStand build(World world) {
         if (location == null) throw new IllegalStateException("ERROR - PLEASE REPORT THIS (135 - ArmorStandBuilder)");
@@ -206,6 +211,47 @@ public class ArmorStandBuilder{
             }.runTaskTimer(plugin, 0, 1);
         }
 
+        if (enabledSpin){
+            new BukkitRunnable(){
+                int ticks = 0;
+
+                @Override
+                public void run() {
+                    if (armorStand.isDead()){
+                        this.cancel();
+                        return;
+                    }
+                    EulerAngle oldRot = armorStand.getHeadPose();
+                    EulerAngle newRot = oldRot.add(0f, 0.2f, 0.f);
+                    armorStand.setHeadPose(newRot);
+
+                    ticks++;
+                }
+            }.runTaskTimer(plugin, 0, 1);
+        }
+        if (enableHover){
+            new BukkitRunnable(){
+                int ticks = 0;
+                boolean goingUp = true;
+
+                @Override
+                public void run() {
+                    if (armorStand.isDead()){
+                        this.cancel();
+                        return;
+                    }
+                    if (ticks >= 20) {
+                        goingUp = !goingUp;
+                        ticks = 0;
+                    }
+
+                    double yOffset = goingUp ? 0.03 : -0.03;
+                    armorStand.teleport(armorStand.getLocation().clone().add(0, yOffset, 0));
+
+                    ticks++;
+                }
+            }.runTaskTimer(plugin, 0, 1);
+        }
         if (spinAndHover){
             new BukkitRunnable(){
                 int ticks = 0;
