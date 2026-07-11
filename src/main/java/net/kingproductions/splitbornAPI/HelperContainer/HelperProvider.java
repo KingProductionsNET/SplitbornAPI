@@ -105,5 +105,6 @@ public interface HelperProvider {
     int getPlayersCurrentHeat(Player player);
     boolean playerIsOnTour(Player player);
     ItemStack getPlaceholderLockedItemForNPCShop(List<String> description);
+    boolean playerHasFreeInventorySpace(Player player);
 
 }
