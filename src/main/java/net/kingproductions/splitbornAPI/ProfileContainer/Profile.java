@@ -45,7 +45,10 @@ public interface Profile {
     String getString(String Path);
     int getInteger(String Path);
 
-    void addUnclaimedItem(Item_ID itemId, int Amount);
+    void addUnclaimedItem(Item_ID itemId, int Amount, String reason);
+    default void addUnclaimedItem(Item_ID itemId, int amount) {
+        addUnclaimedItem(itemId, amount, null);
+    }
     boolean getSetting_Drop_Announcement(int tier);
 
     String getPlayersRankAsString();
