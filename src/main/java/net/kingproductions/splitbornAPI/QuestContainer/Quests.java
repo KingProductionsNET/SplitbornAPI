@@ -18,6 +18,9 @@ public enum Quests {
     HEAT_CORE,
     ITS_GETTING_HOT_IN_HERE,
 
+    SCRAP_FOR_PIP,
+    CONTRAPTION_RUSH,
+
     DEFAULT_NONE;
 
 
