@@ -10,12 +10,14 @@ public class MobSpawnEvent extends Event implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
 
     private final Mob_ID mobId;
+    private final SPAWN_REASON spawnReason;
     private final Entity mob;
     private boolean cancelled;
 
-    public MobSpawnEvent(Mob_ID mobId, Entity mob, boolean cancelled) {
+    public MobSpawnEvent(Mob_ID mobId, Entity mob, SPAWN_REASON spawnReason, boolean cancelled) {
         this.mobId = mobId;
         this.mob = mob;
+        this.spawnReason = spawnReason;
         this.cancelled = cancelled;
     }
 
@@ -24,6 +26,9 @@ public class MobSpawnEvent extends Event implements Cancellable {
     }
     public Entity getMob(){
         return mob;
+    }
+    public SPAWN_REASON getSpawnReason(){
+        return spawnReason;
     }
 
     @Override
