@@ -44,6 +44,11 @@ public class FancyTeleportForEntity {
                 if (entity.isDead() || immediatelyStop.contains(entity.getUniqueId())) {
                     immediatelyStop.remove(entity.getUniqueId());
                     entityNotPathingAnymore.remove(entity.getUniqueId());
+
+                    if (consumer != null){
+                        consumer.accept(entity);
+                    }
+
                     cancel();
                     return;
                 }
@@ -54,6 +59,7 @@ public class FancyTeleportForEntity {
                     if (consumer != null){
                         consumer.accept(entity);
                     }
+
                     cancel();
                     return;
                 }
@@ -63,6 +69,10 @@ public class FancyTeleportForEntity {
                     double ratio = currentPoint / (double) points;
 
                     if (!Double.isFinite(ratio)) {
+                        if (consumer != null){
+                            consumer.accept(entity);
+                        }
+
                         cancel();
                         return;
                     }
@@ -74,6 +84,10 @@ public class FancyTeleportForEntity {
                     double z = loc1.getZ() + ratio * (loc2.getZ() - loc1.getZ());
 
                     if (!Double.isFinite(x) || !Double.isFinite(y) || !Double.isFinite(z)) {
+                        if (consumer != null){
+                            consumer.accept(entity);
+                        }
+
                         cancel();
                         return;
                     }
