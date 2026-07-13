@@ -23,6 +23,7 @@ public class QuestCreator {
         set.add(QUEST_Its_Getting_Hot_In_Here());
         set.add(QUEST_CoolingCore());
         set.add(QUEST_HeatCore());
+        set.add(QUEST_Scrap_for_Pip());
         return set;
     }
 
@@ -87,6 +88,14 @@ public class QuestCreator {
         questData.setQuestID(Quests.HEAT_CORE);
         questData.setQuestLocation(Locations.Ashvein_Mine);
         questData.setDisplayMaterial(Material.BLAZE_POWDER);
+
+        return questData;
+    }
+    private static QuestData QUEST_Scrap_for_Pip(){
+        QuestData questData = new QuestData();
+        questData.setQuestID(Quests.SCRAP_FOR_PIP);
+        questData.setQuestLocation(Locations.Hearthgrove);
+        questData.setDisplayMaterial(Material.IRON_CHAIN);
 
         return questData;
     }
