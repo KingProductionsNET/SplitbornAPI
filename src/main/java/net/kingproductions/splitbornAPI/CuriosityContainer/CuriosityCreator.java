@@ -93,5 +93,6 @@ public class CuriosityCreator {
         curiosityData.setSkullValue("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2QxZmVjN2QwMDBmYmYzMmIwN2IxMmNiNWNkZmNkZWZiYTJmMTc4ZmExM2EzODgzYmMyOTE0ODM4NzNkZDBmYyJ9fX0=");
         return curiosityData;
     }
+    //
 
 }
