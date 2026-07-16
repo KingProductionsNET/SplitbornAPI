@@ -177,6 +177,7 @@ public class ArmorStandBuilder{
         armorStand.setCustomNameVisible(customNameVisible);
 
         armorStand.setPersistent(true);
+        armorStand.setRemoveWhenFarAway(false);
 
         if (helmet != null) armorStand.getEquipment().setHelmet(helmet);
         if (chestplate != null) armorStand.getEquipment().setChestplate(chestplate);
