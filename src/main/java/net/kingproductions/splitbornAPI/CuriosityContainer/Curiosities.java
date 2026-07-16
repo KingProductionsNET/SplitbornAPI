@@ -4,6 +4,11 @@ public enum Curiosities {
 
     HEADLESS_EYE,
     CAT_ON_TREE,
-    SLEEPY_CAPYBARA
+    SLEEPY_CAPYBARA,
+    GHOST_MINER,
+    RESTLESS_SKULL,
+    FLICKER_MAN,
+    VOID_LANTERN,
+    JUNK_SENTINEL
 
 }

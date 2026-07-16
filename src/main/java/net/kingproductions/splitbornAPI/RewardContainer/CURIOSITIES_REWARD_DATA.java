@@ -16,6 +16,12 @@ public class CURIOSITIES_REWARD_DATA {
 
         if (curiosities.equals(Curiosities.HEADLESS_EYE)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.CAT_ON_TREE)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.GHOST_MINER)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 1000;
 
         return gleamReward;
     }
@@ -25,6 +31,12 @@ public class CURIOSITIES_REWARD_DATA {
 
         if (curiosities.equals(Curiosities.HEADLESS_EYE)) xpReward = 200;
         if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 200;
+        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) xpReward = 200;
+        if (curiosities.equals(Curiosities.GHOST_MINER)) xpReward = 200;
+        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) xpReward = 200;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) xpReward = 200;
+        if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 200;
+        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 200;
 
         return xpReward;
     }
