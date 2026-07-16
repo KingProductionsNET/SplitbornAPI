@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface HelperProvider {
 
@@ -107,6 +108,5 @@ public interface HelperProvider {
     ItemStack getPlaceholderLockedItemForNPCShop(List<String> description);
     boolean playerHasFreeInventorySpace(Player player);
     void forceUpdatePlayersLocation(Player player);
-    String getOfflinePlayersDisplayNameByName(String Name);
-
+    String getOfflinePlayersDisplayNameByUUID(UUID Name);
 }
