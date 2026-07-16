@@ -107,5 +107,6 @@ public interface HelperProvider {
     ItemStack getPlaceholderLockedItemForNPCShop(List<String> description);
     boolean playerHasFreeInventorySpace(Player player);
     void forceUpdatePlayersLocation(Player player);
+    String getOfflinePlayersDisplayNameByName(String Name);
 
 }

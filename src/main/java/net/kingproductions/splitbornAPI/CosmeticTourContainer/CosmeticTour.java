@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 
 import net.kingproductions.splitbornAPI.AbilityCastEventContainer.AbilityCastEvent;
+import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -157,8 +158,9 @@ public class CosmeticTour implements Listener {
                         }
 
                         passenger.setInvulnerable(false);
-
                         Passenger.removeMetadata("ON_TOUR", plugin);
+
+                        SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
                     }
                     return;
                 }
