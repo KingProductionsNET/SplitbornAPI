@@ -47,7 +47,7 @@ public class CuriosityCreator {
         CuriosityData curiosityData = new CuriosityData();
         curiosityData.setID(Curiosities.SLEEPY_CAPYBARA);
         curiosityData.setDisplayMaterial(Material.PLAYER_HEAD);
-        curiosityData.setLocation(Locations.Sporewood);
+        curiosityData.setLocation(Locations.Hearthgrove);
         curiosityData.setSkullValue("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc5ZmUwNTRhOTIzZGZiODg0ZjZjNjAzMTk4MmJkMDlhY2IwNDQ2Y2Q0NzExYjRjYjQzM2JlOTA0ZDVkNWJmZCJ9fX0=");
         return curiosityData;
     }
@@ -64,7 +64,7 @@ public class CuriosityCreator {
         CuriosityData curiosityData = new CuriosityData();
         curiosityData.setID(Curiosities.RESTLESS_SKULL);
         curiosityData.setDisplayMaterial(Material.SKELETON_SKULL);
-        curiosityData.setLocation(Locations.Doomrest);
+        curiosityData.setLocation(Locations.Hearthgrove);
         return curiosityData;
     }
 
@@ -72,7 +72,7 @@ public class CuriosityCreator {
         CuriosityData curiosityData = new CuriosityData();
         curiosityData.setID(Curiosities.FLICKER_MAN);
         curiosityData.setDisplayMaterial(Material.PLAYER_HEAD);
-        curiosityData.setLocation(Locations.The_Fold);
+        curiosityData.setLocation(Locations.Hearthgrove);
         curiosityData.setSkullValue("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDBkNGNhYWE1NTRhZWY4OWM4ZDA3NDc2Zjg3ZTA2NzlkYjBkZmJiYjM1YmVhMGVkMjQ4ZjgzZWZhYWQ4YjgzOCJ9fX0=");
         return curiosityData;
     }
@@ -81,7 +81,7 @@ public class CuriosityCreator {
         CuriosityData curiosityData = new CuriosityData();
         curiosityData.setID(Curiosities.VOID_LANTERN);
         curiosityData.setDisplayMaterial(Material.SOUL_LANTERN);
-        curiosityData.setLocation(Locations.The_Beyond);
+        curiosityData.setLocation(Locations.Hearthgrove);
         return curiosityData;
     }
 
