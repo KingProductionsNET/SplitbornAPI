@@ -7,6 +7,6 @@ public enum Locations {
     Doomrest,
     The_Beyond,
     Sporewood,
-    Ashvein_Mine
-
+    Ashvein_Mine,
+    Junkyard
 }
