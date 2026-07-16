@@ -18,6 +18,7 @@ public class LootDropEvent extends Event implements Cancellable {
     private final Map<Item_ID, Double> getItemsFinalModifiedDropChance = new HashMap<>();
     private final Set<Item_ID> disallowedItems = new HashSet<>();
     private final Map<Item_ID, Integer> GuaranteedExtraDrops = new HashMap<>();
+    private final Map<Item_ID, Integer> bonusAmountForItemID = new HashMap<>();
     private boolean cancelled;
 
     public LootDropEvent(Player player, Mob_ID mobId, boolean cancelled) {
@@ -41,12 +42,18 @@ public class LootDropEvent extends Event implements Cancellable {
     public Map<Item_ID, Integer> getGuaranteedExtraDrops(){
         return GuaranteedExtraDrops;
     }
+    public int getBonusAmountForItemID(Item_ID itemId){
+        return bonusAmountForItemID.getOrDefault(itemId, 0);
+    }
 
-    public void modifyChanceForItemID(Item_ID itemId, double chance){
+    public void addBonusChanceForItemID(Item_ID itemId, double chance){
         double currentModifiedChance = getItemsFinalModifiedDropChance.getOrDefault(itemId, 0.0);
         currentModifiedChance += chance;
 
         getItemsFinalModifiedDropChance.put(itemId, currentModifiedChance);
+    }
+    public void addBonusAmountForItemID(Item_ID itemId, int Amount){
+        bonusAmountForItemID.put(itemId, Amount);
     }
     public void addDisallowedItemID(Item_ID itemId){
         disallowedItems.add(itemId);
