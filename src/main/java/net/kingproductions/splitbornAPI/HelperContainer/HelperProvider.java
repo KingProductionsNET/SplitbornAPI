@@ -109,4 +109,5 @@ public interface HelperProvider {
     boolean playerHasFreeInventorySpace(Player player);
     void forceUpdatePlayersLocation(Player player);
     String getOfflinePlayersDisplayNameByUUID(UUID Name);
+    void addAshveinPoints(Player player, int Amount);
 }
