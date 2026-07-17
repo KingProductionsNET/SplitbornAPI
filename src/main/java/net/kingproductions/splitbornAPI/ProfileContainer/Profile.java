@@ -25,6 +25,7 @@ public interface Profile {
     int getReelSpeed();
     int getLeap();
     int getHeat();
+    int getStat(Stat stat);
 
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
@@ -37,6 +38,7 @@ public interface Profile {
     void setReelSpeed(int i);
     void setLeap(int i);
     void setHeat(int i);
+    void setStat(Stat stat, int i);
 
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
