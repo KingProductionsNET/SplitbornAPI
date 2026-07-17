@@ -110,4 +110,5 @@ public interface HelperProvider {
     void forceUpdatePlayersLocation(Player player);
     String getOfflinePlayersDisplayNameByUUID(UUID Name);
     void addAshveinPoints(Player player, int Amount);
+    String convertToRomanNumber(int input);
 }
