@@ -111,4 +111,5 @@ public interface HelperProvider {
     String getOfflinePlayersDisplayNameByUUID(UUID Name);
     void addAshveinPoints(Player player, int Amount);
     String convertToRomanNumber(int input);
+    String getStatSymbol(Stat stat);
 }
