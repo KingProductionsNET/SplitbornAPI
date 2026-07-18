@@ -63,6 +63,12 @@ public class ItemBuilder {
         }
         return this;
     }
+    public ItemBuilder addHiddenObject(String key, PersistentDataType persistentDataType, Object value){
+        NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+        PersistentDataContainer container = itemMeta.getPersistentDataContainer();
+        container.set(namespacedKey, persistentDataType, value);
+        return this;
+    }
 
     public ItemBuilder addLore(String... loreLines) {
         if (itemMeta != null) {
