@@ -39,6 +39,8 @@ public interface Profile {
     void setReelSpeed(int i);
     void setLeap(int i);
     void setHeat(int i);
+    void setExcavationSpeed(int i);
+    void setExcavationFortune(int i);
 
     void setStat(Stat stat, int i);
 

@@ -68,6 +68,8 @@ public interface HelperProvider {
     String getLoreReady_Range(int value);
     String getLoreReady_ReelSpeed(int value);
     String getLoreReady_Heat(int value);
+    String getLoreReady_ExcavationSpeed(int value);
+    String getLoreReady_ExcavationFortune(int value);
     boolean isValidSplitbornItem(ItemStack itemStack);
     Item_ID getItemStacksItemID(ItemStack itemStack);
     Locations getPlayersLocation(Player player);
