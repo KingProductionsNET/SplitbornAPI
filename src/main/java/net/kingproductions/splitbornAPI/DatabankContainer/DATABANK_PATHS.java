@@ -44,6 +44,8 @@ public enum DATABANK_PATHS {
     DEATH_,
 
     MINED_,
+    MINING_LEVEL_,
+    MINING_LEVEL_CLAIMED_,
 
     KILL_LOG_LEVEL_,
 
