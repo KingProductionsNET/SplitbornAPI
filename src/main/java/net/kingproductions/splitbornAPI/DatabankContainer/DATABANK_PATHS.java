@@ -43,6 +43,8 @@ public enum DATABANK_PATHS {
     KILLS_,
     DEATH_,
 
+    MINED_,
+
     KILL_LOG_LEVEL_,
 
     LEVEL_CLAIM_,
