@@ -48,6 +48,8 @@ public interface HelperProvider {
     String getAquaticSymbol();
     String getMoltenSymbol();
     String getLeapSymbol();
+    String getExcavationSpeedSymbol();
+    String getExcavationFortuneSymbol();
     boolean playerHasActiveQuest(Player player);
     boolean eligibleForUpgrade(int currentXP, int eventXP);
     void fireworkForLevelUpgrade(Player player);
