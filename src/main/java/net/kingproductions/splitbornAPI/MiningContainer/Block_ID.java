@@ -1,6 +1,6 @@
 package net.kingproductions.splitbornAPI.MiningContainer;
 
-public enum BLOCK_ID {
+public enum Block_ID {
 
     SCRAP_ORE,SPARK_ORE
 
