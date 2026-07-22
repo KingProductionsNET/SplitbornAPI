@@ -117,4 +117,5 @@ public interface HelperProvider {
     void addAshveinPoints(Player player, int Amount);
     String convertToRomanNumber(int input);
     String getStatSymbol(Stat stat);
+    boolean isSplitbornNPC(Entity e);
 }

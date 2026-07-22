@@ -26,8 +26,17 @@ public class QuestCreator {
         set.add(new Scrap_For_Pip().build());
         set.add(new Talk_To_Bonsai().build());
         set.add(new The_Lost_Caravan().build());
+        set.add(new Meet_Grug().build());
         return set;
     }
+
+
+
+
+
+
+
+
 
     public static void sendDataToCore(){
         Bukkit.getScheduler().runTaskAsynchronously(plugin, () ->{

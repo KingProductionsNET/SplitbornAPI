@@ -174,8 +174,15 @@ public class CategoryRewardBuilder {
         if (StatRewards != null && !StatRewards.isEmpty()){
             for (Stat stat : StatRewards.keySet()){
                 int Amount = StatRewards.get(stat);
-
                 int currentStatAmount = profileData.getBaseStatValue(stat);
+
+                if (stat.equals(Stat.HEALTH)){
+                    if ((int) player.getHealth() >= (int) player.getMaxHealth()){
+                        player.setMaxHealth(currentStatAmount + Amount);
+                        player.setHealth(player.getMaxHealth());
+                    }
+                }
+
                 profileData.setStat(stat, currentStatAmount + Amount);
                 extraRewardsAsString.add("§a+" + Amount + " " + SplitbornAPI.getHelper().getStatSymbol(stat) + SplitbornAPI.getHelper().formatEnumName(stat.toString()));
             }

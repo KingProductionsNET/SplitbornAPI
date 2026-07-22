@@ -3,14 +3,14 @@ package net.kingproductions.splitbornAPI.QuestContainer.Quests;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestPreset;
+import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestProvider;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.Quests;
 import org.bukkit.Material;
 
 import java.util.List;
 import java.util.Map;
 
-public class Talk_To_Bonsai extends QuestPreset {
-
+public class Meet_Grug extends QuestPreset {
     @Override
     public boolean isMainQuest() {
         return false;
@@ -18,27 +18,27 @@ public class Talk_To_Bonsai extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.TALK_TO_BONSAI;
+        return Quests.MEET_GRUG;
     }
 
     @Override
     public String questDisplayName() {
-        return "§fTalk To §eBonsai";
+        return "§fMeet §cGrug";
     }
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return null;
     }
 
     @Override
     public Material displayMaterial() {
-        return Material.ARMADILLO_SCUTE;
+        return null;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fTalk to §eBonsai");
+        return List.of("§fMeet §cGrug");
     }
 
     @Override
@@ -53,6 +53,6 @@ public class Talk_To_Bonsai extends QuestPreset {
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of(NPC_ID.BONSAI);
+        return List.of();
     }
 }
