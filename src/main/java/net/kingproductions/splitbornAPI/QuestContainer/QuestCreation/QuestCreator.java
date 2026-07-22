@@ -44,10 +44,10 @@ public class QuestCreator {
                 final Map<String, Object> questRelatedValues = questData.getQuestRelatedValues();
                 final List<NPC_ID> whitelistedNPCs = questData.getWhitelistedNPCsWhileQuestIsActive();
 
-                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "ID", questID.toString(), true);
+                if (questID != null) SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "ID", questID.toString(), true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "isMainQuest", isMainQuest, true);
-                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "location", questLocation.toString(), true);
-                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "displayMaterial", material.toString(), true);
+                if (questLocation != null) SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "location", questLocation.toString(), true);
+                if (material != null)  SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "displayMaterial", material.toString(), true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "inQuestDescriptionText", inQuestDescriptionText, true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "inventoryDescriptionText", inventoryDescriptionText, true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "questRelatedValues", questRelatedValues, true);

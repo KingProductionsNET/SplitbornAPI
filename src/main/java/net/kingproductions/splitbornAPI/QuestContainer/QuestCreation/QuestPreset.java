@@ -28,7 +28,8 @@ public abstract class QuestPreset {
                 .setInQuestDescriptionText(inQuestDescriptionText())
                 .setInventoryDescriptionText(inventoryDescriptionText())
                 .setQuestRelatedValues(questRelatedValues())
-                .setWhitelistedNPCs(whitelistedNPCsWhileQuestIsActive());
+                .setWhitelistedNPCs(whitelistedNPCsWhileQuestIsActive())
+                .setDisplayName(questDisplayName());
     }
 
 }
