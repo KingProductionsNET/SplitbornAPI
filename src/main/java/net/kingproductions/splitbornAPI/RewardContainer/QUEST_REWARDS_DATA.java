@@ -1,14 +1,10 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
-import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
-import net.kingproductions.splitbornAPI.NPC.NPC_ID;
-import net.kingproductions.splitbornAPI.QuestContainer.Quests;
+import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.Quests;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class QUEST_REWARDS_DATA {

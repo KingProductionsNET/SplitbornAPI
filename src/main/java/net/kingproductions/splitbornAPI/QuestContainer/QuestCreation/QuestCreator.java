@@ -1,9 +1,6 @@
-package net.kingproductions.splitbornAPI.QuestContainer;
+package net.kingproductions.splitbornAPI.QuestContainer.QuestCreation;
 
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.model.ReplaceOptions;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
-import org.bson.Document;
 import org.bukkit.Material;
 
 import java.util.HashSet;
@@ -25,15 +22,6 @@ public class QuestCreator {
         set.add(QUEST_HeatCore());
         set.add(QUEST_Scrap_for_Pip());
         return set;
-    }
-
-    private static QuestData QUEST_Chup_Hunter(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.Chup_Hunter);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.ARMADILLO_SCUTE);
-
-        return questData;
     }
     private static QuestData QUEST_Defeat_Rotmaw(){
         QuestData questData = new QuestData();

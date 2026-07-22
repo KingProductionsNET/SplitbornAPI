@@ -1,4 +1,4 @@
-package net.kingproductions.splitbornAPI.QuestContainer;
+package net.kingproductions.splitbornAPI.QuestContainer.QuestCreation;
 
 import org.bukkit.entity.Player;
 

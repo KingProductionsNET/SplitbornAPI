@@ -1,10 +1,8 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
-import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
 import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
-import net.kingproductions.splitbornAPI.QuestContainer.Quests;
 
 import java.util.HashMap;
 import java.util.Map;

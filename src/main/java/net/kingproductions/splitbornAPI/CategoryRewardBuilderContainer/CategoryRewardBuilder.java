@@ -11,21 +11,16 @@ import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NBS_FILE_NAMES;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
-import net.kingproductions.splitbornAPI.QuestContainer.Quests;
+import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.Quests;
 import net.kingproductions.splitbornAPI.RewardContainer.*;
 import net.kingproductions.splitbornAPI.RewardReasonContainer.REWARD_REASON;
 import net.kingproductions.splitbornAPI.VoidGateContainer.VOID_GATE_ID;
-import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
 
 public class CategoryRewardBuilder {

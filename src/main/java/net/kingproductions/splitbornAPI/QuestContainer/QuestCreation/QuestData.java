@@ -1,4 +1,4 @@
-package net.kingproductions.splitbornAPI.QuestContainer;
+package net.kingproductions.splitbornAPI.QuestContainer.QuestCreation;
 
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import org.bukkit.Material;
