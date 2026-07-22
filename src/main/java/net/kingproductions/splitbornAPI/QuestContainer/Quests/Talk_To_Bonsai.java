@@ -22,6 +22,11 @@ public class Talk_To_Bonsai extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§fTalk To Bonsai";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Hearthgrove;
     }

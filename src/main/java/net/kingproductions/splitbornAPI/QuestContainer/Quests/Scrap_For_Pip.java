@@ -21,6 +21,11 @@ public class Scrap_For_Pip extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§6Scrap for Pip";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Junkyard;
     }

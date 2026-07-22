@@ -21,6 +21,11 @@ public class Find_Andrews_Toy extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§fFind §eAndrews §cToy§f.";
+    }
+
+    @Override
     public Locations questLocation() {
         return null;
     }

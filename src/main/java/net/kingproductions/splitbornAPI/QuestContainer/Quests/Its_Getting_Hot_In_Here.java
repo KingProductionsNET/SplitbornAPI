@@ -21,6 +21,11 @@ public class Its_Getting_Hot_In_Here extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§6It's Getting Hot In Here";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Ashvein_Mine;
     }

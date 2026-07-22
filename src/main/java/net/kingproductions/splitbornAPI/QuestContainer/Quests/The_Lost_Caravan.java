@@ -21,6 +21,11 @@ public class The_Lost_Caravan extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§aThe Lost Caravan";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Hearthgrove;
     }

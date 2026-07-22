@@ -22,6 +22,11 @@ public class Defeat_Rotmaw extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§fDefeat §cRotmaw";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Hearthgrove;
     }

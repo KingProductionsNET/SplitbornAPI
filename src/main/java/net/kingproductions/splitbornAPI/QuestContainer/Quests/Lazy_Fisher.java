@@ -21,6 +21,11 @@ public class Lazy_Fisher extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§9Lazy Fisher";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Hearthgrove;
     }

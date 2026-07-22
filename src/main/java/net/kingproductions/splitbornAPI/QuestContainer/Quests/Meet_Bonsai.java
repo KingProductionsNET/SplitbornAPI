@@ -21,6 +21,11 @@ public class Meet_Bonsai extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§fMeet Bonsai";
+    }
+
+    @Override
     public Locations questLocation() {
         return null;
     }

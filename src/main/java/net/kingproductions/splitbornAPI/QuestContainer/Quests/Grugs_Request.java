@@ -21,6 +21,11 @@ public class Grugs_Request extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§cGrugs Request";
+    }
+
+    @Override
     public Locations questLocation() {
         return null;
     }

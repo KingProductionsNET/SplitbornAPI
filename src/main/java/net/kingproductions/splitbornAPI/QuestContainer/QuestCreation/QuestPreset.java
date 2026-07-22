@@ -11,6 +11,7 @@ public abstract class QuestPreset {
 
     public abstract boolean isMainQuest();
     public abstract Quests questID();
+    public abstract String questDisplayName();
     public abstract Locations questLocation();
     public abstract Material displayMaterial();
     public abstract List<String> inQuestDescriptionText();

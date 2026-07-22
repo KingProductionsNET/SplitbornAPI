@@ -21,6 +21,11 @@ public class Eliminate_The_Creature extends QuestPreset {
     }
 
     @Override
+    public String questDisplayName() {
+        return "§fEliminate the §5Creature";
+    }
+
+    @Override
     public Locations questLocation() {
         return Locations.Hearthgrove;
     }

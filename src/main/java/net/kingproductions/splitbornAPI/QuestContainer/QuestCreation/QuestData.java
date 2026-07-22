@@ -19,6 +19,7 @@ public class QuestData {
     private List<String> inventoryDescriptionText = new ArrayList<>();
     private Map<String, Object> questRelatedValues = new HashMap<>();
     private List<NPC_ID> whilitedNPCsWhileQuestIsActive = new ArrayList<>();
+    private String displayName;
 
     public QuestData setIsMainQuest(boolean b){
         this.isMainQuest = b;
@@ -53,6 +54,10 @@ public class QuestData {
         this.whilitedNPCsWhileQuestIsActive = list;
         return this;
     }
+    public QuestData setDisplayName(String s){
+        this.displayName = s;
+        return this;
+    }
 
     public boolean getIsMainQuest(){
         return isMainQuest;
@@ -78,5 +83,8 @@ public class QuestData {
     }
     public List<NPC_ID> getWhitelistedNPCsWhileQuestIsActive(){
         return whilitedNPCsWhileQuestIsActive;
+    }
+    public String getDisplayName(){
+        return displayName;
     }
 }
