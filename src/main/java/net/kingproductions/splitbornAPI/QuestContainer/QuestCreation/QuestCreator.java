@@ -1,91 +1,58 @@
 package net.kingproductions.splitbornAPI.QuestContainer.QuestCreation;
 
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
+import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
+import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.*;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import static com.mongodb.client.model.Filters.eq;
+import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
 public class QuestCreator {
 
     public static Set<QuestData> getQuestData(){
         Set<QuestData> set = new HashSet<>();
-        set.add(QUEST_Chup_Hunter());
-        set.add(QUEST_Defeat_Rotmaw());
-        set.add(QUEST_Eliminate_The_Creator());
-        set.add(QUEST_The_Lost_Caravan());
-        set.add(QUEST_Lazy_Fisher());
-        set.add(QUEST_Its_Getting_Hot_In_Here());
-        set.add(QUEST_CoolingCore());
-        set.add(QUEST_HeatCore());
-        set.add(QUEST_Scrap_for_Pip());
+        set.add(new Defeat_Rotmaw().build());
+        set.add(new Eliminate_The_Creature().build());
+        set.add(new Find_Andrews_Toy().build());
+        set.add(new Grugs_Request().build());
+        set.add(new Its_Getting_Hot_In_Here().build());
+        set.add(new Lazy_Fisher().build());
+        set.add(new Meet_Bonsai().build());
+        set.add(new Scrap_For_Pip().build());
+        set.add(new Talk_To_Bonsai().build());
+        set.add(new The_Lost_Caravan().build());
         return set;
     }
-    private static QuestData QUEST_Defeat_Rotmaw(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.DEFEAT_ROTMAW);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.IRON_SWORD);
 
-        return questData;
+    public static void sendDataToCore(){
+        Bukkit.getScheduler().runTaskAsynchronously(plugin, () ->{
+            final String collectionName = "quest_container";
+
+            for (QuestData questData : getQuestData()){
+                final Quests questID = questData.getQuestID();
+
+                final boolean isMainQuest = questData.getIsMainQuest();
+                final Locations questLocation = questData.getQuestLocation();
+                final Material material = questData.getDisplayMaterial();
+                final List<String> inQuestDescriptionText = questData.getInQuestDescriptionText();
+                final List<String> inventoryDescriptionText = questData.getInventoryDescriptionText();
+                final Map<String, Object> questRelatedValues = questData.getQuestRelatedValues();
+                final List<NPC_ID> whitelistedNPCs = questData.getWhitelistedNPCsWhileQuestIsActive();
+
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "ID", questID.toString(), true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "isMainQuest", isMainQuest, true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "location", questLocation.toString(), true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "displayMaterial", material.toString(), true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "inQuestDescriptionText", inQuestDescriptionText, true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "inventoryDescriptionText", inventoryDescriptionText, true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "questRelatedValues", questRelatedValues, true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "whitelistedNPCs", whitelistedNPCs, true);
+            }
+        });
     }
-    private static QuestData QUEST_Eliminate_The_Creator(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.ELIMINATE_THE_CREATURE);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.DRIED_KELP);
-
-        return questData;
-    }
-    private static QuestData QUEST_The_Lost_Caravan(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.THE_LOST_CARAVAN);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.BARREL);
-
-        return questData;
-    }
-    private static QuestData QUEST_Lazy_Fisher(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.LAZY_FISHER);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.FISHING_ROD);
-
-        return questData;
-    }
-    private static QuestData QUEST_Its_Getting_Hot_In_Here(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.ITS_GETTING_HOT_IN_HERE);
-        questData.setQuestLocation(Locations.Ashvein_Mine);
-        questData.setDisplayMaterial(Material.LAVA_BUCKET);
-
-        return questData;
-    }
-    private static QuestData QUEST_CoolingCore(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.COOLING_CORE);
-        questData.setQuestLocation(Locations.Ashvein_Mine);
-        questData.setDisplayMaterial(Material.BLUE_ICE);
-
-        return questData;
-    }
-    private static QuestData QUEST_HeatCore(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.HEAT_CORE);
-        questData.setQuestLocation(Locations.Ashvein_Mine);
-        questData.setDisplayMaterial(Material.BLAZE_POWDER);
-
-        return questData;
-    }
-    private static QuestData QUEST_Scrap_for_Pip(){
-        QuestData questData = new QuestData();
-        questData.setQuestID(Quests.SCRAP_FOR_PIP);
-        questData.setQuestLocation(Locations.Hearthgrove);
-        questData.setDisplayMaterial(Material.IRON_CHAIN);
-
-        return questData;
-    }
-
 }

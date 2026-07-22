@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -67,6 +68,14 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.AREO)){
             map.put(Item_ID.ZENTIS_U7, 1);
         }
+
+        return map;
+    }
+
+    public static Map<Stat, Integer> getStatReward(NPC_ID npcId){
+        Map<Stat, Integer> map = new HashMap<>();
+
+        if (npcId.equals(NPC_ID.BONSAI)) map.put(Stat.HEALTH, 5);
 
         return map;
     }

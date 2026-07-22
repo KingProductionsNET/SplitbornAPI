@@ -14,6 +14,7 @@ import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.Quests;
 import net.kingproductions.splitbornAPI.RewardContainer.*;
 import net.kingproductions.splitbornAPI.RewardReasonContainer.REWARD_REASON;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.VoidGateContainer.VOID_GATE_ID;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -31,6 +32,7 @@ public class CategoryRewardBuilder {
     private int GleamReward = 0;
     private Map<Item_ID, Integer> ExtraRewards;
     private Map<Essence_ID, Integer> EssenceRewards;
+    private Map<Stat, Integer> StatRewards;
 
     private List<String> BenefitList;
     private String InfoText;
@@ -87,6 +89,7 @@ public class CategoryRewardBuilder {
                 XPReward = QUEST_REWARDS_DATA.getXPReward(quest);
                 EssenceRewards = QUEST_REWARDS_DATA.getEssenceRewards(quest);
                 ExtraRewards = QUEST_REWARDS_DATA.getExtraRewards(quest);
+                StatRewards = QUEST_REWARDS_DATA.getStatReward(quest);
             }
             if (rewardReason.equals(REWARD_REASON.AREA)){
                 InfoText = location.toString();
@@ -111,6 +114,7 @@ public class CategoryRewardBuilder {
                 XPReward = NPC_REWARD_DATA.getXPReward(npcId);
                 EssenceRewards = NPC_REWARD_DATA.getEssenceRewards(npcId);
                 ExtraRewards = NPC_REWARD_DATA.getExtraRewards(npcId);
+                StatRewards = NPC_REWARD_DATA.getStatReward(npcId);
             }
             if (rewardReason.equals(REWARD_REASON.ACHIEVEMENT)){
                 InfoText = achievementId.toString();
@@ -123,6 +127,7 @@ public class CategoryRewardBuilder {
                 XPReward = ACHIEVEMENT_REWARD_DATA.getXPReward(achievementId);
                 EssenceRewards = ACHIEVEMENT_REWARD_DATA.getEssenceRewards(achievementId);
                 ExtraRewards = ACHIEVEMENT_REWARD_DATA.getExtraRewards(achievementId);
+                StatRewards = ACHIEVEMENT_REWARD_DATA.getStatReward(achievementId);
             }
             if (rewardReason.equals(REWARD_REASON.SEALED_VOID_GATE)){
                 InfoText = voidGateId.toString();
@@ -142,11 +147,22 @@ public class CategoryRewardBuilder {
                 XPReward = CURIOSITIES_REWARD_DATA.getXPReward(curiosities);
                 EssenceRewards = CURIOSITIES_REWARD_DATA.getEssenceRewards(curiosities);
                 ExtraRewards = CURIOSITIES_REWARD_DATA.getExtraRewards(curiosities);
+                StatRewards = CURIOSITIES_REWARD_DATA.getStatReward(curiosities);
             }
         }
 
         List<String> extraRewardsAsString = new ArrayList<>();
 
+        if (ExtraRewards != null && !ExtraRewards.isEmpty()){
+            for (Item_ID itemId : ExtraRewards.keySet()){
+
+                ItemStack preItem = SplitbornAPI.getItem(itemId);
+                int amount = ExtraRewards.get(itemId);
+
+                extraRewardsAsString.add("§8(§7" + amount + "x§8) " + preItem.getItemMeta().getDisplayName());
+                profileData.addUnclaimedItem(itemId, amount);
+            }
+        }
         if (EssenceRewards != null && !EssenceRewards.isEmpty()){
             for (Essence_ID essenceId : EssenceRewards.keySet()){
                 int Amount = EssenceRewards.get(essenceId);
@@ -155,15 +171,13 @@ public class CategoryRewardBuilder {
                 extraRewardsAsString.add("§e" + SplitbornAPI.getHelper().formatInteger(Amount) + " §d" + SplitbornAPI.getHelper().formatEnumName(essenceId.toString()) + " Essence" + SplitbornAPI.getHelper().getEssenceSymbol());
             }
         }
-        if (ExtraRewards != null && !ExtraRewards.isEmpty()){
-            for (Item_ID itemId : ExtraRewards.keySet()){
+        if (StatRewards != null && !StatRewards.isEmpty()){
+            for (Stat stat : StatRewards.keySet()){
+                int Amount = StatRewards.get(stat);
 
-
-                ItemStack preItem = SplitbornAPI.getItem(itemId);
-                int amount = ExtraRewards.get(itemId);
-
-                extraRewardsAsString.add("§8(§7" + amount + "x§8) " + preItem.getItemMeta().getDisplayName());
-                profileData.addUnclaimedItem(itemId, amount);
+                int currentStatAmount = profileData.getBaseStatValue(stat);
+                profileData.setStat(stat, currentStatAmount + Amount);
+                extraRewardsAsString.add("§a+" + Amount + " " + SplitbornAPI.getHelper().getStatSymbol(stat) + SplitbornAPI.getHelper().formatEnumName(stat.toString()));
             }
         }
 

@@ -9,16 +9,16 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
+public class Talk_To_Bonsai extends QuestPreset {
 
     @Override
     public boolean isMainQuest() {
-        return true;
+        return false;
     }
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.TALK_TO_BONSAI;
     }
 
     @Override
@@ -28,12 +28,12 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return Material.ARMADILLO_SCUTE;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("§fTalk to §eBonsai");
     }
 
     @Override
@@ -48,6 +48,6 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.BONSAI);
     }
 }

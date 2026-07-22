@@ -9,8 +9,7 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
-
+public class Lazy_Fisher extends QuestPreset {
     @Override
     public boolean isMainQuest() {
         return true;
@@ -18,7 +17,7 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.LAZY_FISHER;
     }
 
     @Override
@@ -28,12 +27,12 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return Material.FISHING_ROD;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("§fFish §9Welph's §frod out of the lake.");
     }
 
     @Override

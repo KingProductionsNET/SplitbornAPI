@@ -3,6 +3,8 @@ package net.kingproductions.splitbornAPI.RewardContainer;
 import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,6 +52,13 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosity.equals(Curiosities.HEADLESS_EYE)){
             map.put(Item_ID.FUNNY_SWORD, 1);
         }
+
+        return map;
+    }
+    public static Map<Stat, Integer> getStatReward(Curiosities curiosities){
+        Map<Stat, Integer> map = new HashMap<>();
+
+        if (curiosities.equals(Curiosities.HEADLESS_EYE)) map.put(Stat.HEALTH, 5);
 
         return map;
     }

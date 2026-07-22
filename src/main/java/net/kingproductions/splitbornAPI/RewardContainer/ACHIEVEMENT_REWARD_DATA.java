@@ -1,10 +1,12 @@
 package net.kingproductions.splitbornAPI.RewardContainer;
 
 import net.kingproductions.splitbornAPI.AchievementContainer.ACHIEVEMENT_ID;
+import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,6 +53,13 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)){
             map.put(Item_ID.ZENTIS_U7, 1);
         }
+
+        return map;
+    }
+    public static Map<Stat, Integer> getStatReward(ACHIEVEMENT_ID achievementId){
+        Map<Stat, Integer> map = new HashMap<>();
+
+        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) map.put(Stat.HEALTH, 5);
 
         return map;
     }

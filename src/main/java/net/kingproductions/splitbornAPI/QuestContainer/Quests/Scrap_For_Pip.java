@@ -9,8 +9,7 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
-
+public class Scrap_For_Pip extends QuestPreset {
     @Override
     public boolean isMainQuest() {
         return true;
@@ -18,22 +17,22 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.SCRAP_FOR_PIP;
     }
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return Locations.Junkyard;
     }
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return Material.IRON_CHAIN;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("§fCollect " + questRelatedValues().get("SC") + "x §aScrap Coil §fand " + questRelatedValues().get("SPC") + "x §aSpark Capacitor §ffor §6Pip§f.");
     }
 
     @Override
@@ -43,11 +42,12 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Map<String, Object> questRelatedValues() {
-        return Map.of();
+        return Map.of("SC", 28,
+                "SPC", 10);
     }
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.PIP_CINDERWICK);
     }
 }

@@ -9,8 +9,7 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
-
+public class Eliminate_The_Creature extends QuestPreset {
     @Override
     public boolean isMainQuest() {
         return true;
@@ -18,7 +17,7 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.ELIMINATE_THE_CREATURE;
     }
 
     @Override
@@ -28,12 +27,12 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return Material.DRIED_KELP;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("§fLure the §5creature §finto the §5void bin§f.");
     }
 
     @Override

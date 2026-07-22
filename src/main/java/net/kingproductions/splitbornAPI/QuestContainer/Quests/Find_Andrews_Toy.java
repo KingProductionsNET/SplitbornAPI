@@ -9,31 +9,30 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
-
+public class Find_Andrews_Toy extends QuestPreset {
     @Override
     public boolean isMainQuest() {
-        return true;
+        return false;
     }
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.FIND_ANDREWS_TOY;
     }
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return null;
     }
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return null;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("§fFind §eAndrews §cToy§f.");
     }
 
     @Override

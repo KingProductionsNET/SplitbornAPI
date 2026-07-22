@@ -14,6 +14,7 @@ import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
 import net.kingproductions.splitbornAPI.OneTimeRewardInventory.One_Time_Reward_Inventory;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.ProfileContainer.ProfileProvider;
+import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestCreator;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestProvider;
 import net.kingproductions.splitbornAPI.Util.UtilProvider;
 import org.bukkit.Bukkit;
@@ -113,6 +114,8 @@ public final class SplitbornAPI extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new One_Time_Reward_Inventory(), this);
         Bukkit.getPluginManager().registerEvents(new CosmeticTour(), this);
+
+        QuestCreator.sendDataToCore();
 
         Bukkit.getScheduler().runTask(plugin, () ->{
             LocationSpawnPoints.InitializeLocations();

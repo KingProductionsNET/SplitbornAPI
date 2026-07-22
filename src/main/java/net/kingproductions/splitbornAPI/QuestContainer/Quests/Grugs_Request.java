@@ -9,31 +9,30 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Defeat_Rotmaw extends QuestPreset {
-
+public class Grugs_Request extends QuestPreset {
     @Override
     public boolean isMainQuest() {
-        return true;
+        return false;
     }
 
     @Override
     public Quests questID() {
-        return Quests.DEFEAT_ROTMAW;
+        return Quests.GRUGS_REQUEST;
     }
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return null;
     }
 
     @Override
     public Material displayMaterial() {
-        return Material.IRON_SWORD;
+        return null;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fDefeat §cRotmaw§f.");
+        return List.of("Bring Grug " + questRelatedValues().get("CF") + "x §fChup Fluff and " + questRelatedValues().get("QP") + "x Quivering Pebbles.");
     }
 
     @Override
@@ -43,11 +42,13 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public Map<String, Object> questRelatedValues() {
-        return Map.of();
+        return Map.of(
+                "CF", 64,
+                "QP", 20);
     }
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.GRUG);
     }
 }
