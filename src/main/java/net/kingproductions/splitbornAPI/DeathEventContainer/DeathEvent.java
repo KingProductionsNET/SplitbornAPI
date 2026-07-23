@@ -19,7 +19,7 @@ public class DeathEvent extends Event implements Cancellable {
     private final Entity killer;
     private final String CustomName;
     private final DEATH_REASON ds;
-    private final Location newRespawnLocation;
+    private Location newRespawnLocation;
     private boolean cancelled;
 
     public DeathEvent(Player player, Mob_ID mobId, Entity killer, String CustomName, DEATH_REASON deathReason, Location respawnLocation, boolean cancelled) {
@@ -30,6 +30,10 @@ public class DeathEvent extends Event implements Cancellable {
         this.ds = deathReason;
         this.newRespawnLocation = respawnLocation;
         this.cancelled = cancelled;
+    }
+
+    public void setNewRespawnLocation(Location loc){
+        this.newRespawnLocation = loc;
     }
 
     public Player getPlayer() {
