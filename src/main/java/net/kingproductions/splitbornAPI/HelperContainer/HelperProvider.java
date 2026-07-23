@@ -8,6 +8,7 @@ import net.kingproductions.splitbornAPI.MobContainer.MobCategory;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.*;
@@ -118,4 +119,5 @@ public interface HelperProvider {
     String convertToRomanNumber(int input);
     String getStatSymbol(Stat stat);
     boolean isSplitbornNPC(Entity e);
+    ChatColor getStatsColor(Stat stat);
 }

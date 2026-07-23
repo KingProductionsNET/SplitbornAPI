@@ -53,6 +53,6 @@ public class Meet_Grug extends QuestPreset {
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.GRUG);
     }
 }
