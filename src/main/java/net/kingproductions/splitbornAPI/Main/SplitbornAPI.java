@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Main;
 
+import net.kingproductions.splitbornAPI.AuctionHouseContainer.AuctionHouseProvider;
 import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
 import net.kingproductions.splitbornAPI.CosmeticTourContainer.CosmeticTour;
@@ -42,6 +43,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static CommandBlockProvider commandBlockProvider;
     private static UtilProvider utilProvider;
     private static RPGMobProvider rpgMobProvider;
+    private static AuctionHouseProvider auctionHouseProvider;
 
     private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
 
@@ -58,6 +60,9 @@ public final class SplitbornAPI extends JavaPlugin {
     }
     public static void initRPGMobs(RPGMobProvider r){
         rpgMobProvider = r;
+    }
+    public static void initAuctionHouse(AuctionHouseProvider a){
+        auctionHouseProvider = a;
     }
     public static void addItemProvider(SplitbornItemProvider s){
         itemProviders.add(s);
@@ -101,6 +106,10 @@ public final class SplitbornAPI extends JavaPlugin {
     public static RPGMobProvider getMobSystem(){
         if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return rpgMobProvider;
+    }
+    public static AuctionHouseProvider getAuctionHouse(){
+        if (auctionHouseProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        return auctionHouseProvider;
     }
 
     @Override
