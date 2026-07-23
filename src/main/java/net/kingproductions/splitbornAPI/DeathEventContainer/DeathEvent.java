@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.DeathEventContainer;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.NPC.NPCInteractEvent;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
@@ -18,14 +19,16 @@ public class DeathEvent extends Event implements Cancellable {
     private final Entity killer;
     private final String CustomName;
     private final DEATH_REASON ds;
+    private final Location newRespawnLocation;
     private boolean cancelled;
 
-    public DeathEvent(Player player, Mob_ID mobId, Entity killer, String CustomName, DEATH_REASON deathReason, boolean cancelled) {
+    public DeathEvent(Player player, Mob_ID mobId, Entity killer, String CustomName, DEATH_REASON deathReason, Location respawnLocation, boolean cancelled) {
         this.player = player;
         this.mobId = mobId;
         this.killer = killer;
         this.CustomName = CustomName;
         this.ds = deathReason;
+        this.newRespawnLocation = respawnLocation;
         this.cancelled = cancelled;
     }
 
@@ -42,6 +45,7 @@ public class DeathEvent extends Event implements Cancellable {
         return CustomName;
     }
     public DEATH_REASON getDeathReason(){return ds;}
+    public Location getNewRespawnLocation(){return newRespawnLocation;}
 
     @Override
     public boolean isCancelled() {
