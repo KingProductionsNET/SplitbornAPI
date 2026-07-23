@@ -37,7 +37,8 @@ public class Scrap_For_Pip extends QuestPreset {
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fCollect " + questRelatedValues().get("SC") + "x §aScrap Coil §fand " + questRelatedValues().get("SPC") + "x §aSpark Capacitor §ffor §6Pip§f.");
+        return List.of("§fCollect " + questRelatedValues().get("SC") + "x §aScrap Coil §fand ",
+                "§f" + questRelatedValues().get("SPC") + "x §aSpark Capacitor §ffor §6Pip§f.");
     }
 
     @Override
