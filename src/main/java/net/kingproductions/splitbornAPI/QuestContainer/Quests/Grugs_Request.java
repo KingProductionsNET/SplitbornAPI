@@ -37,7 +37,8 @@ public class Grugs_Request extends QuestPreset {
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("Bring Grug " + questRelatedValues().get("CF") + "x §fChup Fluff and " + questRelatedValues().get("QP") + "x Quivering Pebbles.");
+        return List.of("§7Bring §cGrug §7" + questRelatedValues().get("CF") + "x §aChup Fluff",
+                "§7and §a" + questRelatedValues().get("QP") + "x §7Quivering Pebbles.");
     }
 
     @Override

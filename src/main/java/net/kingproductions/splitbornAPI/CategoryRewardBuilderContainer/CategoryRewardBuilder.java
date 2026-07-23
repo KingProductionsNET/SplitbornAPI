@@ -159,7 +159,7 @@ public class CategoryRewardBuilder {
                 ItemStack preItem = SplitbornAPI.getItem(itemId);
                 int amount = ExtraRewards.get(itemId);
 
-                extraRewardsAsString.add("§8(§7" + amount + "x§8) " + preItem.getItemMeta().getDisplayName());
+                extraRewardsAsString.add("§a+" + amount + " " + preItem.getItemMeta().getDisplayName());
                 profileData.addUnclaimedItem(itemId, amount);
             }
         }
@@ -184,7 +184,7 @@ public class CategoryRewardBuilder {
                 }
 
                 profileData.setStat(stat, currentStatAmount + Amount);
-                extraRewardsAsString.add("§a+" + Amount + " " + SplitbornAPI.getHelper().getStatSymbol(stat) + SplitbornAPI.getHelper().formatEnumName(stat.toString()));
+                extraRewardsAsString.add("§a+" + Amount + " " + SplitbornAPI.getHelper().getStatsColor(stat) + SplitbornAPI.getHelper().formatEnumName(stat.toString()) + SplitbornAPI.getHelper().getStatSymbol(stat));
             }
         }
 
