@@ -29,11 +29,6 @@ public interface UtilProvider {
     void boostTo(Entity e, Location targetLoc, double strength);
     void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c, Consumer<Entity> shuttle);
 
-    /**
-     * Adjusts a player's gleam balance by delta, correctly whether they're online on this
-     * server, another server on the network, or offline entirely. Never routes through a
-     * possibly-fabricated in-memory profile - safe to call for any UUID from any server.
-     */
     void adjustPlayerGleams(UUID uuid, int delta);
 
     // Generic atomic per-document Mongo primitives, for callers (e.g. cross-server plugins)
