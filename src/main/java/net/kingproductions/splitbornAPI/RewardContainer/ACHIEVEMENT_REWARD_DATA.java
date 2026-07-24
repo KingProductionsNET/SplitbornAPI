@@ -22,6 +22,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) gleamReward = 2000;
         if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) gleamReward = 500;
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) gleamReward = 500;
+        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) gleamReward = 500;
         return gleamReward;
     }
 
@@ -32,6 +33,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 200;
         if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 500;
+        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) xpReward = 500;
 
         return xpReward;
     }
@@ -60,6 +62,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         Map<Stat, Integer> map = new HashMap<>();
 
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) map.put(Stat.HEALTH, 5);
+        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) map.put(Stat.STAMINA, 10);
 
         return map;
     }
