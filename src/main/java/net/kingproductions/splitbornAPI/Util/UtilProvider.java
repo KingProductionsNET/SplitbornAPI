@@ -30,9 +30,6 @@ public interface UtilProvider {
     void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c, Consumer<Entity> shuttle);
 
     void adjustPlayerGleams(UUID uuid, int delta);
-
-    // Generic atomic per-document Mongo primitives, for callers (e.g. cross-server plugins)
-    // that need real atomicity instead of setObjectIntoDB's whole-field overwrite.
     void insertOne(String collectionName, Document doc);
     Document findOneAndUpdate(String collectionName, Document filter, Document update, boolean upsert);
     Document findOneAndDelete(String collectionName, Document filter);

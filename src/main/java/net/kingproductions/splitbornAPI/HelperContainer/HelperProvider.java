@@ -120,4 +120,5 @@ public interface HelperProvider {
     String getStatSymbol(Stat stat);
     boolean isSplitbornNPC(Entity e);
     ChatColor getStatsColor(Stat stat);
+    String getGleamString();
 }
