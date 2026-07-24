@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.Util;
 
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
+import org.bson.Document;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -26,5 +27,20 @@ public interface UtilProvider {
     Object getDBObject(String CollectionName, String oPath, String path);
     void arcMove(Entity e, Location loc1, Location loc2, int speed, Consumer<Entity> c);
     void boostTo(Entity e, Location targetLoc, double strength);
+
+    /**
+     * Adjusts a player's gleam balance by delta, correctly whether they're online on this
+     * server, another server on the network, or offline entirely. Never routes through a
+     * possibly-fabricated in-memory profile - safe to call for any UUID from any server.
+     */
+    void adjustPlayerGleams(UUID uuid, int delta);
+
+    // Generic atomic per-document Mongo primitives, for callers (e.g. cross-server plugins)
+    // that need real atomicity instead of setObjectIntoDB's whole-field overwrite.
+    void insertOne(String collectionName, Document doc);
+    Document findOneAndUpdate(String collectionName, Document filter, Document update, boolean upsert);
+    Document findOneAndDelete(String collectionName, Document filter);
+    List<Document> find(String collectionName, Document filter);
+    void updateOne(String collectionName, Document filter, Document update, boolean upsert);
 
 }
