@@ -4,6 +4,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
+import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
+import org.bson.Document;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -15,6 +17,7 @@ import java.lang.reflect.Field;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Base64;
+import java.util.List;
 import java.util.UUID;
 
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
@@ -94,6 +97,56 @@ public class CustomSkull {
                     if (ok) meta.setPlayerProfile(profile);
                     else meta.setOwner(name);
                 });
+
+                if (afterApplyOnMain != null) afterApplyOnMain.run();
+            });
+        });
+    }
+
+    /**
+     * Resolves a player's real skin by UUID and applies it to head, using a Mongo-backed cache
+     * shared by every server on the network so a player's texture only ever needs to be fetched
+     * from Mojang once, anywhere - not independently by every backend server that happens to
+     * render their head. Must be called off the main thread.
+     */
+    public static void applySkinByUUIDAsync(ItemStack head, UUID uuid, String fallbackName, Runnable afterApplyOnMain) {
+        Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+            List<Document> cached = SplitbornAPI.getUtil().find("player_skin_cache", new Document("_id", uuid.toString()));
+
+            String value = cached.isEmpty() ? null : cached.get(0).getString("texture");
+            String signature = cached.isEmpty() ? null : cached.get(0).getString("signature");
+
+            if (value == null) {
+                com.destroystokyo.paper.profile.PlayerProfile profile = Bukkit.createProfile(uuid, fallbackName);
+                if (profile.complete(true)) {
+                    for (com.destroystokyo.paper.profile.ProfileProperty property : profile.getProperties()) {
+                        if (property.getName().equals("textures")) {
+                            value = property.getValue();
+                            signature = property.getSignature();
+                            break;
+                        }
+                    }
+                }
+
+                if (value != null) {
+                    Document doc = new Document("_id", uuid.toString())
+                            .append("name", fallbackName)
+                            .append("texture", value)
+                            .append("signature", signature)
+                            .append("cached_at", System.currentTimeMillis());
+                    SplitbornAPI.getUtil().updateOne("player_skin_cache", new Document("_id", uuid.toString()),
+                            new Document("$set", doc), true);
+                }
+            }
+
+            String finalValue = value;
+            String finalSignature = signature;
+            Bukkit.getScheduler().runTask(plugin, () -> {
+                if (finalValue != null) {
+                    com.destroystokyo.paper.profile.PlayerProfile profile = Bukkit.createProfile(uuid, fallbackName);
+                    profile.setProperty(new com.destroystokyo.paper.profile.ProfileProperty("textures", finalValue, finalSignature));
+                    head.editMeta(SkullMeta.class, meta -> meta.setPlayerProfile(profile));
+                }
 
                 if (afterApplyOnMain != null) afterApplyOnMain.run();
             });
