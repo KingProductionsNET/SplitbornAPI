@@ -55,6 +55,7 @@ public class CURIOSITIES_REWARD_DATA {
 
         return map;
     }
+    //
     public static Map<Stat, Integer> getStatReward(Curiosities curiosities){
         Map<Stat, Integer> map = new HashMap<>();
 
