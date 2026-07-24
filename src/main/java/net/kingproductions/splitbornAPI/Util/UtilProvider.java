@@ -26,5 +26,6 @@ public interface UtilProvider {
     Object getDBObject(String CollectionName, String oPath, String path);
     void arcMove(Entity e, Location loc1, Location loc2, int speed, Consumer<Entity> c);
     void boostTo(Entity e, Location targetLoc, double strength);
+    void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c);
 
 }
