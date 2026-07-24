@@ -121,4 +121,6 @@ public interface HelperProvider {
     boolean isSplitbornNPC(Entity e);
     ChatColor getStatsColor(Stat stat);
     String getGleamString();
+    void disableBowShooting(Player player);
+    void enableBowShooting(Player player);
 }
