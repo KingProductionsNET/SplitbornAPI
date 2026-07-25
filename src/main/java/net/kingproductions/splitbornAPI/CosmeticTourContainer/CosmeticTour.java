@@ -158,8 +158,6 @@ public class CosmeticTour implements Listener {
                         Passenger.removeMetadata("ON_TOUR", plugin);
                         passenger.setGameMode(oldGameMode);
 
-                        Bukkit.broadcastMessage("old gm: " + oldGameMode);
-
                         SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
                     }
                     return;
