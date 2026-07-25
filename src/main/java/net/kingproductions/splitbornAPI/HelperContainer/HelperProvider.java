@@ -123,4 +123,5 @@ public interface HelperProvider {
     String getGleamString();
     void disableBowShooting(Player player);
     void enableBowShooting(Player player);
+    String getCooldownSymbol();
 }
