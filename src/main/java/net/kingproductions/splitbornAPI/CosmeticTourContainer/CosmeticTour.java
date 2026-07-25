@@ -3,10 +3,7 @@ package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 import net.kingproductions.splitbornAPI.AbilityCastEventContainer.AbilityCastEvent;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
@@ -122,6 +119,9 @@ public class CosmeticTour implements Listener {
         double distance = loc1.distance(loc2);
         int points = (int) (distance * INGORE);
 
+        GameMode oldGameMode = passenger.getPreviousGameMode();
+        passenger.setGameMode(GameMode.ADVENTURE);
+
         passenger.setInvulnerable(true);
 
         new BukkitRunnable() {
@@ -138,6 +138,7 @@ public class CosmeticTour implements Listener {
                 }
                 if (shuttle.getLocation().distance(loc2) <= 0.5) {
                     this.cancel();
+
                     if (remainingLocations.hasNext()) {
                         Location nextTarget = remainingLocations.next();
                         startSegment(passenger, shuttle, loc2, nextTarget, speed, remainingLocations);
@@ -146,11 +147,7 @@ public class CosmeticTour implements Listener {
                         Passenger.playSound(Passenger.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1F, random.nextFloat());
                         isInATour.remove(Passenger);
 
-                        if (endLoc == null){
-                            Passenger.teleport(loc2);
-                        } else {
-                            Passenger.teleport(endLoc);
-                        }
+                        Passenger.teleport(Objects.requireNonNullElse(endLoc, loc2));
                         Passenger.playSound(Passenger.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1F, 2F);
 
                         if (consumer != null){
@@ -159,6 +156,9 @@ public class CosmeticTour implements Listener {
 
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
+                        passenger.setGameMode(oldGameMode);
+
+                        Bukkit.broadcastMessage("old gm: " + oldGameMode);
 
                         SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
                     }
