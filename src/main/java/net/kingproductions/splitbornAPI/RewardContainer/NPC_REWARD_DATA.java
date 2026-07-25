@@ -27,6 +27,13 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.CALI_THE_GREAT)) gleamReward = 500;
         if (npcId.equals(NPC_ID.VIORICT)) gleamReward = 1000;
         if (npcId.equals(NPC_ID.DEBY)) gleamReward = 1000;
+        if (npcId.equals(NPC_ID.MISTER_CHRONA)) gleamReward = 500;
+        if (npcId.equals(NPC_ID.JERNIK)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.AUCTION_MASTER)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.SCRAPPER_FENN)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.BROMM)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) gleamReward = 300;
 
         return gleamReward;
     }
@@ -47,6 +54,13 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.CALI_THE_GREAT)) xpReward = 150;
         if (npcId.equals(NPC_ID.VIORICT)) xpReward = 300;
         if (npcId.equals(NPC_ID.DEBY)) xpReward = 300;
+        if (npcId.equals(NPC_ID.MISTER_CHRONA)) xpReward = 300;
+        if (npcId.equals(NPC_ID.JERNIK)) xpReward = 300;
+        if (npcId.equals(NPC_ID.AUCTION_MASTER)) xpReward = 300;
+        if (npcId.equals(NPC_ID.SCRAPPER_FENN)) xpReward = 300;
+        if (npcId.equals(NPC_ID.BROMM)) xpReward = 300;
+        if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) xpReward = 300;
+        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) xpReward = 300;
 
 
         return xpReward;

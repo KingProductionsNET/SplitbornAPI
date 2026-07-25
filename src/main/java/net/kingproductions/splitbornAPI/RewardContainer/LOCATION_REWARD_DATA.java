@@ -27,6 +27,9 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.Ashvein_Mine)){
             gleamReward = 3000;
         }
+        if (location.equals(Locations.Junkyard)){
+            gleamReward = 3000;
+        }
 
         return gleamReward;
     }
@@ -45,6 +48,9 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.Ashvein_Mine)){
+            xpReward = 200;
+        }
+        if (location.equals(Locations.Junkyard)){
             xpReward = 200;
         }
 
