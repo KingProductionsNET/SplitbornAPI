@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.CuriosityInteractEventContainer;
 
 import net.kingproductions.splitbornAPI.CuriosityContainer.Curiosities;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -13,16 +14,19 @@ public class CuriosityInteractEvent extends Event {
 
     private final Player player;
     private final Curiosities curiosityID;
+    private final Entity curiosity;
 
-    public CuriosityInteractEvent(Player receiver, Curiosities curiosityID){
+    public CuriosityInteractEvent(Player receiver, Curiosities curiosityID, Entity curiosity){
         this.player = receiver;
         this.curiosityID = curiosityID;
+        this.curiosity = curiosity;
     }
 
     public Player getPlayer(){
         return player;
     }
     public Curiosities getCuriosityID(){return curiosityID;}
+    public Entity getCuriosityEntity(){return curiosity;}
 
     @Override
     public @NotNull HandlerList getHandlers() {
