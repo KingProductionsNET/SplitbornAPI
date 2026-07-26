@@ -32,6 +32,7 @@ public class ItemBuilder {
     private final ItemStack itemStack;
     private final ItemMeta itemMeta;
     private String SkinValue = null;
+    private boolean glint = false;
     private boolean addUniqueID = false;
     private Player player;
 
@@ -243,6 +244,10 @@ public class ItemBuilder {
         this.player = player;
         return this;
     }
+    public ItemBuilder setGlint(boolean b){
+        this.glint = b;
+        return this;
+    }
 
     private static final UUID STACKABLE_UUID = UUID.fromString("34c267b3-5da5-4407-9498-c90a8cba9f4d");
 
@@ -264,6 +269,10 @@ public class ItemBuilder {
             Meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             Meta.setUnbreakable(true);
 
+            if (glint){
+                Meta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+            }
+
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
 
@@ -283,6 +292,10 @@ public class ItemBuilder {
             meta.setUnbreakable(true);
             meta.setLore(itemMeta.getLore());
 
+            if (glint){
+                itemMeta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+            }
+
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
 
@@ -297,6 +310,10 @@ public class ItemBuilder {
             itemMeta.addItemFlags(ItemFlag.HIDE_DYE);
             itemMeta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             itemMeta.setUnbreakable(true);
+
+            if (glint){
+                itemMeta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+            }
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
