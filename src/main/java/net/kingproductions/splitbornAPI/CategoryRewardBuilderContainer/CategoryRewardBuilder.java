@@ -16,6 +16,8 @@ import net.kingproductions.splitbornAPI.RewardContainer.*;
 import net.kingproductions.splitbornAPI.RewardReasonContainer.REWARD_REASON;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.VoidGateContainer.VOID_GATE_ID;
+import org.bukkit.Effect;
+import org.bukkit.EntityEffect;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -217,6 +219,8 @@ public class CategoryRewardBuilder {
             NoteBlockAPI.Play(player, NBS_FILE_NAMES.QUEST_COMPLETE.toString(), false);
             DatabankPath = DATABANK_PATHS.COMPLETED_QUEST_PATH_.toString();
             inputAssistForDatabank = quest.toString();
+
+            player.sendEntityEffect(EntityEffect.TOTEM_RESURRECT, player);
         }
         if (reason.equals(REWARD_REASON.AREA)){
             DatabankPath = DATABANK_PATHS.AREA_DISCOVERED_PATH_.toString();
