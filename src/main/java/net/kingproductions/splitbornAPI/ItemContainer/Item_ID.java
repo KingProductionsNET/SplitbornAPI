@@ -123,5 +123,6 @@ public enum Item_ID {
     WINDSTEP_BOOTS,
     EXPLORERS_LENS,
     CHUPFANG_DAGGER,
-    
+
+    CINDERWICKS_WRENCH
 }
