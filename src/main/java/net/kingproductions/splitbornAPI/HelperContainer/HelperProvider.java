@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.HelperContainer;
 
 import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
@@ -128,4 +129,8 @@ public interface HelperProvider {
     List<PerkID> getAllActivePerks(Player player);
     boolean perkIsActive(Player player, PerkID perkID);
     void unlockPerk(Player player, PerkID perkID);
+    String getItemRewardString(Item_ID itemId, int Amount);
+    String getEssenceRewardString(Essence_ID essenceId, int Amount);
+    String getSplitbornXPRewardString(int Amount);
+    String getGleamRewardString(int Amount);
 }
