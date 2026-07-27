@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.CosmeticTourContainer;
 
 import net.kingproductions.splitbornAPI.AbilityCastEventContainer.AbilityCastEvent;
+import net.kingproductions.splitbornAPI.CommandBlockContainer.COMMAND_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NoteBlockAPIContainer.NoteBlockAPI;
 import org.bukkit.*;
@@ -85,6 +86,7 @@ public class CosmeticTour implements Listener {
         if (Passenger.hasMetadata("ON_TOUR")) return;
 
         Location startLocation = connectionPoints.getFirst();
+        SplitbornAPI.BlockCommand().BlockCommand(Passenger, COMMAND_ID.SPAWN);
 
         LivingEntity Shuttle = (LivingEntity) startLocation.getWorld().spawn(startLocation, TourGuide.getEntityClass());
         Shuttle.setInvulnerable(true);
@@ -157,6 +159,8 @@ public class CosmeticTour implements Listener {
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
                         passenger.setGameMode(oldGameMode);
+
+                        SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
 
                         SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
                     }
