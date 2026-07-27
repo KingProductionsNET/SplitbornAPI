@@ -26,5 +26,7 @@ public enum Quests {
     SCRAP_FOR_PIP,
     CONTRAPTION_RUSH,
 
+    THE_GOBLINS_HUSTLE,
+
     DEFAULT_NONE;
 }

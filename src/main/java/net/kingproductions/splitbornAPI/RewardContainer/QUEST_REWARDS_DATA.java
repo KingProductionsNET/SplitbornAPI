@@ -23,6 +23,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.COOLING_CORE)) gleamReward = 1000;
         if (quest.equals(Quests.HEAT_CORE)) gleamReward = 2000;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) gleamReward = 2000;
+        if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) gleamReward = 1500;
 
         return gleamReward;
     }
@@ -39,6 +40,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.COOLING_CORE)) xpReward = 400;
         if (quest.equals(Quests.HEAT_CORE)) xpReward = 500;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) xpReward = 700;
+        if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) xpReward = 300;
 
         return xpReward;
     }
