@@ -127,4 +127,5 @@ public interface HelperProvider {
     String getCooldownSymbol();
     List<PerkID> getAllActivePerks(Player player);
     boolean perkIsActive(Player player, PerkID perkID);
+    void unlockPerk(Player player, PerkID perkID);
 }
