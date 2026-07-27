@@ -133,5 +133,5 @@ public interface HelperProvider {
     String getEssenceRewardString(Essence_ID essenceId, int Amount);
     String getSplitbornXPRewardString(int Amount);
     String getGleamRewardString(int Amount);
-    String getActivePerksDatabankPath(PerkID perkID);
+    String getActivePerksDatabankPath(Player player, PerkID perkID);
 }
