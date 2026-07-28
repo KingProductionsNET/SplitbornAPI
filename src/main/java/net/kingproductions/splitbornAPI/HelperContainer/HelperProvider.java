@@ -139,4 +139,5 @@ public interface HelperProvider {
     String getFreePerkPath(Player player);
     KillEffectID getActiveKillEffect(Player player);
     List<KillEffectID> getOwnedKillEffects(Player player);
+    void applyNotPickableToItem(Item item);
 }
