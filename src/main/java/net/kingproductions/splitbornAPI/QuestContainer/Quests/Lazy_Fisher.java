@@ -52,6 +52,6 @@ public class Lazy_Fisher extends QuestPreset {
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.WELPH);
     }
 }
