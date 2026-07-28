@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.KillEffectsContainer.KillEffectID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.MobContainer.MobCategory;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
@@ -136,4 +137,6 @@ public interface HelperProvider {
     String getActivePerksDatabankPath(Player player, PerkID perkID);
     String getStatRewardString(Stat stat, int Amount);
     String getFreePerkPath(Player player);
+    KillEffectID getActiveKillEffect(Player player);
+    List<KillEffectID> getOwnedKillEffects(Player player);
 }
