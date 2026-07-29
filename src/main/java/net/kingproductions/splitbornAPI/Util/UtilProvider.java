@@ -6,8 +6,10 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.TextDisplay;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
 import java.util.UUID;
@@ -18,6 +20,7 @@ public interface UtilProvider {
     Location getLocationFromMongo(String locationKey);
     TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text);
     TextDisplay spawnNPCTextDisplay(Location spawnLocation, boolean seeThrough, String Text, float viewRange);
+    ItemDisplay spawnItemDisplay(Location spawnLocation, ItemStack itemStack);
     String getFancyProgressBar(int current, int max, String filledChar, String emptyChar);
     List<Location> getNearbyBlockLocations(Location centerLoc, int scanRadius, Material material);
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);
