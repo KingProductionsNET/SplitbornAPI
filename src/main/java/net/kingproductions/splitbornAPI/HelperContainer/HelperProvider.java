@@ -142,4 +142,5 @@ public interface HelperProvider {
     void applyNotPickableToItem(Item item);
     Location getRandomLocation(Location center, int radius);
     void forceEntityToFaceLocation(Entity e, Location targetLocation);
+    void applyGlowToEntity(Entity entity, ChatColor chatColor, Player player);
 }
