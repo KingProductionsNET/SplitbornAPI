@@ -9,6 +9,7 @@ public enum Curiosities {
     RESTLESS_SKULL,
     FLICKER_MAN,
     VOID_LANTERN,
-    JUNK_SENTINEL
+    JUNK_SENTINEL,
+    PHANTOM_THIEF
 
 }
