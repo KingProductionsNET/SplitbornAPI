@@ -141,4 +141,5 @@ public interface HelperProvider {
     List<KillEffectID> getOwnedKillEffects(Player player);
     void applyNotPickableToItem(Item item);
     Location getRandomLocation(Location center, int radius);
+    void forceEntityToFaceLocation(Entity e, Location targetLocation);
 }
