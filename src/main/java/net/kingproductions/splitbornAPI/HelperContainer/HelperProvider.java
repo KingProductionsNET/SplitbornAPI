@@ -145,4 +145,5 @@ public interface HelperProvider {
     void applyGlowToEntity(Entity entity, ChatColor chatColor, Player player);
     void addAllowedInteractBlock(Player player, Location location);
     void removeAllowedInteractBlock(Player player, Location location);
+    void healPlayerHealth(Player player, int Amount);
 }
