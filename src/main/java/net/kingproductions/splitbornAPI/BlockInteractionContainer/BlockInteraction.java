@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.BlockInteractionContainer;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 
@@ -12,7 +13,7 @@ public class BlockInteraction implements Listener {
 
     public static Map<UUID, List<Location>> usersAllowedInteractionLocations = new HashMap<>();
 
-    @EventHandler
+    @EventHandler (priority = EventPriority.HIGHEST)
     public void onInteract(PlayerInteractEvent event){
         Player player = event.getPlayer();
 
