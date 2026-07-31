@@ -31,7 +31,8 @@ public interface UtilProvider {
     void arcMove(Entity e, Location loc1, Location loc2, int speed, Consumer<Entity> c);
     void boostTo(Entity e, Location targetLoc, double strength);
     void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c, Consumer<Entity> shuttle);
-    void sendPacketBlock(Player player, Location location);
+
+    void sendPacketBlock(Player player, Location location, String REASON);
 
     void adjustPlayerGleams(UUID uuid, int delta);
     void insertOne(String collectionName, Document doc);
