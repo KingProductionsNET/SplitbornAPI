@@ -172,7 +172,14 @@ public class ItemBuilder {
 
         String raw = ItemBuilder.getHiddenValueString(meta, Item_Paths.NPC_BUY_PRICE_PATH.toString());
         if (raw.equalsIgnoreCase("0")){
-            return new ItemBuilder(Material.BEDROCK).setDisplayName(meta.getDisplayName() + " NO PRICE SET!").build();
+            lore.add("");
+            lore.add("§7Cost:");
+            lore.add("§a§lFREE");
+
+            meta.setLore(lore);
+            stack.setItemMeta(meta);
+
+            return stack;
         }
 
         String[] costList = raw.split(",");
@@ -190,8 +197,7 @@ public class ItemBuilder {
             int amount = Integer.parseInt(itemString.substring(lastUnderscore + 1));
 
             if (itemID.equalsIgnoreCase(Item_ID.GLEAMS.toString())) {
-                gleamLore.add("§6" + SplitbornAPI.getHelper().formatInteger(amount)
-                        + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+                gleamLore.add("§6" + SplitbornAPI.getHelper().formatInteger(amount) + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
                 continue;
             }
 
