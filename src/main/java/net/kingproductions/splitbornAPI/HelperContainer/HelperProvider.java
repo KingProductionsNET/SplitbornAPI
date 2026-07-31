@@ -143,4 +143,6 @@ public interface HelperProvider {
     Location getRandomLocation(Location center, int radius);
     void forceEntityToFaceLocation(Entity e, Location targetLocation);
     void applyGlowToEntity(Entity entity, ChatColor chatColor, Player player);
+    void addAllowedInteractBlock(Player player, Location location);
+    void removeAllowedInteractBlock(Player player, Location location);
 }
