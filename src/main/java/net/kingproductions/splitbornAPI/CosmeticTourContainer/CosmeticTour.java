@@ -121,9 +121,7 @@ public class CosmeticTour implements Listener {
         double distance = loc1.distance(loc2);
         int points = (int) (distance * INGORE);
 
-        GameMode oldGameMode = passenger.getPreviousGameMode();
         passenger.setGameMode(GameMode.ADVENTURE);
-
         passenger.setInvulnerable(true);
 
         new BukkitRunnable() {
@@ -158,7 +156,7 @@ public class CosmeticTour implements Listener {
 
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
-                        passenger.setGameMode(oldGameMode);
+                        passenger.setGameMode(GameMode.SURVIVAL);
 
                         SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
 
