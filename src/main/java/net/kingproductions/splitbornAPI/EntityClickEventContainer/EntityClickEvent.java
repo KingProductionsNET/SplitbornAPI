@@ -18,7 +18,7 @@ public class EntityClickEvent extends Event {
     private final Entity mob;
     private final CLICK_TYPE clickType;
 
-    public EntityClickEvent(Player receiver, Mob_ID mobId, Mob mob, CLICK_TYPE clickType){
+    public EntityClickEvent(Player receiver, Mob_ID mobId, Entity mob, CLICK_TYPE clickType){
         this.player = receiver;
         this.mobId = mobId;
         this.mob = mob;
