@@ -28,5 +28,7 @@ public enum Quests {
 
     THE_GOBLINS_HUSTLE,
 
+    THE_HIDDEN_VAULT,
+
     DEFAULT_NONE;
 }

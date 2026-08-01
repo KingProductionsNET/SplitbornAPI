@@ -26,6 +26,7 @@ public class QuestCreator {
         set.add(new Talk_To_Bonsai().build());
         set.add(new The_Lost_Caravan().build());
         set.add(new Meet_Grug().build());
+        set.add(new The_Hidden_Vault().build());
         return set;
     }
 

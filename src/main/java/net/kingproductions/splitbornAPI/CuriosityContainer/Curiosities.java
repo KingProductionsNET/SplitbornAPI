@@ -10,6 +10,7 @@ public enum Curiosities {
     FLICKER_MAN,
     VOID_LANTERN,
     JUNK_SENTINEL,
-    PHANTOM_THIEF
+    PHANTOM_THIEF,
+    FLUFF_TOTEM
 
 }

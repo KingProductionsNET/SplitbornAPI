@@ -33,7 +33,7 @@ public interface UtilProvider {
     void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c, Consumer<Entity> shuttle);
 
     void sendPacketBlock(Player player, Location location, Material material, boolean interactable);
-    void sendPacketMultiBlocks(Player player, List<Location> locations, Material material, boolean interactable);
+    void sendPacketMultiBlocks(Player player, List<Location> locations, Material material, boolean preventInteraction);
 
     void adjustPlayerGleams(UUID uuid, int delta);
     void insertOne(String collectionName, Document doc);
