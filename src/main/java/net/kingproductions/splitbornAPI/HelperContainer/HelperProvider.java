@@ -103,7 +103,7 @@ public interface HelperProvider {
     int getPlayersItemCountInWholeInventory(Player player, Item_ID itemId);
     void applyDummyDamage(Player target, int Damage, String CustomName);
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
-    void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration_In_Seconds);
+    void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration_In_Ticks);
     void applyHeat(Player player, int Amount);
     List<Item_ID> getPlayersEquippedBonusItems(Player player);
     void setItemCooldownForPlayer(Player player, Item_ID itemId, int Duration_In_Seconds);

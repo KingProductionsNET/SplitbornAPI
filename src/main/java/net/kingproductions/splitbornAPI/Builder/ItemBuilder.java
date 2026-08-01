@@ -175,6 +175,8 @@ public class ItemBuilder {
             lore.add("");
             lore.add("§7Cost:");
             lore.add("§a§lFREE");
+            lore.add("");
+            lore.add("§aClick to receive.");
 
             meta.setLore(lore);
             stack.setItemMeta(meta);
