@@ -146,4 +146,5 @@ public interface HelperProvider {
     void addAllowedInteractBlock(Player player, Location location);
     void removeAllowedInteractBlock(Player player, Location location);
     void healPlayerHealth(Player player, int Amount);
+    List<Entity> getTargetingMobsForPlayer(Player player);
 }
