@@ -12,7 +12,7 @@ import java.util.Map;
 public class The_Hidden_Vault extends QuestPreset {
     @Override
     public boolean isMainQuest() {
-        return false;
+        return true;
     }
 
     @Override
