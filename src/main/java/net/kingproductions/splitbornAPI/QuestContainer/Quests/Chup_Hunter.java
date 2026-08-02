@@ -9,7 +9,7 @@ import org.bukkit.Material;
 import java.util.List;
 import java.util.Map;
 
-public class Eliminate_The_Creature extends QuestPreset {
+public class Chup_Hunter extends QuestPreset {
     @Override
     public boolean isMainQuest() {
         return true;
@@ -17,12 +17,12 @@ public class Eliminate_The_Creature extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.ELIMINATE_THE_CREATURE;
+        return Quests.CHUP_HUNTER;
     }
 
     @Override
     public String questDisplayName() {
-        return "§7Eliminate the §5Creature";
+        return "§dChup Hunter";
     }
 
     @Override
@@ -32,12 +32,12 @@ public class Eliminate_The_Creature extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.DRIED_KELP;
+        return Material.ARMADILLO_SCUTE;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§fLure the §5creature §finto the §5void bin§f.");
+        return List.of();
     }
 
     @Override

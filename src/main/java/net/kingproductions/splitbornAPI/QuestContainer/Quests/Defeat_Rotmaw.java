@@ -23,7 +23,7 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "§fDefeat §cRotmaw";
+        return "§7Defeat §cRotmaw";
     }
 
     @Override
