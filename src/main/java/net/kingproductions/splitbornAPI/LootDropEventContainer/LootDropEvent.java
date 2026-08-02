@@ -20,7 +20,10 @@ public class LootDropEvent extends Event implements Cancellable {
     private final Set<Item_ID> disallowedItems = new HashSet<>();
     private final Map<Item_ID, Integer> GuaranteedExtraDrops = new HashMap<>();
     private final Map<Item_ID, Integer> bonusAmountForItemID = new HashMap<>();
+
     private final Map<Essence_ID, Double> getEssenceBonusChance = new HashMap<>();
+    private final Map<Essence_ID, Integer> getEssenceBonusAmount = new HashMap<>();
+
     private double totalBonusChance = 0;
     private boolean cancelled;
 
@@ -38,6 +41,9 @@ public class LootDropEvent extends Event implements Cancellable {
     }
     public double getBonusChanceForItemID(Item_ID itemId){
         return getItemsFinalModifiedDropChance.getOrDefault(itemId, 0.0);
+    }
+    public int getEssenceBonusAmount(Essence_ID essenceId){
+        return getEssenceBonusAmount.getOrDefault(essenceId, 0);
     }
     public double getBonusChanceForEssenceID(Essence_ID essenceId){
         return getEssenceBonusChance.getOrDefault(essenceId, 0.0);
@@ -71,13 +77,22 @@ public class LootDropEvent extends Event implements Cancellable {
         getItemsFinalModifiedDropChance.put(itemId, currentModifiedChance);
     }
     public void addBonusAmountForItemID(Item_ID itemId, int Amount){
-        bonusAmountForItemID.put(itemId, Amount);
+        int currentAmount = bonusAmountForItemID.getOrDefault(itemId, 0);
+        currentAmount += Amount;
+
+        bonusAmountForItemID.put(itemId, currentAmount);
     }
     public void addDisallowedItemID(Item_ID itemId){
         disallowedItems.add(itemId);
     }
     public void addGuaranteedExtraDrop(Item_ID itemId, int Amount){
         GuaranteedExtraDrops.put(itemId, Amount);
+    }
+    public void addEssenceBonusAmount(Essence_ID essenceId, int Amount){
+        int currentAmount = getEssenceBonusAmount.getOrDefault(essenceId, 0);
+        currentAmount += Amount;
+
+        getEssenceBonusAmount.put(essenceId, currentAmount);
     }
 
     @Override
