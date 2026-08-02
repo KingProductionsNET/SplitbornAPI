@@ -19,8 +19,8 @@ public class CustomAttackEvent extends Event implements Cancellable {
     private final Entity mob;
     private boolean cancelled;
 
-    public CustomAttackEvent(Player receiver, Mob_ID mobId, Entity mob, boolean cancelled){
-        this.player = receiver;
+    public CustomAttackEvent(Player player, Mob_ID mobId, Entity mob, boolean cancelled){
+        this.player = player;
         this.mobId = mobId;
         this.mob = mob;
         this.cancelled = cancelled;

@@ -16,8 +16,8 @@ public class CuriosityInteractEvent extends Event {
     private final Curiosities curiosityID;
     private final Entity curiosity;
 
-    public CuriosityInteractEvent(Player receiver, Curiosities curiosityID, Entity curiosity){
-        this.player = receiver;
+    public CuriosityInteractEvent(Player player, Curiosities curiosityID, Entity curiosity){
+        this.player = player;
         this.curiosityID = curiosityID;
         this.curiosity = curiosity;
     }

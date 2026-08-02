@@ -16,8 +16,8 @@ public class EssenceGainEvent extends Event implements Cancellable {
     private boolean cancelled;
     private int percentageModifier;
 
-    public EssenceGainEvent(Player receiver, Essence_ID essenceId, int Amount, boolean cancelled){
-        this.player = receiver;
+    public EssenceGainEvent(Player player, Essence_ID essenceId, int Amount, boolean cancelled){
+        this.player = player;
         this.essenceId = essenceId;
         this.Amount = Amount;
         this.cancelled = cancelled;

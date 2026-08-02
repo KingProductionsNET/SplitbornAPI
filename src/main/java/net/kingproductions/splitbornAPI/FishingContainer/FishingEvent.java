@@ -22,10 +22,10 @@ public class FishingEvent extends Event implements Cancellable {
 
     private Entity modifiedEntityDrop;
     private ItemStack modifiedItemDrop;
-    private Location hookLocation;
+    private final Location hookLocation;
 
-    private Entity fishedEntity;
-    private ItemStack fishedItemStack;
+    private final Entity fishedEntity;
+    private final ItemStack fishedItemStack;
 
     public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop, Location hookLocation, Entity fishedEntity, ItemStack fishedItem) {
         this.player = player;

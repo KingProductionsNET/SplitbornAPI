@@ -15,8 +15,8 @@ public class AbilityCastEvent extends Event implements Cancellable {
     private final Item_ID itemId;
     private boolean cancelled;
 
-    public AbilityCastEvent(Player receiver, Item_ID itemId, boolean cancelled){
-        this.player = receiver;
+    public AbilityCastEvent(Player player, Item_ID itemId, boolean cancelled){
+        this.player = player;
         this.itemId = itemId;
         this.cancelled = cancelled;
     }
