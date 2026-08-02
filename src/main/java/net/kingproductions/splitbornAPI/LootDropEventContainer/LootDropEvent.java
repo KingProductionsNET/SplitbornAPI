@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.LootDropEventContainer;
 
+import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import org.bukkit.entity.Player;
@@ -19,6 +20,7 @@ public class LootDropEvent extends Event implements Cancellable {
     private final Set<Item_ID> disallowedItems = new HashSet<>();
     private final Map<Item_ID, Integer> GuaranteedExtraDrops = new HashMap<>();
     private final Map<Item_ID, Integer> bonusAmountForItemID = new HashMap<>();
+    private final Map<Essence_ID, Double> getEssenceBonusChance = new HashMap<>();
     private double totalBonusChance = 0;
     private boolean cancelled;
 
@@ -37,6 +39,9 @@ public class LootDropEvent extends Event implements Cancellable {
     public double getBonusChanceForItemID(Item_ID itemId){
         return getItemsFinalModifiedDropChance.getOrDefault(itemId, 0.0);
     }
+    public double getBonusChanceForEssenceID(Essence_ID essenceId){
+        return getEssenceBonusChance.getOrDefault(essenceId, 0.0);
+    }
     public List<Item_ID> getDisallowedItems(){
         return disallowedItems.stream().toList();
     }
@@ -48,6 +53,12 @@ public class LootDropEvent extends Event implements Cancellable {
     }
     public double getTotalBonusChance(){
         return this.totalBonusChance;
+    }
+    public void addBonusChanceForEssenceID(Essence_ID essenceId, double chance){
+        double currentChance = getEssenceBonusChance.getOrDefault(essenceId, 0.0);
+        currentChance += chance;
+
+        getEssenceBonusChance.put(essenceId, currentChance);
     }
 
     public void addBonusChanceForEveryDrop(double chance){
@@ -68,7 +79,6 @@ public class LootDropEvent extends Event implements Cancellable {
     public void addGuaranteedExtraDrop(Item_ID itemId, int Amount){
         GuaranteedExtraDrops.put(itemId, Amount);
     }
-
 
     @Override
     public boolean isCancelled() {
