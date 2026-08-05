@@ -16,6 +16,9 @@ public enum Mob_ID {
     JUNK_FLY,
     CURSED_BLOOM,
     GLEAM_BUG,
-    ELDER_CHUP
+    ELDER_CHUP,
+    RIFTWATCHER,
+    VOIDSCARRED_CHAMPION,
+    ABYSS_CRAWLERS
 
 }
