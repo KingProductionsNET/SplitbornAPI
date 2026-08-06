@@ -14,14 +14,13 @@ public class BowShootEvent extends Event implements Cancellable {
 
     private final Player player;
     private final Item_ID itemId;
-    private final Entity entity;
+    private Entity entity;
     private boolean onlyShowArrowForShooter;
     private boolean cancelled;
 
-    public BowShootEvent(Player player, Item_ID itemId, Entity projectile, boolean cancelled){
+    public BowShootEvent(Player player, Item_ID itemId, boolean cancelled){
         this.player = player;
         this.itemId = itemId;
-        this.entity = projectile;
         this.cancelled = cancelled;
     }
 
@@ -38,6 +37,9 @@ public class BowShootEvent extends Event implements Cancellable {
 
     public void setOnlyShowArrowForShooter(boolean b){
         this.onlyShowArrowForShooter = b;
+    }
+    public void setProjectile(Entity e){
+        this.entity = e;
     }
 
 
