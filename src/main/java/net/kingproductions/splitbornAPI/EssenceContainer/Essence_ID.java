@@ -2,6 +2,6 @@ package net.kingproductions.splitbornAPI.EssenceContainer;
 
 public enum Essence_ID {
 
-    SEED,CHALLENGE,FISHING
+    SEED,CHALLENGE,FISHING,VEIL
 
 }
