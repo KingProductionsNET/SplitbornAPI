@@ -30,5 +30,7 @@ public enum Quests {
 
     THE_HIDDEN_VAULT,
 
+    JERNIKS_LEDGER,
+
     DEFAULT_NONE;
 }
