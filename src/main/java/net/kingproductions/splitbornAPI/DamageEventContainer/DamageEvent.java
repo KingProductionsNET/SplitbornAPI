@@ -18,7 +18,8 @@ public class DamageEvent extends Event implements Cancellable {
     private final Mob_ID mobId;
     private boolean cancelled;
     private int damage;
-    private double percentageModifier;
+    private double percentageModifier = 0.0;
+    private int plainDamageModifier = 0;
 
     public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damagedMob, Mob_ID mobId, int damage){
         this.player = player;
@@ -49,6 +50,12 @@ public class DamageEvent extends Event implements Cancellable {
     }
     public void setDamage(int value){
         this.damage = value;
+    }
+    public void addBonusPlainDamage(int value){
+        this.plainDamageModifier += value;
+    }
+    public int getBonusPlainDamage(){
+        return plainDamageModifier;
     }
 
     @Override
