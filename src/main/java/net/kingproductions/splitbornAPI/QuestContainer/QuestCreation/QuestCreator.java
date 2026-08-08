@@ -30,6 +30,7 @@ public class QuestCreator {
         set.add(new Chup_Hunter().build());
         set.add(new Jerniks_Ledger().build());
         set.add(new The_Goblins_Hustle().build());
+        set.add(new The_Veiled_Echo().build());
         return set;
     }
 
