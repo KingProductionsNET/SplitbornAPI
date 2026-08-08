@@ -29,6 +29,7 @@ public class QuestCreator {
         set.add(new The_Hidden_Vault().build());
         set.add(new Chup_Hunter().build());
         set.add(new Jerniks_Ledger().build());
+        set.add(new The_Goblins_Hustle().build());
         return set;
     }
 
