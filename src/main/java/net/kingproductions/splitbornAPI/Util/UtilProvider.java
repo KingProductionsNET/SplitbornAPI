@@ -32,7 +32,7 @@ public interface UtilProvider {
     void boostTo(Entity e, Location targetLoc, double strength);
     void arcMoveForPlayer(Player player, Location loc1, Location loc2, int speed, Consumer<Player> c, Consumer<Entity> shuttle);
 
-    void sendPacketBlock(Player player, Location location, Material material, boolean interactable);
+    void sendPacketBlock(Player player, Location location, Material material, boolean preventInteraction);
     void sendPacketMultiBlocks(Player player, List<Location> locations, Material material, boolean preventInteraction);
 
     void adjustPlayerGleams(UUID uuid, int delta);
