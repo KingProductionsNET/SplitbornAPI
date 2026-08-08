@@ -41,6 +41,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.HEAT_CORE)) xpReward = 500;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) xpReward = 700;
         if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) xpReward = 300;
+        if (quest.equals(Quests.JERNIKS_LEDGER)) xpReward = 300;
 
         return xpReward;
     }
