@@ -27,6 +27,7 @@ public interface Profile {
     int getHeat();
     int getExcavationSpeed();
     int getExcavationFortune();
+    int getQuickTravelPoints();
 
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
@@ -41,6 +42,7 @@ public interface Profile {
     void setHeat(int i);
     void setExcavationSpeed(int i);
     void setExcavationFortune(int i);
+    void setQuickTravelPoints(int i);
 
     void setStat(Stat stat, int i);
 

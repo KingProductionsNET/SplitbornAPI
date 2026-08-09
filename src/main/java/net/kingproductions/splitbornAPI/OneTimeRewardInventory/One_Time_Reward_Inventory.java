@@ -50,8 +50,8 @@ public class One_Time_Reward_Inventory implements Listener {
 
         ItemMeta meta = DisplayReward.getItemMeta();
         List<String> lore = (meta.getLore() == null ? new ArrayList<>() : meta.getLore());
-        lore.add(""); lore.add("§a§lFREE");
-        meta.setDisplayName(meta.getDisplayName() + " §8[§b" + Amount + "x§8]");
+        lore.add(""); lore.add("§eClick to claim");
+        meta.setDisplayName(meta.getDisplayName() + " §7(§a" + Amount + "x§7)");
         meta.setLore(lore);
         DisplayReward.setItemMeta(meta);
 
