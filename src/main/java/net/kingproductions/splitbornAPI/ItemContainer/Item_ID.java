@@ -140,6 +140,7 @@ public enum Item_ID {
 
     VEILWALKER_HELM,
     ECHO_CORE,
+    CRUDE_BOW,
 
     ECHO_HEART,
     PHANTOM_DUST,
