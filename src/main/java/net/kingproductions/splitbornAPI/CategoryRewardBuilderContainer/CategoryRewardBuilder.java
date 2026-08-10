@@ -200,7 +200,7 @@ public class CategoryRewardBuilder {
             player.sendMessage("");
         }
         player.sendMessage("§7Rewards:");
-        player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§6" + GleamReward + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
+        player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§6" + SplitbornAPI.getHelper().formatInteger(GleamReward) + " Gleams" + SplitbornAPI.getHelper().getGleamSymbol());
         if (XPReward != 0) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + "§b" + XPReward + " §bSplitborn XP");
         for (String rewardsAsString : extraRewardsAsString) player.sendMessage(SplitbornAPI.getHelper().getListingSymbol() + rewardsAsString);
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");
