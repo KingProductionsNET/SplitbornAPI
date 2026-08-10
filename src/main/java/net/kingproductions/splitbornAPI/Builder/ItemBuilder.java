@@ -20,10 +20,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
@@ -35,6 +32,8 @@ public class ItemBuilder {
     private boolean glint = false;
     private boolean addUniqueID = false;
     private Player player;
+
+    private final Map<String, Object> addedHiddenObjects = new HashMap();
 
     public ItemBuilder(Material material) {
         this.itemStack = new ItemStack(material);
@@ -68,6 +67,8 @@ public class ItemBuilder {
         NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
         PersistentDataContainer container = itemMeta.getPersistentDataContainer();
         container.set(namespacedKey, persistentDataType, value);
+
+        addedHiddenObjects.put(key, value);
         return this;
     }
 
@@ -103,7 +104,7 @@ public class ItemBuilder {
         return "0";
     }
 
-    @Deprecated
+    @Deprecated (since = "Always")
     public static ItemStack TransformItem_NPC_BUY(ItemStack stack){
         ItemMeta meta = stack.getItemMeta();
         List<String> lore = meta.getLore();
@@ -278,11 +279,20 @@ public class ItemBuilder {
             Meta.setUnbreakable(true);
 
             if (glint){
-                Meta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+                Meta.addEnchant(Enchantment.AQUA_AFFINITY, 1, true);
             }
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
+
+            for (String path : addedHiddenObjects.keySet()){
+                Object o = addedHiddenObjects.get(path);
+
+                PersistentDataType persistentDataType = PersistentDataType.STRING;
+                if (o instanceof Integer) persistentDataType = PersistentDataType.INTEGER;
+
+                addHiddenValue(Meta, path, persistentDataType, o);
+            }
 
             Skull.setItemMeta(Meta);
             return Skull;
@@ -306,6 +316,15 @@ public class ItemBuilder {
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
+
+            for (String path : addedHiddenObjects.keySet()){
+                Object o = addedHiddenObjects.get(path);
+
+                PersistentDataType persistentDataType = PersistentDataType.STRING;
+                if (o instanceof Integer) persistentDataType = PersistentDataType.INTEGER;
+
+                addHiddenValue(meta, path, persistentDataType, o);
+            }
 
             Skull.setItemMeta(meta);
 
