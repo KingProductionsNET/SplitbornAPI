@@ -18,7 +18,6 @@ public class HideManager implements Listener {
 
     public static void HideEntityForUnworthy(Entity entity, Player worthyPlayer)  {
         List<UUID> list = playersPacketEntities.getOrDefault(worthyPlayer.getUniqueId(), new ArrayList<>());
-
         list.add(entity.getUniqueId());
         playersPacketEntities.put(worthyPlayer.getUniqueId(), list);
         for (Player online : Bukkit.getOnlinePlayers()) {
