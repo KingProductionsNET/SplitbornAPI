@@ -13,6 +13,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -156,7 +157,7 @@ public class CosmeticTour implements Listener {
 
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
-                        passenger.setGameMode(GameMode.ADVENTURE);
+                        passenger.setGameMode(GameMode.SURVIVAL);
 
                         SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
 
@@ -193,6 +194,13 @@ public class CosmeticTour implements Listener {
     @EventHandler
     public void noExit(PlayerToggleSneakEvent event){
         if (isInATour.contains(event.getPlayer())) event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void noTeleport(PlayerTeleportEvent event){
+        if (isInATour.contains(event.getPlayer())){
+            event.setCancelled(true);
+        }
     }
 
     @EventHandler
