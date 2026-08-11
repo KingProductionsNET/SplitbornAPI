@@ -151,5 +151,7 @@ public interface HelperProvider {
     void removeAllowedInteractBlock(Player player, Location location);
     void healPlayerHealth(Player player, int Amount);
     List<Mob> getTargetingMobsForPlayer(Player player);
+    void BlockQuickTravel(Player player);
+    void UnblockQuickTravel(Player player);
 
 }
