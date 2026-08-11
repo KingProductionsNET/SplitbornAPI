@@ -77,6 +77,7 @@ public class CategoryRewardBuilder {
         String chatReason = "§cUnknown";
         String DatabankPath = null;
         String inputAssistForDatabank = null;
+        String SongPath = null;
 
         List<String> rewardReasonText = new ArrayList<>();
         if (rewardReason != null){
@@ -206,17 +207,17 @@ public class CategoryRewardBuilder {
         player.sendMessage("§8§m⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍⚍");
 
         if (reason.equals(REWARD_REASON.CURIOSITY)){
-            NoteBlockAPI.Play(player, NBS_FILE_NAMES.CURIOSITY_FOUND.toString(), false);
+            SongPath = NBS_FILE_NAMES.CURIOSITY_FOUND.name();
             DatabankPath = DATABANK_PATHS.CURIOSITIES_COMPLETED_PATH_.toString();
             inputAssistForDatabank = curiosities.toString();
         }
         if (reason.equals(REWARD_REASON.NPC)){
-            NoteBlockAPI.Play(player, NBS_FILE_NAMES.ALLY_MET.toString(), false);
+            SongPath = NBS_FILE_NAMES.ALLY_MET.name();
             DatabankPath = DATABANK_PATHS.ALLY_MET_PATH_.toString();
             inputAssistForDatabank = npcId.toString();
         }
         if (reason.equals(REWARD_REASON.QUEST)){
-            NoteBlockAPI.Play(player, NBS_FILE_NAMES.QUEST_COMPLETE.toString(), false);
+            SongPath = NBS_FILE_NAMES.QUEST_COMPLETE.name();
             DatabankPath = DATABANK_PATHS.COMPLETED_QUEST_PATH_.toString();
             inputAssistForDatabank = quest.toString();
 
@@ -227,9 +228,9 @@ public class CategoryRewardBuilder {
             inputAssistForDatabank = location.toString();
         }
         if (reason.equals(REWARD_REASON.ACHIEVEMENT)){
+            SongPath = NBS_FILE_NAMES.ACHIEVEMENT.name();
             DatabankPath = DATABANK_PATHS.ACHIEVEMENT_UNLOCKED_PATH_.toString();
             inputAssistForDatabank = achievementId.toString();
-            NoteBlockAPI.Play(player, NBS_FILE_NAMES.ACHIEVEMENT.toString(), false);
         }
         if (reason.equals(REWARD_REASON.SEALED_VOID_GATE)){
             DatabankPath = DATABANK_PATHS.SEALED_VOID_GATE_PATH_.toString();
@@ -241,7 +242,9 @@ public class CategoryRewardBuilder {
             SplitbornAPI.getHelper().upgradePlayersLevel(player, XPReward);
         } else {
             profileData.setXP(PlayersXPAmount + XPReward);
+            if (SongPath != null) NoteBlockAPI.Play(player, SongPath, false);
         }
+
         profileData.setGleams(profileData.getGleams() + GleamReward);
 
         profileData.setBoolean(DatabankPath + inputAssistForDatabank, true);
