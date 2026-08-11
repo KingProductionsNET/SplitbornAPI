@@ -156,7 +156,7 @@ public class CosmeticTour implements Listener {
 
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
-                        passenger.setGameMode(GameMode.SURVIVAL);
+                        passenger.setGameMode(GameMode.ADVENTURE);
 
                         SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
 

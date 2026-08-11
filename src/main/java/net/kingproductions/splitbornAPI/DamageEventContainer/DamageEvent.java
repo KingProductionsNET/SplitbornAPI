@@ -43,7 +43,7 @@ public class DamageEvent extends Event implements Cancellable {
         return mobId;
     }
     public int getDamage(){
-        return (int) Math.floor(damage * (1 + percentageModifier / 100.0) + plainDamageModifier);
+        return (int) Math.floor(damage * (1 + percentageModifier / 100.0)) + plainDamageModifier;
     }
     public void addModifier(double value){
         percentageModifier += value;
