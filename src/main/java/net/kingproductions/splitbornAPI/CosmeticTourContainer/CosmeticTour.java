@@ -151,17 +151,16 @@ public class CosmeticTour implements Listener {
                         Passenger.teleport(Objects.requireNonNullElse(endLoc, loc2));
                         Passenger.playSound(Passenger.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1F, 2F);
 
-                        if (consumer != null){
-                            consumer.accept(Passenger);
-                        }
-
                         passenger.setInvulnerable(false);
                         Passenger.removeMetadata("ON_TOUR", plugin);
                         passenger.setGameMode(GameMode.SURVIVAL);
 
                         SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
-
                         SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
+
+                        if (consumer != null){
+                            consumer.accept(Passenger);
+                        }
                     }
                     return;
                 }
