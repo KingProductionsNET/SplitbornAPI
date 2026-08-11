@@ -5,6 +5,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import java.util.List;
+
 public class LevelUpEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();
@@ -12,11 +14,13 @@ public class LevelUpEvent extends Event {
     private final Player player;
     private final int newLevel;
     private final int previousLevel;
+    private final List<String> rewardList;
 
-    public LevelUpEvent(Player player, int newLevel, int previousLevel) {
+    public LevelUpEvent(Player player, int newLevel, int previousLevel, List<String> rewardList) {
         this.player = player;
         this.newLevel = newLevel;
         this.previousLevel = previousLevel;
+        this.rewardList = rewardList;
     }
 
     public Player getPlayer() {
@@ -27,6 +31,9 @@ public class LevelUpEvent extends Event {
     }
     public int getPreviousLevel(){
         return previousLevel;
+    }
+    public List<String> getRewardList(){
+        return rewardList;
     }
 
     @Override
