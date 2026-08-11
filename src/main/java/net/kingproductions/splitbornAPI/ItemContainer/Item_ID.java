@@ -142,6 +142,8 @@ public enum Item_ID {
     ECHO_CORE,
     CRUDE_BOW,
 
+    CHRONAS_INVITATION,
+
     ECHO_HEART,
     PHANTOM_DUST,
     SHATTERED_SIGIL,
