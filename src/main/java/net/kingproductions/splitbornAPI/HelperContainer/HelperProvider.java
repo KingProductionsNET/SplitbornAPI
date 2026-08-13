@@ -153,5 +153,6 @@ public interface HelperProvider {
     List<Mob> getTargetingMobsForPlayer(Player player);
     void BlockQuickTravel(Player player);
     void UnblockQuickTravel(Player player);
+    void addNotAllowedForViewRangeTextEntity(Player player, Entity entity);
 
 }
