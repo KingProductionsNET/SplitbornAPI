@@ -154,6 +154,6 @@ public interface HelperProvider {
     void BlockQuickTravel(Player player);
     void UnblockQuickTravel(Player player);
     void addNotAllowedForViewRangeTextEntity(Player player, Entity entity);
-    Mannequin spawnMannequin(String Value, String Signature);
+    Mannequin spawnMannequin(Location SpawnLocation, String Value, String Signature);
 
 }
