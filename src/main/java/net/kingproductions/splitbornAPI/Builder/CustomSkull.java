@@ -80,7 +80,7 @@ public class CustomSkull {
 
     public static ItemStack getCustomSkull(String value) {
         String version = Bukkit.getBukkitVersion();
-        if (version.contains("26.1") || version.contains("1.21.4") || version.contains("1.21.1")  || version.contains("1.21.11") ||version.contains("1.21.2") || version.contains("1.21.3") || version.contains("1.21.5") || version.contains("1.21.6") || version.contains("1.21.7") || version.contains("1.21.8") || version.contains("1.21.9") || version.contains("1.21.10")) {
+        if (version.contains("26.1") || version.contains("26.") || version.contains("1.21.4") || version.contains("1.21.1")  || version.contains("1.21.11") ||version.contains("1.21.2") || version.contains("1.21.3") || version.contains("1.21.5") || version.contains("1.21.6") || version.contains("1.21.7") || version.contains("1.21.8") || version.contains("1.21.9") || version.contains("1.21.10")) {
             return giveCustomSkull(value);
         } else {
             return getCustomSkull_1_20(value);
@@ -103,12 +103,6 @@ public class CustomSkull {
         });
     }
 
-    /**
-     * Resolves a player's real skin by UUID and applies it to head, using a Mongo-backed cache
-     * shared by every server on the network so a player's texture only ever needs to be fetched
-     * from Mojang once, anywhere - not independently by every backend server that happens to
-     * render their head. Must be called off the main thread.
-     */
     public static void applySkinByUUIDAsync(ItemStack head, UUID uuid, String fallbackName, Runnable afterApplyOnMain) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
             List<Document> cached = SplitbornAPI.getUtil().find("player_skin_cache", new Document("_id", uuid.toString()));

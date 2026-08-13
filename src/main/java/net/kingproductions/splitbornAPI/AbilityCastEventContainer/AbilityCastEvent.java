@@ -1,6 +1,6 @@
 package net.kingproductions.splitbornAPI.AbilityCastEventContainer;
 
-import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
+
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;

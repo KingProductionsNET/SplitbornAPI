@@ -11,7 +11,6 @@ public interface AuctionListing {
     UUID getSellerUUID();
     String getSellerName();
 
-    /** A copy of the listed item (full ItemStack, any item a player owns). */
     ItemStack getItem();
     int getAmount();
 
