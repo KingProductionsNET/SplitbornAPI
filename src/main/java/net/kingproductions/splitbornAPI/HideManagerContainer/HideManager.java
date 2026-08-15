@@ -3,7 +3,9 @@ package net.kingproductions.splitbornAPI.HideManagerContainer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.TextDisplay;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -17,6 +19,12 @@ public class HideManager implements Listener {
 
     public static Map<UUID, List<UUID>> playersPacketEntities = new HashMap<>();
 
+    /**
+     * Hides an entity for every online and future player except for the worthyPlayer. Do not use this when trying to hide a text display.
+     * It won't work. Instead use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#hideTextDisplay(TextDisplay, Player)}
+     * @param entity the entity that will be hidden for every online and future player except for the worthyPlayer
+     * @param worthyPlayer the player which is the only one allowed to see the entity
+     */
     public static void HideEntityForUnworthy(Entity entity, Player worthyPlayer)  {
         List<UUID> list = playersPacketEntities.getOrDefault(worthyPlayer.getUniqueId(), new ArrayList<>());
         list.add(entity.getUniqueId());
@@ -26,6 +34,12 @@ public class HideManager implements Listener {
             online.hideEntity(plugin, entity);
         }
     }
+
+    /**
+     * Unhides an entity for every online and future player. Do not use this when trying to hide a text display.
+     * It won't work. Instead use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unhideTextDisplay(TextDisplay, Player)}
+     * @param e the entity will be unhidden for everyone
+     */
     public static void UnhideEntityForEveryone(Entity e){
         for (UUID uuid : playersPacketEntities.keySet()){
             List<UUID> list = playersPacketEntities.getOrDefault(uuid, new ArrayList<>());
@@ -40,6 +54,26 @@ public class HideManager implements Listener {
             for (Player player : Bukkit.getOnlinePlayers()){
                 player.showEntity(plugin, e);
             }
+        }, 10);
+    }
+
+    /**
+     * Unhides an entity for the player. Do not use this when trying to hide a text display.
+     * It won't work. It won't work. Instead use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unhideTextDisplay(TextDisplay, Player)}
+     * @param entity the entity that will be unhidden
+     * @param player the player which will see the entity
+     */
+    public static void UnhideEntityForPlayer(Entity entity, Player player){
+        UUID uuid = player.getUniqueId();
+        List<UUID> list = playersPacketEntities.getOrDefault(uuid, new ArrayList<>());
+
+        if (!list.isEmpty() && list.contains(entity.getUniqueId())){
+            list.remove(entity.getUniqueId());
+            playersPacketEntities.put(uuid, list);
+        }
+
+        Bukkit.getScheduler().runTaskLater(plugin, () ->{
+            player.showEntity(plugin, entity);
         }, 10);
     }
 
