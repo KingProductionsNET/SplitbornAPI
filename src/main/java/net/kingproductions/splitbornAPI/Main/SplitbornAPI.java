@@ -120,7 +120,6 @@ public final class SplitbornAPI extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new HideManager(), this);
         Bukkit.getPluginManager().registerEvents(new BlockInteraction(), this);
-
         Bukkit.getPluginManager().registerEvents(new One_Time_Reward_Inventory(), this);
         Bukkit.getPluginManager().registerEvents(new CosmeticTour(), this);
 
@@ -128,6 +127,7 @@ public final class SplitbornAPI extends JavaPlugin {
 
         Bukkit.getScheduler().runTask(plugin, () ->{
             LocationSpawnPoints.InitializeLocations();
+            HideManager.orderHiddenEntities();
         });
     }
 
