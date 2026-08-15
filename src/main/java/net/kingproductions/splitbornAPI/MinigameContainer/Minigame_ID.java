@@ -4,6 +4,7 @@ public enum Minigame_ID {
 
     CONTRAPTION_RUSH,
     SAIKON,
-    HIFE
+    HIFE,
+    SUMO
 
 }

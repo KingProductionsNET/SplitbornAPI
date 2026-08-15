@@ -34,6 +34,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.BROMM)) gleamReward = 300;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) gleamReward = 300;
         if (npcId.equals(NPC_ID.PIP_CINDERWICK)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) gleamReward = 500;
 
         return gleamReward;
     }
@@ -61,6 +62,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.BROMM)) xpReward = 300;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) xpReward = 300;
         if (npcId.equals(NPC_ID.PIP_CINDERWICK)) xpReward = 300;
+        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) xpReward = 300;
 
 
         return xpReward;
