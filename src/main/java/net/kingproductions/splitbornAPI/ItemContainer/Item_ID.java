@@ -143,6 +143,7 @@ public enum Item_ID {
     CRUDE_BOW,
 
     CHRONAS_INVITATION,
+    INFINITE_EGG,
 
     ECHO_HEART,
     PHANTOM_DUST,
