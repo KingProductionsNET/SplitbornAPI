@@ -1112,6 +1112,11 @@ public interface HelperProvider {
      * @return the symbol of the Veilborn Mob Category
      */
     String getVeilbornSymbol();
-    Set<COMMAND_ID> getBlockedCommands();
+
+    /**
+     *
+     * @return a set of all blocked commands for the player.
+     */
+    Set<COMMAND_ID> getBlockedCommands(Player player);
 
 }
