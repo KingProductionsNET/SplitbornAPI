@@ -8,5 +8,7 @@ public enum Locations {
     The_Beyond,
     Sporewood,
     Ashvein_Mine,
-    Junkyard
+    Junkyard,
+    The_Veil,
+    Dojo
 }
