@@ -109,6 +109,6 @@
   </dependencyManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>26</java.version>
+    <java.version>25</java.version>
   </properties>
 </project>
