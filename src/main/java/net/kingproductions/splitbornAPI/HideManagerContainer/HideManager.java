@@ -18,6 +18,7 @@ import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 public class HideManager implements Listener {
 
     public static Map<UUID, List<UUID>> playersPacketEntities = new HashMap<>();
+    public static Map<UUID, List<UUID>> playersHiddenEntities = new HashMap<>();
 
     /**
      * Hides an entity for every online and future player except for the worthyPlayer. Do not use this when trying to hide a text display.
@@ -59,7 +60,7 @@ public class HideManager implements Listener {
 
     /**
      * Unhides an entity for the player. Do not use this when trying to hide a text display.
-     * It won't work. It won't work. Instead use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unhideTextDisplay(TextDisplay, Player)}
+     * It won't work. Instead use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unhideTextDisplay(TextDisplay, Player)}
      * @param entity the entity that will be unhidden
      * @param player the player which will see the entity
      */
@@ -74,7 +75,22 @@ public class HideManager implements Listener {
 
         Bukkit.getScheduler().runTaskLater(plugin, () ->{
             player.showEntity(plugin, entity);
+
+            List<UUID> hiddenEntities = playersHiddenEntities.getOrDefault(player.getUniqueId(), new ArrayList<>());
+            hiddenEntities.remove(entity.getUniqueId());
+            playersPacketEntities.put(player.getUniqueId(), hiddenEntities);
         }, 10);
+    }
+
+    /**
+     *
+     * @param player
+     * @param entity
+     * @return True when the player can see the entity.
+     */
+    public static boolean canSeeEntity(Player player, Entity entity){
+        List<UUID> hiddenEntities = playersHiddenEntities.getOrDefault(player.getUniqueId(), new ArrayList<>());
+        return !hiddenEntities.contains(entity.getUniqueId());
     }
 
     public static void orderHiddenEntities(){
@@ -86,9 +102,13 @@ public class HideManager implements Listener {
                     List<UUID> hideList = new ArrayList<>();
                     for (UUID uuid : playersPacketEntities.keySet()) {
                         if (uuid.equals(player.getUniqueId())) continue;
+
                         List<UUID> otherPlayersEntities = playersPacketEntities.get(uuid);
+
                         if (otherPlayersEntities == null) continue;
+
                         Iterator<UUID> iterator = otherPlayersEntities.iterator();
+
                         while (iterator.hasNext()) {
                             UUID oUUID = iterator.next();
                             Entity entity = Bukkit.getEntity(oUUID);
@@ -106,9 +126,13 @@ public class HideManager implements Listener {
                         Entity entityToHide = Bukkit.getEntity(uuid);
                         if (entityToHide == null) continue;
                         player.hideEntity(plugin, entityToHide);
+
+                        List<UUID> hiddenEntities = playersHiddenEntities.getOrDefault(player.getUniqueId(), new ArrayList<>());
+                        hiddenEntities.add(entityToHide.getUniqueId());
+                        playersPacketEntities.put(player.getUniqueId(), hiddenEntities);
                     }
                 }
             }
-        }.runTaskTimer(plugin, 0, 20);
+        }.runTaskTimer(plugin, 0, 25);
     }
 }
