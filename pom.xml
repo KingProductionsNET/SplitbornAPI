@@ -6,7 +6,7 @@
 
     <groupId>net.kingproductions</groupId>
     <artifactId>SplitbornAPI</artifactId>
-    <version>4.8.2</version>
+    <version>4.8.3</version>
     <packaging>jar</packaging>
 
     <name>splitbornapi</name>
