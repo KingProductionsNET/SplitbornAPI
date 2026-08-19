@@ -1119,5 +1119,25 @@ public interface HelperProvider {
      */
     Set<COMMAND_ID> getBlockedCommands(Player player);
 
+    /**
+     * Adds a location that is allowed for breaking.
+     * @param player
+     * @param allowedLocation The location that can be broken.
+     */
+    void addAllowedBlockBreakLocation(Player player, Location allowedLocation);
+    /**
+     * Removes a location that is allowed for breaking.
+     * @param player
+     * @param allowedLocation The location that can no longer be broken.
+     */
+    void removeAllowedBlockBreakLocation(Player player, Location allowedLocation);
+
+    /**
+     *
+     * @param player
+     * @return A list of all allowed break locations for the player.
+     */
+    List<Location> getAllowedBlockBreakLocations(Player player);
+
 
 }
