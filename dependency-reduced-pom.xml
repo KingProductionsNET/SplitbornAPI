@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>net.kingproductions</groupId>
-  <artifactId>SplitbornAPI</artifactId>
+  <groupId>com.github.KingProductionsNET</groupId>
+  <artifactId>splitbornapi</artifactId>
   <name>splitbornapi</name>
-  <version>1</version>
+  <version>4.8.6</version>
   <build>
     <defaultGoal>clean package</defaultGoal>
     <resources>
@@ -119,6 +119,13 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/kingproductionsnet/SplitbornAPI</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>25</java.version>
