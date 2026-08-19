@@ -21,6 +21,6 @@ public enum Mob_ID {
     VOIDSCARRED_CHAMPION,
     ABYSS_CRAWLER,
     PRATICE_DUMMY,
-    UMBRAL
+    UMBRAL,
 
 }
