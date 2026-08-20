@@ -1137,7 +1137,7 @@ public interface HelperProvider {
      * @param player
      * @return A list of all allowed break locations for the player.
      */
-    List<Location> getAllowedBlockBreakLocations(Player player);
+    Set<Location> getAllowedBlockBreakLocations(Player player);
 
 
 }

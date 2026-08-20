@@ -81,7 +81,6 @@ public class HideManager implements Listener {
             playersPacketEntities.put(player.getUniqueId(), hiddenEntities);
         }, 10);
     }
-
     /**
      *
      * @param player

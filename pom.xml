@@ -6,7 +6,7 @@
 
     <groupId>com.github.KingProductionsNET</groupId>
     <artifactId>splitbornapi</artifactId>
-    <version>4.8.6</version>
+    <version>4.8.9</version>
     <packaging>jar</packaging>
 
     <name>splitbornapi</name>
@@ -25,6 +25,7 @@
     </distributionManagement>
 
     <build>
+        <finalName>SplitbornAPI</finalName>
         <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>

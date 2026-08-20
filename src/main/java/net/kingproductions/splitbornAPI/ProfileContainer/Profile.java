@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.ProfileContainer;
 
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.entity.Player;
 
@@ -52,6 +53,7 @@ public interface Profile {
     boolean getBoolean(String Path);
     String getString(String Path);
     int getInteger(String Path);
+    Ranks getRank();
 
     void addUnclaimedItem(Item_ID itemId, int Amount, String reason);
     default void addUnclaimedItem(Item_ID itemId, int amount) {
