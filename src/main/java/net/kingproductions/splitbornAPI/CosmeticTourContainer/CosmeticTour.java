@@ -131,9 +131,10 @@ public class CosmeticTour implements Listener {
 
             @Override
             public void run() {
-                if (!passenger.isOnline()){
+                if (!passenger.isOnline() || !isInATour.contains(Passenger)){
                     shuttle.remove();
                     passenger.setInvulnerable(false);
+                    Passenger.removeMetadata("ON_TOUR", plugin);
                     this.cancel();
                     return;
                 }
@@ -213,6 +214,10 @@ public class CosmeticTour implements Listener {
             if (e != null) e.remove();
             playersShuttle.remove(player.getUniqueId());
         }
+    }
+
+    public static void stopTour(Player player){
+        isInATour.remove(player);
     }
 
     @EventHandler
