@@ -21,6 +21,7 @@ public enum Quests {
     THE_HIDDEN_VAULT,
     JERNIKS_LEDGER,
     THE_VEILED_ECHO,
+    CRUSHING_THE_NESTS,
 
     DEFAULT_NONE;
 }
