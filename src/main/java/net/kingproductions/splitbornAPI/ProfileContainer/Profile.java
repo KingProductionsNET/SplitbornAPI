@@ -6,6 +6,7 @@ import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.entity.Player;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface Profile {
@@ -71,5 +72,11 @@ public interface Profile {
     int getEssence(Essence_ID essenceId);
     int getBaseStatValue(Stat stat);
     int getFullStatValue(Stat stat);
+
+    List<String> getStringList(String key);
+    List<UUID> getUUIDList(String key);
+
+    void setStringListSavingMap(String key, List<String> list);
+    void setUUIDListSavingMap(String key, List<UUID> list);
 
 }
