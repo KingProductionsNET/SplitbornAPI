@@ -31,6 +31,8 @@ public interface Profile {
     int getExcavationFortune();
     int getQuickTravelPoints();
 
+    int getAmethysts();
+
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
     void setSPEED(int amount);
@@ -45,6 +47,8 @@ public interface Profile {
     void setExcavationSpeed(int i);
     void setExcavationFortune(int i);
     void setQuickTravelPoints(int i);
+
+    void setAmethysts(int i);
 
     void setStat(Stat stat, int i);
 
@@ -78,5 +82,14 @@ public interface Profile {
 
     void setStringListSavingMap(String key, List<String> list);
     void setUUIDListSavingMap(String key, List<UUID> list);
+
+    void setFlexPassExpireMillis(long millis);
+    boolean hasFlexPass();
+    void activateFlexPass(int Days);
+    void deactivateFlexPass();
+    long getFlexPassDeactivationMillis();
+    String getRemainingFlexPassTimeAsViewableString();
+
+    boolean completedTutorial();
 
 }

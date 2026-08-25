@@ -90,11 +90,6 @@ public class ItemBuilder {
         }
         return 0;
     }
-    public static void addHiddenValue(ItemMeta meta, String key, PersistentDataType persistentDataType, Object value){
-        NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
-        PersistentDataContainer container = meta.getPersistentDataContainer();
-        container.set(namespacedKey, persistentDataType, value);
-    }
     public static String getHiddenValueString(ItemMeta meta, String key) {
         if (meta != null) {
             NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
@@ -102,6 +97,27 @@ public class ItemBuilder {
             return container.getOrDefault(namespacedKey, PersistentDataType.STRING, "0");
         }
         return "0";
+    }
+    public static long getHiddenValueLong(ItemMeta meta, String key) {
+        if (meta != null) {
+            NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+            PersistentDataContainer container = meta.getPersistentDataContainer();
+            return container.getOrDefault(namespacedKey, PersistentDataType.LONG, 0L);
+        }
+        return 0L;
+    }
+    public static double getHiddenValueDouble(ItemMeta meta, String key) {
+        if (meta != null) {
+            NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+            PersistentDataContainer container = meta.getPersistentDataContainer();
+            return container.getOrDefault(namespacedKey, PersistentDataType.DOUBLE, 0D);
+        }
+        return 0D;
+    }
+    public static void addHiddenValue(ItemMeta meta, String key, PersistentDataType persistentDataType, Object value){
+        NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+        PersistentDataContainer container = meta.getPersistentDataContainer();
+        container.set(namespacedKey, persistentDataType, value);
     }
 
     @Deprecated (since = "Always")

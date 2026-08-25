@@ -32,6 +32,7 @@ public class HideManager implements Listener {
         playersPacketEntities.put(worthyPlayer.getUniqueId(), list);
         for (Player online : Bukkit.getOnlinePlayers()) {
             if (online.getUniqueId().equals(worthyPlayer.getUniqueId())) continue;
+
             online.hideEntity(plugin, entity);
         }
     }
@@ -92,46 +93,44 @@ public class HideManager implements Listener {
         return !hiddenEntities.contains(entity.getUniqueId());
     }
 
-    public static void orderHiddenEntities(){
-        new BukkitRunnable(){
+    public static void orderHiddenEntities() {
+        new BukkitRunnable() {
 
             @Override
             public void run() {
-                for (Player player : Bukkit.getOnlinePlayers()){
-                    List<UUID> hideList = new ArrayList<>();
-                    for (UUID uuid : playersPacketEntities.keySet()) {
-                        if (uuid.equals(player.getUniqueId())) continue;
+                for (Player player : Bukkit.getOnlinePlayers()) {
+                    Set<UUID> hiddenEntities = playersHiddenEntities.computeIfAbsent(
+                            player.getUniqueId(),
+                            k -> new HashSet<>()
+                    );
 
-                        Set<UUID> otherPlayersEntities = playersPacketEntities.get(uuid);
+                    for (Map.Entry<UUID, Set<UUID>> entry : playersPacketEntities.entrySet()) {
 
-                        if (otherPlayersEntities == null) continue;
+                        UUID ownerUUID = entry.getKey();
+                        if (ownerUUID.equals(player.getUniqueId())) {
+                            continue;
+                        }
 
-                        Iterator<UUID> iterator = otherPlayersEntities.iterator();
-
+                        Iterator<UUID> iterator = entry.getValue().iterator();
                         while (iterator.hasNext()) {
-                            UUID oUUID = iterator.next();
-                            Entity entity = Bukkit.getEntity(oUUID);
+                            UUID entityUUID = iterator.next();
+
+                            Entity entity = Bukkit.getEntity(entityUUID);
 
                             if (entity == null) {
                                 iterator.remove();
                                 continue;
                             }
 
-                            hideList.add(oUUID);
+                            if (!hiddenEntities.contains(entityUUID)) {
+                                player.hideEntity(plugin, entity);
+                                hiddenEntities.add(entityUUID);
+                            }
                         }
-                    }
-
-                    for (UUID uuid : hideList) {
-                        Entity entityToHide = Bukkit.getEntity(uuid);
-                        if (entityToHide == null) continue;
-                        player.hideEntity(plugin, entityToHide);
-
-                        Set<UUID> hiddenEntities = playersHiddenEntities.getOrDefault(player.getUniqueId(), new HashSet<>());
-                        hiddenEntities.add(entityToHide.getUniqueId());
-                        playersPacketEntities.put(player.getUniqueId(), hiddenEntities);
                     }
                 }
             }
-        }.runTaskTimer(plugin, 0, 25);
+
+        }.runTaskTimer(plugin, 0L, 25L);
     }
 }

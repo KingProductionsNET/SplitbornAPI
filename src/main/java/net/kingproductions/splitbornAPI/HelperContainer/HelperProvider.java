@@ -1139,5 +1139,24 @@ public interface HelperProvider {
      */
     Set<Location> getAllowedBlockBreakLocations(Player player);
 
+    /**
+     *
+     * @return All advantages of the Flex Pass
+     */
+    List<String> getFlexPassAdvantages();
+
+    /**
+     * Sends a message that player needs a flex pass to perform this.
+     * @param player
+     */
+    void sendPurchaseFlexPassMessage(Player player);
+
+    /**
+     *
+     * @param player
+     * @return The Rank and players name with correct color e.g. [ADMIN] ReverseHonig
+     */
+    String getPlayersDisplayNameWithRank(Player player);
+
 
 }

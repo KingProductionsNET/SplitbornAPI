@@ -23,4 +23,7 @@ public enum Item_Paths {
     NPC_SELL_PRICE_PATH,
     NPC_BUY_PRICE_PATH,
 
+    HOW_TO_GET_PATH,
+    CREATION_DATE
+
 }
