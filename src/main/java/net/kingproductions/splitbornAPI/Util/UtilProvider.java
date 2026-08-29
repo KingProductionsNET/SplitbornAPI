@@ -19,6 +19,8 @@ public interface UtilProvider {
 
     Location getLocationFromMongo(String locationKey);
     TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text);
+    TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text, boolean backround);
+    TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text, boolean backround, float scale);
     TextDisplay spawnNPCTextDisplay(Location spawnLocation, boolean seeThrough, String Text, float viewRange);
     ItemDisplay spawnItemDisplay(Location spawnLocation, ItemStack itemStack);
     String getFancyProgressBar(int current, int max, String filledChar, String emptyChar);

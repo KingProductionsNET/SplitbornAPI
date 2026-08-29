@@ -6,11 +6,10 @@
 
     <groupId>com.github.KingProductionsNET</groupId>
     <artifactId>splitbornapi</artifactId>
-    <version>5.1.1</version>
+    <version>5.6.3</version>
     <packaging>jar</packaging>
 
     <name>splitbornapi</name>
-
     <properties>
         <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

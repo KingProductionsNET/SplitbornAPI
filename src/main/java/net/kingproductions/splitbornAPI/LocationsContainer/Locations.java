@@ -10,5 +10,7 @@ public enum Locations {
     Ashvein_Mine,
     Junkyard,
     The_Veil,
-    Dojo
+    Dojo,
+    The_Undercroft,
+    Brinehollow
 }

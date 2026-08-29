@@ -17,6 +17,8 @@ public class LocationSpawnPoints {
     public static Location Ashvein_Mine_Spawn = null;
     public static Location Junkyard_Spawn = null;
     public static Location Dojo_Spawn = null;
+    public static Location The_Undercroft_Spawn = null;
+    public static Location Brinehollow_Spawn = null;
 
     private static final Map<Locations, Location> SPAWN_POINTS = new EnumMap<>(Locations.class);
 
@@ -27,6 +29,8 @@ public class LocationSpawnPoints {
         Ashvein_Mine_Spawn = new Location(world_splitborn, 72.5, 91, 133.5, -180, 0);
         Junkyard_Spawn = new Location(world_splitborn, -51.5, 100, 246.5, -37, 0);
         Dojo_Spawn = new Location(world_splitborn, 121.5, 53, 153.5, 90, 0);
+        The_Undercroft_Spawn = new Location(world_splitborn, 148.5, 106, 119.5, -99, 0);
+        Brinehollow_Spawn = new Location(world_splitborn, 78.5, 110, 125.5, -150, 0);
 
         SPAWN_POINTS.put(Locations.Hearthgrove, Hearthgrove_Spawn);
         SPAWN_POINTS.put(Locations.The_Fold, The_Fold_Spawn);
@@ -36,6 +40,8 @@ public class LocationSpawnPoints {
         SPAWN_POINTS.put(Locations.Ashvein_Mine, Ashvein_Mine_Spawn);
         SPAWN_POINTS.put(Locations.Junkyard, Junkyard_Spawn);
         SPAWN_POINTS.put(Locations.Dojo, Dojo_Spawn);
+        SPAWN_POINTS.put(Locations.The_Undercroft, The_Undercroft_Spawn);
+        SPAWN_POINTS.put(Locations.Brinehollow, Brinehollow_Spawn);
     }
 
     public static Location getSpawnPoint(Locations location){

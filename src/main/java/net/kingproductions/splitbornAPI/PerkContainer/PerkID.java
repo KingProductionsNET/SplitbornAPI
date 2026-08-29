@@ -5,6 +5,7 @@ public enum PerkID {
     KING_OF_CHUPS,
     DOUBLE_JUMP,
     LAST_CHANCE,
-    SHATTERSHOT
+    SHATTERSHOT,
+    TIDAL_INSTINCT
 
 }

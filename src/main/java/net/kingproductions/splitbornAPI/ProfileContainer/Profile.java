@@ -16,21 +16,12 @@ public interface Profile {
     void setXP(int xp);
 
     int getGleams();
+
     int getLevel();
-    int getMAX_HEALTH();
-    int getSpeed();
-    int getMAX_STAMINA();
+    int getClaimedSupplies();
     int getSupplyLevel();
     double getSupplyBonusChance();
-    int getClaimedSupplies();
-    int getRange();
-    int getReelSpeed();
-    int getLeap();
-    int getHeat();
-    int getExcavationSpeed();
-    int getExcavationFortune();
     int getQuickTravelPoints();
-
     int getAmethysts();
 
     void setGleams(int amount);

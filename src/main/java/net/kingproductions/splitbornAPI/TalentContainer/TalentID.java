@@ -4,6 +4,8 @@ public enum TalentID {
 
     ESSENCE_OVERFLOW,
     PREDATOR_INSTINCT,
-    MOMENTUM
+    MOMENTUM,
+    MARINERS_RESOLVE,
+    ECHOED_CATCH
 
 }

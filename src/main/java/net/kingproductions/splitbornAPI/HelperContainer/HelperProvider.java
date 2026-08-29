@@ -10,8 +10,10 @@ import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.MobContainer.MobCategory;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.PerkContainer.PerkID;
+import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
+import net.kingproductions.splitbornAPI.TalentContainer.TalentID;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -21,8 +23,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 public interface HelperProvider {
 
@@ -658,6 +662,7 @@ public interface HelperProvider {
     /**
      * Temporarily modifies one of the player's stats by the specified amount.
      * The modification is automatically reverted after the supplied duration.
+     * If this shouldn't expire automatically the Duration should be -1 or INTEGER.MAX_VALUE.
      *
      * @param player the player whose stat should be modified
      * @param stat the stat to modify
@@ -669,7 +674,7 @@ public interface HelperProvider {
     /**
      * Temporarily modifies one of the player's stats and associates the modification
      * with a specific reason. The modification is automatically reverted after
-     * the supplied duration.
+     * the supplied duration. If this shouldn't expire automatically the Duration should be -1 or INTEGER.MAX_VALUE.
      *
      * @param player the player whose stat should be modified
      * @param Reason the reason used to identify the temporary modification
@@ -1158,5 +1163,156 @@ public interface HelperProvider {
      */
     String getPlayersDisplayNameWithRank(Player player);
 
+    /**
+     *
+     * @param rank
+     * @return The color of the given Rank
+     */
+    ChatColor getRanksColor(Ranks rank);
 
+    /**
+     * Locks the given Stat to a specific amount meaning it's amount can't change,
+     * until it gets unlocked by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unlockStat(Player, Stat)}.
+     * Use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#lockMultipleStats(Player, Map)} when trying to lock multiple stats.
+     * Stamina can be set to infinite by setting the amount to -1
+     * @param player
+     * @param stat The stat that should be locked
+     * @param Amount The Amount to which the stat should be locked
+     */
+    void lockStat(Player player, Stat stat, int Amount);
+
+    /**
+     * Locks multiple Stats to a specific amount meaning their amount can't change
+     * until it gets unlocked by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#unlockStat(Player, Stat)}.
+     * Use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#lockStat(Player, Stat, int)} when trying to just lock one stat.
+     * Stamina can be set to infinite by setting the amount to -1
+     * @param player
+     * @param map The map which locks the given stat with the value amount.
+     */
+    void lockMultipleStats(Player player, Map<Stat, Integer> map);
+
+    /**
+     * Unlocks a Stat which has been locked by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#lockStat(Player, Stat, int)}
+     * @param player
+     * @param stat The Stat that should be unlocked
+     */
+    void unlockStat(Player player, Stat stat);
+
+    /**
+     * Returns a String which can be used in inventories where essence is included in the costs.
+     * @param essenceId the essence which is used for the costs.
+     * @param Amount the amount of the essence.
+     * @return An inventory ready string for a cost list
+     */
+    String getEssenceIDAsCostString(Essence_ID essenceId, int Amount);
+    /**
+     * Returns a String which can be used in inventories where the itemId is included in the costs.
+     * @param itemId the itemId which is used for the costs.
+     * @param Amount the amount of the itemId.
+     * @return An inventory ready string for a cost list
+     */
+    String getItemIDAsCostString(Item_ID itemId, int Amount);
+
+    /**
+     * Returns a cost list for inventory lore.
+     * @param map_items the map containing itemIds including their amounts
+     * @param map_essence the map containing essenceIds including their amounts
+     * @return
+     */
+    List<String> getCostList(Map<Item_ID, Integer> map_items, Map<Essence_ID, Integer> map_essence);
+
+    /**
+     *
+     * @param player
+     * @param talentID
+     * @return True if the player owns this Talent
+     */
+    boolean isOwningTalent(Player player, TalentID talentID);
+
+    /**
+     * Simulates the player fishing something out.
+     * @param player
+     * @param mobId The mobId that is being fished
+     * @param startLocation The location where the mob will spawn
+     * @param targetLocation The location to where the mob should fly to
+     */
+    void simulateFishingCatch(Player player, Mob_ID mobId, Location startLocation, Location targetLocation);
+
+    /**
+     * Simulates the player fishing something out.
+     * @param player
+     * @param itemStack The itemstack that is being fished
+     * @param startLocation The location where the item will spawn
+     * @param targetLocation The location to where the item should fly to
+     */
+    void simulateFishingCatch(Player player, ItemStack itemStack, Location startLocation, Location targetLocation);
+
+    /**
+     *
+     * @return If the Deepwake Event is active
+     */
+    boolean theDeepwakeEventIsActive();
+
+    /**
+     *
+     * @return If the event is active it returns remaining time in HH:MM:SS till until the event starts. If the event is active it returns the remaining time in HH:MM:SS until the event ends.
+     */
+    String getDeepwakeEventTimer();
+
+    /**
+     * Resets the players modified stat which got changed by a reason. This should only be used if the stat got modified by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#modifyPlayersStatTemporarily(Player, String, Stat, int, int)} and doesn't expire on its own, cause the duration is INTEGER.MAX_VALUE or -1
+     * @param player
+     * @param Reason The reason why that stat was changed.
+     * @param stat The stat that should be reset 0
+     */
+    void resetPlayersModifiedStatByReason(Player player, String Reason, Stat stat);
+
+    /**
+     *
+     * @return A list of all available itemIds during The Deepwake.
+     */
+    List<Item_ID> getTheDeepwakePossibleDrops();
+
+    /**
+     *
+     * @return A list of all available mobIds during The Deepwake.
+     */
+    List<Mob_ID> getTheDeepwakePossibleMobs();
+
+    /**
+     *
+     * @param player
+     * @return True if the player is currently a passenger on another entity.
+     */
+    boolean playerIsRiding(Player player);
+
+    /**
+     * Creates a purchasable item with attached purchase logic, which will be executed by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#executeItemsPurchaseLogic(ItemStack)}
+     * @param costData The data which contains the required items/essence.
+     * @param lore The lore of the item (without the cost list).
+     * @param consumer The purchase code.
+     * @return A purchasable ItemStack
+     */
+    ItemStack createPurchasableItem(CostData costData, List<String> lore, Consumer<Player> consumer);
+    /**
+     * Creates a purchasable item with attached purchase logic, which will be executed by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#executeItemsPurchaseLogic(ItemStack)}
+     * @param costData The data which contains the required items/essence.
+     * @param consumer The purchase code.
+     * @param preset The preset applies to correct lore to the item.
+     * @return A purchasable ItemStack
+     */
+    ItemStack createPurchasableItem(CostData costData, Consumer<Player> consumer, ItemPreset preset);
+
+    /**
+     *
+     * @param itemStack The item that should be checked, and where the CostData is taken from.
+     * @return True if the player has all the required items/essence.
+     */
+    boolean canAfford(ItemStack itemStack);
+
+    /**
+     * Executes the purchase logic of this item (if it has one)
+     * @param stack The item that should be checked.
+     */
+    void executeItemsPurchaseLogic(ItemStack stack);
 }

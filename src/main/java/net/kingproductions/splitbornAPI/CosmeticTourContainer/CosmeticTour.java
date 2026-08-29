@@ -156,7 +156,6 @@ public class CosmeticTour implements Listener {
                         Passenger.removeMetadata("ON_TOUR", plugin);
                         passenger.setGameMode(GameMode.SURVIVAL);
 
-                        SplitbornAPI.BlockCommand().UnblockCommand(Passenger, COMMAND_ID.SPAWN);
                         SplitbornAPI.getHelper().forceUpdatePlayersLocation(Passenger);
 
                         if (consumer != null){

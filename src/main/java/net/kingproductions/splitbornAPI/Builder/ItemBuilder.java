@@ -114,6 +114,14 @@ public class ItemBuilder {
         }
         return 0D;
     }
+    public static boolean getHiddenValueBoolean(ItemMeta meta, String key) {
+        if (meta != null) {
+            NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+            PersistentDataContainer container = meta.getPersistentDataContainer();
+            return container.getOrDefault(namespacedKey, PersistentDataType.BOOLEAN, false);
+        }
+        return false;
+    }
     public static void addHiddenValue(ItemMeta meta, String key, PersistentDataType persistentDataType, Object value){
         NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
         PersistentDataContainer container = meta.getPersistentDataContainer();
@@ -211,7 +219,6 @@ public class ItemBuilder {
 
         for (String itemString : costList) {
             int lastUnderscore = itemString.lastIndexOf("_");
-
             String itemID = itemString.substring(0, lastUnderscore);
             int amount = Integer.parseInt(itemString.substring(lastUnderscore + 1));
 

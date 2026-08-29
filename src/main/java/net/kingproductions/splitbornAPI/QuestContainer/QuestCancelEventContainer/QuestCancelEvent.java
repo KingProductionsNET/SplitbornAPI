@@ -17,6 +17,7 @@ public class QuestCancelEvent extends Event implements Cancellable {
     private final Player player;
     private final Quests questID;
     private boolean cancelled;
+    private String reason = null;
 
     public QuestCancelEvent(Player player, Quests quests, boolean cancelled) {
         this.player = player;
@@ -24,11 +25,18 @@ public class QuestCancelEvent extends Event implements Cancellable {
         this.cancelled = cancelled;
     }
 
+    public void setReason(String s){
+        this.reason = s;
+    }
+
     public Player getPlayer() {
         return player;
     }
     public Quests getQuest(){
         return questID;
+    }
+    public String getReason(){
+        return reason;
     }
 
     @Override

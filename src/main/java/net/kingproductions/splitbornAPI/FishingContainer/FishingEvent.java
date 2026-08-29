@@ -1,7 +1,6 @@
 package net.kingproductions.splitbornAPI.FishingContainer;
 
-import net.kingproductions.splitbornAPI.NPC.NPCInteractEvent;
-import net.kingproductions.splitbornAPI.NPC.NPC_ID;
+import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -9,42 +8,34 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.ItemStack;
-import org.jetbrains.annotations.NotNull;
 
 public class FishingEvent extends Event implements Cancellable {
-
 
     private static final HandlerList handlers = new HandlerList();
 
     private final Player player;
-    private final boolean isAboutToCatchSomething;
     private boolean cancelled;
+    private final State state;
 
     private Entity modifiedEntityDrop;
     private ItemStack modifiedItemDrop;
-    private final Location hookLocation;
 
-    private final Entity fishedEntity;
-    private final ItemStack fishedItemStack;
+    private Location hookLocation;
+    private Entity fishedEntity;
+    private ItemStack fishedItemStack;
 
-    public FishingEvent(Player player, boolean isAboutToCatchSomething, boolean cancelled, Entity modifiedEntityDrop, ItemStack modifiedItemDrop, Location hookLocation, Entity fishedEntity, ItemStack fishedItem) {
+    /**
+     * Event is being called in different states see {@link net.kingproductions.splitbornAPI.FishingContainer.FishingEvent.State}
+     * @param player The player which is fishing
+     * @param state The state this event has been called in.
+     */
+    public FishingEvent(Player player, State state) {
         this.player = player;
-        this.isAboutToCatchSomething = isAboutToCatchSomething;
-        this.cancelled = cancelled;
-        this.modifiedEntityDrop = modifiedEntityDrop;
-        this.modifiedItemDrop = modifiedItemDrop;
-        this.hookLocation = hookLocation;
-        this.fishedEntity = fishedEntity;
-        this.fishedItemStack = fishedItem;
+        this.state = state;
     }
 
     public Player getPlayer() {
         return player;
-    }
-
-
-    public boolean isAboutToCatchSomething() {
-        return isAboutToCatchSomething;
     }
 
     public void setModifiedEntityDrop(Entity e){
@@ -52,6 +43,15 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public void setModifiedItemDrop(ItemStack i){
         this.modifiedItemDrop = i;
+    }
+    public void setHookLocation(Location loc){
+        this.hookLocation = loc;
+    }
+    public void setFishedEntity(Entity e){
+        this.fishedEntity = e;
+    }
+    public void setFishedItemStack(ItemStack i){
+        this.fishedItemStack = i;
     }
 
     public Entity getModifiedEntityDrop(){
@@ -65,6 +65,7 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public Entity getFishedEntity(){return fishedEntity;}
     public ItemStack getFishedItemStack(){return fishedItemStack;}
+    public State getState(){return state;}
 
     @Override
     public boolean isCancelled() {
@@ -82,5 +83,20 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public static HandlerList getHandlerList() {
         return handlers;
+    }
+
+    public enum State {
+        /**
+         * The moment the hook hits the water.
+         */
+        CAST_HOOK,
+        /**
+         * The moment something bites the hook.
+         */
+        LOOT_ON_HOOK,
+        /**
+         * The moment the final loot has been picked, and the player successfully reels their hook in.
+         */
+        REEL_IN
     }
 }

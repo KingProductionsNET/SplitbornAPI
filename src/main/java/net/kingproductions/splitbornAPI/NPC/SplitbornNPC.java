@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.NPC;
 
+import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.TextDisplay;
@@ -23,6 +24,7 @@ public class SplitbornNPC {
     private boolean lookClose = false;
     private boolean seeThroughWall = false;
     private float viewRange;
+    private Locations location;
 
     public SplitbornNPC(NPC_ID npcId) {
         this.ID = npcId;
@@ -56,6 +58,10 @@ public class SplitbornNPC {
         this.seeThroughWall = b;
         return this;
     }
+    public SplitbornNPC setLocation(Locations location){
+        this.location = location;
+        return this;
+    }
 
     public float getTitleViewRange(){return viewRange;}
     public String getSkin_Value(){
@@ -81,6 +87,9 @@ public class SplitbornNPC {
     }
     public boolean getSeeThroughWall(){
         return seeThroughWall;
+    }
+    public Locations getLocation(){
+        return location;
     }
 
 
