@@ -1287,32 +1287,80 @@ public interface HelperProvider {
     boolean playerIsRiding(Player player);
 
     /**
-     * Creates a purchasable item with attached purchase logic, which will be executed by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#executeItemsPurchaseLogic(ItemStack)}
+     * Creates a purchasable item with attached purchase logic, which will be executed as soon as it's being clicked & and if the player has the required items.
      * @param costData The data which contains the required items/essence.
      * @param lore The lore of the item (without the cost list).
-     * @param consumer The purchase code.
+     * @param material The material of purchasable item.
+     * @param skullValue The skull value of the material if it's a player head. This can be null if the material is no player head.
+     * @param consumer The purchase logic. It should only focus on updating values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
      * @return A purchasable ItemStack
      */
-    ItemStack createPurchasableItem(CostData costData, List<String> lore, Consumer<Player> consumer);
+    ItemStack createPurchasableItem(CostData costData, Material material, String skullValue, List<String> lore, Consumer<Player> consumer);
     /**
-     * Creates a purchasable item with attached purchase logic, which will be executed by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#executeItemsPurchaseLogic(ItemStack)}
+     * Creates a purchasable item with attached purchase logic, which will be executed as soon as it's being clicked & and if the player has the required items.
+     * @param player The player which will see this item.
      * @param costData The data which contains the required items/essence.
-     * @param consumer The purchase code.
-     * @param preset The preset applies to correct lore to the item.
+     * @param consumer The purchase logic. It should only focus on updating values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
+     * @param purchaseObject The object which is being sold. Following can be sold:
+     * {@link net.kingproductions.splitbornAPI.TalentContainer.TalentID} {@link net.kingproductions.splitbornAPI.PerkContainer.PerkID} {@link net.kingproductions.splitbornAPI.KillEffectsContainer.KillEffectID} {@link net.kingproductions.splitbornAPI.EmblemContainer.EmblemID}
      * @return A purchasable ItemStack
      */
-    ItemStack createPurchasableItem(CostData costData, Consumer<Player> consumer, ItemPreset preset);
+    ItemStack createPurchasableItem(Player player, CostData costData, Consumer<Player> consumer, Object purchaseObject);
 
     /**
-     *
+     * @param player The player that is being checked.
      * @param itemStack The item that should be checked, and where the CostData is taken from.
      * @return True if the player has all the required items/essence.
      */
-    boolean canAfford(ItemStack itemStack);
+    boolean canAfford(Player player, ItemStack itemStack);
 
     /**
      * Executes the purchase logic of this item (if it has one)
+     * @param player The consumer of the execution code.
      * @param stack The item that should be checked.
      */
-    void executeItemsPurchaseLogic(ItemStack stack);
+    void executeItemsPurchaseLogic(Player player, ItemStack stack);
+
+    /**
+     * Creates an item which has a hidden execute logic when its being clicked. The hidden code will be executed to the player (clicker) at any time this item is being clicked.
+     * @param consumer The hidden code which will be executed when this item is being clicked.
+     * @param displayName The display name of this item.
+     * @param lore The lore of this item.
+     * @param allowedInventoryTitle If this item should only execute its code in a specific inventory, set this to the title of it. If it should work in any inventory set it to null
+     * @param material The material of the ItemStack.
+     * @param skullValue The skull value of the material if it's a player head.
+     * @return A functional item which does something when its being clicked.
+     */
+    ItemStack createExecutableInventoryItem(Consumer<Player> consumer, String displayName, List<String> lore, String allowedInventoryTitle, Material material, String skullValue);
+
+    /**
+     * Unlocks a talent.
+     * @param player
+     * @param talentID
+     */
+    void unlockTalent(Player player, TalentID talentID);
+
+    /**
+     * Unlocks a emblem.
+     * @param player
+     * @param emblemID
+     */
+    void unlockEmblem(Player player, EmblemID emblemID);
+
+    /**
+     * Unlocks a kill effect.
+     * @param player
+     * @param killEffectID
+     */
+    void unlockKillEffect(Player player, KillEffectID killEffectID);
+
+    /**
+     * Creates an inventory.
+     * @param player The owner of the inventory.
+     * @param size The size of the inventory.
+     * @param title The title of the inventory.
+     * @param clickable Set to false if player's shouldn't be allowed to take items out of this inventory. (Basically always)
+     * @return An inventory.
+     */
+    Inventory createInventory(Player player, int size, String title, boolean clickable);
 }

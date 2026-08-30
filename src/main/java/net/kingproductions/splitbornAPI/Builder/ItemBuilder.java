@@ -45,6 +45,11 @@ public class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder setMaterial(Material material){
+        this.itemStack.setType(material);
+        return this;
+    }
+
     public ItemBuilder enableUUID(boolean b){
         addUniqueID = b;
         return this;
@@ -184,6 +189,11 @@ public class ItemBuilder {
         return stack;
     }
 
+    /**
+     * Returns a shop-ready item which can be purchased. The purchase logic must be executed using {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#handleBuyProcess(Player, ItemStack)} in an InventoryClickEvent.
+     * @param itemId The item id which should be sold.
+     * @return Returns a shop-ready item
+     */
     public static ItemStack getShopItem(Item_ID itemId){
         if (itemId == null){
             return new ItemBuilder(Material.BEDROCK).setDisplayName("§cNO ITEM_ID SET!").build();

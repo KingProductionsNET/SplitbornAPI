@@ -11,11 +11,13 @@ public class CostData {
     private final Map<Essence_ID, Integer> essenceCost = new HashMap<>();
     private final Map<Item_ID, Integer> itemCost = new HashMap<>();
 
-    public void addEssenceCost(Essence_ID essenceId, int amount){
+    public CostData addEssenceCost(Essence_ID essenceId, int amount){
         essenceCost.put(essenceId, amount);
+        return this;
     }
-    public void addItemCost(Item_ID itemId, int Amount){
+    public CostData addItemCost(Item_ID itemId, int Amount){
         itemCost.put(itemId, Amount);
+        return this;
     }
 
     public Map<Essence_ID, Integer> getEssenceCost() {
