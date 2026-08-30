@@ -1288,14 +1288,17 @@ public interface HelperProvider {
 
     /**
      * Creates a purchasable item with attached purchase logic, which will be executed as soon as it's being clicked & and if the player has the required items.
+     * @param player The player which will see this item.
      * @param costData The data which contains the required items/essence.
      * @param lore The lore of the item (without the cost list).
      * @param material The material of purchasable item.
+     * @param displayName The display name of the item.
      * @param skullValue The skull value of the material if it's a player head. This can be null if the material is no player head.
      * @param consumer The purchase logic. It should only focus on updating values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
+     * @param purchaseStop Set this boolean to true whenever the player should no longer be able to purchase this.
      * @return A purchasable ItemStack
      */
-    ItemStack createPurchasableItem(CostData costData, Material material, String skullValue, List<String> lore, Consumer<Player> consumer);
+    ItemStack createPurchasableItem(Player player, CostData costData, Material material, String displayName, String skullValue, List<String> lore, Consumer<Player> consumer, boolean purchaseStop);
     /**
      * Creates a purchasable item with attached purchase logic, which will be executed as soon as it's being clicked & and if the player has the required items.
      * @param player The player which will see this item.
@@ -1305,7 +1308,7 @@ public interface HelperProvider {
      * {@link net.kingproductions.splitbornAPI.TalentContainer.TalentID} {@link net.kingproductions.splitbornAPI.PerkContainer.PerkID} {@link net.kingproductions.splitbornAPI.KillEffectsContainer.KillEffectID} {@link net.kingproductions.splitbornAPI.EmblemContainer.EmblemID}
      * @return A purchasable ItemStack
      */
-    ItemStack createPurchasableItem(Player player, CostData costData, Consumer<Player> consumer, Object purchaseObject);
+    ItemStack createPurchasablePresetItem(Player player, CostData costData, Consumer<Player> consumer, Object purchaseObject);
 
     /**
      * @param player The player that is being checked.
@@ -1363,4 +1366,11 @@ public interface HelperProvider {
      * @return An inventory.
      */
     Inventory createInventory(Player player, int size, String title, boolean clickable);
+
+    /**
+     * Converts costData which is being used for purchasable items, into a list which can be used in the item lore.
+     * @param costData The costData which should be converted into a list.
+     * @return A list
+     */
+    List<String> convertCostDataToList(CostData costData);
 }

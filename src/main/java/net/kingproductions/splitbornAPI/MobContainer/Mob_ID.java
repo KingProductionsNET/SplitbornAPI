@@ -23,7 +23,7 @@ public enum Mob_ID {
     PRACTICE_DUMMY,
     UMBRAL,
 
-    BRINECRALWER,
+    BRINECRAWLER,
     GLOOMFIN,
     ABYSSAL_ANGLER
 

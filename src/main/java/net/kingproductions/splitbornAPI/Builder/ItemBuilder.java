@@ -355,6 +355,9 @@ public class ItemBuilder {
 
                 PersistentDataType persistentDataType = PersistentDataType.STRING;
                 if (o instanceof Integer) persistentDataType = PersistentDataType.INTEGER;
+                if (o instanceof Double) persistentDataType = PersistentDataType.DOUBLE;
+                if (o instanceof Long) persistentDataType = PersistentDataType.LONG;
+                if (o instanceof Boolean) persistentDataType = PersistentDataType.BOOLEAN;
 
                 addHiddenValue(meta, path, persistentDataType, o);
             }
