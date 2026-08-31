@@ -23,7 +23,7 @@ public class NoteBlockAPI {
 
         EntitySongPlayer esp = new EntitySongPlayer(song);
         esp.setEntity(player);
-        esp.setDistance(32);
+        esp.setDistance(40);
         esp.setAutoDestroy(true);
         esp.setVolume((byte) 100);
         esp.addPlayer(player);

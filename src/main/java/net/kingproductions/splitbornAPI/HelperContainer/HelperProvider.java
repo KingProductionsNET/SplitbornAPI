@@ -1373,4 +1373,11 @@ public interface HelperProvider {
      * @return A list
      */
     List<String> convertCostDataToList(CostData costData);
+
+    /**
+     * Returns the skull value if the item id is a player head and has one.
+     * @param itemId
+     * @return Null if the item does not have a skull value.
+     */
+    String getItemSkullValue(Item_ID itemId);
 }
