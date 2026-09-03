@@ -32,6 +32,7 @@ public class QuestCreator {
         set.add(new The_Goblins_Hustle().build());
         set.add(new The_Veiled_Echo().build());
         set.add(new Crushing_The_Nests().build());
+        set.add(new The_Lake_Run().build());
         return set;
     }
 

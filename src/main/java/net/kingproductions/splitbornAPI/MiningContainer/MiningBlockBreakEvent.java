@@ -1,21 +1,23 @@
 package net.kingproductions.splitbornAPI.MiningContainer;
 
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class MiningBlockBreakEvent extends Event implements Cancellable {
+public class MiningBlockBreakEvent extends Event{
 
     private static final HandlerList handlers = new HandlerList();
 
     private final Player player;
     private final Block_ID blockId;
-    private boolean cancelled;
+    private final Location blockBreakLocation;
+    private boolean respawn = true;
 
-    public MiningBlockBreakEvent(Player player, Block_ID blockId, boolean cancelled) {
+    public MiningBlockBreakEvent(Player player, Location location, Block_ID blockId) {
         this.player = player;
-        this.cancelled = cancelled;
+        this.blockBreakLocation = location;
         this.blockId = blockId;
     }
 
@@ -25,6 +27,20 @@ public class MiningBlockBreakEvent extends Event implements Cancellable {
     public Block_ID getBlockID(){
         return blockId;
     }
+    public void setRespawn(boolean b){
+        this.respawn = b;
+    }
+
+    /**
+     *
+     * @return The location of the broken block.
+     */
+    public Location getBrokenBlockLocation(){
+        return blockBreakLocation;
+    }
+    public boolean getRespawn(){
+        return respawn;
+    }
 
     @Override
     public HandlerList getHandlers() {
@@ -32,16 +48,6 @@ public class MiningBlockBreakEvent extends Event implements Cancellable {
     }
     public static HandlerList getHandlerList() {
         return handlers;
-    }
-
-    @Override
-    public boolean isCancelled() {
-        return cancelled;
-    }
-
-    @Override
-    public void setCancelled(boolean b) {
-        this.cancelled = b;
     }
 
 }

@@ -311,6 +311,10 @@ public class ItemBuilder {
             Meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             Meta.setUnbreakable(true);
 
+            if (addUniqueID){
+                addHiddenValue(itemMeta, "not-stackable", PersistentDataType.STRING, UUID.randomUUID().toString());
+            }
+
             if (glint){
                 Meta.addEnchant(Enchantment.AQUA_AFFINITY, 1, true);
             }
@@ -362,6 +366,11 @@ public class ItemBuilder {
                 addHiddenValue(meta, path, persistentDataType, o);
             }
 
+            if (addUniqueID){
+                addHiddenValue(itemMeta, "not-stackable", PersistentDataType.STRING, UUID.randomUUID().toString());
+            }
+
+
             Skull.setItemMeta(meta);
 
             return Skull;
@@ -376,6 +385,10 @@ public class ItemBuilder {
 
             if (glint){
                 itemMeta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+            }
+
+            if (addUniqueID){
+                addHiddenValue(itemMeta, "not-stackable", PersistentDataType.STRING, UUID.randomUUID().toString());
             }
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);

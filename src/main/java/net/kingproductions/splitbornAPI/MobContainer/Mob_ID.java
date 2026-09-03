@@ -25,6 +25,10 @@ public enum Mob_ID {
 
     BRINECRAWLER,
     GLOOMFIN,
-    ABYSSAL_ANGLER
+    ABYSSAL_ANGLER,
+
+    SUNSTONE_SENTINEL,
+
+    CROAKLE
 
 }

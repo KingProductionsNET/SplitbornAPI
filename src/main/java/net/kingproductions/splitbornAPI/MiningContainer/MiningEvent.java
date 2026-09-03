@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.MiningContainer;
 
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
@@ -11,11 +12,13 @@ public class MiningEvent extends Event implements Cancellable {
 
     private final Player player;
     private final Block_ID blockId;
+    private final Location location;
     private boolean cancelled;
 
-    public MiningEvent(Player player, Block_ID blockId, boolean cancelled) {
+    public MiningEvent(Player player, Location loc, Block_ID blockId, boolean cancelled) {
         this.player = player;
         this.cancelled = cancelled;
+        this.location = loc;
         this.blockId = blockId;
     }
 
@@ -24,6 +27,14 @@ public class MiningEvent extends Event implements Cancellable {
     }
     public Block_ID getBlockID(){
         return blockId;
+    }
+
+    /**
+     *
+     * @return The location of the block the player is attempting to break.
+     */
+    public Location getLocation(){
+        return location;
     }
 
     @Override

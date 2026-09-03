@@ -23,6 +23,7 @@ public interface UtilProvider {
     TextDisplay spawnTextDisplay(Location spawnLocation, boolean seeThrough, String Text, boolean backround, float scale);
     TextDisplay spawnNPCTextDisplay(Location spawnLocation, boolean seeThrough, String Text, float viewRange);
     ItemDisplay spawnItemDisplay(Location spawnLocation, ItemStack itemStack);
+    ItemDisplay spawnItemDisplay(Location spawnLocation, ItemStack itemStack, float scale);
     String getFancyProgressBar(int current, int max, String filledChar, String emptyChar);
     List<Location> getNearbyBlockLocations(Location centerLoc, int scanRadius, Material material);
     void spawnParticleLine(Player player, Particle particle, Location loc1, Location loc2);

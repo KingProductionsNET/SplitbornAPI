@@ -22,6 +22,7 @@ public enum Quests {
     JERNIKS_LEDGER,
     THE_VEILED_ECHO,
     CRUSHING_THE_NESTS,
+    THE_LAKE_RUN,
 
     DEFAULT_NONE;
 }

@@ -1380,4 +1380,19 @@ public interface HelperProvider {
      * @return Null if the item does not have a skull value.
      */
     String getItemSkullValue(Item_ID itemId);
+
+    /**
+     *
+     * @param Attacker The attacker entity.
+     * @param Range The scan range.
+     * @return A random available player target within the range.
+     */
+    Player getRandomAvailablePlayerTarget(Entity Attacker, int Range);
+
+    /**
+     * This completely overwrites the default Splitborn actionbar and displays the text for 30 ticks.
+     * @param player The player which will see the text.
+     * @param Text The text which will appear in the actionbar.
+     */
+    void sendActionBarText(Player player, String Text);
 }
