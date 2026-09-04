@@ -1363,9 +1363,10 @@ public interface HelperProvider {
      * @param size The size of the inventory.
      * @param title The title of the inventory.
      * @param clickable Set to false if player's shouldn't be allowed to take items out of this inventory. (Basically always)
+     * @param id This id will allow any Splitborn plugin to open this exact inventory. This can be null if this inventory shouldn't be opened from anywhere.
      * @return An inventory.
      */
-    Inventory createInventory(Player player, int size, String title, boolean clickable);
+    Inventory createInventory(Player player, int size, String title, boolean clickable, String id);
 
     /**
      * Converts costData which is being used for purchasable items, into a list which can be used in the item lore.
@@ -1395,4 +1396,11 @@ public interface HelperProvider {
      * @param Text The text which will appear in the actionbar.
      */
     void sendActionBarText(Player player, String Text);
+
+    /**
+     * Opens a registered inventory which had to be created by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#createInventory(Player, int, String, boolean, String)}
+     * @param player The owner of the inventory.
+     * @param id The id.
+     */
+    void openInventory(Player player, String id);
 }
