@@ -13,6 +13,7 @@ public enum EmblemID {
     Ashwalker,
     Anglers_Legacy,
     Drowned_Wisdom,
-    Snowflake
+
+    Snowbloom
 
 }
