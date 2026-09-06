@@ -45,4 +45,5 @@ public interface UtilProvider {
     List<Document> find(String collectionName, Document filter);
     void updateOne(String collectionName, Document filter, Document update, boolean upsert);
 
+    void arcMoveParticle(Player player, Particle particle, Location startLocation, Location endLocation, int height, int speed);
 }
