@@ -12,6 +12,7 @@ public enum EmblemID {
     Challenger,
     Ashwalker,
     Anglers_Legacy,
-    Drowned_Wisdom
+    Drowned_Wisdom,
+    Snowflake
 
 }

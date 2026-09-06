@@ -1295,7 +1295,7 @@ public interface HelperProvider {
      * @param material The material of purchasable item.
      * @param displayName The display name of the item.
      * @param skullValue The skull value of the material if it's a player head. This can be null if the material is no player head.
-     * @param consumer The purchase logic. It should only focus on updating values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
+     * @param consumer The purchase logic. This will only be executed if the player has the required costs. It should only focus on updating/unlocking values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
      * @param purchaseStop Set this boolean to true whenever the player should no longer be able to purchase this.
      * @return A purchasable ItemStack
      */
@@ -1304,7 +1304,7 @@ public interface HelperProvider {
      * Creates a purchasable item with attached purchase logic, which will be executed as soon as it's being clicked & and if the player has the required items.
      * @param player The player which will see this item.
      * @param costData The data which contains the required items/essence.
-     * @param consumer The purchase logic. It should only focus on updating values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
+     * @param consumer The purchase logic. This will only be executed if the player has the required costs. It should only focus on updating/unlocking values. Costs, such as Gleams, are removed automatically same as scoreboard refresh.
      * @param purchaseObject The object which is being sold. Following can be sold:
      * {@link net.kingproductions.splitbornAPI.TalentContainer.TalentID} {@link net.kingproductions.splitbornAPI.PerkContainer.PerkID} {@link net.kingproductions.splitbornAPI.KillEffectsContainer.KillEffectID} {@link net.kingproductions.splitbornAPI.EmblemContainer.EmblemID}
      * @return A purchasable ItemStack
