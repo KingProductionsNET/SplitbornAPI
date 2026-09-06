@@ -214,6 +214,8 @@ public enum Item_ID {
     FROSTED_ICE,
     GLACIAL_ICE,
 
-    ICEBREAKER
+    ICEBREAKER,
+
+    INFECTED_MUSHROOM
 
 }
