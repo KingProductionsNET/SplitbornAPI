@@ -17,6 +17,7 @@ public class EntityClickEvent extends Event {
     private final Mob_ID mobId;
     private final Entity mob;
     private final CLICK_TYPE clickType;
+    private boolean cancelDamageOnLeftClick = false;
 
     public EntityClickEvent(Player receiver, Mob_ID mobId, Entity mob, CLICK_TYPE clickType){
         this.player = receiver;
@@ -34,6 +35,13 @@ public class EntityClickEvent extends Event {
     }
     public CLICK_TYPE getClickType(){
         return clickType;
+    }
+    public boolean isCancelDamageOnLeftClick() {
+        return cancelDamageOnLeftClick;
+    }
+
+    public void setCancelDamageOnLeftClick(boolean b){
+        this.cancelDamageOnLeftClick = b;
     }
 
     @Override

@@ -7,6 +7,8 @@ public enum Block_ID {
     EMBER_ORE,
     FOLDSTONE_ORE,
     SUNSHARD,
-    SUNSTONE
+    SUNSTONE,
+    FROSTED_ICE,
+    GLACIAL_ICE
 
 }

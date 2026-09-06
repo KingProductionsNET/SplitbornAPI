@@ -29,6 +29,7 @@ public enum Mob_ID {
 
     SUNSTONE_SENTINEL,
 
-    CROAKLE
-
+    CROAKLE,
+    SPORELING,
+    SPOREBRUTE
 }

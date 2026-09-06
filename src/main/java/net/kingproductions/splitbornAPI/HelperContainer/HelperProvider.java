@@ -1403,4 +1403,37 @@ public interface HelperProvider {
      * @param id The id.
      */
     void openInventory(Player player, String id);
+
+    /**
+     * Disables NPC interaction for the player, until it gets enabled by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#enableNPCInteraction(Player)}
+     * @param player The player for which NPC interaction is being disabled.
+     */
+    void disableNPCInteraction(Player player);
+
+    /**
+     * Enables NPC interaction if it got disabled by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#disableNPCInteraction(Player)}
+     * @param player The player which will be able to interact with NPCs again.
+     */
+    void enableNPCInteraction(Player player);
+
+    /**
+     * Returns a list with a block in the given range.
+     * @param center The center location.
+     * @param radius The scan range.
+     */
+    List<Location> getSphereBlocks(Location center, int radius);
+
+    /**
+     * Sets the scale of an item display.
+     * @param itemDisplay
+     * @param scale
+     */
+    void setItemDisplayScale(ItemDisplay itemDisplay, float scale);
+
+    /**
+     * Removes the specified amount from the players item stack in their main hand.
+     * @param player The player.
+     * @param Amount The amount that should be removed from the item stack in their main hand.
+     */
+    void removeItemCountFromMainHand(Player player, int Amount);
 }

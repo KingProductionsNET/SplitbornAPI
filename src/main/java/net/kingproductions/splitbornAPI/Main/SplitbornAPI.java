@@ -9,6 +9,7 @@ import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.SplitbornItemProvider;
 import net.kingproductions.splitbornAPI.LocationsContainer.LocationSpawnPoints;
+import net.kingproductions.splitbornAPI.MiningContainer.MiningManagerProvider;
 import net.kingproductions.splitbornAPI.MobContainer.RPGMobProvider;
 import net.kingproductions.splitbornAPI.NPC.NPCProvider;
 import net.kingproductions.splitbornAPI.NPC.SplitbornNPC;
@@ -44,6 +45,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static UtilProvider utilProvider;
     private static RPGMobProvider rpgMobProvider;
     private static AuctionHouseProvider auctionHouseProvider;
+    private static MiningManagerProvider miningManagerProvider;
 
     private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
 
@@ -66,6 +68,9 @@ public final class SplitbornAPI extends JavaPlugin {
     }
     public static void addItemProvider(SplitbornItemProvider s){
         itemProviders.add(s);
+    }
+    public static void initMiningSystem(MiningManagerProvider m){
+        miningManagerProvider = m;
     }
 
     public static Profile getProfile(UUID uuid) {
@@ -104,12 +109,19 @@ public final class SplitbornAPI extends JavaPlugin {
         return utilProvider;
     }
     public static RPGMobProvider getMobSystem(){
-        if (utilProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        if (rpgMobProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return rpgMobProvider;
     }
     public static AuctionHouseProvider getAuctionHouse(){
         if (auctionHouseProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return auctionHouseProvider;
+    }
+    public static MiningManagerProvider MiningManager(){
+        if (miningManagerProvider == null){
+            throw new API_NOT_FOUND(API_NOT_FOUND_STRING);
+        }
+
+        return miningManagerProvider;
     }
 
     @Override
