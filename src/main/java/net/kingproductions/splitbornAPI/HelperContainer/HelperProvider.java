@@ -292,6 +292,7 @@ public interface HelperProvider {
 
     /**
      * Makes an entity invulnerable and registers it as an immortal Splitborn entity.
+     * This shouldn't be used when trying to make a player immortal. Instead {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#enableGodMode(Player)}
      *
      * @param e the entity to make immortal
      */
@@ -1436,4 +1437,16 @@ public interface HelperProvider {
      * @param Amount The amount that should be removed from the item stack in their main hand.
      */
     void removeItemCountFromMainHand(Player player, int Amount);
+
+    /**
+     * Makes a player immune to every attack from a Splitborn Mob.
+     * @param player The player.
+     */
+    void enableGodMode(Player player);
+
+    /**
+     * Removes god mode from a player.
+     * @param player The player.
+     */
+    void disableGodMode(Player player);
 }

@@ -6,6 +6,7 @@ public enum PerkID {
     DOUBLE_JUMP,
     LAST_CHANCE,
     SHATTERSHOT,
-    TIDAL_INSTINCT
+    TIDAL_INSTINCT,
+    UNBREAKABLE,
 
 }
