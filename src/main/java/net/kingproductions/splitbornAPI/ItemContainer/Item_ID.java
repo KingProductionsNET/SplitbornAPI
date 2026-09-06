@@ -212,6 +212,8 @@ public enum Item_ID {
     ROTCAP,
 
     FROSTED_ICE,
-    GLACIAL_ICE
+    GLACIAL_ICE,
+
+    INFECTED_MUSHROOM
 
 }
