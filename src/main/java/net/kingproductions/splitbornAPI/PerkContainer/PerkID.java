@@ -8,5 +8,6 @@ public enum PerkID {
     SHATTERSHOT,
     TIDAL_INSTINCT,
     UNBREAKABLE,
+    SWAMPWALKER
 
 }

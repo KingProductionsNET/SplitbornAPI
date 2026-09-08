@@ -11,6 +11,7 @@ public enum Curiosities {
     VOID_LANTERN,
     JUNK_SENTINEL,
     PHANTOM_THIEF,
-    FLUFF_TOTEM
+    FLUFF_TOTEM,
+    CURIOUS_CAP
 
 }

@@ -12,5 +12,6 @@ public enum Locations {
     The_Veil,
     Dojo,
     The_Undercroft,
-    Brinehollow
+    Brinehollow,
+    Dryoak
 }

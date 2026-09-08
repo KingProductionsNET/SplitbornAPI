@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class PerkChangeEvent extends Event {
@@ -16,7 +17,7 @@ public class PerkChangeEvent extends Event {
     private final PerkID newPerk;
     private final List<PerkID> activePerks;
 
-    public PerkChangeEvent(Player player, PerkID newPerk, List<PerkID> activePerks) {
+    public PerkChangeEvent(Player player, @Nullable PerkID newPerk, List<PerkID> activePerks) {
         this.player = player;
         this.newPerk = newPerk;
         this.activePerks = activePerks;

@@ -24,7 +24,10 @@ import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
 public class One_Time_Reward_Inventory implements Listener {
 
-    private static final String Title = "§8Free Reward";
+    /**
+     * When changing this string, also change it in the core in ExecutablesListener class.
+     */
+    public static final String Title = "§8Free Reward";
 
     private static final Set<UUID> claimedReward = new HashSet<>();
     private static final Map<UUID, Item_ID> getRewardsItemID = new HashMap<>();
@@ -155,7 +158,9 @@ public class One_Time_Reward_Inventory implements Listener {
                 player.sendMessage("§aYou have claimed your free reward!");
                 player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1F, 2F);
 
-                for (int i = 0; i <= (Amount - 1); i++) player.getInventory().addItem(SplitbornAPI.getItem(thisItem_ID));
+                for (int i = 0; i <= (Amount - 1); i++){
+                    player.getInventory().addItem(SplitbornAPI.getItem(thisItem_ID));
+                }
                 player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1F, 2F);
 
                 Consumer<Player> c = on_Claim_Action.getOrDefault(player.getUniqueId(), null);
