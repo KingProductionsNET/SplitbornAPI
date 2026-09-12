@@ -14,6 +14,7 @@ import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.TalentContainer.TalentID;
+import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -1454,4 +1455,12 @@ public interface HelperProvider {
      * @param player The player.
      */
     void disableGodMode(Player player);
+
+    /**
+     * @param Message The message that will be displayed for the player.
+     * @param HoverText The text that will be shown if the player hovers over the messages.
+     * @param ClickCommand The command that be executed when this message is being clicked.
+     * @return A clickable chat message.
+     */
+    Component createClickableMessage(String Message, String HoverText, String ClickCommand);
 }
