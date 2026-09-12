@@ -46,5 +46,6 @@ public enum NPC_ID {
     RIME,
     CAFUNE,
     ENCELL,
-    SUGRA
+    SUGRA,
+    OREAL
 }

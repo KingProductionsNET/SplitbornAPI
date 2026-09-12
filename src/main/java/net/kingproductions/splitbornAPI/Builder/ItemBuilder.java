@@ -190,7 +190,7 @@ public class ItemBuilder {
     }
 
     /**
-     * Returns a shop-ready item which can be purchased. The purchase logic must be executed using {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#handleBuyProcess(Player, ItemStack)} in an InventoryClickEvent.
+     * Returns a shop-ready item which can be purchased.
      * @param itemId The item id which should be sold.
      * @return Returns a shop-ready item
      */
@@ -256,6 +256,8 @@ public class ItemBuilder {
         lore.add("");
         lore.add("§eClick to purchase.");
         meta.setLore(lore);
+
+        ItemBuilder.addHiddenValue(meta, "SHOP_ITEM", PersistentDataType.BOOLEAN, true);
 
         stack.setItemMeta(meta);
 

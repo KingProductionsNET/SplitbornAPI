@@ -217,6 +217,9 @@ public enum Item_ID {
     ICEBREAKER,
 
     INFECTED_MUSHROOM,
-    WATER_BOMB
+    WATER_BOMB,
+
+    SPRAY_AND_PRAY,
+    PRAY_AND_SPRAY
 
 }

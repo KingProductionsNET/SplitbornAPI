@@ -33,6 +33,7 @@ public class QuestCreator {
         set.add(new The_Veiled_Echo().build());
         set.add(new Crushing_The_Nests().build());
         set.add(new The_Lake_Run().build());
+        set.add(new Unwanted_Guests().build());
         return set;
     }
 

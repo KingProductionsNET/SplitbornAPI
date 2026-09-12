@@ -202,6 +202,12 @@ public interface HelperProvider {
     String getMoltenSymbol();
 
     /**
+     *
+     * @return the symbol used to represent Arid mobs
+     */
+    String getAridSymbol();
+
+    /**
      * @return the symbol used to represent Leap
      */
     String getLeapSymbol();
@@ -215,7 +221,6 @@ public interface HelperProvider {
      * @return the symbol used to represent Excavation Fortune
      */
     String getExcavationFortuneSymbol();
-
     /**
      * Checks whether the player currently has an active quest registered in the quest manager.
      *

@@ -31,5 +31,6 @@ public enum Mob_ID {
 
     CROAKLE,
     SPORELING,
-    SPOREBRUTE
+    SPOREBRUTE,
+    DUNER
 }

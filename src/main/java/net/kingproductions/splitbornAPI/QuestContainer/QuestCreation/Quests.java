@@ -23,6 +23,7 @@ public enum Quests {
     THE_VEILED_ECHO,
     CRUSHING_THE_NESTS,
     THE_LAKE_RUN,
+    UNWANTED_GUESTS,
 
     DEFAULT_NONE;
 }

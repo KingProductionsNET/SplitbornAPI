@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.Builder.ItemBuilder;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
+import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -189,6 +190,17 @@ public class One_Time_Reward_Inventory implements Listener {
     private static void handleForgottenProcess(Player player){
         Item_ID forgottenItem = getRewardsItemID.getOrDefault(player.getUniqueId(), null);
         int Amount = getRewardsItemAmount.getOrDefault(player.getUniqueId(), 1);
+
+        Rarities rarity = SplitbornAPI.getHelper().getItemsRarity(SplitbornAPI.getItem(forgottenItem));
+        if (rarity.equals(Rarities.QUEST_ITEM)){
+            player.sendMessage("§cQuest items can't be transferred to the delivery box! Try again.");
+            player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_CURSE, 1F, 2F);
+
+            getRewardsItemAmount.remove(player.getUniqueId());
+            getRewardsItemID.remove(player.getUniqueId());
+            closeAnimation.add(player.getUniqueId());
+            return;
+        }
 
         Profile profile = SplitbornAPI.getProfile(player.getUniqueId());
         profile.addUnclaimedItem(forgottenItem, Amount);
