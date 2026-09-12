@@ -220,6 +220,8 @@ public enum Item_ID {
     WATER_BOMB,
 
     SPRAY_AND_PRAY,
-    PRAY_AND_SPRAY
+    PRAY_AND_SPRAY,
+
+    DRAGON_GAMBLE
 
 }
