@@ -48,5 +48,7 @@ public enum NPC_ID {
     ENCELL,
     SUGRA,
     OREAL,
-    HUNTER_TERZO
+    HUNTER_TERZO,
+    MAROSO,
+    RAVYNE
 }

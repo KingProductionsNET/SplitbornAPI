@@ -87,7 +87,6 @@ public class CosmeticTour implements Listener {
         if (Passenger.hasMetadata("ON_TOUR")) return;
 
         Location startLocation = connectionPoints.getFirst();
-        SplitbornAPI.BlockCommand().BlockCommand(Passenger, COMMAND_ID.SPAWN);
 
         LivingEntity Shuttle = (LivingEntity) startLocation.getWorld().spawn(startLocation, TourGuide.getEntityClass());
         Shuttle.setInvulnerable(true);

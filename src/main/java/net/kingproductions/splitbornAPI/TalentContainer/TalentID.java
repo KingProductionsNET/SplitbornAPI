@@ -9,6 +9,7 @@ public enum TalentID {
     ECHOED_CATCH,
     PROSPECTORS_INSTINCT,
     STEADY_PACE,
-    BRUTALITY
+    BRUTALITY,
+    DRYOAK_SLAYER
 
 }

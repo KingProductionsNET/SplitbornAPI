@@ -13,7 +13,9 @@ public enum EmblemID {
     Ashwalker,
     Anglers_Legacy,
     Drowned_Wisdom,
-
-    Snowbloom
+    Snowbloom,
+    Arid,
+    Fractured,
+    Webbed
 
 }
