@@ -8,6 +8,7 @@ public enum TalentID {
     MARINERS_RESOLVE,
     ECHOED_CATCH,
     PROSPECTORS_INSTINCT,
-    STEADY_PACE
+    STEADY_PACE,
+    BRUTALITY
 
 }

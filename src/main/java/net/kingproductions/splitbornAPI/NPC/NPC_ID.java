@@ -47,5 +47,6 @@ public enum NPC_ID {
     CAFUNE,
     ENCELL,
     SUGRA,
-    OREAL
+    OREAL,
+    HUNTER_TERZO
 }

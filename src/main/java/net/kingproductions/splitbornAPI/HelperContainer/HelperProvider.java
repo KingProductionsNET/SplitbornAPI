@@ -1463,4 +1463,18 @@ public interface HelperProvider {
      * @return A clickable chat message.
      */
     Component createClickableMessage(String Message, String HoverText, String ClickCommand);
+
+    /**
+     *
+     * @param i The integer that will be converted into seconds (e.g. int (10) will become 0.5). (This should be used when trying to convert minecraft ticks into viewable seconds)
+     * @return A string displaying the integer as precise seconds.
+     */
+    String convertTicksToSeconds(int i);
+
+    /**
+     * Adds Dryoak points to a player with a chat message.
+     * @param player The player.
+     * @param Amount The Dryoak point amount.
+     */
+    void addDryOakPoints(Player player, int Amount);
 }
