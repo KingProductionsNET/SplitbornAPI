@@ -13,5 +13,6 @@ public enum Locations {
     Dojo,
     The_Undercroft,
     Brinehollow,
-    Dryoak
+    Dryoak,
+    Darkshaft
 }

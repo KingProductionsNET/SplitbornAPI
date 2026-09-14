@@ -36,5 +36,7 @@ public enum Mob_ID {
 
     QUIESSER,
     FLURBY,
-    GOAT
+    GOAT,
+
+    O_SHADOW
 }

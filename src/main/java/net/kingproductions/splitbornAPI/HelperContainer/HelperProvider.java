@@ -1514,4 +1514,12 @@ public interface HelperProvider {
      * @param provider The inventory itself.
      */
     void registerInventory(String id, Function<Player, Inventory> provider);
+
+    /**
+     *
+     * @param Loc1
+     * @param Loc2
+     * @return A random location inside this cuboid.
+     */
+    Location getRandomLocationInCuboid(Location Loc1, Location Loc2);
 }
