@@ -1073,16 +1073,18 @@ public interface HelperProvider {
 
     /**
      * Prevents the player from using Splitborn Quick Travel.
-     *
+     * @deprecated Instead use {@link net.kingproductions.splitbornAPI.CustomMiscEventsContainer.QuickTravelEvent}
      * @param player the player whose Quick Travel should be blocked
      */
+    @Deprecated
     void BlockQuickTravel(Player player);
 
     /**
      * Removes the Quick Travel restriction from the player.
-     *
+     * @deprecated Instead use {@link net.kingproductions.splitbornAPI.CustomMiscEventsContainer.QuickTravelEvent}
      * @param player the player whose Quick Travel should be unblocked
      */
+    @Deprecated
     void UnblockQuickTravel(Player player);
 
     /**
