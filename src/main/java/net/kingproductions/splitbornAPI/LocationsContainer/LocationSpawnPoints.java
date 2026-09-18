@@ -11,7 +11,6 @@ public class LocationSpawnPoints {
 
     public static Location Hearthgrove_Spawn = null;
     public static Location The_Fold_Spawn = null;
-    public static Location Doomrest_Spawn = null;
     public static Location The_Beyond_Spawn = null;
     public static Location Sporewood_Spawn = null;
     public static Location Ashvein_Mine_Spawn = null;
@@ -36,7 +35,6 @@ public class LocationSpawnPoints {
 
         SPAWN_POINTS.put(Locations.Hearthgrove, Hearthgrove_Spawn);
         SPAWN_POINTS.put(Locations.The_Fold, The_Fold_Spawn);
-        SPAWN_POINTS.put(Locations.Doomrest, Doomrest_Spawn);
         SPAWN_POINTS.put(Locations.The_Beyond, The_Beyond_Spawn);
         SPAWN_POINTS.put(Locations.Sporewood, Sporewood_Spawn);
         SPAWN_POINTS.put(Locations.Ashvein_Mine, Ashvein_Mine_Spawn);

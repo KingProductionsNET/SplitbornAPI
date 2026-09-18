@@ -4,7 +4,6 @@ public enum Locations {
 
     Hearthgrove,
     The_Fold,
-    Doomrest,
     The_Beyond,
     Sporewood,
     Ashvein_Mine,
