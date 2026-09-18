@@ -50,5 +50,6 @@ public enum NPC_ID {
     OREAL,
     HUNTER_TERZO,
     MAROSO,
-    RAVYNE
+    RAVYNE,
+    THE_EXCAVATOR
 }

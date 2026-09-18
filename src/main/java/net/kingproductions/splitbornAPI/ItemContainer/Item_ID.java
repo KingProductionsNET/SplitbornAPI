@@ -241,6 +241,8 @@ public enum Item_ID {
     ARID_FUR,
     WITHERED_CORE,
 
-    GIANT_BANE
+    GIANT_BANE,
+
+    SHADOW_PICKAXE
 
 }
