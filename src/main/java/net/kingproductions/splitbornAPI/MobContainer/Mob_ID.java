@@ -39,5 +39,7 @@ public enum Mob_ID {
     GOAT,
 
     O_SHADOW,
-    MOSIER
+    MOSIER,
+
+    MOLTASO
 }

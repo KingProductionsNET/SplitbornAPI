@@ -15,5 +15,6 @@ public enum Locations {
     Dryoak,
     Darkshaft,
     Little_Spore,
-    Sunken_Trenches
+    Sunken_Trenches,
+    The_Molten_Ring
 }
