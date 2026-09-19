@@ -15,6 +15,7 @@ public class LocationChangeEvent extends Event{
     private final Player player;
     private final Locations fromLocation;
     private final Locations toLocation;
+    private Reason reason;
 
     public LocationChangeEvent(Player player, Locations fromLocation, Locations toLocation) {
         this.player = player;
@@ -31,6 +32,13 @@ public class LocationChangeEvent extends Event{
     public Locations getToLocation(){
         return toLocation;
     }
+    public Reason getReason(){
+        return reason;
+    }
+
+    public void setReason(Reason reason){
+        this.reason = reason;
+    }
 
     @Override
     public HandlerList getHandlers() {
@@ -40,4 +48,10 @@ public class LocationChangeEvent extends Event{
         return handlers;
     }
 
+    public enum Reason {
+
+        DEATH,
+        WALKING
+
+    }
 }
