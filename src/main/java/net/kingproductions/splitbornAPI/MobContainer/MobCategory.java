@@ -2,6 +2,6 @@ package net.kingproductions.splitbornAPI.MobContainer;
 
 public enum MobCategory {
 
-    TERRESTRIAL,AQUATIC,MOLTEN,VEILBORN
+    TERRESTRIAL,AQUATIC,MOLTEN,VEILBORN,ARID
 
 }

@@ -6,21 +6,20 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class NPCInteractEvent extends Event{
+/**
+ * Event is called before the NPCInteractEvent
+ */
+public class PreNPCInteractEvent extends Event implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
 
-    public enum ClickType {
-        LEFT,
-        RIGHT
-    }
-
     private final Player player;
     private final NPC_ID npcId;
-    private final ClickType clickType;
+    private final NPCInteractEvent.ClickType clickType;
     private final Entity entity;
+    private boolean cancelled = false;
 
-    public NPCInteractEvent(Player player, NPC_ID npcId, ClickType clickType, Entity NPC) {
+    public PreNPCInteractEvent(Player player, NPC_ID npcId, NPCInteractEvent.ClickType clickType, Entity NPC) {
         this.player = player;
         this.npcId = npcId;
         this.clickType = clickType;
@@ -35,7 +34,7 @@ public class NPCInteractEvent extends Event{
         return npcId;
     }
 
-    public ClickType getClickType() {
+    public NPCInteractEvent.ClickType getClickType() {
         return clickType;
     }
 
@@ -50,4 +49,15 @@ public class NPCInteractEvent extends Event{
     public static HandlerList getHandlerList() {
         return handlers;
     }
+
+    @Override
+    public boolean isCancelled() {
+        return cancelled;
+    }
+
+    @Override
+    public void setCancelled(boolean cancel) {
+        cancelled = cancel;
+    }
+
 }

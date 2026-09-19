@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.Builder.ItemBuilder;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
+import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -24,7 +25,10 @@ import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
 public class One_Time_Reward_Inventory implements Listener {
 
-    private static final String Title = "§8Free Reward";
+    /**
+     * When changing this string, also change it in the core in ExecutablesListener class.
+     */
+    public static final String Title = "§8Free Reward";
 
     private static final Set<UUID> claimedReward = new HashSet<>();
     private static final Map<UUID, Item_ID> getRewardsItemID = new HashMap<>();
@@ -155,7 +159,9 @@ public class One_Time_Reward_Inventory implements Listener {
                 player.sendMessage("§aYou have claimed your free reward!");
                 player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1F, 2F);
 
-                for (int i = 0; i <= (Amount - 1); i++) player.getInventory().addItem(SplitbornAPI.getItem(thisItem_ID));
+                for (int i = 0; i <= (Amount - 1); i++){
+                    player.getInventory().addItem(SplitbornAPI.getItem(thisItem_ID));
+                }
                 player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1F, 2F);
 
                 Consumer<Player> c = on_Claim_Action.getOrDefault(player.getUniqueId(), null);
@@ -184,6 +190,17 @@ public class One_Time_Reward_Inventory implements Listener {
     private static void handleForgottenProcess(Player player){
         Item_ID forgottenItem = getRewardsItemID.getOrDefault(player.getUniqueId(), null);
         int Amount = getRewardsItemAmount.getOrDefault(player.getUniqueId(), 1);
+
+        Rarities rarity = SplitbornAPI.getHelper().getItemsRarity(SplitbornAPI.getItem(forgottenItem));
+        if (rarity.equals(Rarities.QUEST_ITEM)){
+            player.sendMessage("§cQuest items can't be transferred to the delivery box! Try again.");
+            player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_CURSE, 1F, 2F);
+
+            getRewardsItemAmount.remove(player.getUniqueId());
+            getRewardsItemID.remove(player.getUniqueId());
+            closeAnimation.add(player.getUniqueId());
+            return;
+        }
 
         Profile profile = SplitbornAPI.getProfile(player.getUniqueId());
         profile.addUnclaimedItem(forgottenItem, Amount);

@@ -38,6 +38,26 @@ public interface UtilProvider {
     void sendPacketBlock(Player player, Location location, Material material, boolean preventInteraction);
     void sendPacketMultiBlocks(Player player, List<Location> locations, Material material, boolean preventInteraction);
 
+    /**
+     *
+     * @param player
+     * @param location
+     * @param material
+     * @param preventInteraction
+     * @param resend If true, the block wil be resent after its being clicked.
+     */
+    void sendPacketBlock(Player player, Location location, Material material, boolean preventInteraction, boolean resend);
+
+    /**
+     *
+     * @param player
+     * @param locations
+     * @param material
+     * @param preventInteraction
+     * @param resend If true, the block wil be resent after its being clicked.
+     */
+    void sendPacketMultiBlocks(Player player, List<Location> locations, Material material, boolean preventInteraction, boolean resend);
+
     void adjustPlayerGleams(UUID uuid, int delta);
     void insertOne(String collectionName, Document doc);
     Document findOneAndUpdate(String collectionName, Document filter, Document update, boolean upsert);

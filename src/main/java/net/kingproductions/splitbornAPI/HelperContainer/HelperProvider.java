@@ -14,19 +14,25 @@ import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.TalentContainer.TalentID;
+import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BossBar;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public interface HelperProvider {
 
@@ -202,6 +208,12 @@ public interface HelperProvider {
     String getMoltenSymbol();
 
     /**
+     *
+     * @return the symbol used to represent Arid mobs
+     */
+    String getAridSymbol();
+
+    /**
      * @return the symbol used to represent Leap
      */
     String getLeapSymbol();
@@ -215,7 +227,6 @@ public interface HelperProvider {
      * @return the symbol used to represent Excavation Fortune
      */
     String getExcavationFortuneSymbol();
-
     /**
      * Checks whether the player currently has an active quest registered in the quest manager.
      *
@@ -1062,16 +1073,18 @@ public interface HelperProvider {
 
     /**
      * Prevents the player from using Splitborn Quick Travel.
-     *
+     * @deprecated Instead use {@link net.kingproductions.splitbornAPI.CustomMiscEventsContainer.QuickTravelEvent}
      * @param player the player whose Quick Travel should be blocked
      */
+    @Deprecated
     void BlockQuickTravel(Player player);
 
     /**
      * Removes the Quick Travel restriction from the player.
-     *
+     * @deprecated Instead use {@link net.kingproductions.splitbornAPI.CustomMiscEventsContainer.QuickTravelEvent}
      * @param player the player whose Quick Travel should be unblocked
      */
+    @Deprecated
     void UnblockQuickTravel(Player player);
 
     /**
@@ -1359,7 +1372,7 @@ public interface HelperProvider {
     void unlockKillEffect(Player player, KillEffectID killEffectID);
 
     /**
-     * Creates an inventory.
+     * Creates an inventory. If you want that inventory will be publicly available make sure to register it with {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#registerInventory(String, Function)}
      * @param player The owner of the inventory.
      * @param size The size of the inventory.
      * @param title The title of the inventory.
@@ -1449,4 +1462,66 @@ public interface HelperProvider {
      * @param player The player.
      */
     void disableGodMode(Player player);
+
+    /**
+     * @param Message The message that will be displayed for the player.
+     * @param HoverText The text that will be shown if the player hovers over the messages.
+     * @param ClickCommand The command that be executed when this message is being clicked.
+     * @return A clickable chat message.
+     */
+    Component createClickableMessage(String Message, String HoverText, String ClickCommand);
+
+    /**
+     *
+     * @param i The integer that will be converted into seconds (e.g. int (10) will become 0.5). (This should be used when trying to convert minecraft ticks into viewable seconds)
+     * @return A string displaying the integer as precise seconds.
+     */
+    String convertTicksToSeconds(int i);
+
+    /**
+     * Adds Dryoak points to a player with a chat message.
+     * @param player The player.
+     * @param Amount The Dryoak point amount.
+     */
+    void addDryOakPoints(Player player, int Amount);
+
+    /**
+     *
+     * @param player The player who is going to see the bossbar.
+     * @param Text The text that is shown in the bossbar.
+     * @param progress The progress of the boss 0.0 - 1.0
+     * @param color The color of the bossbar.
+     */
+    void setCustomBossBar(Player player, String Text, double progress, BarColor color);
+    void removeCustomBossBar(Player player);
+
+    /**
+     *
+     * @param player
+     * @return The custom bossbar of the player if they have one.
+     */
+    @Nullable
+    BossBar getPlayersCustomBossBar(Player player);
+
+    /**
+     *
+     * @param emblemID
+     * @return An inventory ready reward string, viewing the emblem.
+     */
+    String getEmblemRewardString(EmblemID emblemID);
+
+    /**
+     * Registers an inventory to make it publicly available in every Splitborn plugin.
+     * @param id The id defines how this inventory should be accessed.
+     * @param provider The inventory itself.
+     */
+    void registerInventory(String id, Function<Player, Inventory> provider);
+
+    /**
+     *
+     * @param Loc1
+     * @param Loc2
+     * @return A random location inside this cuboid.
+     */
+    Location getRandomLocationInCuboid(Location Loc1, Location Loc2);
 }

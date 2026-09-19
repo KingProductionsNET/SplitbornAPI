@@ -4,7 +4,6 @@ public enum Locations {
 
     Hearthgrove,
     The_Fold,
-    Doomrest,
     The_Beyond,
     Sporewood,
     Ashvein_Mine,
@@ -12,5 +11,8 @@ public enum Locations {
     The_Veil,
     Dojo,
     The_Undercroft,
-    Brinehollow
+    Brinehollow,
+    Dryoak,
+    Darkshaft,
+    Little_Spore
 }

@@ -102,7 +102,13 @@ public class FancyTeleportForEntity {
 
                     currentPoint++;
 
-                    if (currentPoint > points) break;
+                    if (currentPoint > points) {
+                        if (consumer != null) {
+                            consumer.accept(entity);
+                        }
+                        this.cancel();
+                        return;
+                    }
                 }
             }
         }.runTaskTimer(plugin, 0L, 1L);
