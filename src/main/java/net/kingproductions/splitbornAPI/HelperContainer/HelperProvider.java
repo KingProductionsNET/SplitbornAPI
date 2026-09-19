@@ -1524,4 +1524,13 @@ public interface HelperProvider {
      * @return A random location inside this cuboid.
      */
     Location getRandomLocationInCuboid(Location Loc1, Location Loc2);
+
+    /**
+     * @param centerLocation The center location from where the scan will start.
+     * @param Attacker The entity which will attack players.
+     * @param Range The scan range.
+     * @param location The locations which should be scanned for. If the location doesn't matter set this to null
+     * @return A list of all players within the specified range, if they are allowed to be damaged.
+     */
+    List<Player> getNearbyAvailableTargets(Location centerLocation, Entity Attacker, int Range, Locations location);
 }
