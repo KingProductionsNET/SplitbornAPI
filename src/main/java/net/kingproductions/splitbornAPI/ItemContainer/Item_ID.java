@@ -245,6 +245,14 @@ public enum Item_ID {
 
     SHADOW_PICKAXE,
 
-    CLEANSED_MUSHROOM
+    CLEANSED_MUSHROOM,
+
+    // Hollowdeep mining drops
+    GLOOM_SHARD,
+    RUSTVEIN_CHUNK,
+    OCHRE_TABLET,
+    VERDANT_SPORE,
+    PALE_CRYSTAL,
+    PROSPECTORS_GEM
 
 }

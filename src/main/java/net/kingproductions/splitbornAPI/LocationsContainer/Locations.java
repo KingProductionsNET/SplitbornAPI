@@ -16,5 +16,6 @@ public enum Locations {
     Darkshaft,
     Little_Spore,
     Sunken_Trenches,
-    The_Molten_Ring
+    The_Molten_Ring,
+    Hollowdeep
 }
