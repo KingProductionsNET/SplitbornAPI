@@ -4,7 +4,7 @@
   <groupId>com.github.KingProductionsNET</groupId>
   <artifactId>splitbornapi</artifactId>
   <name>splitbornapi</name>
-  <version>7.0.8</version>
+  <version>7.1.0</version>
   <build>
     <defaultGoal>clean package</defaultGoal>
     <resources>
