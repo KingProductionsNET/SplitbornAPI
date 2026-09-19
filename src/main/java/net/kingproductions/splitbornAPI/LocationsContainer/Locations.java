@@ -13,5 +13,6 @@ public enum Locations {
     The_Undercroft,
     Brinehollow,
     Dryoak,
-    Darkshaft
+    Darkshaft,
+    Little_Spore
 }

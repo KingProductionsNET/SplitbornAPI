@@ -243,6 +243,8 @@ public enum Item_ID {
 
     GIANT_BANE,
 
-    SHADOW_PICKAXE
+    SHADOW_PICKAXE,
+
+    CLEANSED_MUSHROOM
 
 }
