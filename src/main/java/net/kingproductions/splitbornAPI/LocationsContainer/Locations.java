@@ -14,5 +14,6 @@ public enum Locations {
     Brinehollow,
     Dryoak,
     Darkshaft,
-    Little_Spore
+    Little_Spore,
+    Sunken_Trenches
 }
