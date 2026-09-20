@@ -40,6 +40,7 @@ public enum Mob_ID {
 
     O_SHADOW,
     MOSIER,
-
-    MOLTASO
+    MOLTASO,
+    MAGMOX,
+    SCORCHMAW
 }
