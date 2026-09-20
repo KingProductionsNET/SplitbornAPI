@@ -51,5 +51,6 @@ public enum NPC_ID {
     HUNTER_TERZO,
     MAROSO,
     RAVYNE,
-    THE_EXCAVATOR
+    THE_EXCAVATOR,
+    DELVEMASTER_ORIN
 }
