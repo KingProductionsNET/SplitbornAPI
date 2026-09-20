@@ -52,5 +52,6 @@ public enum NPC_ID {
     MAROSO,
     RAVYNE,
     THE_EXCAVATOR,
-    DELVEMASTER_ORIN
+    DELVEMASTER_ORIN,
+    SORBIT
 }

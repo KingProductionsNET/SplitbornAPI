@@ -11,6 +11,7 @@ public enum PerkID {
     SWAMPWALKER,
     QUIESSER_SLAYER,
     FLURBY_SLAYER,
-    GOAT_SLAYER
+    GOAT_SLAYER,
+    MOLTASO_HUNTER
 
 }
