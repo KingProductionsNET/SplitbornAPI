@@ -253,6 +253,5 @@ public enum Item_ID {
     OCHRE_TABLET,
     VERDANT_SPORE,
     PALE_CRYSTAL,
-    PROSPECTORS_GEM
-
+    PROSPECTORS_GEM,
 }
