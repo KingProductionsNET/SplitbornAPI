@@ -26,11 +26,16 @@ public class FancyTeleportForEntity {
         if (!entity.getWorld().equals(loc2.getWorld())) return;
 
         Location loc1 = entity.getLocation().clone();
-
         double distance = loc1.distance(loc2);
 
         if (distance < 0.5) {
             entity.teleport(loc2);
+
+            if (consumer != null){
+                consumer.accept(entity);
+            }
+
+            entityNotPathingAnymore.remove(entity.getUniqueId());
             return;
         }
 
@@ -77,7 +82,7 @@ public class FancyTeleportForEntity {
                         return;
                     }
 
-                    ratio = Math.max(0.0, Math.min(1.0, ratio));
+                    ratio = Math.clamp(ratio, 0.0, 1.0);
 
                     double x = loc1.getX() + ratio * (loc2.getX() - loc1.getX());
                     double y = loc1.getY() + ratio * (loc2.getY() - loc1.getY());
