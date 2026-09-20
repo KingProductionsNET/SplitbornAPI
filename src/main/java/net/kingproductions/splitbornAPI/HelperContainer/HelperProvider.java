@@ -1533,4 +1533,31 @@ public interface HelperProvider {
      * @return A list of all players within the specified range, if they are allowed to be damaged.
      */
     List<Player> getNearbyAvailableTargets(Location centerLocation, Entity Attacker, int Range, Locations location);
+
+    /**
+     *
+     * @param player
+     * @return The stamina of the player.
+     */
+    int getStamina(Player player);
+
+    /**
+     * Adds the given amount to the stamina bar of the player. This method ensures that the new stamina can't go above the player maximum stamina.
+     * @param player
+     * @param Amount The amount which will be added to the players stamina bar.
+     */
+    void addStamina(Player player, int Amount);
+
+    /**
+     * Drains the given amount from the player stamina bar.
+     * @param player
+     * @param Amount The amount which will be drained. This method ensures that the stamina can't go below 0.
+     */
+    void drainStamina(Player player, int Amount);
+
+    /**
+     * Notifies the player that they don't have enough stamina to perform this action.
+     * @param player The player which will be notified.
+     */
+    void notEnoughStamina(Player player);
 }
