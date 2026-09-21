@@ -261,5 +261,8 @@ public enum Item_ID {
     PALE_AMETHYST_DRILL,
     PROSPECTORS_CROWN,
 
-    HEAT_SHIELD
+    HEAT_SHIELD,
+
+    MOLT_CLAW,
+    MOLTASOS_HEART
 }

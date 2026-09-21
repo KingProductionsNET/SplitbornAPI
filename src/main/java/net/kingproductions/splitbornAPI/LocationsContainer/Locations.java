@@ -17,5 +17,8 @@ public enum Locations {
     Little_Spore,
     Sunken_Trenches,
     The_Molten_Ring,
-    Hollowdeep
+    Hollowdeep,
+    Auralith,
+    Ochrefall,
+    The_Unfound
 }

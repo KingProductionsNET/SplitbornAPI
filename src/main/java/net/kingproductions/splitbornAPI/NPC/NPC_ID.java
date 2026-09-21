@@ -53,5 +53,7 @@ public enum NPC_ID {
     RAVYNE,
     THE_EXCAVATOR,
     DELVEMASTER_ORIN,
-    SORBIT
+    SORBIT,
+    REEZ,
+    THE_REALMKEEPER
 }

@@ -42,5 +42,5 @@ public enum Mob_ID {
     MOSIER,
     MOLTASO,
     MAGMOX,
-    SCORCHMAW
+    ROCKMAW
 }

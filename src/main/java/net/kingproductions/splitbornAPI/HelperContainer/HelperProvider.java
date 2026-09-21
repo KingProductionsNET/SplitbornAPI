@@ -1560,4 +1560,24 @@ public interface HelperProvider {
      * @param player The player which will be notified.
      */
     void notEnoughStamina(Player player);
+
+    /**
+     *
+     * @param timestamp The timestamp which is being used.
+     * @return A String in the HH:MM:SS format showing how much time remains until the given timestamp. Example: 13:23:22.
+     */
+    String getRemainingTimeAs_HH_MM_SS(long timestamp);
+    /**
+     *
+     * @param timestamp The timestamp which is being used.
+     * @return A String in the MM:SS format showing how much time remains until the given timestamp. Example: 23:22.
+     */
+    String getRemainingTimeAs_MM_SS(long timestamp);
+
+    /**
+     *
+     * @param timestamp The timestamp which is being used.
+     * @return The number of seconds remaining from now until the given timestamp.
+     */
+    int getRemainingTimeMillisInSeconds(long timestamp);
 }
