@@ -40,8 +40,9 @@ public interface Profile {
     void setQuickTravelPoints(int i);
 
     void setAmethysts(int i);
-
     void setStat(Stat stat, int i);
+
+    void setRank(Ranks rank);
 
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
