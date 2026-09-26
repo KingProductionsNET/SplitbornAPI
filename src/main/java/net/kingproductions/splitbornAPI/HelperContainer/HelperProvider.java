@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -1560,7 +1561,12 @@ public interface HelperProvider {
      * @param player The player which will be notified.
      */
     void notEnoughStamina(Player player);
-
+    /**
+     *
+     * @param timestamp The timestamp which is being used.
+     * @return A String in the DD:HH:MM:SS format showing how much time remains until the given timestamp. Example: 3:13:23:22.
+     */
+    String getRemainingTimeAs_DD_HH_MM_SS(long timestamp);
     /**
      *
      * @param timestamp The timestamp which is being used.
@@ -1573,11 +1579,17 @@ public interface HelperProvider {
      * @return A String in the MM:SS format showing how much time remains until the given timestamp. Example: 23:22.
      */
     String getRemainingTimeAs_MM_SS(long timestamp);
-
     /**
      *
      * @param timestamp The timestamp which is being used.
      * @return The number of seconds remaining from now until the given timestamp.
      */
     int getRemainingTimeMillisInSeconds(long timestamp);
+
+    /**
+     *
+     * @param Name The name of the player, ignores case.
+     * @return True if the player has ever joined Splitborn.
+     */
+    CompletableFuture<Boolean> playerPlayedBefore(String Name);
 }
