@@ -16,10 +16,10 @@ public class LOCATION_REWARD_DATA {
         int gleamReward = 0;
 
         if (location.equals(Locations.Hearthgrove)){
-            gleamReward = 500;
+            gleamReward = 10;
         }
         if (location.equals(Locations.The_Fold)){
-            gleamReward = 1000;
+            gleamReward = 10;
         }
         if (location.equals(Locations.Sporewood)){
             gleamReward = 1000;
@@ -39,10 +39,10 @@ public class LOCATION_REWARD_DATA {
 
 
         if (location.equals(Locations.Hearthgrove)){
-            xpReward = 100;
+            xpReward = 50;
         }
         if (location.equals(Locations.The_Fold)){
-            xpReward = 100;
+            xpReward = 50;
         }
         if (location.equals(Locations.Sporewood)){
             xpReward = 100;

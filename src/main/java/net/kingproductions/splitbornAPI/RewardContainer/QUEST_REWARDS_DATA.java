@@ -14,7 +14,7 @@ public class QUEST_REWARDS_DATA {
     public static int getGleamReward(Quests quest){
         int gleamReward = 0;
 
-        if (quest.equals(Quests.CHUP_HUNTER)) gleamReward = 1000;
+        if (quest.equals(Quests.CHUP_HUNTER)) gleamReward = 50;
         if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 5000;
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 1250;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 2000;
@@ -68,9 +68,6 @@ public class QUEST_REWARDS_DATA {
 
     public static Map<Stat, Integer> getStatReward(Quests quests){
         Map<Stat, Integer> map = new HashMap<>();
-
-        if (quests.equals(Quests.CHUP_HUNTER)) map.put(Stat.HEALTH, 5);
-
         return map;
     }
 
