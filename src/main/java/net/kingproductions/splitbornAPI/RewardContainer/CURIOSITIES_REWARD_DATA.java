@@ -14,12 +14,12 @@ public class CURIOSITIES_REWARD_DATA {
     public static int getGleamReward(Curiosities curiosities){
         int gleamReward = 0;
 
-        if (curiosities.equals(Curiosities.HEADLESS_EYE)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.HEADLESS_EYE)) gleamReward = 25;
         if (curiosities.equals(Curiosities.CAT_ON_TREE)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.GHOST_MINER)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.RESTLESS_SKULL)) gleamReward = 1000;
-        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 50;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 25;
         if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 1000;
 

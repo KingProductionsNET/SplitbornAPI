@@ -22,13 +22,16 @@ public class LOCATION_REWARD_DATA {
             gleamReward = 10;
         }
         if (location.equals(Locations.Sporewood)){
-            gleamReward = 1000;
+            gleamReward = 50;
         }
         if (location.equals(Locations.Ashvein_Mine)){
-            gleamReward = 3000;
+            gleamReward = 25;
         }
         if (location.equals(Locations.Junkyard)){
-            gleamReward = 3000;
+            gleamReward = 50;
+        }
+        if (location.equals(Locations.Dryoak)){
+            gleamReward = 50;
         }
 
         return gleamReward;
@@ -48,10 +51,13 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.Ashvein_Mine)){
-            xpReward = 200;
+            xpReward = 100;
         }
         if (location.equals(Locations.Junkyard)){
-            xpReward = 200;
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Dryoak)){
+            xpReward = 100;
         }
 
         return xpReward;
@@ -64,9 +70,6 @@ public class LOCATION_REWARD_DATA {
 
     public static Map<Item_ID, Integer> getExtraRewards(Locations location){
         Map<Item_ID, Integer> map = new HashMap<>();
-        if (location.equals(Locations.The_Fold)){
-
-        }
 
         return map;
     }
