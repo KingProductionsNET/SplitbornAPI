@@ -18,8 +18,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.GRUG)) gleamReward = 10;
         if (npcId.equals(NPC_ID.WELPH)) gleamReward = 500;
         if (npcId.equals(NPC_ID.ANDREW)) gleamReward = 2000;
-        if (npcId.equals(NPC_ID.AREO)) gleamReward = 600;
-        if (npcId.equals(NPC_ID.STEPHEN)) gleamReward = 1500;
+        if (npcId.equals(NPC_ID.AREO)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.STEPHEN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.QUARTERMASTER_BRANNOCK)) gleamReward = 1500;
         if (npcId.equals(NPC_ID.CYSTEIN)) gleamReward = 2000;
         if (npcId.equals(NPC_ID.LADY_CHRONA)) gleamReward = 1337;
@@ -46,8 +46,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.GRUG)) xpReward = 50;
         if (npcId.equals(NPC_ID.WELPH)) xpReward = 250;
         if (npcId.equals(NPC_ID.ANDREW)) xpReward = 300;
-        if (npcId.equals(NPC_ID.AREO)) xpReward = 100;
-        if (npcId.equals(NPC_ID.STEPHEN)) xpReward = 200;
+        if (npcId.equals(NPC_ID.AREO)) xpReward = 50;
+        if (npcId.equals(NPC_ID.STEPHEN)) xpReward = 50;
         if (npcId.equals(NPC_ID.QUARTERMASTER_BRANNOCK)) xpReward = 300;
         if (npcId.equals(NPC_ID.CYSTEIN)) xpReward = 400;
         if (npcId.equals(NPC_ID.LADY_CHRONA)) xpReward = 300;
@@ -75,10 +75,6 @@ public class NPC_REWARD_DATA {
 
     public static Map<Item_ID, Integer> getExtraRewards(NPC_ID npcId){
         Map<Item_ID, Integer> map = new HashMap<>();
-
-        if (npcId.equals(NPC_ID.AREO)){
-            map.put(Item_ID.ZENTIS_U7, 1);
-        }
         return map;
     }
 

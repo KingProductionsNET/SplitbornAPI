@@ -19,7 +19,7 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.GHOST_MINER)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.RESTLESS_SKULL)) gleamReward = 1000;
-        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 1000;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 50;
         if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 1000;
         if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 1000;
 
@@ -29,14 +29,14 @@ public class CURIOSITIES_REWARD_DATA {
     public static int getXPReward(Curiosities curiosities){
         int xpReward = 0;
 
-        if (curiosities.equals(Curiosities.HEADLESS_EYE)) xpReward = 200;
-        if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 200;
-        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) xpReward = 200;
-        if (curiosities.equals(Curiosities.GHOST_MINER)) xpReward = 200;
-        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) xpReward = 200;
-        if (curiosities.equals(Curiosities.FLICKER_MAN)) xpReward = 200;
-        if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 200;
-        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 200;
+        if (curiosities.equals(Curiosities.HEADLESS_EYE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) xpReward = 100;
+        if (curiosities.equals(Curiosities.GHOST_MINER)) xpReward = 100;
+        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) xpReward = 100;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) xpReward = 100;
+        if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 100;
+        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 100;
 
         return xpReward;
     }
@@ -58,8 +58,6 @@ public class CURIOSITIES_REWARD_DATA {
     //
     public static Map<Stat, Integer> getStatReward(Curiosities curiosities){
         Map<Stat, Integer> map = new HashMap<>();
-
-        if (curiosities.equals(Curiosities.HEADLESS_EYE)) map.put(Stat.HEALTH, 5);
 
         return map;
     }
