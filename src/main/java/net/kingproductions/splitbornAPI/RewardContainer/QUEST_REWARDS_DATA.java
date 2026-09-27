@@ -15,10 +15,10 @@ public class QUEST_REWARDS_DATA {
         int gleamReward = 0;
 
         if (quest.equals(Quests.CHUP_HUNTER)) gleamReward = 50;
-        if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 5000;
+        if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 200;
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 50;
-        if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 2000;
-        if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 500;
+        if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 150;
+        if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 50;
         if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 1000;
         if (quest.equals(Quests.COOLING_CORE)) gleamReward = 1000;
         if (quest.equals(Quests.HEAT_CORE)) gleamReward = 2000;
@@ -32,10 +32,10 @@ public class QUEST_REWARDS_DATA {
         int xpReward = 0;
 
         if (quest.equals(Quests.CHUP_HUNTER)) xpReward = 100;
-        if (quest.equals(Quests.DEFEAT_ROTMAW)) xpReward = 300;
+        if (quest.equals(Quests.DEFEAT_ROTMAW)) xpReward = 100;
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) xpReward = 100;
-        if (quest.equals(Quests.THE_LOST_CARAVAN)) xpReward = 300;
-        if (quest.equals(Quests.LAZY_FISHER)) xpReward = 500;
+        if (quest.equals(Quests.THE_LOST_CARAVAN)) xpReward = 100;
+        if (quest.equals(Quests.LAZY_FISHER)) xpReward = 100;
         if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) xpReward = 300;
         if (quest.equals(Quests.COOLING_CORE)) xpReward = 400;
         if (quest.equals(Quests.HEAT_CORE)) xpReward = 500;
