@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/splitbornapi.iml" filepath="$PROJECT_DIR$/splitbornapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SplitbornAPI.iml" filepath="$PROJECT_DIR$/SplitbornAPI.iml" />
     </modules>
   </component>
 </project>
