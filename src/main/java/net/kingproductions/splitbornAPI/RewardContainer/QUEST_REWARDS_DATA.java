@@ -26,6 +26,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) gleamReward = 1500;
         if (quest.equals(Quests.JERNIKS_LEDGER)) gleamReward = 500;
         if (quest.equals(Quests.CRUSHING_THE_NESTS)) gleamReward = 30;
+        if (quest.equals(Quests.THE_VEILED_ECHO)) gleamReward = 500;
 
         return gleamReward;
     }
@@ -45,6 +46,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) xpReward = 300;
         if (quest.equals(Quests.JERNIKS_LEDGER)) xpReward = 100;
         if (quest.equals(Quests.CRUSHING_THE_NESTS)) xpReward = 100;
+        if (quest.equals(Quests.THE_VEILED_ECHO)) xpReward = 100;
 
         return xpReward;
     }
