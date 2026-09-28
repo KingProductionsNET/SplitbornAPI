@@ -33,6 +33,9 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.Dryoak)){
             gleamReward = 50;
         }
+        if (location.equals(Locations.Brinehollow)){
+            gleamReward = 10;
+        }
 
         return gleamReward;
     }
@@ -57,6 +60,9 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.Dryoak)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Brinehollow)){
             xpReward = 100;
         }
 

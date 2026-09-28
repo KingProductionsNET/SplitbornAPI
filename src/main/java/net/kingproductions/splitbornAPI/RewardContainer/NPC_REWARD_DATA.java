@@ -39,6 +39,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.VEYR)) gleamReward = 10;
         if (npcId.equals(NPC_ID.VAELITH)) gleamReward = 10;
         if (npcId.equals(NPC_ID.ELIAS)) gleamReward = 100;
+        if (npcId.equals(NPC_ID.SNURK)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.ORVAYN)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -71,6 +73,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.VEYR)) xpReward = 100;
         if (npcId.equals(NPC_ID.VAELITH)) xpReward = 100;
         if (npcId.equals(NPC_ID.ELIAS)) xpReward = 100;
+        if (npcId.equals(NPC_ID.SNURK)) xpReward = 100;
+        if (npcId.equals(NPC_ID.ORVAYN)) xpReward = 100;
 
         return xpReward;
     }
