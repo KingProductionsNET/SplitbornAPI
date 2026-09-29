@@ -271,5 +271,6 @@ public enum Item_ID {
     HYDRINA_PANTS,
     HYDRINA_SWIM_FINS,
 
-    RAINBOW_FISH
+    RAINBOW_FISH,
+    TWIG
 }

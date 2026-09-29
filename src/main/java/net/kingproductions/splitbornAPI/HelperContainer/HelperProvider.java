@@ -673,6 +673,7 @@ public interface HelperProvider {
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
 
     /**
+     *
      * Temporarily modifies one of the player's stats by the specified amount.
      * The modification is automatically reverted after the supplied duration.
      * If this shouldn't expire automatically the Duration should be -1 or INTEGER.MAX_VALUE.
@@ -682,6 +683,7 @@ public interface HelperProvider {
      * @param Amount the amount to add temporarily
      * @param Duration_In_Ticks the duration of the modification in ticks
      */
+    @Deprecated
     void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration_In_Ticks);
 
     /**
@@ -695,6 +697,7 @@ public interface HelperProvider {
      * @param Amount the amount to add temporarily
      * @param Duration_In_Ticks the duration of the modification in ticks
      */
+    @Deprecated
     void modifyPlayersStatTemporarily(Player player, String Reason, Stat stat, int Amount, int Duration_In_Ticks);
 
     /**
@@ -706,6 +709,7 @@ public interface HelperProvider {
      * @param stat the stat to retrieve
      * @return the currently active amount for the specified reason and stat
      */
+    @Deprecated
     int getPlayersModifiedStatAmountByReason(Player player, String Reason, Stat stat);
 
     /**
@@ -1599,4 +1603,21 @@ public interface HelperProvider {
      * @return True if the player is a team member.
      */
     boolean isTeamMember(Player player);
+
+    /**
+     * Temporarily adds a specific amount to a stat of the player. The bonus amount will stay until it gets reset by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#resetTempStat(Player, String, Stat)} or if the player disconnects.
+     * @param player The player.
+     * @param Reason The reason identifies why this stat was changed. This is also needed to reset it back to 0 by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#resetTempStat(Player, String, Stat)}
+     * @param stat The stat which will be changed.
+     * @param Amount The amount which is being added temporarily.
+     */
+    void addTempStat(Player player, String Reason, Stat stat, int Amount);
+
+    /**
+     * Resets a temporarily changed stat by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#addTempStat(Player, String, Stat, int)}.
+     * @param player The player.
+     * @param Reason The identifier.
+     * @param stat The stat which got modified by the given reason.
+     */
+    void resetTempStat(Player player, String Reason, Stat stat);
 }
