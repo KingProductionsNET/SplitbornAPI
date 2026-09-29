@@ -45,6 +45,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.OLD_MARROW)) gleamReward = 10;
         if (npcId.equals(NPC_ID.MARA_TIDEWELL)) gleamReward = 10;
         if (npcId.equals(NPC_ID.CAPTAIN_VAEL)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.BOUNCER)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.WICK)) gleamReward = 100;
 
         return gleamReward;
     }
@@ -83,6 +85,8 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.OLD_MARROW)) xpReward = 100;
         if (npcId.equals(NPC_ID.MARA_TIDEWELL)) xpReward = 100;
         if (npcId.equals(NPC_ID.CAPTAIN_VAEL)) xpReward = 100;
+        if (npcId.equals(NPC_ID.BOUNCER)) xpReward = 100;
+        if (npcId.equals(NPC_ID.WICK)) xpReward = 100;
 
         return xpReward;
     }
