@@ -1592,4 +1592,11 @@ public interface HelperProvider {
      * @return True if the player has ever joined Splitborn.
      */
     CompletableFuture<Boolean> playerPlayedBefore(String Name);
+
+    /**
+     *
+     * @param player
+     * @return True if the player is a team member.
+     */
+    boolean isTeamMember(Player player);
 }

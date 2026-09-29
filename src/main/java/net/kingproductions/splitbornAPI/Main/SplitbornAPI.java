@@ -1,6 +1,7 @@
 package net.kingproductions.splitbornAPI.Main;
 
 import net.kingproductions.splitbornAPI.AuctionHouseContainer.AuctionHouseProvider;
+import net.kingproductions.splitbornAPI.BanContainer.PunishProvider;
 import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
 import net.kingproductions.splitbornAPI.CosmeticTourContainer.CosmeticTour;
@@ -46,6 +47,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static RPGMobProvider rpgMobProvider;
     private static AuctionHouseProvider auctionHouseProvider;
     private static MiningManagerProvider miningManagerProvider;
+    private static PunishProvider punishProvider;
 
     private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
 
@@ -71,6 +73,9 @@ public final class SplitbornAPI extends JavaPlugin {
     }
     public static void initMiningSystem(MiningManagerProvider m){
         miningManagerProvider = m;
+    }
+    public static void initBanSystem(PunishProvider p){
+        punishProvider = p;
     }
 
     public static Profile getProfile(UUID uuid) {
@@ -122,6 +127,13 @@ public final class SplitbornAPI extends JavaPlugin {
         }
 
         return miningManagerProvider;
+    }
+    public static PunishProvider getPunishSystem(){
+        if (punishProvider == null){
+            throw new API_NOT_FOUND(API_NOT_FOUND_STRING);
+        }
+
+        return punishProvider;
     }
 
     @Override
