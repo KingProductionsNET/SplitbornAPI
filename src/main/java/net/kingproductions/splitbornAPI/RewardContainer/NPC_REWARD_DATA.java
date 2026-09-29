@@ -42,6 +42,9 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.SNURK)) gleamReward = 10;
         if (npcId.equals(NPC_ID.ORVAYN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.THE_DROWNED_SCHOLAR)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.OLD_MARROW)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.MARA_TIDEWELL)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.CAPTAIN_VAEL)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -77,6 +80,9 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.SNURK)) xpReward = 100;
         if (npcId.equals(NPC_ID.ORVAYN)) xpReward = 100;
         if (npcId.equals(NPC_ID.THE_DROWNED_SCHOLAR)) xpReward = 100;
+        if (npcId.equals(NPC_ID.OLD_MARROW)) xpReward = 100;
+        if (npcId.equals(NPC_ID.MARA_TIDEWELL)) xpReward = 100;
+        if (npcId.equals(NPC_ID.CAPTAIN_VAEL)) xpReward = 100;
 
         return xpReward;
     }
