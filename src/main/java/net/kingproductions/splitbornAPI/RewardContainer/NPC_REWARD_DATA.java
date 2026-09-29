@@ -34,7 +34,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.BROMM)) gleamReward = 25;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) gleamReward = 10;
         if (npcId.equals(NPC_ID.PIP_CINDERWICK)) gleamReward = 300;
-        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) gleamReward = 500;
+        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.ARCHIVIST_VEYRAN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.VEYR)) gleamReward = 10;
         if (npcId.equals(NPC_ID.VAELITH)) gleamReward = 10;
@@ -49,14 +49,14 @@ public class NPC_REWARD_DATA {
     public static int getXPReward(NPC_ID npcId){
         int xpReward = 0;
 
-        if (npcId.equals(NPC_ID.BONSAI)) xpReward = 50;
-        if (npcId.equals(NPC_ID.GRUG)) xpReward = 50;
-        if (npcId.equals(NPC_ID.WELPH)) xpReward = 50;
-        if (npcId.equals(NPC_ID.ANDREW)) xpReward = 50;
-        if (npcId.equals(NPC_ID.AREO)) xpReward = 50;
-        if (npcId.equals(NPC_ID.STEPHEN)) xpReward = 50;
-        if (npcId.equals(NPC_ID.QUARTERMASTER_BRANNOCK)) xpReward = 50;
-        if (npcId.equals(NPC_ID.ARCHIVIST_VEYRAN)) xpReward = 50;
+        if (npcId.equals(NPC_ID.BONSAI)) xpReward = 100;
+        if (npcId.equals(NPC_ID.GRUG)) xpReward = 100;
+        if (npcId.equals(NPC_ID.WELPH)) xpReward = 100;
+        if (npcId.equals(NPC_ID.ANDREW)) xpReward = 100;
+        if (npcId.equals(NPC_ID.AREO)) xpReward = 100;
+        if (npcId.equals(NPC_ID.STEPHEN)) xpReward = 100;
+        if (npcId.equals(NPC_ID.QUARTERMASTER_BRANNOCK)) xpReward = 100;
+        if (npcId.equals(NPC_ID.ARCHIVIST_VEYRAN)) xpReward = 100;
         if (npcId.equals(NPC_ID.CYSTEIN)) xpReward = 100;
         if (npcId.equals(NPC_ID.LADY_CHRONA)) xpReward = 100;
         if (npcId.equals(NPC_ID.KAY_TINFOIL)) xpReward = 300;
@@ -70,7 +70,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.BROMM)) xpReward = 100;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) xpReward = 100;
         if (npcId.equals(NPC_ID.PIP_CINDERWICK)) xpReward = 300;
-        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) xpReward = 300;
+        if (npcId.equals(NPC_ID.MASTER_BO_KAN)) xpReward = 100;
         if (npcId.equals(NPC_ID.VEYR)) xpReward = 100;
         if (npcId.equals(NPC_ID.VAELITH)) xpReward = 100;
         if (npcId.equals(NPC_ID.ELIAS)) xpReward = 100;

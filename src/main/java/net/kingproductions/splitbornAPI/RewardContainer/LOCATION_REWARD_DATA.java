@@ -39,6 +39,9 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.The_Undercroft)){
             gleamReward = 10;
         }
+        if (location.equals(Locations.Dojo)){
+            gleamReward = 10;
+        }
 
         return gleamReward;
     }
@@ -69,6 +72,9 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.The_Undercroft)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Dojo)){
             xpReward = 100;
         }
 
