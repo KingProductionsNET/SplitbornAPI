@@ -8,16 +8,14 @@ public interface PunishProvider {
      *
      * @param TargetName The name of the player which is about to get banned.
      * @param banReason The reason why this player will be banned.
-     * @return A future containing whether the player was successfully banned.
      */
-    CompletableFuture<Boolean> BanPlayer(String TargetName, BanReason banReason);
+     void BanPlayer(String TargetName, BanReason banReason);
 
     /**
      *
      * @param TargetName The name of the player which is about to get muted.
      * @param muteReason The reason why this player will be muted.
-     * @return A future containing whether the player was successfully muted.
      */
-    CompletableFuture<Boolean> MutePlayer(String TargetName, MuteReason muteReason);
+    void MutePlayer(String TargetName, MuteReason muteReason);
 
 }
