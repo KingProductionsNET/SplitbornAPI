@@ -18,22 +18,22 @@ public class ACHIEVEMENT_REWARD_DATA {
     public static int getGleamReward(ACHIEVEMENT_ID achievementId){
         int gleamReward = 0;
 
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) gleamReward = 4000;
+        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) gleamReward = 100;
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) gleamReward = 50;
-        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) gleamReward = 500;
-        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) gleamReward = 500;
-        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) gleamReward = 500;
+        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) gleamReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) gleamReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) gleamReward = 100;
         return gleamReward;
     }
 
     public static int getXPReward(ACHIEVEMENT_ID achievementId){
         int xpReward = 0;
 
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 100;
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 100;
-        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
-        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 500;
-        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) xpReward = 500;
+        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) xpReward = 100;
 
         return xpReward;
     }
