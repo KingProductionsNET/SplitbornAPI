@@ -2,6 +2,17 @@ package net.kingproductions.splitbornAPI.DatabankContainer;
 
 public enum DATABANK_PATHS {
 
+    BAN_STATUS,
+    BAN_EXPIRE_DATE,
+    BAN_REASON,
+
+    MUTE_STATUS,
+    MUTE_EXPIRE_DATE,
+    MUTE_REASON,
+
+    TOTAL_BANS,
+    TOTAL_MUTES,
+
     PERK_1_PATH,
     PERK_2_PATH,
     PERK_3_PATH,
