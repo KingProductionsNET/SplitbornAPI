@@ -3,6 +3,7 @@ package net.kingproductions.splitbornAPI.DatabankContainer;
 public enum DATABANK_PATHS {
 
     SERVER,
+    UUID,
 
     BAN_STATUS,
     BAN_EXPIRE_DATE,

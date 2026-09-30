@@ -5,8 +5,7 @@ public enum BanReason {
     CHEATING,
     EXPLOITING,
     SERVER_CRASHING,
-    NAME_VIOLATION,
     SKIN,
-    NAME
+    EXCESSIVE_BAN_HISTORY
 
 }
