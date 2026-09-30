@@ -47,9 +47,13 @@ public interface Profile {
     void setBoolean(String path, boolean b);
     void setString(String path, String s);
     void setInteger(String path, int i);
+    void setLong(String path, long l);
+
     boolean getBoolean(String Path);
     String getString(String Path);
     int getInteger(String Path);
+    long getLong(String path);
+
     Ranks getRank();
 
     void addUnclaimedItem(Item_ID itemId, int Amount, String reason);

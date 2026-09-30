@@ -15,6 +15,7 @@ import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.TalentContainer.TalentID;
 import net.kyori.adventure.text.Component;
+import org.bson.Document;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -673,46 +674,6 @@ public interface HelperProvider {
     void removeItemAmountFromInventory(Player player, Item_ID itemId, int Amount);
 
     /**
-     *
-     * Temporarily modifies one of the player's stats by the specified amount.
-     * The modification is automatically reverted after the supplied duration.
-     * If this shouldn't expire automatically the Duration should be -1 or INTEGER.MAX_VALUE.
-     *
-     * @param player the player whose stat should be modified
-     * @param stat the stat to modify
-     * @param Amount the amount to add temporarily
-     * @param Duration_In_Ticks the duration of the modification in ticks
-     */
-    @Deprecated
-    void modifyPlayersStatTemporarily(Player player, Stat stat, int Amount, int Duration_In_Ticks);
-
-    /**
-     * Temporarily modifies one of the player's stats and associates the modification
-     * with a specific reason. The modification is automatically reverted after
-     * the supplied duration. If this shouldn't expire automatically the Duration should be -1 or INTEGER.MAX_VALUE.
-     *
-     * @param player the player whose stat should be modified
-     * @param Reason the reason used to identify the temporary modification
-     * @param stat the stat to modify
-     * @param Amount the amount to add temporarily
-     * @param Duration_In_Ticks the duration of the modification in ticks
-     */
-    @Deprecated
-    void modifyPlayersStatTemporarily(Player player, String Reason, Stat stat, int Amount, int Duration_In_Ticks);
-
-    /**
-     * Gets the amount of a temporary stat modification currently active under
-     * the specified reason.
-     *
-     * @param player the player whose modification should be checked
-     * @param Reason the reason associated with the modification
-     * @param stat the stat to retrieve
-     * @return the currently active amount for the specified reason and stat
-     */
-    @Deprecated
-    int getPlayersModifiedStatAmountByReason(Player player, String Reason, Stat stat);
-
-    /**
      * Applies Heat to the player by firing a HeatGainEvent.
      * A one-tick cooldown prevents multiple Heat events from being triggered
      * for the same player within the same tick.
@@ -1277,15 +1238,6 @@ public interface HelperProvider {
      * @return If the event is active it returns remaining time in HH:MM:SS till until the event starts. If the event is active it returns the remaining time in HH:MM:SS until the event ends.
      */
     String getDeepwakeEventTimer();
-
-    /**
-     * Resets the players modified stat which got changed by a reason. This should only be used if the stat got modified by {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#modifyPlayersStatTemporarily(Player, String, Stat, int, int)} and doesn't expire on its own, cause the duration is INTEGER.MAX_VALUE or -1
-     * @param player
-     * @param Reason The reason why that stat was changed.
-     * @param stat The stat that should be reset 0
-     */
-    void resetPlayersModifiedStatByReason(Player player, String Reason, Stat stat);
-
     /**
      *
      * @return A list of all available itemIds during The Deepwake.
@@ -1620,4 +1572,11 @@ public interface HelperProvider {
      * @param stat The stat which got modified by the given reason.
      */
     void resetTempStat(Player player, String Reason, Stat stat);
+
+    /**
+     *
+     * @param Name The name which is being searched.
+     * @return A document if the given name has ever played Splitborn.
+     */
+    CompletableFuture<Document> getUsersDocument(String Name);
 }

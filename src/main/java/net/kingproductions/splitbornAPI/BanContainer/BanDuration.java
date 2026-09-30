@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public enum BanDuration {
 
-    CHEATING(TimeUnit.DAYS.toMillis(30));
+    CHEATING(TimeUnit.SECONDS.toMillis(10));
 
     private final long value;
 
