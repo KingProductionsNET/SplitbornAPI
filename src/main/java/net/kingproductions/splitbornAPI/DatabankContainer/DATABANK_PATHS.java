@@ -4,6 +4,7 @@ public enum DATABANK_PATHS {
 
     SERVER,
     UUID,
+    REPORT_NOTIFICATIONS,
 
     BAN_STATUS,
     BAN_EXPIRE_DATE,
