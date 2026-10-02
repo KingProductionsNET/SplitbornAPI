@@ -1579,4 +1579,13 @@ public interface HelperProvider {
      * @return A document if the given name has ever played Splitborn.
      */
     CompletableFuture<Document> getUsersDocument(String Name);
+    /**
+     *
+     * @param uuid The uuid which is being searched.
+     * @return A document if the given uuid has ever played Splitborn.
+     */
+    CompletableFuture<Document> getUsersDocument(UUID uuid);
+
+    CompletableFuture<Document> getBannedUsersPunishDocument(String Name);
+    CompletableFuture<Document> getMutedUsersPunishDocument(String Name);
 }

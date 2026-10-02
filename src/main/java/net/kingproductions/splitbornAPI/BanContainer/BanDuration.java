@@ -4,7 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 public enum BanDuration {
 
-    CHEATING(TimeUnit.DAYS.toMillis(30)),
+    CHEATING(TimeUnit.SECONDS.toMillis(10)),
+
     EXPLOITING(TimeUnit.DAYS.toMillis(14)),
     SERVER_CRASHING(TimeUnit.DAYS.toMillis(365)),
     NAME(TimeUnit.DAYS.toMillis(3)),

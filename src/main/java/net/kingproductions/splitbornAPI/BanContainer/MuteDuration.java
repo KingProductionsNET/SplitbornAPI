@@ -4,7 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 public enum MuteDuration {
 
-    SPAM(TimeUnit.DAYS.toMillis(3)),
+    SPAM(TimeUnit.SECONDS.toMillis(10)),
+
     ADVERTISING(TimeUnit.DAYS.toMillis(7)),
     INAPPROPRIATE_BEHAVIOUR(TimeUnit.DAYS.toMillis(14));
 
