@@ -42,5 +42,8 @@ public enum Mob_ID {
     MOSIER,
     MOLTASO,
     MAGMOX,
-    ROCKMAW
+    ROCKMAW,
+
+    BAMBOO_BANDIT,
+    DEPTHSTALKER
 }

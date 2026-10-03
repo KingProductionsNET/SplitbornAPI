@@ -504,11 +504,11 @@ public interface HelperProvider {
     String formatInteger(int i);
 
     /**
-     * Converts a timestamp into a human-readable description of how long ago it occurred.
+     * Converts a timestamp into a readable description of how long ago it occurred.
      * The result is expressed in seconds, minutes, hours or days depending on the elapsed time.
      *
      * @param longAsString the timestamp in milliseconds represented as a String
-     * @return a human-readable description of how long ago the timestamp occurred
+     * @return a readable description of how long ago the timestamp occurred
      */
     String getTimeAgo(String longAsString);
 
@@ -1586,6 +1586,43 @@ public interface HelperProvider {
      */
     CompletableFuture<Document> getUsersDocument(UUID uuid);
 
+    /**
+     *
+     * @param Name The name which will be used to search.
+     * @return The Punish document of the given players name. Returns null if the player isn't banned.
+     */
     CompletableFuture<Document> getBannedUsersPunishDocument(String Name);
+
+    /**
+     *
+     * @param Name The name which will be used to search.
+     * @return The Punish document of the given players name. Returns null if the player isn't muted.
+     */
     CompletableFuture<Document> getMutedUsersPunishDocument(String Name);
+
+    /**
+     * Enables fly.
+     * @param player
+     */
+    void enableFly(Player player);
+
+    /**
+     * Disabled fly.
+     * @param player
+     */
+    void disabledFly(Player player);
+
+    /**
+     * Creates a player-viewable Perk reward string.
+     * @param perkID
+     * @return
+     */
+    String getPerkRewardString(PerkID perkID);
+
+    /**
+     * Creates a player-viewable Talent reward string.
+     * @param talentID
+     * @return
+     */
+    String getTalentRewardString(TalentID talentID);
 }

@@ -55,5 +55,6 @@ public enum NPC_ID {
     DELVEMASTER_ORIN,
     SORBIT,
     REEZ,
-    THE_REALMKEEPER
+    THE_REALMKEEPER,
+    TIDECALLER
 }

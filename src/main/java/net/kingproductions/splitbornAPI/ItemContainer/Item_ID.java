@@ -272,5 +272,9 @@ public enum Item_ID {
     HYDRINA_SWIM_FINS,
 
     RAINBOW_FISH,
-    TWIG
+    TWIG,
+    BAMBOO_FANG,
+    DROWNED_CORE,
+    WET_SHOES,
+    DEPTH_CHARGE
 }

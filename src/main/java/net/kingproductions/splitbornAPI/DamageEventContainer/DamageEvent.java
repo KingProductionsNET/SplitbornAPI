@@ -20,6 +20,7 @@ public class DamageEvent extends Event implements Cancellable {
     private int damage;
     private double percentageModifier = 0.0;
     private int plainDamageModifier = 0;
+    private boolean disableKnockback = false;
 
     public DamageEvent(Player player, DAMAGE_REASON reason, boolean cancelled, Entity damagedMob, Mob_ID mobId, int damage){
         this.player = player;
@@ -56,6 +57,18 @@ public class DamageEvent extends Event implements Cancellable {
     }
     public int getBonusPlainDamage(){
         return plainDamageModifier;
+    }
+
+    public boolean isDisableKnockback() {
+        return disableKnockback;
+    }
+
+    /**
+     * Disables the knockback for this hit.
+     * @param disableKnockback
+     */
+    public void setDisableKnockback(boolean disableKnockback) {
+        this.disableKnockback = disableKnockback;
     }
 
     @Override
