@@ -19,7 +19,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 50;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 150;
         if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 50;
-        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 1000;
+        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 50;
         if (quest.equals(Quests.COOLING_CORE)) gleamReward = 300;
         if (quest.equals(Quests.HEAT_CORE)) gleamReward = 500;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) gleamReward = 300;
@@ -29,6 +29,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_VEILED_ECHO)) gleamReward = 500;
         if (quest.equals(Quests.UNWANTED_GUESTS)) gleamReward = 100;
         if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 50;
+        if (quest.equals(Quests.THE_HIDDEN_VAULT)) gleamReward = 50;
 
         return gleamReward;
     }
@@ -51,16 +52,13 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_VEILED_ECHO)) xpReward = 100;
         if (quest.equals(Quests.UNWANTED_GUESTS)) xpReward = 100;
         if (quest.equals(Quests.THE_LAKE_RUN)) xpReward = 100;
+        if (quest.equals(Quests.THE_HIDDEN_VAULT)) xpReward = 100;
 
         return xpReward;
     }
 
     public static Map<Essence_ID, Integer> getEssenceRewards(Quests quests){
         Map<Essence_ID, Integer> map = new HashMap<>();
-
-        if (quests.equals(Quests.DEFEAT_ROTMAW)){
-            map.put(Essence_ID.CHALLENGE, 500);
-        }
 
         return map;
     }
