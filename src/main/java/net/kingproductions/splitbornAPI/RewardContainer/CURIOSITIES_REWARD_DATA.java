@@ -51,15 +51,13 @@ public class CURIOSITIES_REWARD_DATA {
     public static Map<Item_ID, Integer> getExtraRewards(Curiosities curiosity){
         Map<Item_ID, Integer> map = new HashMap<>();
 
-        if (curiosity.equals(Curiosities.HEADLESS_EYE)){
-            map.put(Item_ID.FUNNY_SWORD, 1);
-        }
-
         return map;
     }
-    //
+
     public static Map<Stat, Integer> getStatReward(Curiosities curiosities){
         Map<Stat, Integer> map = new HashMap<>();
+
+        map.put(Stat.HEALTH,5);
 
         return map;
     }

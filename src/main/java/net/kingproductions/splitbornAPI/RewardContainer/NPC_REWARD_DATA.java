@@ -33,7 +33,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.SCRAPPER_FENN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.BROMM)) gleamReward = 25;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) gleamReward = 10;
-        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) gleamReward = 300;
+        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) gleamReward = 10;
         if (npcId.equals(NPC_ID.MASTER_BO_KAN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.ARCHIVIST_VEYRAN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.VEYR)) gleamReward = 10;
@@ -55,6 +55,12 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.GRIX)) gleamReward = 10;
         if (npcId.equals(NPC_ID.CAFUNE)) gleamReward = 10;
         if (npcId.equals(NPC_ID.TIDECALLER)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.SORBIT)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.ENCELL)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.SUGRA)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.OREAL)) gleamReward = 30;
+        if (npcId.equals(NPC_ID.DELVEMASTER_ORIN)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.MUCKLE)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -82,7 +88,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.SCRAPPER_FENN)) xpReward = 100;
         if (npcId.equals(NPC_ID.BROMM)) xpReward = 100;
         if (npcId.equals(NPC_ID.FOREMAN_KAELOR)) xpReward = 100;
-        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) xpReward = 300;
+        if (npcId.equals(NPC_ID.PIP_CINDERWICK)) xpReward = 100;
         if (npcId.equals(NPC_ID.MASTER_BO_KAN)) xpReward = 100;
         if (npcId.equals(NPC_ID.VEYR)) xpReward = 100;
         if (npcId.equals(NPC_ID.VAELITH)) xpReward = 100;
@@ -103,6 +109,12 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.GRIX)) xpReward = 100;
         if (npcId.equals(NPC_ID.CAFUNE)) xpReward = 100;
         if (npcId.equals(NPC_ID.TIDECALLER)) xpReward = 100;
+        if (npcId.equals(NPC_ID.SORBIT)) xpReward = 100;
+        if (npcId.equals(NPC_ID.ENCELL)) xpReward = 100;
+        if (npcId.equals(NPC_ID.SUGRA)) xpReward = 100;
+        if (npcId.equals(NPC_ID.OREAL)) xpReward = 100;
+        if (npcId.equals(NPC_ID.DELVEMASTER_ORIN)) xpReward = 100;
+        if (npcId.equals(NPC_ID.MUCKLE)) xpReward = 100;
 
 
         return xpReward;
