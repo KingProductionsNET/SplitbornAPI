@@ -1,5 +1,7 @@
 package net.kingproductions.splitbornAPI.FishingContainer;
 
+import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
+import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -22,7 +24,10 @@ public class FishingEvent extends Event implements Cancellable {
 
     private Location hookLocation;
     private Entity fishedEntity;
+    private Mob_ID mobId;
+
     private ItemStack fishedItemStack;
+    private Item_ID itemId;
 
     /**
      * Event is being called in different states see {@link net.kingproductions.splitbornAPI.FishingContainer.FishingEvent.State}
@@ -54,6 +59,13 @@ public class FishingEvent extends Event implements Cancellable {
         this.fishedItemStack = i;
     }
 
+    public void setItemId(Item_ID itemId) {
+        this.itemId = itemId;
+    }
+    public void setMobId(Mob_ID mobId) {
+        this.mobId = mobId;
+    }
+
     public Entity getModifiedEntityDrop(){
         return modifiedEntityDrop;
     }
@@ -65,6 +77,15 @@ public class FishingEvent extends Event implements Cancellable {
     }
     public Entity getFishedEntity(){return fishedEntity;}
     public ItemStack getFishedItemStack(){return fishedItemStack;}
+
+    public Item_ID getItemId() {
+        return itemId;
+    }
+
+    public Mob_ID getMobId() {
+        return mobId;
+    }
+
     public State getState(){return state;}
 
     @Override
