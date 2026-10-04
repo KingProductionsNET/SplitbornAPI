@@ -62,7 +62,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.DELVEMASTER_ORIN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.MUCKLE)) gleamReward = 10;
         if (npcId.equals(NPC_ID.HUNTER_TERZO)) gleamReward = 10;
-        if (npcId.equals(NPC_ID.THE_EXCAVATOR)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.THE_EXCAVATOR)) gleamReward = 300;
         if (npcId.equals(NPC_ID.MAROSO)) gleamReward = 10;
         if (npcId.equals(NPC_ID.RAVYNE)) gleamReward = 10;
 
