@@ -61,6 +61,10 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.OREAL)) gleamReward = 30;
         if (npcId.equals(NPC_ID.DELVEMASTER_ORIN)) gleamReward = 10;
         if (npcId.equals(NPC_ID.MUCKLE)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.HUNTER_TERZO)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.THE_EXCAVATOR)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.MAROSO)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.RAVYNE)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -115,6 +119,10 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.OREAL)) xpReward = 100;
         if (npcId.equals(NPC_ID.DELVEMASTER_ORIN)) xpReward = 100;
         if (npcId.equals(NPC_ID.MUCKLE)) xpReward = 100;
+        if (npcId.equals(NPC_ID.HUNTER_TERZO)) xpReward = 100;
+        if (npcId.equals(NPC_ID.THE_EXCAVATOR)) xpReward = 100;
+        if (npcId.equals(NPC_ID.MAROSO)) xpReward = 100;
+        if (npcId.equals(NPC_ID.RAVYNE)) xpReward = 100;
 
 
         return xpReward;
