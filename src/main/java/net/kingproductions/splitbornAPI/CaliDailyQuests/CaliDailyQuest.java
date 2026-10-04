@@ -7,6 +7,13 @@ import java.util.List;
 
 public enum CaliDailyQuest {
 
+    HUNTER(
+            QuestType.KILL,
+            "§cMob Hunter",
+            200,
+            List.of("§7Kill §a" + 200 + " §7Mobs"),
+            null
+    ),
     GLEAM_HUNTER(
             QuestType.KILL,
             "§6Gleam Bug Hunter",
