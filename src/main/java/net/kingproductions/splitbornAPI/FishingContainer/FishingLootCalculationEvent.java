@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.FishingContainer;
 
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -13,7 +14,7 @@ public class FishingLootCalculationEvent extends Event {
     private final Player player;
     private Mob_ID mobId;
     private Item_ID itemId;
-    private double additionalChance = 0.0;
+    private double additionalChance;
 
     /**
      * Event is being called when the loot calculation of each possible loot starts. This can be useful when trying to add more or less chance to a specific drop.
@@ -35,11 +36,11 @@ public class FishingLootCalculationEvent extends Event {
     }
 
     public double getAdditionalChance() {
-        return additionalChance;
+        return this.additionalChance;
     }
 
     public void setAdditionalChance(double additionalChance) {
-        this.additionalChance = additionalChance;
+        this.additionalChance += additionalChance;
     }
 
     public Mob_ID getMobId() {
