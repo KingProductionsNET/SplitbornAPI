@@ -51,10 +51,10 @@ public class LOCATION_REWARD_DATA {
 
 
         if (location.equals(Locations.Hearthgrove)){
-            xpReward = 50;
+            xpReward = 100;
         }
         if (location.equals(Locations.The_Fold)){
-            xpReward = 50;
+            xpReward = 100;
         }
         if (location.equals(Locations.Sporewood)){
             xpReward = 100;

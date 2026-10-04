@@ -88,7 +88,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.VIORICT)) xpReward = 100;
         if (npcId.equals(NPC_ID.DEBY)) xpReward = 100;
         if (npcId.equals(NPC_ID.MISTER_CHRONA)) xpReward = 100;
-        if (npcId.equals(NPC_ID.JERNIK)) xpReward = 50;
+        if (npcId.equals(NPC_ID.JERNIK)) xpReward = 100;
         if (npcId.equals(NPC_ID.AUCTION_MASTER)) xpReward = 100;
         if (npcId.equals(NPC_ID.SCRAPPER_FENN)) xpReward = 100;
         if (npcId.equals(NPC_ID.BROMM)) xpReward = 100;
