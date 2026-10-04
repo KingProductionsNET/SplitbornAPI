@@ -212,6 +212,8 @@ public class CosmeticTour implements Listener {
             if (e != null) e.remove();
             playersShuttle.remove(player.getUniqueId());
         }
+
+        isInATour.remove(player);
     }
 
     public static void stopTour(Player player){

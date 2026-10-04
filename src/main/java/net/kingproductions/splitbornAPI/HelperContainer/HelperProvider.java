@@ -1625,4 +1625,11 @@ public interface HelperProvider {
      * @return
      */
     String getTalentRewardString(TalentID talentID);
+
+    /**
+     *
+     * @param player the player.
+     * @return A list of all blocks that are visible to the player but not present on the server. Only includes blocks sent using a Splitborn Util or Helper method, not Bukkit.
+     */
+    List<Location> getPlayersClientSidePacketBlocks(Player player);
 }

@@ -16,6 +16,7 @@ public enum EmblemID {
     Snowbloom,
     Arid,
     Fractured,
-    Webbed
+    Webbed,
+    Crest_Of_The_Great,
 
 }

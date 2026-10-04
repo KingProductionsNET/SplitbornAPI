@@ -276,5 +276,6 @@ public enum Item_ID {
     BAMBOO_FANG,
     DROWNED_CORE,
     WET_SHOES,
-    DEPTH_CHARGE
+    DEPTH_CHARGE,
+    CALIS_FAVOUR
 }

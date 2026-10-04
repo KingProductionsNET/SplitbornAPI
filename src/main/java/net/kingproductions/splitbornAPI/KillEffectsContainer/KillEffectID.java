@@ -7,6 +7,7 @@ public enum KillEffectID {
     IMPALE,
     BURIED_TREASURE,
     FROZEN_EXECUTIONS,
-    SANDFALL
+    SANDFALL,
+    GREATNESS_UNLEASHED
 
 }

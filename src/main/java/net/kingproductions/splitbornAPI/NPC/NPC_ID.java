@@ -56,5 +56,5 @@ public enum NPC_ID {
     SORBIT,
     REEZ,
     THE_REALMKEEPER,
-    TIDECALLER
+    TIDECALLER,
 }
