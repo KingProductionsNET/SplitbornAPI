@@ -34,6 +34,7 @@ public class QuestCreator {
         set.add(new Crushing_The_Nests().build());
         set.add(new The_Lake_Run().build());
         set.add(new Unwanted_Guests().build());
+        set.add(new Heat_Core().build());
         return set;
     }
 
