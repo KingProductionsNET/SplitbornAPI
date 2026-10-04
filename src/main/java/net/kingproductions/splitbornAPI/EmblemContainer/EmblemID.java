@@ -18,5 +18,6 @@ public enum EmblemID {
     Fractured,
     Webbed,
     Crest_Of_The_Great,
+    Beta
 
 }

@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.HelperContainer;
 
+import net.kingproductions.splitbornAPI.CaliDailyQuests.CaliDailyQuest;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.COMMAND_ID;
 import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
@@ -1632,4 +1633,11 @@ public interface HelperProvider {
      * @return A list of all blocks that are visible to the player but not present on the server. Only includes blocks sent using a Splitborn Util or Helper method, not Bukkit.
      */
     List<Location> getPlayersClientSidePacketBlocks(Player player);
+
+    /**
+     *
+     * @param player The player.
+     * @return A map containing the Quest ID and the quest itself.
+     */
+    Map<Integer, CaliDailyQuest> getPlayersCaliDailies(Player player);
 }
