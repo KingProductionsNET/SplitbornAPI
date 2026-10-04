@@ -24,7 +24,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.CYSTEIN)) gleamReward = 25;
         if (npcId.equals(NPC_ID.LADY_CHRONA)) gleamReward = 10;
         if (npcId.equals(NPC_ID.KAY_TINFOIL)) gleamReward = 10;
-        if (npcId.equals(NPC_ID.CALI_THE_GREAT)) gleamReward = 500;
+        if (npcId.equals(NPC_ID.CALI_THE_GREAT)) gleamReward = 10;
         if (npcId.equals(NPC_ID.VIORICT)) gleamReward = 25;
         if (npcId.equals(NPC_ID.DEBY)) gleamReward = 10;
         if (npcId.equals(NPC_ID.MISTER_CHRONA)) gleamReward = 100;
@@ -54,6 +54,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.RIME)) gleamReward = 10;
         if (npcId.equals(NPC_ID.GRIX)) gleamReward = 10;
         if (npcId.equals(NPC_ID.CAFUNE)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.TIDECALLER)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -72,7 +73,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.CYSTEIN)) xpReward = 100;
         if (npcId.equals(NPC_ID.LADY_CHRONA)) xpReward = 100;
         if (npcId.equals(NPC_ID.KAY_TINFOIL)) xpReward = 100;
-        if (npcId.equals(NPC_ID.CALI_THE_GREAT)) xpReward = 150;
+        if (npcId.equals(NPC_ID.CALI_THE_GREAT)) xpReward = 100;
         if (npcId.equals(NPC_ID.VIORICT)) xpReward = 100;
         if (npcId.equals(NPC_ID.DEBY)) xpReward = 100;
         if (npcId.equals(NPC_ID.MISTER_CHRONA)) xpReward = 100;
@@ -101,6 +102,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.RIME)) xpReward = 100;
         if (npcId.equals(NPC_ID.GRIX)) xpReward = 100;
         if (npcId.equals(NPC_ID.CAFUNE)) xpReward = 100;
+        if (npcId.equals(NPC_ID.TIDECALLER)) xpReward = 100;
 
 
         return xpReward;
