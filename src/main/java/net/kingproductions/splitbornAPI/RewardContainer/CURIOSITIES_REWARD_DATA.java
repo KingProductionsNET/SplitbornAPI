@@ -23,6 +23,9 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 25;
         if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 25;
         if (curiosities.equals(Curiosities.PHANTOM_THIEF)) gleamReward = 25;
+        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) gleamReward = 25;
+        if (curiosities.equals(Curiosities.CURIOUS_CAP)) gleamReward = 25;
+        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 25;
 
         return gleamReward;
     }
@@ -39,6 +42,9 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 100;
         if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 100;
         if (curiosities.equals(Curiosities.PHANTOM_THIEF)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CURIOUS_CAP)) xpReward = 100;
+        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) xpReward = 100;
 
         return xpReward;
     }

@@ -28,6 +28,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.CRUSHING_THE_NESTS)) gleamReward = 30;
         if (quest.equals(Quests.THE_VEILED_ECHO)) gleamReward = 500;
         if (quest.equals(Quests.UNWANTED_GUESTS)) gleamReward = 100;
+        if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 50;
 
         return gleamReward;
     }
@@ -40,7 +41,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) xpReward = 100;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) xpReward = 100;
         if (quest.equals(Quests.LAZY_FISHER)) xpReward = 100;
-        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) xpReward = 300;
+        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) xpReward = 100;
         if (quest.equals(Quests.COOLING_CORE)) xpReward = 100;
         if (quest.equals(Quests.HEAT_CORE)) xpReward = 100;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) xpReward = 100;
@@ -49,6 +50,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.CRUSHING_THE_NESTS)) xpReward = 100;
         if (quest.equals(Quests.THE_VEILED_ECHO)) xpReward = 100;
         if (quest.equals(Quests.UNWANTED_GUESTS)) xpReward = 100;
+        if (quest.equals(Quests.THE_LAKE_RUN)) xpReward = 100;
 
         return xpReward;
     }
