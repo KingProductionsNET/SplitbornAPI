@@ -1640,4 +1640,11 @@ public interface HelperProvider {
      * @return A map containing the Quest ID and the quest itself.
      */
     Map<Integer, CaliDailyQuest> getPlayersCaliDailies(Player player);
+
+    /**
+     *
+     * @param killEffectID
+     * @return A viewable reward string for a kill effect.
+     */
+    String getKillEffectRewardString(KillEffectID killEffectID);
 }
