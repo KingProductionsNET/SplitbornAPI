@@ -1654,4 +1654,11 @@ public interface HelperProvider {
      * @return A string with the color of the location and the location itself. (e.g. §5Auralith)
      */
     String getLocationString(Locations location);
+
+    /**
+     *
+     * @param ranks
+     * @return The prefix of the given rank.
+     */
+    String getRanksPrefix(Ranks ranks);
 }
