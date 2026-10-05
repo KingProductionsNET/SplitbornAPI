@@ -10,7 +10,7 @@ public class GleamGainEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 
     private final Player player;
-    private final int gleamGainAmount;
+    private int gleamGainAmount;
     private boolean cancelled;
 
     public GleamGainEvent(Player player, int Amount){
@@ -20,6 +20,9 @@ public class GleamGainEvent extends Event {
 
     public Player getPlayer(){
         return player;
+    }
+    public void addGleams(int Amount){
+        this.gleamGainAmount += Amount;
     }
     public int getAmount(){
         return (gleamGainAmount);

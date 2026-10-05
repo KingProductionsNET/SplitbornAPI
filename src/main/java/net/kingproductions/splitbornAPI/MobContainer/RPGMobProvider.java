@@ -15,5 +15,11 @@ public interface RPGMobProvider {
      * @param Mob The mob id will be automatically fetched from this mob.
      */
     void addKillToKillLog(Player player, LivingEntity Mob);
+    /**
+     * Adds a kill for that mob to the player kill log.
+     * @param player The player.
+     * @param mobId The mob id.
+     */
+    void addKillToKillLog(Player player, Mob_ID mobId);
 
 }

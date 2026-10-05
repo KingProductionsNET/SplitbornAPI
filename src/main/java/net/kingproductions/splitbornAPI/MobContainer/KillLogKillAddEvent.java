@@ -14,7 +14,7 @@ public class KillLogKillAddEvent extends Event  {
 
     private final Player player;
     private final Mob_ID mobId;
-    private final int Amount;
+    private int Amount = 0;
 
     public KillLogKillAddEvent(Player player, Mob_ID mobId, int Amount) {
         this.mobId = mobId;
@@ -30,6 +30,10 @@ public class KillLogKillAddEvent extends Event  {
     }
     public int getAmount(){
         return Amount;
+    }
+
+    public void addAdditionalKills(int Amount){
+        this.Amount += Amount;
     }
 
 
