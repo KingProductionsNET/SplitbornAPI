@@ -58,4 +58,5 @@ public enum NPC_ID {
     REEZ,
     THE_REALMKEEPER,
     TIDECALLER,
+    DURNAK
 }

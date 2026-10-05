@@ -1647,4 +1647,11 @@ public interface HelperProvider {
      * @return A viewable reward string for a kill effect.
      */
     String getKillEffectRewardString(KillEffectID killEffectID);
+
+    /**
+     *
+     * @param location The location.
+     * @return A string with the color of the location and the location itself. (e.g. §5Auralith)
+     */
+    String getLocationString(Locations location);
 }
