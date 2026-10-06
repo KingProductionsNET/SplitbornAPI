@@ -19,6 +19,7 @@ import net.kingproductions.splitbornAPI.ProfileContainer.Profile;
 import net.kingproductions.splitbornAPI.ProfileContainer.ProfileProvider;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestCreator;
 import net.kingproductions.splitbornAPI.QuestContainer.QuestCreation.QuestProvider;
+import net.kingproductions.splitbornAPI.SupplyContainer.SupplySystemProvider;
 import net.kingproductions.splitbornAPI.Util.UtilProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -48,6 +49,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static AuctionHouseProvider auctionHouseProvider;
     private static MiningManagerProvider miningManagerProvider;
     private static PunishProvider punishProvider;
+    private static SupplySystemProvider supplySystemProvider;
 
     private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
 
@@ -77,6 +79,7 @@ public final class SplitbornAPI extends JavaPlugin {
     public static void initBanSystem(PunishProvider p){
         punishProvider = p;
     }
+    public static void initSupplySystem(SupplySystemProvider s){supplySystemProvider = s;}
 
     public static Profile getProfile(UUID uuid) {
         if (profileProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
@@ -96,6 +99,10 @@ public final class SplitbornAPI extends JavaPlugin {
     public static SplitbornNPC spawnNPC(SplitbornNPC id) {
         if (npcProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
         return npcProvider.spawnNPC(id);
+    }
+    public static NPCProvider getNpcProvider(){
+        if (npcProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
+        return npcProvider;
     }
     public static HelperProvider getHelper() {
         if (helperProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
@@ -134,6 +141,13 @@ public final class SplitbornAPI extends JavaPlugin {
         }
 
         return punishProvider;
+    }
+    public static SupplySystemProvider getSupplySystem(){
+        if (supplySystemProvider == null){
+            throw new API_NOT_FOUND(API_NOT_FOUND_STRING);
+        }
+
+        return supplySystemProvider;
     }
 
     @Override

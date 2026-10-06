@@ -11,6 +11,7 @@ public enum TalentID {
     STEADY_PACE,
     BRUTALITY,
     DRYOAK_SLAYER,
-    MOLTEN_SLAYER
+    MOLTEN_SLAYER,
+    DRYOAKS_BLESSING
 
 }

@@ -1,5 +1,7 @@
 package net.kingproductions.splitbornAPI.Builder;
 
+import io.papermc.paper.datacomponent.DataComponentTypes;
+import io.papermc.paper.datacomponent.item.TooltipDisplay;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_Paths;
@@ -333,6 +335,11 @@ public class ItemBuilder {
                 addHiddenValue(Meta, path, persistentDataType, o);
             }
 
+            Skull.setData(
+                    DataComponentTypes.TOOLTIP_DISPLAY,
+                    TooltipDisplay.tooltipDisplay()
+                            .addHiddenComponents(DataComponentTypes.JUKEBOX_PLAYABLE)
+            );
             Skull.setItemMeta(Meta);
             return Skull;
         }
@@ -373,6 +380,11 @@ public class ItemBuilder {
             }
 
 
+            Skull.setData(
+                    DataComponentTypes.TOOLTIP_DISPLAY,
+                    TooltipDisplay.tooltipDisplay()
+                            .addHiddenComponents(DataComponentTypes.JUKEBOX_PLAYABLE)
+            );
             Skull.setItemMeta(meta);
 
             return Skull;
@@ -396,6 +408,11 @@ public class ItemBuilder {
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
             itemMeta.addAttributeModifier(Attribute.ARMOR, modifier);
 
+            itemStack.setData(
+                    DataComponentTypes.TOOLTIP_DISPLAY,
+                    TooltipDisplay.tooltipDisplay()
+                            .addHiddenComponents(DataComponentTypes.JUKEBOX_PLAYABLE)
+            );
             itemStack.setItemMeta(itemMeta);
         }
         return itemStack;
