@@ -19,6 +19,9 @@ public enum EmblemID {
     Webbed,
     Crest_Of_The_Great,
     Beta,
-    Music
+    Music,
+    Sovereigns_Crest,
+    Royal_Sigil,
+    Crown_Of_Dominion
 
 }

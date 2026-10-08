@@ -1078,7 +1078,7 @@ public interface HelperProvider {
      * from the player's protected hidden-entity list.
      *
      * @param textDisplay the TextDisplay to show
-     * @param player the player who should see the TextDisplay
+     * @param player the player who should see the TextDisplay. Set this to null if everyone should see the text display.
      */
     void unhideTextDisplay(TextDisplay textDisplay, Player player);
 
@@ -1661,4 +1661,19 @@ public interface HelperProvider {
      * @return The prefix of the given rank.
      */
     String getRanksPrefix(Ranks ranks);
+
+    /**
+     *
+     * @param player The player.
+     * @param rank The rank.
+     * @return true if the player has the given rank or a higher one.
+     */
+    boolean hasRankOrHigher(Player player, Ranks rank);
+
+    /**
+     *
+     * @param uuid The uuid of the player.
+     * @return The base64 string of a player skull.
+     */
+    CompletableFuture<String> getHeadTexture(UUID uuid);
 }

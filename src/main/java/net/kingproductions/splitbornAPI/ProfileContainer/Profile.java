@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.ProfileContainer;
 
+import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.RankContainer.Ranks;
@@ -55,6 +56,9 @@ public interface Profile {
     long getLong(String path);
 
     Ranks getRank();
+
+    void setEmblem(String emblemID);
+    EmblemID getEmblem();
 
     void addUnclaimedItem(Item_ID itemId, int Amount, String reason);
     default void addUnclaimedItem(Item_ID itemId, int amount) {
