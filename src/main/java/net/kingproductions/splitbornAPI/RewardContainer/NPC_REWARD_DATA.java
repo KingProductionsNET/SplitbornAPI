@@ -67,6 +67,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.RAVYNE)) gleamReward = 10;
         if (npcId.equals(NPC_ID.THE_REALMKEEPER)) gleamReward = 10;
         if (npcId.equals(NPC_ID.REEZ)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.DURNAK)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -127,6 +128,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.RAVYNE)) xpReward = 300;
         if (npcId.equals(NPC_ID.THE_REALMKEEPER)) xpReward = 300;
         if (npcId.equals(NPC_ID.REEZ)) xpReward = 300;
+        if (npcId.equals(NPC_ID.DURNAK)) xpReward = 300;
 
 
         return xpReward;
