@@ -10,8 +10,8 @@ public enum CaliDailyQuest {
     HUNTER(
             QuestType.KILL,
             "§cMob Hunter",
-            200,
-            List.of("§7Kill §a" + 200 + " §7Mobs"),
+            300,
+            List.of("§7Kill §a" + 300 + " §7Mobs"),
             null
     ),
     GLEAM_HUNTER(
@@ -24,8 +24,8 @@ public enum CaliDailyQuest {
     PRACTICE_DUMMY_HUNTER(
             QuestType.KILL,
             "§ePractice Dummy Hunter",
-            10,
-            List.of("§7Kill §a" + 10 + " §ePractice Dummies"),
+            100,
+            List.of("§7Kill §a" + 100 + " §ePractice Dummies"),
             Mob_ID.PRACTICE_DUMMY
     ),
 
@@ -40,38 +40,38 @@ public enum CaliDailyQuest {
     SCRAP_MINER(
             QuestType.MINING,
             "§aScrap Miner",
-            20,
-            List.of("§7Mine §a" + 20 + " §eScrap Ores"),
+            200,
+            List.of("§7Mine §a" + 200 + " §eScrap Ores"),
             Block_ID.SCRAP_ORE
     ),
     SPARK_MINER(
             QuestType.MINING,
             "§aSpark Miner",
-            20,
-            List.of("§7Mine §a" + 20 + " §eSpark Ores"),
+            200,
+            List.of("§7Mine §a" + 200 + " §eSpark Ores"),
             Block_ID.SPARK_ORE
     ),
     SUNSTONE_MINER(
             QuestType.MINING,
             "§aSunstone Miner",
-            20,
-            List.of("§7Mine §a" + 20 + " §eSunstones"),
+            200,
+            List.of("§7Mine §a" + 200 + " §eSunstones"),
             Block_ID.SUNSTONE
     ),
 
     FISHERMAN(
             QuestType.FISHING,
             "§bFisherman",
-            50,
-            List.of("§7Make §a" + 50 + " §7catches"),
+            100,
+            List.of("§7Make §a" + 100 + " §7catches"),
             null
     ),
 
     DROP_OF_HOPE(
             QuestType.MISC,
             "§bDrop Of Hope",
-            1,
-            List.of("§7Water " + 1 + " §aSappling §7in §eDryoak"),
+            14,
+            List.of("§7Water " + 14 + " §aSappling §7in §eDryoak"),
             null
     );
 
