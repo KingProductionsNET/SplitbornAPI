@@ -49,8 +49,8 @@ public class Grugs_Request extends QuestPreset {
     @Override
     public Map<String, Object> questRelatedValues() {
         return Map.of(
-                "CF", 64,
-                "QP", 20);
+                "CF", 32,
+                "QP", 10);
     }
 
     @Override
