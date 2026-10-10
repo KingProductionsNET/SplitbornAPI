@@ -1676,4 +1676,12 @@ public interface HelperProvider {
      * @return The base64 string of a player skull.
      */
     CompletableFuture<String> getHeadTexture(UUID uuid);
+
+    /**
+     * Compares Rank_1 with Rank_2, returns true if Rank_1 is higher than Rank_2
+     * @param rank_1
+     * @param rank_2
+     * @return True if Rank_1 is higher than Rank_2
+     */
+    boolean rankIsHigher(Ranks rank_1, Ranks rank_2);
 }
