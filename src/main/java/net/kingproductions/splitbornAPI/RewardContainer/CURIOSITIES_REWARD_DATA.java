@@ -14,18 +14,18 @@ public class CURIOSITIES_REWARD_DATA {
     public static int getGleamReward(Curiosities curiosities){
         int gleamReward = 0;
 
-        if (curiosities.equals(Curiosities.HEADLESS_EYE)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.CAT_ON_TREE)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.GHOST_MINER)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.PHANTOM_THIEF)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.CURIOUS_CAP)) gleamReward = 25;
-        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 25;
+        if (curiosities.equals(Curiosities.HEADLESS_EYE)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CAT_ON_TREE)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.GHOST_MINER)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.VOID_LANTERN)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.PHANTOM_THIEF)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CURIOUS_CAP)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 10;
 
         return gleamReward;
     }

@@ -14,12 +14,12 @@ public class QUEST_REWARDS_DATA {
     public static int getGleamReward(Quests quest){
         int gleamReward = 0;
 
-        if (quest.equals(Quests.CHUP_HUNTER)) gleamReward = 50;
-        if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 200;
-        if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 50;
+        if (quest.equals(Quests.CHUP_HUNTER)) gleamReward = 20;
+        if (quest.equals(Quests.DEFEAT_ROTMAW)) gleamReward = 60;
+        if (quest.equals(Quests.ELIMINATE_THE_CREATURE)) gleamReward = 20;
         if (quest.equals(Quests.THE_LOST_CARAVAN)) gleamReward = 150;
-        if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 50;
-        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 50;
+        if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 20;
+        if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 20;
         if (quest.equals(Quests.COOLING_CORE)) gleamReward = 300;
         if (quest.equals(Quests.HEAT_CORE)) gleamReward = 1500;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) gleamReward = 300;
@@ -28,7 +28,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.CRUSHING_THE_NESTS)) gleamReward = 30;
         if (quest.equals(Quests.THE_VEILED_ECHO)) gleamReward = 500;
         if (quest.equals(Quests.UNWANTED_GUESTS)) gleamReward = 100;
-        if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 50;
+        if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 20;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) gleamReward = 50;
 
         return gleamReward;
