@@ -26,6 +26,7 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) gleamReward = 10;
         if (curiosities.equals(Curiosities.CURIOUS_CAP)) gleamReward = 10;
         if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CAMEL_EGG)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -45,6 +46,7 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) xpReward = 100;
         if (curiosities.equals(Curiosities.CURIOUS_CAP)) xpReward = 100;
         if (curiosities.equals(Curiosities.FLUFF_TOTEM)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CAMEL_EGG)) xpReward = 100;
 
         return xpReward;
     }
