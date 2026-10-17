@@ -320,7 +320,7 @@ public class ItemBuilder {
             }
 
             if (glint){
-                Meta.addEnchant(Enchantment.AQUA_AFFINITY, 1, true);
+                Meta.setEnchantmentGlintOverride(true);
             }
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
@@ -357,7 +357,7 @@ public class ItemBuilder {
             meta.setLore(itemMeta.getLore());
 
             if (glint){
-                itemMeta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+                meta.setEnchantmentGlintOverride(true);
             }
 
             AttributeModifier modifier = new AttributeModifier(STACKABLE_UUID, "dummy", 1.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
@@ -398,7 +398,7 @@ public class ItemBuilder {
             itemMeta.setUnbreakable(true);
 
             if (glint){
-                itemMeta.addEnchant(Enchantment.AQUA_AFFINITY, 1, false);
+                itemMeta.setEnchantmentGlintOverride(true);
             }
 
             if (addUniqueID){
