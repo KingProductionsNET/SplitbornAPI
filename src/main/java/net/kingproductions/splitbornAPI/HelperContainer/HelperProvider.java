@@ -1684,4 +1684,12 @@ public interface HelperProvider {
      * @return True if Rank_1 is higher than Rank_2
      */
     boolean rankIsHigher(Ranks rank_1, Ranks rank_2);
+
+    /**
+     *
+     * @param player The player which should be checked.
+     * @param mobId The mob id which should be used for checking whether the player has an unclaimed reward for that mob.
+     * @return True if the player has an unclaimed reward for that mob id.
+     */
+    boolean hasUnclaimedKillLogReward(Player player, Mob_ID mobId);
 }
