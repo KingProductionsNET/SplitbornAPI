@@ -1692,4 +1692,12 @@ public interface HelperProvider {
      * @return True if the player has an unclaimed reward for that mob id.
      */
     boolean hasUnclaimedKillLogReward(Player player, Mob_ID mobId);
+
+    /**
+     * Modifies something in databank document of a user.
+     * @param uuid The uuid of the player.
+     * @param path The path of the value.
+     * @param value The value.
+     */
+    void modifySomethingInPlayersDocument(UUID uuid, String path, Object value);
 }
