@@ -5,5 +5,6 @@ import org.bukkit.inventory.ItemStack;
 public interface SplitbornItemProvider {
 
     ItemStack getItem(Item_ID itemId);
+    String getHowToGet(Item_ID itemId);
 
 }
