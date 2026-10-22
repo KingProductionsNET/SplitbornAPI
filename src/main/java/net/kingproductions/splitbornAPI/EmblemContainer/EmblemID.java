@@ -22,6 +22,7 @@ public enum EmblemID {
     Music,
     Sovereigns_Crest,
     Royal_Sigil,
-    Crown_Of_Dominion
+    Crown_Of_Dominion,
+    Beta_Tester
 
 }
