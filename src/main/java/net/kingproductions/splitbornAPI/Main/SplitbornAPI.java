@@ -93,7 +93,16 @@ public final class SplitbornAPI extends JavaPlugin {
                 return item;
             }
         }
+        throw new API_NOT_FOUND("Item not found: " + itemId);
+    }
+    public static List<String> getHowToGet(Item_ID itemId){
+        for (SplitbornItemProvider provider : itemProviders){
+            List<String> howTo = provider.getHowToGet(itemId);
 
+            if (howTo != null && !howTo.isEmpty()){
+                return howTo;
+            }
+        }
         throw new API_NOT_FOUND("Item not found: " + itemId);
     }
     public static SplitbornNPC spawnNPC(SplitbornNPC id) {

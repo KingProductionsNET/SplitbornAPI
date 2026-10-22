@@ -301,6 +301,8 @@ public enum Item_ID {
 
     MOLTEN_REMNANT,
 
-    PEARFUS_WHISTLE
+    PEARFUS_WHISTLE,
+
+    PRECARIOUS_CORE
 
 }

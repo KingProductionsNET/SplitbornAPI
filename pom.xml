@@ -6,7 +6,7 @@
 
     <groupId>com.github.KingProductionsNET</groupId>
     <artifactId>splitbornapi</artifactId>
-    <version>8.3.4</version>
+    <version>8.3.8</version>
     <packaging>jar</packaging>
 
     <name>splitbornapi</name>
