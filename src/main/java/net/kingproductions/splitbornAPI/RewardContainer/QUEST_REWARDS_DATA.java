@@ -21,7 +21,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.LAZY_FISHER)) gleamReward = 20;
         if (quest.equals(Quests.ITS_GETTING_HOT_IN_HERE)) gleamReward = 20;
         if (quest.equals(Quests.COOLING_CORE)) gleamReward = 300;
-        if (quest.equals(Quests.HEAT_CORE)) gleamReward = 1500;
+        if (quest.equals(Quests.HEAT_CORE)) gleamReward = 300;
         if (quest.equals(Quests.SCRAP_FOR_PIP)) gleamReward = 300;
         if (quest.equals(Quests.THE_GOBLINS_HUSTLE)) gleamReward = 20;
         if (quest.equals(Quests.JERNIKS_LEDGER)) gleamReward = 500;
