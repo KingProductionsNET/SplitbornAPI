@@ -27,6 +27,7 @@ public enum Quests {
     BIG_CHUP_HUNTER,
     AREOS_GUIDANCE,
     KING_OF_CHUPS,
+    FIRST_TALENT,
 
     DEFAULT_NONE;
 }

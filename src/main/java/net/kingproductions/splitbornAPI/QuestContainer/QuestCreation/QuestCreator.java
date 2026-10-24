@@ -37,6 +37,7 @@ public class QuestCreator {
         set.add(new Heat_Core().build());
         set.add(new Big_Chup_Hunter().build());
         set.add(new King_of_Chups().build());
+        set.add(new First_Talent().build());
         return set;
     }
 
