@@ -32,7 +32,7 @@ public enum Quests {
     A_MINER,
     A_FISHER,
     MANY_SUPPLIES,
-
+    CHECK_JOURNEY,
 
     DEFAULT_NONE;
 }

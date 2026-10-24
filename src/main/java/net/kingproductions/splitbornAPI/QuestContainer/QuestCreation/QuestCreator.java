@@ -42,6 +42,8 @@ public class QuestCreator {
         set.add(new A_Miner().build());
         set.add(new Reaction_Time().build());
         set.add(new Many_Supplies().build());
+        set.add(new Check_Journey().build());
+        set.add(new Areos_Guidance().build());
         return set;
     }
 
