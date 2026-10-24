@@ -30,6 +30,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.UNWANTED_GUESTS)) gleamReward = 100;
         if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 20;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) gleamReward = 50;
+        if (quest.equals(Quests.BIG_CHUP_HUNTER)) gleamReward = 50;
 
         return gleamReward;
     }
@@ -53,6 +54,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.UNWANTED_GUESTS)) xpReward = 300;
         if (quest.equals(Quests.THE_LAKE_RUN)) xpReward = 300;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) xpReward = 300;
+        if (quest.equals(Quests.BIG_CHUP_HUNTER)) xpReward = 300;
 
         return xpReward;
     }

@@ -12,7 +12,7 @@ import java.util.Map;
 public class Big_Chup_Hunter extends QuestPreset {
     @Override
     public boolean isMainQuest() {
-        return false;
+        return true;
     }
 
     @Override
