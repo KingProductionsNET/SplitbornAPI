@@ -29,5 +29,6 @@ public enum Quests {
     KING_OF_CHUPS,
     FIRST_TALENT,
 
+
     DEFAULT_NONE;
 }
