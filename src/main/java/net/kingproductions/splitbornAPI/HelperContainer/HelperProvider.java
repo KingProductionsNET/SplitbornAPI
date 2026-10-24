@@ -1487,7 +1487,7 @@ public interface HelperProvider {
      * @param centerLocation The center location from where the scan will start.
      * @param Attacker The entity which will attack players.
      * @param Range The scan range.
-     * @param location The locations which should be scanned for. If the location doesn't matter set this to null
+     * @param location The Splitborn location which should be scanned for. If the Splitborn location doesn't matter set this to null
      * @return A list of all players within the specified range, if they are allowed to be damaged.
      */
     List<Player> getNearbyAvailableTargets(Location centerLocation, Entity Attacker, int Range, Locations location);
@@ -1700,4 +1700,11 @@ public interface HelperProvider {
      * @param value The value.
      */
     void modifySomethingInPlayersDocument(UUID uuid, String path, Object value);
+
+    /**
+     *
+     * @param player The player.
+     * @return True if the player has unclaimed fishing rewards.
+     */
+    boolean hasUnclaimedFishingRewards(Player player);
 }

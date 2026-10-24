@@ -25,6 +25,12 @@ public interface Profile {
     int getQuickTravelPoints();
     int getAmethysts();
 
+    int getTotalCatches();
+    int getFishingLevel();
+
+    void setTotalCatches(int amount);
+    void setFishingLevel(int level);
+
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
     void setSPEED(int amount);

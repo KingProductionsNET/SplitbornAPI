@@ -5,6 +5,7 @@ import net.kingproductions.splitbornAPI.BanContainer.PunishProvider;
 import net.kingproductions.splitbornAPI.BlockInteractionContainer.BlockInteraction;
 import net.kingproductions.splitbornAPI.CommandBlockContainer.CommandBlockProvider;
 import net.kingproductions.splitbornAPI.CosmeticTourContainer.CosmeticTour;
+import net.kingproductions.splitbornAPI.FishingContainer.FishingProvider;
 import net.kingproductions.splitbornAPI.HelperContainer.HelperProvider;
 import net.kingproductions.splitbornAPI.HideManagerContainer.HideManager;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
@@ -50,6 +51,7 @@ public final class SplitbornAPI extends JavaPlugin {
     private static MiningManagerProvider miningManagerProvider;
     private static PunishProvider punishProvider;
     private static SupplySystemProvider supplySystemProvider;
+    private static FishingProvider fishingProvider;
 
     private static final List<SplitbornItemProvider> itemProviders = new ArrayList<>();
 
@@ -80,6 +82,9 @@ public final class SplitbornAPI extends JavaPlugin {
         punishProvider = p;
     }
     public static void initSupplySystem(SupplySystemProvider s){supplySystemProvider = s;}
+    public static void initFishingSystem(FishingProvider f){
+        fishingProvider = f;
+    }
 
     public static Profile getProfile(UUID uuid) {
         if (profileProvider == null) {throw new API_NOT_FOUND(API_NOT_FOUND_STRING);}
@@ -157,6 +162,13 @@ public final class SplitbornAPI extends JavaPlugin {
         }
 
         return supplySystemProvider;
+    }
+    public static FishingProvider getFishingSystem(){
+        if (fishingProvider == null){
+            throw new API_NOT_FOUND(API_NOT_FOUND_STRING);
+        }
+
+        return fishingProvider;
     }
 
     @Override

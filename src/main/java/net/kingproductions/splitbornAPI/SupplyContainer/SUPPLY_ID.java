@@ -8,6 +8,7 @@ public enum SUPPLY_ID {
     NEAR_SPOREWOOD,
     NEAR_CAVE_BOSS,
     SUN_AREA,
-    SPOREWOOD
+    SPOREWOOD,
+    ASHVEIN_TOP
 
 }
