@@ -16,6 +16,7 @@ public enum Item_ID {
     CHUPS_TEAR,
     ZENTIS_U7,
     FUNNY_SWORD,
+    SEED_PICKAXE,
 
     WEIRD_KELP,
     ENERGY_ORB,
