@@ -28,6 +28,11 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 10;
         if (curiosities.equals(Curiosities.CAMEL_EGG)) gleamReward = 10;
 
+        if (curiosities.equals(Curiosities.MUSHROOM_PLUSHIE)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.FISH_IN_BUCKET)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.SWAMP_WATER)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.LOST_SOLDIER)) gleamReward = 10;
+
         return gleamReward;
     }
 
@@ -47,6 +52,11 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.CURIOUS_CAP)) xpReward = 100;
         if (curiosities.equals(Curiosities.FLUFF_TOTEM)) xpReward = 100;
         if (curiosities.equals(Curiosities.CAMEL_EGG)) xpReward = 100;
+
+        if (curiosities.equals(Curiosities.MUSHROOM_PLUSHIE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.FISH_IN_BUCKET)) xpReward = 100;
+        if (curiosities.equals(Curiosities.SWAMP_WATER)) xpReward = 100;
+        if (curiosities.equals(Curiosities.LOST_SOLDIER)) xpReward = 100;
 
         return xpReward;
     }
