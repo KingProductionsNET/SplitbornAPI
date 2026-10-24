@@ -43,7 +43,7 @@ public class Reaction_Time extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Beat the §eSpicy §7Difficulty at §5Lady Chrona."
+                "§7Claim the §eSpicy §7Difficulty Reward at §5Lady Chrona."
         );
     }
 
