@@ -22,7 +22,7 @@ public class Check_Journey extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "";
+        return "§fCheck your §6Journey";
     }
 
     @Override
