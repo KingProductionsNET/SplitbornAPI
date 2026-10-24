@@ -28,6 +28,10 @@ public enum Quests {
     AREOS_GUIDANCE,
     KING_OF_CHUPS,
     FIRST_TALENT,
+    REACTION_TIME,
+    A_MINER,
+    A_FISHER,
+    MANY_SUPPLIES,
 
     DEFAULT_NONE;
 }
