@@ -31,6 +31,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 20;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) gleamReward = 50;
         if (quest.equals(Quests.BIG_CHUP_HUNTER)) gleamReward = 50;
+        if (quest.equals(Quests.KING_OF_CHUPS)) gleamReward = 200;
 
         return gleamReward;
     }
@@ -55,6 +56,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_LAKE_RUN)) xpReward = 300;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) xpReward = 300;
         if (quest.equals(Quests.BIG_CHUP_HUNTER)) xpReward = 300;
+        if (quest.equals(Quests.KING_OF_CHUPS)) xpReward = 300;
 
         return xpReward;
     }

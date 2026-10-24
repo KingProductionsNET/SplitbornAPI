@@ -26,6 +26,7 @@ public enum Quests {
     UNWANTED_GUESTS,
     BIG_CHUP_HUNTER,
     AREOS_GUIDANCE,
+    KING_OF_CHUPS,
 
     DEFAULT_NONE;
 }
