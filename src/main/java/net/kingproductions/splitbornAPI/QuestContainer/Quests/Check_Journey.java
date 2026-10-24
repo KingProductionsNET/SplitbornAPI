@@ -52,6 +52,6 @@ public class Check_Journey extends QuestPreset {
 
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
-        return List.of();
+        return List.of(NPC_ID.AREO);
     }
 }
