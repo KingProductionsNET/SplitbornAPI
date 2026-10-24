@@ -27,7 +27,7 @@ public class Crushing_The_Nests extends QuestPreset {
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return Locations.Doomrest;
     }
 
     @Override

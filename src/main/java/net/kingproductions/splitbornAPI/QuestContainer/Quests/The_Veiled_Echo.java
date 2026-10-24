@@ -29,7 +29,7 @@ public class The_Veiled_Echo extends QuestPreset {
 
     @Override
     public Locations questLocation() {
-        return Locations.Hearthgrove;
+        return Locations.Doomrest;
     }
 
     @Override
