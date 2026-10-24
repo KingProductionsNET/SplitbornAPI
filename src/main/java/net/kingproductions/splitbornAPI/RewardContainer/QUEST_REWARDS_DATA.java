@@ -30,8 +30,14 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.UNWANTED_GUESTS)) gleamReward = 100;
         if (quest.equals(Quests.THE_LAKE_RUN)) gleamReward = 20;
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) gleamReward = 50;
-        if (quest.equals(Quests.BIG_CHUP_HUNTER)) gleamReward = 50;
+        if (quest.equals(Quests.BIG_CHUP_HUNTER)) gleamReward = 20;
         if (quest.equals(Quests.KING_OF_CHUPS)) gleamReward = 200;
+        if (quest.equals(Quests.FIRST_TALENT)) gleamReward = 20;
+        if (quest.equals(Quests.REACTION_TIME)) gleamReward = 20;
+        if (quest.equals(Quests.A_FISHER)) gleamReward = 20;
+        if (quest.equals(Quests.A_MINER)) gleamReward = 20;
+        if (quest.equals(Quests.MANY_SUPPLIES)) gleamReward = 20;
+        if (quest.equals(Quests.AREOS_GUIDANCE)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -57,6 +63,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.THE_HIDDEN_VAULT)) xpReward = 300;
         if (quest.equals(Quests.BIG_CHUP_HUNTER)) xpReward = 300;
         if (quest.equals(Quests.KING_OF_CHUPS)) xpReward = 300;
+        if (quest.equals(Quests.A_FISHER)) xpReward = 300;
+        if (quest.equals(Quests.A_MINER)) xpReward = 300;
+        if (quest.equals(Quests.REACTION_TIME)) xpReward = 300;
+        if (quest.equals(Quests.MANY_SUPPLIES)) xpReward = 300;
+        if (quest.equals(Quests.FIRST_TALENT)) xpReward = 300;
+        if (quest.equals(Quests.AREOS_GUIDANCE)) xpReward = 300;
 
         return xpReward;
     }
