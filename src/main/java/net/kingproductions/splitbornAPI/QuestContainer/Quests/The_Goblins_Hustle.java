@@ -37,14 +37,13 @@ public class The_Goblins_Hustle extends QuestPreset {
 
     @Override
     public List<String> inQuestDescriptionText() {
-        // The goblins deliberately never name the item they want, so neither does the tracker.
         return List.of("§7Bring the §aGoblin siblings §7something §crare§7,",
-                "§7something that still carries a bit of §cfire§7.");
+                "§7something that still carries a bit of §fcalcium§7.");
     }
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Give the §aGoblins the desired §6item§7.");
     }
 
     @Override

@@ -43,7 +43,7 @@ public class The_Lake_Run extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Escort the §bSupply §7from §cTobin§7.");
     }
 
     @Override

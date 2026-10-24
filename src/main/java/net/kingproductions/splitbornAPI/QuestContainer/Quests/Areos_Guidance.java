@@ -38,13 +38,13 @@ public class Areos_Guidance extends QuestPreset {
     @Override
     public List<String> inQuestDescriptionText() {
         return List.of(
-                "§7Listen To Areo."
+                "§fListen To Areo."
         );
     }
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Listen To Areo.");
     }
 
     @Override

@@ -42,7 +42,7 @@ public class Heat_Core extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Bring §5Deby §7an §dInfernal Core§7.");
     }
 
     @Override

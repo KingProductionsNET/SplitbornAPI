@@ -42,7 +42,7 @@ public class The_Lost_Caravan extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Retrieve the missing supplies for §eBrannock§7.");
     }
 
     @Override

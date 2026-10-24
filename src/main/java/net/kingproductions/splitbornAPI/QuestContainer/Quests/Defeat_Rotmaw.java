@@ -43,7 +43,7 @@ public class Defeat_Rotmaw extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Defeat §cRotmaw§7.");
     }
 
     @Override

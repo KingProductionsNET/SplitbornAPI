@@ -43,7 +43,7 @@ public class King_of_Chups extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§Activate the King of Chups Perk."
+                "§7Activate the §6King of Chups §7Perk."
         );
     }
 
