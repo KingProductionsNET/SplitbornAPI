@@ -24,6 +24,7 @@ public enum Quests {
     CRUSHING_THE_NESTS,
     THE_LAKE_RUN,
     UNWANTED_GUESTS,
+    BIG_CHUP_HUNTER,
 
     DEFAULT_NONE;
 }

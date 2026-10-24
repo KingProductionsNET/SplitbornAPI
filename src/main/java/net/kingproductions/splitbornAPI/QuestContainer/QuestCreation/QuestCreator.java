@@ -35,6 +35,7 @@ public class QuestCreator {
         set.add(new The_Lake_Run().build());
         set.add(new Unwanted_Guests().build());
         set.add(new Heat_Core().build());
+        set.add(new Big_Chup_Hunter().build());
         return set;
     }
 
