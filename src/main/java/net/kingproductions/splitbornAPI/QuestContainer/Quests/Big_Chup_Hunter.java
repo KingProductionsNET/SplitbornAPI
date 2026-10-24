@@ -42,7 +42,9 @@ public class Big_Chup_Hunter extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of(
+                "§7Kill one §bElder Chup§7."
+        );
     }
 
     @Override
