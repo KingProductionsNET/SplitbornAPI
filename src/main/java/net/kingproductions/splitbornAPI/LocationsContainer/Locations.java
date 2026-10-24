@@ -20,5 +20,6 @@ public enum Locations {
     Hollowdeep,
     Auralith,
     Ochrefall,
-    The_Unfound
+    The_Unfound,
+    Doomrest
 }
