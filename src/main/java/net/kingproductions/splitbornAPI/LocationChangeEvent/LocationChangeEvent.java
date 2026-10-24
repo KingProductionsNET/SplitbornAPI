@@ -16,13 +16,15 @@ public class LocationChangeEvent extends Event{
     private final Locations fromLocation;
     private final Locations toLocation;
     private final Location fromBukkitLocation;
+    private final Location toBukkitLocation;
     private Reason reason;
 
-    public LocationChangeEvent(Player player, Locations fromLocation, Locations toLocation, Location fromBukkitLocation) {
+    public LocationChangeEvent(Player player, Locations fromLocation, Locations toLocation, Location fromBukkitLocation, Location toBukkitLocation) {
         this.player = player;
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
         this.fromBukkitLocation = fromBukkitLocation;
+        this.toBukkitLocation = toBukkitLocation;
     }
 
     public Player getPlayer() {
@@ -39,6 +41,9 @@ public class LocationChangeEvent extends Event{
     }
     public Location getFromBukkitLocation(){
         return fromBukkitLocation;
+    }
+    public Location getToBukkitLocation(){
+        return toBukkitLocation;
     }
 
     public void setReason(Reason reason){
