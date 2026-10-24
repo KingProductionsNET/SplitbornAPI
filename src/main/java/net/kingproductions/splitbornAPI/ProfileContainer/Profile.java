@@ -31,6 +31,9 @@ public interface Profile {
     void setTotalCatches(int amount);
     void setFishingLevel(int level);
 
+    int getStars();
+    void setStars(int Amount);
+
     void setGleams(int amount);
     void setMAX_HEALTH(int amount);
     void setSPEED(int amount);
