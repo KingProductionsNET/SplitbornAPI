@@ -42,6 +42,33 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.Dojo)){
             gleamReward = 10;
         }
+        if (location.equals(Locations.Doomrest)){
+            gleamReward = 10;
+        }
+        if (location.equals(Locations.Little_Spore)){
+            gleamReward = 50;
+        }
+        if (location.equals(Locations.Sunken_Trenches)){
+            gleamReward = 25;
+        }
+        if (location.equals(Locations.The_Molten_Ring)){
+            gleamReward = 50;
+        }
+        if (location.equals(Locations.Darkshaft)){
+            gleamReward = 50;
+        }
+        if (location.equals(Locations.Hollowdeep)){
+            gleamReward = 10;
+        }
+        if (location.equals(Locations.Auralith)){
+            gleamReward = 10;
+        }
+        if (location.equals(Locations.Ochrefall)){
+            gleamReward = 10;
+        }
+        if (location.equals(Locations.The_Unfound)){
+            gleamReward = 10;
+        }
 
         return gleamReward;
     }
@@ -75,6 +102,33 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.Dojo)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Doomrest)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Little_Spore)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Sunken_Trenches)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.The_Molten_Ring)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Darkshaft)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Hollowdeep)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Auralith)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Ochrefall)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.The_Unfound)){
             xpReward = 100;
         }
 
