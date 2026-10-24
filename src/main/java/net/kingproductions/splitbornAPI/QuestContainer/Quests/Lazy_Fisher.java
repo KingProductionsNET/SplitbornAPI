@@ -42,7 +42,7 @@ public class Lazy_Fisher extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Fish §9Welph's §7rod out of the lake.");
     }
 
     @Override

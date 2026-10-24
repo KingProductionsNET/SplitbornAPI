@@ -43,7 +43,7 @@ public class Scrap_For_Pip extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Help §6Pip with his contraption!");
     }
 
     @Override

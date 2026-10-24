@@ -43,7 +43,7 @@ public class Many_Supplies extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Loot 10 Supplies."
+                "§7Loot 10 §6Supplies§7."
         );
     }
 

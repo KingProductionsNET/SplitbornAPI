@@ -37,7 +37,7 @@ public class Check_Journey extends QuestPreset {
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of("§7View §bThe Fold §7in your journey.");
+        return List.of("§fView §bThe Fold §fin your journey.");
     }
 
     @Override

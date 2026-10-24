@@ -44,7 +44,7 @@ public class Jerniks_Ledger extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Pay the §bone-time §7entry fee.");
     }
 
     @Override

@@ -42,7 +42,7 @@ public class Eliminate_The_Creature extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Lure the §5creature §7into the §5void bin§7.");
     }
 
     @Override

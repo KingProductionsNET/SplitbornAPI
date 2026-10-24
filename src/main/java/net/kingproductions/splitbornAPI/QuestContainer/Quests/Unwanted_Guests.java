@@ -44,7 +44,7 @@ public class Unwanted_Guests extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of("Test");
+        return List.of("§cExterminate §7the §6Unwanted Guests§7.");
     }
 
     @Override

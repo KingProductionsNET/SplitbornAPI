@@ -44,7 +44,7 @@ public class Areos_Guidance extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Listen To §bAreo§7.");
     }
 
     @Override

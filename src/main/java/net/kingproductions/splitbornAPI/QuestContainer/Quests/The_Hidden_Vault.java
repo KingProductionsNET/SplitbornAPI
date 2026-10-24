@@ -42,7 +42,7 @@ public class The_Hidden_Vault extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§cGrug §7swears the drop isn't §3heavy§7.");
     }
 
     @Override

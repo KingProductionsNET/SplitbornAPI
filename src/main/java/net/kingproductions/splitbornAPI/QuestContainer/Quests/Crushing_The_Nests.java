@@ -42,7 +42,7 @@ public class Crushing_The_Nests extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Destroy §a3 §5Crawler Nests");
     }
 
     @Override

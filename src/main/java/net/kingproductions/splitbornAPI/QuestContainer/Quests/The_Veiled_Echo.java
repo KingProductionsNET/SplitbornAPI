@@ -44,7 +44,7 @@ public class The_Veiled_Echo extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Capture the " + SplitbornAPI.getItem(Item_ID.ECHO_CORE).getItemMeta().getDisplayName() + " §7from §5The Veil§7.");
     }
 
     @Override

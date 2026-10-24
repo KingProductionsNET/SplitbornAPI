@@ -42,7 +42,7 @@ public class Its_Getting_Hot_In_Here extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of("");
+        return List.of("§7Jump into an §cEmber Pit");
     }
 
     @Override
