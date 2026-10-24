@@ -25,6 +25,7 @@ public enum Quests {
     THE_LAKE_RUN,
     UNWANTED_GUESTS,
     BIG_CHUP_HUNTER,
+    AREOS_GUIDANCE,
 
     DEFAULT_NONE;
 }
