@@ -50,7 +50,9 @@ public class Immovable_Legs extends QuestPreset {
 
     @Override
     public Map<String, Object> questRelatedValues() {
-        return Map.of();
+        return Map.of(
+                "Time", 40
+        );
     }
 
     @Override
