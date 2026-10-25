@@ -23,6 +23,8 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.SUBMARINER)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.VEILRUNNER)) gleamReward = 10;
         return gleamReward;
     }
 
