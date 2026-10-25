@@ -65,7 +65,13 @@ public enum DATABANK_PATHS {
     DEATH_,
 
     MINED_,
+    /**
+     * PATH + BLOCK_ID + "_" + LEVEL
+     */
     MINING_LEVEL_,
+    /**
+     * PATH + BLOCK_ID + "_" + LEVEL
+     */
     MINING_LEVEL_CLAIMED_,
 
     KILL_LOG_LEVEL_,

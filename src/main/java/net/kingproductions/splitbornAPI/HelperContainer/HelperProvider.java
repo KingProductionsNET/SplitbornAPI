@@ -8,6 +8,7 @@ import net.kingproductions.splitbornAPI.ItemContainer.Item_Category;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.KillEffectsContainer.KillEffectID;
 import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
+import net.kingproductions.splitbornAPI.MiningContainer.Block_ID;
 import net.kingproductions.splitbornAPI.MobContainer.MobCategory;
 import net.kingproductions.splitbornAPI.MobContainer.Mob_ID;
 import net.kingproductions.splitbornAPI.PerkContainer.PerkID;
@@ -1707,4 +1708,19 @@ public interface HelperProvider {
      * @return True if the player has unclaimed fishing rewards.
      */
     boolean hasUnclaimedFishingRewards(Player player);
+
+    /**
+     *
+     * @param player
+     * @return True if the player has unclaimed mining rewards.
+     */
+    boolean hasUnclaimedMiningReward(Player player);
+
+    /**
+     *
+     * @param player
+     * @param blockId The block id.
+     * @return True if the player has unclaimed rewards for the given block id.
+     */
+    boolean hasUnclaimedMiningRewardForThisBlock(Player player, Block_ID blockId);
 }

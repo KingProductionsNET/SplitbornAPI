@@ -135,6 +135,12 @@ public class ItemBuilder {
         container.set(namespacedKey, persistentDataType, value);
     }
 
+    public static void deleteHiddenValue(ItemMeta meta, String key){
+        NamespacedKey namespacedKey = new NamespacedKey(plugin, key);
+        PersistentDataContainer container = meta.getPersistentDataContainer();
+        container.remove(namespacedKey);
+    }
+
     @Deprecated (since = "Always")
     public static ItemStack TransformItem_NPC_BUY(ItemStack stack){
         ItemMeta meta = stack.getItemMeta();
