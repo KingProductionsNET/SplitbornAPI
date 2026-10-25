@@ -22,7 +22,7 @@ public class Practice extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "§bPractice";
+        return "§bAfter Practice";
     }
 
     @Override

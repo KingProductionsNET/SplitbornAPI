@@ -17,12 +17,12 @@ public class Immovable_Legs extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.IMMOVABLE_LEGS;
+        return Quests.THE_IMMOVABLE_LEGS;
     }
 
     @Override
     public String questDisplayName() {
-        return "§8Immovable Legs";
+        return "§8The Immovable Legs";
     }
 
     @Override

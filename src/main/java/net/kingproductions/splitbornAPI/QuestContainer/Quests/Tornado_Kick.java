@@ -17,12 +17,12 @@ public class Tornado_Kick extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.TORNADO_KICK;
+        return Quests.FAST_TORNADO_KICK;
     }
 
     @Override
     public String questDisplayName() {
-        return "§6Tornado Kick";
+        return "§6Fast Tornado Kick";
     }
 
     @Override

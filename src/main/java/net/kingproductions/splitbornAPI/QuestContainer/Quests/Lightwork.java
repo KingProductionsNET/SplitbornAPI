@@ -17,12 +17,12 @@ public class Lightwork extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.LIGHTWORK;
+        return Quests.BE_LIGHTWORK;
     }
 
     @Override
     public String questDisplayName() {
-        return "§fLightwork";
+        return "§fBe Lightwork";
     }
 
     @Override

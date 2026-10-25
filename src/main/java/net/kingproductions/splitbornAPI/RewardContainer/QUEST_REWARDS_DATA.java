@@ -42,12 +42,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.GIVE_REST_TO_CRAWLERS)) gleamReward = 20;
         if (quest.equals(Quests.NESTBREAKER)) gleamReward = 20;
         if (quest.equals(Quests.FRACTURE_TOUCHER)) gleamReward = 20;
-        if (quest.equals(Quests.LIGHTWORK)) gleamReward = 20;
-        if (quest.equals(Quests.FOOTDANCER)) gleamReward = 40;
-        if (quest.equals(Quests.TORNADO_KICK)) gleamReward = 60;
-        if (quest.equals(Quests.THUNDERFEET)) gleamReward = 80;
-        if (quest.equals(Quests.IMMOVABLE_LEGS)) gleamReward = 100;
-        if (quest.equals(Quests.PRACTICE)) gleamReward = 20;
+        if (quest.equals(Quests.BE_LIGHTWORK)) gleamReward = 20;
+        if (quest.equals(Quests.COOL_FOOTDANCER)) gleamReward = 40;
+        if (quest.equals(Quests.FAST_TORNADO_KICK)) gleamReward = 60;
+        if (quest.equals(Quests.GREAT_THUNDERFEET)) gleamReward = 80;
+        if (quest.equals(Quests.THE_IMMOVABLE_LEGS)) gleamReward = 100;
+        if (quest.equals(Quests.AFTER_PRACTICE)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -83,12 +83,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.BRING_DOOM_TO_UMBRAL)) xpReward = 300;
         if (quest.equals(Quests.NESTBREAKER)) xpReward = 300;
         if (quest.equals(Quests.FRACTURE_TOUCHER)) xpReward = 300;
-        if (quest.equals(Quests.LIGHTWORK)) xpReward = 300;
-        if (quest.equals(Quests.FOOTDANCER)) xpReward = 300;
-        if (quest.equals(Quests.TORNADO_KICK)) xpReward = 600;
-        if (quest.equals(Quests.THUNDERFEET)) xpReward = 1000;
-        if (quest.equals(Quests.IMMOVABLE_LEGS)) xpReward = 1000;
-        if (quest.equals(Quests.PRACTICE)) xpReward = 300;
+        if (quest.equals(Quests.BE_LIGHTWORK)) xpReward = 300;
+        if (quest.equals(Quests.COOL_FOOTDANCER)) xpReward = 300;
+        if (quest.equals(Quests.FAST_TORNADO_KICK)) xpReward = 600;
+        if (quest.equals(Quests.GREAT_THUNDERFEET)) xpReward = 1000;
+        if (quest.equals(Quests.THE_IMMOVABLE_LEGS)) xpReward = 1000;
+        if (quest.equals(Quests.AFTER_PRACTICE)) xpReward = 300;
 
         return xpReward;
     }

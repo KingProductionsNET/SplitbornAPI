@@ -17,12 +17,12 @@ public class Footdancer extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.FOOTDANCER;
+        return Quests.COOL_FOOTDANCER;
     }
 
     @Override
     public String questDisplayName() {
-        return "§eFootdancer";
+        return "§eCool Footdancer";
     }
 
     @Override

@@ -17,12 +17,12 @@ public class Thunderfeet extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.THUNDERFEET;
+        return Quests.GREAT_THUNDERFEET;
     }
 
     @Override
     public String questDisplayName() {
-        return "§cThunderfeet";
+        return "§cGreat Thunderfeet";
     }
 
     @Override
