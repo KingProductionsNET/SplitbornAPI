@@ -44,14 +44,13 @@ public class Immovable_Legs extends QuestPreset {
     public List<String> inventoryDescriptionText() {
         return List.of(
                 "§7Get a §aBest Time §7of under",
-                "§b30 §7seconds against §8Bo-Kan's Shadow§7."
+                "§b40 §7seconds against §8Bo-Kan's Shadow§7."
         );
     }
 
     @Override
     public Map<String, Object> questRelatedValues() {
         return Map.of(
-                "Time", 40
         );
     }
 

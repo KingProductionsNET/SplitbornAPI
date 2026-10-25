@@ -44,7 +44,7 @@ public class Thunderfeet extends QuestPreset {
     public List<String> inventoryDescriptionText() {
         return List.of(
                 "§7Get a §aBest Time §7of under",
-                "§b30 §7seconds against §cStormtail§7."
+                "§b40 §7seconds against §cStormtail§7."
         );
     }
 
