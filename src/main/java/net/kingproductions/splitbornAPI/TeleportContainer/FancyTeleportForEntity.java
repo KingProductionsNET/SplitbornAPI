@@ -39,7 +39,7 @@ public class FancyTeleportForEntity {
             return;
         }
 
-        int points = Math.max(1, (int) (distance * 20.0));
+        int points = Math.max(1, (int) (distance * 10.0));
 
         new BukkitRunnable() {
             int currentPoint = 0;
