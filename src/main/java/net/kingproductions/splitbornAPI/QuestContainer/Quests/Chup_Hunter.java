@@ -42,7 +42,7 @@ public class Chup_Hunter extends QuestPreset {
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of("§7Complete the &bTutorial");
+        return List.of("§7Complete the §bTutorial");
     }
 
     @Override

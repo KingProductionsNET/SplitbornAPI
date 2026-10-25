@@ -44,6 +44,10 @@ public class QuestCreator {
         set.add(new Many_Supplies().build());
         set.add(new Check_Journey().build());
         set.add(new Areos_Guidance().build());
+        set.add(new Bring_Doom_To_Umbral().build());
+        set.add(new Give_Rest_to_Crawlers().build());
+        set.add(new Fracture_Toucher().build());
+        set.add(new Nestbreaker().build());
         return set;
     }
 
