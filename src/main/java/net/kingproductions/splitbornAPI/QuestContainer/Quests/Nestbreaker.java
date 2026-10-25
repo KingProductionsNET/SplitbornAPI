@@ -32,7 +32,7 @@ public class Nestbreaker extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.COBWEB;
+        return Material.STRING;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Nestbreaker extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Reach §5Crawler Nest's §eMilestone I §7at §cOrvayn§7."
+                "§7Destroy §b15 §5Crawler Nest's§7."
         );
     }
 

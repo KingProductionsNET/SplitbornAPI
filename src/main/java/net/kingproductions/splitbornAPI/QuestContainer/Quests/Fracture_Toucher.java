@@ -43,7 +43,7 @@ public class Fracture_Toucher extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Reach §5Veil Fracture §eMilestone I §7at §cOrvayn§7."
+                "§7Destroy §b10 §5Veil Fractures§7."
         );
     }
 
