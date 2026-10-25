@@ -34,6 +34,8 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.SUBMARINER)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.VEILRUNNER)) xpReward = 300;
 
         return xpReward;
     }

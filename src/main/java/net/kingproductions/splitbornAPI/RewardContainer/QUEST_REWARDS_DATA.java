@@ -38,6 +38,10 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.A_MINER)) gleamReward = 20;
         if (quest.equals(Quests.MANY_SUPPLIES)) gleamReward = 20;
         if (quest.equals(Quests.AREOS_GUIDANCE)) gleamReward = 20;
+        if (quest.equals(Quests.BRING_DOOM_TO_UMBRAL)) gleamReward = 20;
+        if (quest.equals(Quests.GIVE_REST_TO_CRAWLERS)) gleamReward = 20;
+        if (quest.equals(Quests.NESTBREAKER)) gleamReward = 20;
+        if (quest.equals(Quests.FRACTURE_TOUCHER)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -69,6 +73,10 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.MANY_SUPPLIES)) xpReward = 300;
         if (quest.equals(Quests.FIRST_TALENT)) xpReward = 300;
         if (quest.equals(Quests.AREOS_GUIDANCE)) xpReward = 300;
+        if (quest.equals(Quests.GIVE_REST_TO_CRAWLERS)) xpReward = 300;
+        if (quest.equals(Quests.BRING_DOOM_TO_UMBRAL)) xpReward = 300;
+        if (quest.equals(Quests.NESTBREAKER)) xpReward = 300;
+        if (quest.equals(Quests.FRACTURE_TOUCHER)) xpReward = 300;
 
         return xpReward;
     }
