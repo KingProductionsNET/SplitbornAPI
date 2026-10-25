@@ -48,6 +48,12 @@ public class QuestCreator {
         set.add(new Give_Rest_to_Crawlers().build());
         set.add(new Fracture_Toucher().build());
         set.add(new Nestbreaker().build());
+        set.add(new Lightwork().build());
+        set.add(new Footdancer().build());
+        set.add(new Tornado_Kick().build());
+        set.add(new Thunderfeet().build());
+        set.add(new Immovable_Legs().build());
+        set.add(new Practice().build());
         return set;
     }
 

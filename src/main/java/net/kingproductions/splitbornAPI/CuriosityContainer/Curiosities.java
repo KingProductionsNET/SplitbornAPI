@@ -24,5 +24,7 @@ public enum Curiosities {
     MISSING_GIRL,
     LERRY_THE_PLATYPUS,
     METAL_CUBE,
-    CRAZY_TOOTH
+    CRAZY_TOOTH,
+    CAMOUFLAGE_CHEST,
+    SHY_FIGHTER
 }
