@@ -44,7 +44,7 @@ public class Tornado_Kick extends QuestPreset {
     public List<String> inventoryDescriptionText() {
         return List.of(
                 "§7Get a §aBest Time §7of under",
-                "§b30 §7seconds against §6Ironpaw§7."
+                "§b35 §7seconds against §6Ironpaw§7."
         );
     }
 
