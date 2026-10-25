@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Lightwork extends QuestPreset {
+    // hi
     @Override
     public boolean isMainQuest() {
         return true;
