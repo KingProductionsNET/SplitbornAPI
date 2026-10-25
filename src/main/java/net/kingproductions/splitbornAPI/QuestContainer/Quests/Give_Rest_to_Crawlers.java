@@ -43,7 +43,7 @@ public class Give_Rest_to_Crawlers extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Kill §b30 §5Crawler's§7."
+                "§7Kill §b25 §5Abyss Crawler's§7."
         );
     }
 

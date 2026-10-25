@@ -43,7 +43,7 @@ public class Bring_Doom_To_Umbral extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Kill §b30 §cUmbral's§7."
+                "§7Kill §b20 §cUmbral's§7."
         );
     }
 
