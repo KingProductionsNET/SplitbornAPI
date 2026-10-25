@@ -36,6 +36,8 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.MISSING_GIRL)) gleamReward = 10;
         if (curiosities.equals(Curiosities.LERRY_THE_PLATYPUS)) gleamReward = 10;
         if (curiosities.equals(Curiosities.QUESTION_BOX)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.METAL_CUBE)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CRAZY_TOOTH)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -43,21 +45,19 @@ public class CURIOSITIES_REWARD_DATA {
     public static int getXPReward(Curiosities curiosities){
         int xpReward = 0;
 
-        if (curiosities.equals(Curiosities.HEADLESS_EYE)) xpReward = 10;
-        if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 10;
-        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) xpReward = 10;
-        if (curiosities.equals(Curiosities.GHOST_MINER)) xpReward = 10;
-        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) xpReward = 10;
-        if (curiosities.equals(Curiosities.FLICKER_MAN)) xpReward = 10;
-        if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 10;
-        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 10;
-        if (curiosities.equals(Curiosities.PHANTOM_THIEF)) xpReward = 10;
-        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) xpReward = 10;
-        if (curiosities.equals(Curiosities.CURIOUS_CAP)) xpReward = 10;
-        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) xpReward = 10;
-        if (curiosities.equals(Curiosities.CAMEL_EGG)) xpReward = 10;
-        if (curiosities.equals(Curiosities.METAL_CUBE)) xpReward = 10;
-        if (curiosities.equals(Curiosities.CRAZY_TOOTH)) xpReward = 10;
+        if (curiosities.equals(Curiosities.HEADLESS_EYE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CAT_ON_TREE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.SLEEPY_CAPYBARA)) xpReward = 100;
+        if (curiosities.equals(Curiosities.GHOST_MINER)) xpReward = 100;
+        if (curiosities.equals(Curiosities.RESTLESS_SKULL)) xpReward = 100;
+        if (curiosities.equals(Curiosities.FLICKER_MAN)) xpReward = 100;
+        if (curiosities.equals(Curiosities.VOID_LANTERN)) xpReward = 100;
+        if (curiosities.equals(Curiosities.JUNK_SENTINEL)) xpReward = 100;
+        if (curiosities.equals(Curiosities.PHANTOM_THIEF)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CACTUS_IN_CHEST)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CURIOUS_CAP)) xpReward = 100;
+        if (curiosities.equals(Curiosities.FLUFF_TOTEM)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CAMEL_EGG)) xpReward = 100;
 
         if (curiosities.equals(Curiosities.MUSHROOM_PLUSHIE)) xpReward = 100;
         if (curiosities.equals(Curiosities.FISH_IN_BUCKET)) xpReward = 100;
