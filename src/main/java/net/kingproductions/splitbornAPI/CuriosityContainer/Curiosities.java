@@ -22,6 +22,7 @@ public enum Curiosities {
     QUESTION_BOX,
     BLUE_DEMON,
     MISSING_GIRL,
-    LERRY_THE_PLATYPUS
-
+    LERRY_THE_PLATYPUS,
+    METAL_CUBE,
+    CRAZY_TOOTH
 }

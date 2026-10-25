@@ -29,10 +29,10 @@ public class ACHIEVEMENT_REWARD_DATA {
     public static int getXPReward(ACHIEVEMENT_ID achievementId){
         int xpReward = 0;
 
-        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.RADIOACTIVE_RELIEF)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.WHAT_DID_YOU_EXPECT)) xpReward = 100;
-        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 100;
-        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 100;
+        if (achievementId.equals(ACHIEVEMENT_ID.BLOOD_MONEY)) xpReward = 300;
+        if (achievementId.equals(ACHIEVEMENT_ID.SELF_DESTRUCTION)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.SHORTCUT)) xpReward = 100;
 
         return xpReward;
