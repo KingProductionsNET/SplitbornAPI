@@ -38,6 +38,8 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.QUESTION_BOX)) gleamReward = 10;
         if (curiosities.equals(Curiosities.METAL_CUBE)) gleamReward = 10;
         if (curiosities.equals(Curiosities.CRAZY_TOOTH)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CAMOUFLAGE_CHEST)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.SHY_FIGHTER)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -69,6 +71,8 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.BLUE_DEMON)) xpReward = 100;
         if (curiosities.equals(Curiosities.CRAZY_TOOTH)) xpReward = 100;
         if (curiosities.equals(Curiosities.METAL_CUBE)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CAMOUFLAGE_CHEST)) xpReward = 100;
+        if (curiosities.equals(Curiosities.SHY_FIGHTER)) xpReward = 100;
 
         return xpReward;
     }
