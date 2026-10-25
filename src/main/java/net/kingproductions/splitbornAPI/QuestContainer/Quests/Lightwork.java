@@ -43,7 +43,8 @@ public class Lightwork extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Get a §aBest Time §7of under §b30 §7seconds against §fWhelp§7."
+                "§7Get a §aBest Time §7of under",
+                "§b30 §7seconds against §fWhelp§7."
         );
     }
 
