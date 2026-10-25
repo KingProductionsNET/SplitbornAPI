@@ -26,5 +26,6 @@ public enum Curiosities {
     METAL_CUBE,
     CRAZY_TOOTH,
     CAMOUFLAGE_CHEST,
-    SHY_FIGHTER
+    SHY_FIGHTER,
+    BRINESPRING
 }

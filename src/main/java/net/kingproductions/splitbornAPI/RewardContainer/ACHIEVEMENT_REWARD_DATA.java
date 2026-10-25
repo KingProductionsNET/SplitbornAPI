@@ -26,6 +26,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.SUBMARINER)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.VEILRUNNER)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.PERFECT_FIGHT)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) gleamReward = 10;
         return gleamReward;
     }
 
@@ -40,6 +41,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.SUBMARINER)) xpReward = 100;
         if (achievementId.equals(ACHIEVEMENT_ID.VEILRUNNER)) xpReward = 300;
         if (achievementId.equals(ACHIEVEMENT_ID.PERFECT_FIGHT)) xpReward = 300;
+        if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) xpReward = 1000;
 
         return xpReward;
     }

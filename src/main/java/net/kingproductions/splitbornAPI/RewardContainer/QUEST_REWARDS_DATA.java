@@ -48,6 +48,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.GREAT_THUNDERFEET)) gleamReward = 80;
         if (quest.equals(Quests.THE_IMMOVABLE_LEGS)) gleamReward = 100;
         if (quest.equals(Quests.AFTER_PRACTICE)) gleamReward = 20;
+        if (quest.equals(Quests.ANGLERFISH)) gleamReward = 20;
+        if (quest.equals(Quests.BRINES)) gleamReward = 20;
+        if (quest.equals(Quests.GLOOMFINS)) gleamReward = 20;
+        if (quest.equals(Quests.OLD_MANS_WAY)) gleamReward = 20;
+        if (quest.equals(Quests.KISS_THE_FROG)) gleamReward = 20;
+        if (quest.equals(Quests.FISHING_LICENSE)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -89,6 +95,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.GREAT_THUNDERFEET)) xpReward = 1000;
         if (quest.equals(Quests.THE_IMMOVABLE_LEGS)) xpReward = 1000;
         if (quest.equals(Quests.AFTER_PRACTICE)) xpReward = 300;
+        if (quest.equals(Quests.ANGLERFISH)) xpReward = 300;
+        if (quest.equals(Quests.BRINES)) xpReward = 300;
+        if (quest.equals(Quests.GLOOMFINS)) xpReward = 300;
+        if (quest.equals(Quests.KISS_THE_FROG)) xpReward = 300;
+        if (quest.equals(Quests.OLD_MANS_WAY)) xpReward = 300;
+        if (quest.equals(Quests.FISHING_LICENSE)) xpReward = 300;
 
         return xpReward;
     }
