@@ -39,7 +39,7 @@ public class FancyTeleportForEntity {
             return;
         }
 
-        int points = Math.max(1, (int) (distance * 10.0));
+        int points = Math.max(1, (int) (distance * 20.0));
 
         new BukkitRunnable() {
             int currentPoint = 0;
@@ -58,7 +58,7 @@ public class FancyTeleportForEntity {
                     return;
                 }
 
-                if (entity.getLocation().distance(loc2) <= 1) {
+                if (entity.getLocation().distance(loc2) <= 0.05) {
                     entityNotPathingAnymore.remove(entity.getUniqueId());
 
                     if (consumer != null){
