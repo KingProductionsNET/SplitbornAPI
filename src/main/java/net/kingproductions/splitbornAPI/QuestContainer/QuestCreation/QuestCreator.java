@@ -54,6 +54,12 @@ public class QuestCreator {
         set.add(new Thunderfeet().build());
         set.add(new Immovable_Legs().build());
         set.add(new Practice().build());
+        set.add(new Anglerfish().build());
+        set.add(new Brines().build());
+        set.add(new Fishing_License().build());
+        set.add(new Gloomfins().build());
+        set.add(new Kiss_the_Frog().build());
+        set.add(new Old_Mans_Way().build());
         return set;
     }
 
