@@ -17,7 +17,7 @@ public class Practice extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return Quests.PRACTICE;
+        return Quests.AFTER_PRACTICE;
     }
 
     @Override
