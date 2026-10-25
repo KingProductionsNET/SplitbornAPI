@@ -49,7 +49,7 @@ public class SumoEvent extends Event {
 
     public enum Winner {
         PLAYER,
-        BAOT
+        BOT
     }
 
     public enum Opponent {
