@@ -118,7 +118,7 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SO_BIG)) xpReward = 300;
         if (quest.equals(Quests.BOSS_TME)) xpReward = 300;
         if (quest.equals(Quests.NITRILE_FOAM_GLOVE)) xpReward = 300;
-        if (quest.equals(Quests.WORST_ARMOR)) xpReward = 300;
+        if (quest.equals(Quests.WORST_ARMOR)) xpReward = 1000;
         if (quest.equals(Quests.WASHING_THE_SPORES)) xpReward = 300;
         if (quest.equals(Quests.VERY_COLD_MINER)) xpReward = 300;
         if (quest.equals(Quests.COLD_MINER)) xpReward = 300;
