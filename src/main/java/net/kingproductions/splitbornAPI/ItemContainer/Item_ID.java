@@ -317,6 +317,7 @@ public enum Item_ID {
 
     CUBE_OF_KNOWLEDGE,
 
-    SPORECRACKER
+    SPORECRACKER,
+    WATER_BUBBLE
 
 }
