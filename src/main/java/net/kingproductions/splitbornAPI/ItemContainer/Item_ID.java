@@ -315,6 +315,8 @@ public enum Item_ID {
     SLEEPY_BOOTS,
     CHEWED_BUBBLEGUM,
 
-    CUBE_OF_KNOWLEDGE
+    CUBE_OF_KNOWLEDGE,
+
+    SPORECRACKER
 
 }
