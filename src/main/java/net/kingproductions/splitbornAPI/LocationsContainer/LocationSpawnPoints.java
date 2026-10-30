@@ -45,7 +45,7 @@ public class LocationSpawnPoints {
         SunkenTrenches_Spawn = new Location(world_splitborn, -94.3,114,21.6,141,18);
         TheMoltenRing_Spawn = new Location(world_splitborn, -50.5,106,183.5,90,0);
         Hollowdeep_Spawn = new Location(world_splitborn, -35.5,113,329.5,49,33);
-        Doomrest_Spawn = new Location(world_splitborn, 145.9,120.9,188.7,-63,-19);
+        Doomrest_Spawn = new Location(world_splitborn, 145.9,121,188.7,-63,-19);
         Auralith_Spawn = new Location(world_splitborn, -40.7,80,367.3,-65,0);
         Ochrefall_Spawn = new Location(world_splitborn, -77.5,98,375.7,-16,25);
         Unfound_Spawn = new Location(world_splitborn, -100.5,70,392.3,90,0);
