@@ -43,7 +43,7 @@ public class Nestbreaker extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Destroy §b15 §5Crawler Nest's§7."
+                "§7Destroy §b15 §5Crawler Nests§7."
         );
     }
 
