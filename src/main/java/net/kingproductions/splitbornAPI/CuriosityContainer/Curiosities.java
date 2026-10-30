@@ -27,5 +27,6 @@ public enum Curiosities {
     CRAZY_TOOTH,
     CAMOUFLAGE_CHEST,
     SHY_FIGHTER,
-    BRINESPRING
+    BRINESPRING,
+    SOLE_SURVIVOR
 }

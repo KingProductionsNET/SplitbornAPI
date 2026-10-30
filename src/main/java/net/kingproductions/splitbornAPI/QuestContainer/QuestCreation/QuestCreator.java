@@ -6,6 +6,7 @@ import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.Boss;
 
 import java.util.*;
 
@@ -60,6 +61,12 @@ public class QuestCreator {
         set.add(new Gloomfins().build());
         set.add(new Kiss_the_Frog().build());
         set.add(new Old_Mans_Way().build());
+        set.add(new Recycler().build());
+        set.add(new Chosni_Killer().build());
+        set.add(new So_Big().build());
+        set.add(new Nitrile_Foam_Glove().build());
+        set.add(new Boss_Time().build());
+
         return set;
     }
 

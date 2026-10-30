@@ -49,6 +49,11 @@ public enum Quests {
     GLOOMFINS,
     BRINES,
     ANGLERFISH,
+    RECYCLER,
+    CHOSNI_KILLER,
+    SO_BIG,
+    NITRILE_FOAM_GLOVE,
+    BOSS_TME,
 
     DEFAULT_NONE;
 }

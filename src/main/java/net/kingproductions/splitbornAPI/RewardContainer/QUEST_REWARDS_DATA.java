@@ -54,6 +54,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.OLD_MANS_WAY)) gleamReward = 20;
         if (quest.equals(Quests.KISS_THE_FROG)) gleamReward = 20;
         if (quest.equals(Quests.FISHING_LICENSE)) gleamReward = 20;
+        if (quest.equals(Quests.RECYCLER)) gleamReward = 20;
+        if (quest.equals(Quests.CHOSNI_KILLER)) gleamReward = 20;
+        if (quest.equals(Quests.SO_BIG)) gleamReward = 20;
+        if (quest.equals(Quests.BOSS_TME)) gleamReward = 20;
+        if (quest.equals(Quests.NITRILE_FOAM_GLOVE)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -101,6 +106,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.KISS_THE_FROG)) xpReward = 300;
         if (quest.equals(Quests.OLD_MANS_WAY)) xpReward = 300;
         if (quest.equals(Quests.FISHING_LICENSE)) xpReward = 300;
+        if (quest.equals(Quests.RECYCLER)) xpReward = 300;
+        if (quest.equals(Quests.CHOSNI_KILLER)) xpReward = 300;
+        if (quest.equals(Quests.SO_BIG)) xpReward = 300;
+        if (quest.equals(Quests.BOSS_TME)) xpReward = 300;
+        if (quest.equals(Quests.NITRILE_FOAM_GLOVE)) xpReward = 300;
 
         return xpReward;
     }
