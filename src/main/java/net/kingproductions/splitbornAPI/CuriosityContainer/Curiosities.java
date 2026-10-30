@@ -28,5 +28,7 @@ public enum Curiosities {
     CAMOUFLAGE_CHEST,
     SHY_FIGHTER,
     BRINESPRING,
-    SOLE_SURVIVOR
+    SOLE_SURVIVOR,
+    CLOUDSHROOM,
+    ROOTSHROOM
 }

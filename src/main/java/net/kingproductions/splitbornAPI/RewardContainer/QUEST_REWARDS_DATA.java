@@ -59,6 +59,13 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SO_BIG)) gleamReward = 20;
         if (quest.equals(Quests.BOSS_TME)) gleamReward = 20;
         if (quest.equals(Quests.NITRILE_FOAM_GLOVE)) gleamReward = 20;
+        if (quest.equals(Quests.CAVE_VISIT)) gleamReward = 20;
+        if (quest.equals(Quests.CLEAR_THE_MOLD)) gleamReward = 20;
+        if (quest.equals(Quests.COLD_MINER)) gleamReward = 20;
+        if (quest.equals(Quests.VERY_COLD_MINER)) gleamReward = 20;
+        if (quest.equals(Quests.EXTENDED_DIG_GUIDE)) gleamReward = 20;
+        if (quest.equals(Quests.WASHING_THE_SPORES)) gleamReward = 20;
+        if (quest.equals(Quests.WORST_ARMOR)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -111,6 +118,13 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SO_BIG)) xpReward = 300;
         if (quest.equals(Quests.BOSS_TME)) xpReward = 300;
         if (quest.equals(Quests.NITRILE_FOAM_GLOVE)) xpReward = 300;
+        if (quest.equals(Quests.WORST_ARMOR)) xpReward = 300;
+        if (quest.equals(Quests.WASHING_THE_SPORES)) xpReward = 300;
+        if (quest.equals(Quests.VERY_COLD_MINER)) xpReward = 300;
+        if (quest.equals(Quests.COLD_MINER)) xpReward = 300;
+        if (quest.equals(Quests.EXTENDED_DIG_GUIDE)) xpReward = 300;
+        if (quest.equals(Quests.CLEAR_THE_MOLD)) xpReward = 300;
+        if (quest.equals(Quests.CAVE_VISIT)) xpReward = 300;
 
         return xpReward;
     }

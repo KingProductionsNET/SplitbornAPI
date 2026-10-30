@@ -42,6 +42,8 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.SHY_FIGHTER)) gleamReward = 10;
         if (curiosities.equals(Curiosities.BRINESPRING)) gleamReward = 10;
         if (curiosities.equals(Curiosities.SOLE_SURVIVOR)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.CLOUDSHROOM)) gleamReward = 10;
+        if (curiosities.equals(Curiosities.ROOTSHROOM)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -77,6 +79,8 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.SHY_FIGHTER)) xpReward = 100;
         if (curiosities.equals(Curiosities.BRINESPRING)) xpReward = 100;
         if (curiosities.equals(Curiosities.SOLE_SURVIVOR)) xpReward = 100;
+        if (curiosities.equals(Curiosities.CLOUDSHROOM)) xpReward = 100;
+        if (curiosities.equals(Curiosities.ROOTSHROOM)) xpReward = 100;
 
         return xpReward;
     }

@@ -66,6 +66,13 @@ public class QuestCreator {
         set.add(new So_Big().build());
         set.add(new Nitrile_Foam_Glove().build());
         set.add(new Boss_Time().build());
+        set.add(new Cave_Visit().build());
+        set.add(new Clear_the_Mold().build());
+        set.add(new Cold_Miner().build());
+        set.add(new Very_Cold_Miner().build());
+        set.add(new Extended_Dig_Guide().build());
+        set.add(new Washing_the_Spores().build());
+        set.add(new Worst_Armor().build());
 
         return set;
     }
