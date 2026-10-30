@@ -1723,4 +1723,11 @@ public interface HelperProvider {
      * @return True if the player has unclaimed rewards for the given block id.
      */
     boolean hasUnclaimedMiningRewardForThisBlock(Player player, Block_ID blockId);
+
+    /**
+     *
+     * @param location The area.
+     * @return The required level to discover and enter this area.
+     */
+    int getRequiredLevel(Locations location);
 }
