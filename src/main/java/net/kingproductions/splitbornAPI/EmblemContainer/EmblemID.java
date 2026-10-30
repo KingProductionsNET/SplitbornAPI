@@ -23,6 +23,7 @@ public enum EmblemID {
     Sovereigns_Crest,
     Royal_Sigil,
     Crown_Of_Dominion,
-    Beta_Tester
+    Beta_Tester,
+    Greenweather,
 
 }
