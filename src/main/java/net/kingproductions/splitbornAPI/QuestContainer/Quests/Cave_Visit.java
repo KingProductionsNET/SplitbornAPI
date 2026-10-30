@@ -27,7 +27,7 @@ public class Cave_Visit extends QuestPreset {
 
     @Override
     public Locations questLocation() {
-        return Locations.Sporewood;
+        return Locations.Sunken_Trenches;
     }
 
     @Override
