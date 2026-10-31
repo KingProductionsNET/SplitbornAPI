@@ -21,5 +21,6 @@ public enum Locations {
     Auralith,
     Ochrefall,
     The_Unfound,
-    Doomrest
+    Doomrest,
+    Sunreach
 }

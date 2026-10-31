@@ -14,6 +14,7 @@ public class LocationSpawnPoints {
     public static Location The_Beyond_Spawn = null;
     public static Location Sporewood_Spawn = null;
     public static Location Ashvein_Mine_Spawn = null;
+    public static Location Sunreach_Spawn = null;
     public static Location Junkyard_Spawn = null;
     public static Location Dojo_Spawn = null;
     public static Location The_Undercroft_Spawn = null;
@@ -50,6 +51,8 @@ public class LocationSpawnPoints {
         Ochrefall_Spawn = new Location(world_splitborn, -77.5,98,375.7,-16,25);
         Unfound_Spawn = new Location(world_splitborn, -100.5,70,392.3,90,0);
 
+        Sunreach_Spawn = new Location(world_splitborn, 46.5, 108, 67.5, 40, 0);
+
         SPAWN_POINTS.put(Locations.Hearthgrove, Hearthgrove_Spawn);
         SPAWN_POINTS.put(Locations.The_Fold, The_Fold_Spawn);
         SPAWN_POINTS.put(Locations.The_Beyond, The_Beyond_Spawn);
@@ -69,6 +72,7 @@ public class LocationSpawnPoints {
         SPAWN_POINTS.put(Locations.Auralith, Auralith_Spawn);
         SPAWN_POINTS.put(Locations.Ochrefall, Ochrefall_Spawn);
         SPAWN_POINTS.put(Locations.The_Unfound, Unfound_Spawn);
+        SPAWN_POINTS.put(Locations.Sunreach, Sunreach_Spawn);
     }
 
     public static Location getSpawnPoint(Locations location){
