@@ -48,6 +48,7 @@ public interface Profile {
     void setExcavationSpeed(int i);
     void setExcavationFortune(int i);
     void setQuickTravelPoints(int i);
+    void setLevel(int level);
 
     void setAmethysts(int i);
     void setStat(Stat stat, int i);

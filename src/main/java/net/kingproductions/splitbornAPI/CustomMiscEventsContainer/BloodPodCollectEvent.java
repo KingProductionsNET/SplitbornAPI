@@ -13,7 +13,7 @@ public class BloodPodCollectEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 
     private final Player player;
-    private final int bloodpods;
+    private int bloodpods;
 
     public BloodPodCollectEvent(Player player, int bloodpods){
         this.player = player;
@@ -30,6 +30,14 @@ public class BloodPodCollectEvent extends Event {
      */
     public int getBloodpods() {
         return bloodpods;
+    }
+
+    /**
+     *
+     * @param newBloodpods The amount of blood pods the player will receive.
+     */
+    public void setBloodpods(int newBloodpods){
+        bloodpods = newBloodpods;
     }
 
     @Override
