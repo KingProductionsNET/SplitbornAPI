@@ -334,6 +334,8 @@ public enum Item_ID {
     SPOREBURST,
 
     HARPOON,
-    ICE_CRACKER
+    ICE_CRACKER,
+
+    HELM_OF_THE_GOLDEN_FORTUNE
 
 }

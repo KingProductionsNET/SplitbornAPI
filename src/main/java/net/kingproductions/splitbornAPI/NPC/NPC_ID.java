@@ -61,5 +61,6 @@ public enum NPC_ID {
     DURNAK,
     COPO,
     CHAM,
-    TOSH
+    TOSH,
+    SOLVAR
 }

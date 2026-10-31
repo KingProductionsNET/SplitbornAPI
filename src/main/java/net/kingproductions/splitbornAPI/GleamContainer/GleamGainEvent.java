@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class GleamGainEvent extends Event {
 
@@ -11,11 +12,16 @@ public class GleamGainEvent extends Event {
 
     private final Player player;
     private int gleamGainAmount;
+    private Source source = Source.UNKNOWN;
     private boolean cancelled;
 
     public GleamGainEvent(Player player, int Amount){
         this.player = player;
         this.gleamGainAmount = Amount;
+    }
+
+    public void setSource(Source source){
+        this.source = source;
     }
 
     public Player getPlayer(){
@@ -28,6 +34,10 @@ public class GleamGainEvent extends Event {
         return (gleamGainAmount);
     }
 
+    public Source getSource(){
+        return source;
+    }
+
     @Override
     public @NotNull HandlerList getHandlers() {
         return handlers;
@@ -35,6 +45,11 @@ public class GleamGainEvent extends Event {
 
     public static HandlerList getHandlerList() {
         return handlers;
+    }
+
+    public enum Source {
+        MOB_DROP,
+        UNKNOWN
     }
 
 }

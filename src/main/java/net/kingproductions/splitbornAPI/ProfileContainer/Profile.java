@@ -2,6 +2,7 @@ package net.kingproductions.splitbornAPI.ProfileContainer;
 
 import net.kingproductions.splitbornAPI.EmblemContainer.EmblemID;
 import net.kingproductions.splitbornAPI.EssenceContainer.Essence_ID;
+import net.kingproductions.splitbornAPI.GleamContainer.GleamGainEvent;
 import net.kingproductions.splitbornAPI.ItemContainer.Item_ID;
 import net.kingproductions.splitbornAPI.RankContainer.Ranks;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
@@ -35,6 +36,8 @@ public interface Profile {
     void setStars(int Amount);
 
     void setGleams(int amount);
+    void setGleams(int amount, GleamGainEvent.Source source);
+
     void setMAX_HEALTH(int amount);
     void setSPEED(int amount);
     void setMAX_STAMINA(int amount);
