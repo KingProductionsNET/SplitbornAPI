@@ -331,6 +331,7 @@ public enum Item_ID {
     CHAROOM_BOOTS,
 
     CHARMORE_DAGGER,
+    SPOREBURST,
 
     HARPOON,
     ICE_CRACKER
