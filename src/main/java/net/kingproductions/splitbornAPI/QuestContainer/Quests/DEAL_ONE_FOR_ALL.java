@@ -22,7 +22,7 @@ public class DEAL_ONE_FOR_ALL extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "§6Deal §bOne §fFor All";
+        return "§bDeal One §7For All";
     }
 
     @Override

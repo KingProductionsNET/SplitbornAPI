@@ -22,7 +22,7 @@ public class Capped_Support_Archetype extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "§8Capped §eSupport §bArchetype";
+        return "§8Capped §eSupport Archetype";
     }
 
     @Override

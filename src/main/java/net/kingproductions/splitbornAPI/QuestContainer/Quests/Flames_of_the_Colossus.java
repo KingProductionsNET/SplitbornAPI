@@ -22,7 +22,7 @@ public class Flames_of_the_Colossus extends QuestPreset {
 
     @Override
     public String questDisplayName() {
-        return "§4Flames §7of the §eColossus";
+        return "§4Flames §7of the §8Colossus";
     }
 
     @Override
