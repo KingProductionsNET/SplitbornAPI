@@ -66,6 +66,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.EXTENDED_DIG_GUIDE)) gleamReward = 20;
         if (quest.equals(Quests.WASHING_THE_SPORES)) gleamReward = 20;
         if (quest.equals(Quests.WORST_ARMOR)) gleamReward = 20;
+        if (quest.equals(Quests.VAMPIRE_COSPLAY)) gleamReward = 20;
+        if (quest.equals(Quests.GARDENING_NIGHTMARE)) gleamReward = 20;
+        if (quest.equals(Quests.SHINY_STONE)) gleamReward = 20;
+        if (quest.equals(Quests.RADIOACTIVE_GROUND)) gleamReward = 20;
+        if (quest.equals(Quests.GET_THE_CHUNKY)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -125,6 +130,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.EXTENDED_DIG_GUIDE)) xpReward = 300;
         if (quest.equals(Quests.CLEAR_THE_MOLD)) xpReward = 300;
         if (quest.equals(Quests.CAVE_VISIT)) xpReward = 300;
+        if (quest.equals(Quests.VAMPIRE_COSPLAY)) xpReward = 300;
+        if (quest.equals(Quests.GARDENING_NIGHTMARE)) xpReward = 300;
+        if (quest.equals(Quests.SHINY_STONE)) xpReward = 300;
+        if (quest.equals(Quests.RADIOACTIVE_GROUND)) xpReward = 300;
+        if (quest.equals(Quests.GET_THE_CHUNKY)) xpReward = 300;
 
         return xpReward;
     }

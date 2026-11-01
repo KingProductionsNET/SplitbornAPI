@@ -69,6 +69,10 @@ public class LOCATION_REWARD_DATA {
         if (location.equals(Locations.The_Unfound)){
             gleamReward = 10;
         }
+        if (location.equals(Locations.Sunreach)){
+            gleamReward = 10;
+        }
+
 
         return gleamReward;
     }
@@ -129,6 +133,9 @@ public class LOCATION_REWARD_DATA {
             xpReward = 100;
         }
         if (location.equals(Locations.The_Unfound)){
+            xpReward = 100;
+        }
+        if (location.equals(Locations.Sunreach)){
             xpReward = 100;
         }
 

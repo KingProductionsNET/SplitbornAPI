@@ -73,6 +73,11 @@ public class QuestCreator {
         set.add(new Extended_Dig_Guide().build());
         set.add(new Washing_the_Spores().build());
         set.add(new Worst_Armor().build());
+        set.add(new Radioactive_Ground().build());
+        set.add(new Shiny_Stone().build());
+        set.add(new Gardening_Nightmare().build());
+        set.add(new Get_the_Chunky().build());
+        set.add(new Vampire_Cosplay().build());
 
         return set;
     }

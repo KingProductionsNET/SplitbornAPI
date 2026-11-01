@@ -30,5 +30,6 @@ public enum Curiosities {
     BRINESPRING,
     SOLE_SURVIVOR,
     CLOUDSHROOM,
-    ROOTSHROOM
+    ROOTSHROOM,
+    GAMMA_RAYS,
 }

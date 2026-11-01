@@ -69,6 +69,9 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.REEZ)) gleamReward = 10;
         if (npcId.equals(NPC_ID.DURNAK)) gleamReward = 10;
         if (npcId.equals(NPC_ID.CHAM)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.COPO)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.TOSH)) gleamReward = 10;
+        if (npcId.equals(NPC_ID.SOLVAR)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -131,7 +134,9 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.REEZ)) xpReward = 300;
         if (npcId.equals(NPC_ID.DURNAK)) xpReward = 300;
         if (npcId.equals(NPC_ID.CHAM)) xpReward = 300;
-
+        if (npcId.equals(NPC_ID.COPO)) xpReward = 300;
+        if (npcId.equals(NPC_ID.TOSH)) xpReward = 300;
+        if (npcId.equals(NPC_ID.SOLVAR)) xpReward = 300;
 
         return xpReward;
     }
