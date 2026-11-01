@@ -25,5 +25,6 @@ public enum EmblemID {
     Crown_Of_Dominion,
     Beta_Tester,
     Greenweather,
+    Reaper
 
 }

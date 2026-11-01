@@ -340,6 +340,9 @@ public enum Item_ID {
     GAMMA_BOOTS,
     HIGHLY_REFLECTIVE_PICKAXE,
 
-    MUSHROOM_SOUP
+    MUSHROOM_SOUP,
+
+    HELL_HORSE,
+    HOT_GUM
 
 }
