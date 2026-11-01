@@ -43,7 +43,7 @@ public class Vampire_Cosplay extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Collect §b30 §cBlood Pods§7."
+                "§7Have §b30 §cBlood Pods§7 in your inventory."
         );
     }
 
