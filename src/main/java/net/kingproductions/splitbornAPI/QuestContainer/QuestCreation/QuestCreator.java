@@ -78,6 +78,11 @@ public class QuestCreator {
         set.add(new Gardening_Nightmare().build());
         set.add(new Get_the_Chunky().build());
         set.add(new Vampire_Cosplay().build());
+        set.add(new Bystander().build());
+        set.add(new Capped_Support_Archetype().build());
+        set.add(new DEAL_ONE_FOR_ALL().build());
+        set.add(new Flames_of_the_Colossus().build());
+        set.add(new Moltasos_Shadow().build());
 
         return set;
     }

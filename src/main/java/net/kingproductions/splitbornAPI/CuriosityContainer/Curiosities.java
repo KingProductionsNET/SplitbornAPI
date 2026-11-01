@@ -32,4 +32,5 @@ public enum Curiosities {
     CLOUDSHROOM,
     ROOTSHROOM,
     GAMMA_RAYS,
+    COLWATCHER,
 }

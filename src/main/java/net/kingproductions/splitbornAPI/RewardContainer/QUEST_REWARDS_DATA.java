@@ -71,6 +71,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SHINY_STONE)) gleamReward = 20;
         if (quest.equals(Quests.RADIOACTIVE_GROUND)) gleamReward = 20;
         if (quest.equals(Quests.GET_THE_CHUNKY)) gleamReward = 20;
+        if (quest.equals(Quests.BYSTANDER)) gleamReward = 20;
+        if (quest.equals(Quests.CAPPED_SUPPORT_ARCHETYPE)) gleamReward = 20;
+        if (quest.equals(Quests.DEAL_ONE_FOR_ALL)) gleamReward = 20;
+        if (quest.equals(Quests.FLAMES_OF_THE_COLOSSUS)) gleamReward = 20;
+        if (quest.equals(Quests.MOLTASOS_SHADOW)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -135,6 +140,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SHINY_STONE)) xpReward = 300;
         if (quest.equals(Quests.RADIOACTIVE_GROUND)) xpReward = 300;
         if (quest.equals(Quests.GET_THE_CHUNKY)) xpReward = 300;
+        if (quest.equals(Quests.BYSTANDER)) xpReward = 300;
+        if (quest.equals(Quests.CAPPED_SUPPORT_ARCHETYPE)) xpReward = 600;
+        if (quest.equals(Quests.DEAL_ONE_FOR_ALL)) xpReward = 1000;
+        if (quest.equals(Quests.FLAMES_OF_THE_COLOSSUS)) xpReward = 300;
+        if (quest.equals(Quests.MOLTASOS_SHADOW)) xpReward = 300;
 
         return xpReward;
     }
