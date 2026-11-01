@@ -78,6 +78,7 @@ public class CategoryRewardBuilder {
         String DatabankPath = null;
         String inputAssistForDatabank = null;
         String SongPath = null;
+        String LocationString = null;
 
         List<String> rewardReasonText = new ArrayList<>();
         if (rewardReason != null){
@@ -151,6 +152,7 @@ public class CategoryRewardBuilder {
                 EssenceRewards = CURIOSITIES_REWARD_DATA.getEssenceRewards(curiosities);
                 ExtraRewards = CURIOSITIES_REWARD_DATA.getExtraRewards(curiosities);
                 StatRewards = CURIOSITIES_REWARD_DATA.getStatReward(curiosities);
+
             }
         }
 
