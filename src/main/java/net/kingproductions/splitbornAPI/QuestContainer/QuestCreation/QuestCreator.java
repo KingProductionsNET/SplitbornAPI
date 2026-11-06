@@ -83,6 +83,14 @@ public class QuestCreator {
         set.add(new DEAL_ONE_FOR_ALL().build());
         set.add(new Flames_of_the_Colossus().build());
         set.add(new Moltasos_Shadow().build());
+        set.add(new Casino_Deal().build());
+        set.add(new Adventurer().build());
+        set.add(new Chubby().build());
+        set.add(new Dust_Off().build());
+        set.add(new Hungry().build());
+        set.add(new New_Balance().build());
+        set.add(new Red_Cross().build());
+        set.add(new Team_Trees().build());
 
         return set;
     }

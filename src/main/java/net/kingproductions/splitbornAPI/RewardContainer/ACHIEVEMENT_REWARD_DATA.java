@@ -28,6 +28,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.PERFECT_FIGHT)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.KINGSMAN)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.FORTY_TWO_KILOMETERS)) gleamReward = 10;
         return gleamReward;
     }
 
@@ -44,6 +45,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.PERFECT_FIGHT)) xpReward = 600;
         if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) xpReward = 1000;
         if (achievementId.equals(ACHIEVEMENT_ID.KINGSMAN)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.FORTY_TWO_KILOMETERS)) xpReward = 1000;
 
         return xpReward;
     }
