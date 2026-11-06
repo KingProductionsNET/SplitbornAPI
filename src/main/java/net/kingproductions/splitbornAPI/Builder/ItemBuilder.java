@@ -304,6 +304,10 @@ public class ItemBuilder {
     private static final UUID STACKABLE_UUID = UUID.fromString("34c267b3-5da5-4407-9498-c90a8cba9f4d");
 
     public ItemStack build() {
+        if (itemMeta.getDisplayName().equalsIgnoreCase("§e")){
+            itemMeta.setHideTooltip(true);
+        }
+
         if (player != null){
             ItemStack Skull = new ItemStack(Material.PLAYER_HEAD);
             SkullMeta Meta = (SkullMeta) Skull.getItemMeta();
@@ -316,6 +320,8 @@ public class ItemBuilder {
             Meta.setOwningPlayer(player);
             Meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             Meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            Meta.addItemFlags(ItemFlag.HIDE_PLACED_ON);
+            Meta.addItemFlags(ItemFlag.HIDE_ARMOR_TRIM);
             Meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             Meta.addItemFlags(ItemFlag.HIDE_DYE);
             Meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
@@ -357,6 +363,8 @@ public class ItemBuilder {
             meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+            meta.addItemFlags(ItemFlag.HIDE_PLACED_ON);
+            meta.addItemFlags(ItemFlag.HIDE_ARMOR_TRIM);
             meta.addItemFlags(ItemFlag.HIDE_DYE);
             meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             meta.setUnbreakable(true);
@@ -400,6 +408,8 @@ public class ItemBuilder {
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             itemMeta.addItemFlags(ItemFlag.HIDE_DYE);
+            itemMeta.addItemFlags(ItemFlag.HIDE_PLACED_ON);
+            itemMeta.addItemFlags(ItemFlag.HIDE_ARMOR_TRIM);
             itemMeta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             itemMeta.setUnbreakable(true);
 
