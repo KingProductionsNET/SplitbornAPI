@@ -43,7 +43,7 @@ public class Team_Trees extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Water §bone §7Dry Saplings§7."
+                "§7Water §bone §7Dry Sapling§7."
         );
     }
 
