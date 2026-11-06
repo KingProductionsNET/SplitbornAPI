@@ -32,7 +32,7 @@ public class Dust_Off extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return null;
+        return Material.BRUSH;
     }
 
     @Override
