@@ -48,8 +48,8 @@ public class Scrap_For_Pip extends QuestPreset {
 
     @Override
     public Map<String, Object> questRelatedValues() {
-        return Map.of("SC", 28,
-                "SPC", 10);
+        return Map.of("SC", 64,
+                "SPC", 48);
     }
 
     @Override
