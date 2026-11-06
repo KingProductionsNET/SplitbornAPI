@@ -71,6 +71,14 @@ public enum Quests {
     BYSTANDER,
     CAPPED_SUPPORT_ARCHETYPE,
     DEAL_ONE_FOR_ALL,
+    CASINO_DEAL,
+    DUST_OFF,
+    CHUBBY,
+    NEW_BALANCE,
+    RED_CROSS,
+    TEAM_TREES,
+    HUNGRY,
+    ADVENTURER,
 
     DEFAULT_NONE;
 }

@@ -32,7 +32,7 @@ public class So_Big extends QuestPreset {
 
     @Override
     public Material displayMaterial() {
-        return Material.NETHERITE_UPGRADE_SMITHING_TEMPLATE;
+        return Material.ANCIENT_DEBRIS;
     }
 
     @Override

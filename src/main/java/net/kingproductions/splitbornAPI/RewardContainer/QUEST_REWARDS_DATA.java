@@ -76,6 +76,14 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.DEAL_ONE_FOR_ALL)) gleamReward = 20;
         if (quest.equals(Quests.FLAMES_OF_THE_COLOSSUS)) gleamReward = 20;
         if (quest.equals(Quests.MOLTASOS_SHADOW)) gleamReward = 20;
+        if (quest.equals(Quests.ADVENTURER)) gleamReward = 20;
+        if (quest.equals(Quests.CASINO_DEAL)) gleamReward = 20;
+        if (quest.equals(Quests.CHUBBY)) gleamReward = 20;
+        if (quest.equals(Quests.DUST_OFF)) gleamReward = 20;
+        if (quest.equals(Quests.HUNGRY)) gleamReward = 20;
+        if (quest.equals(Quests.NEW_BALANCE)) gleamReward = 20;
+        if (quest.equals(Quests.RED_CROSS)) gleamReward = 20;
+        if (quest.equals(Quests.TEAM_TREES)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -145,6 +153,14 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.DEAL_ONE_FOR_ALL)) xpReward = 1000;
         if (quest.equals(Quests.FLAMES_OF_THE_COLOSSUS)) xpReward = 300;
         if (quest.equals(Quests.MOLTASOS_SHADOW)) xpReward = 300;
+        if (quest.equals(Quests.TEAM_TREES)) xpReward = 300;
+        if (quest.equals(Quests.RED_CROSS)) xpReward = 300;
+        if (quest.equals(Quests.NEW_BALANCE)) xpReward = 300;
+        if (quest.equals(Quests.HUNGRY)) xpReward = 300;
+        if (quest.equals(Quests.DUST_OFF)) xpReward = 300;
+        if (quest.equals(Quests.CASINO_DEAL)) xpReward = 300;
+        if (quest.equals(Quests.CHUBBY)) xpReward = 300;
+        if (quest.equals(Quests.ADVENTURER)) xpReward = 300;
 
         return xpReward;
     }
