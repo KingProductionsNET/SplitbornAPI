@@ -29,4 +29,11 @@ public interface RPGMobProvider {
      */
     int getMobsLevel(Mob_ID mobId);
 
+    /**
+     *
+     * @param mobId
+     * @return The mob's health.
+     */
+    int getMobsHealth(Mob_ID mobId);
+
 }
