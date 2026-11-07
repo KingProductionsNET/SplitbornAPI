@@ -91,6 +91,12 @@ public class QuestCreator {
         set.add(new New_Balance().build());
         set.add(new Red_Cross().build());
         set.add(new Team_Trees().build());
+        set.add(new Automation().build());
+        set.add(new Dumpster_Diving().build());
+        set.add(new Instinct().build());
+        set.add(new Racoon_Activities().build());
+        set.add(new Reflex().build());
+        set.add(new Take_out_the_Trash().build());
 
         return set;
     }

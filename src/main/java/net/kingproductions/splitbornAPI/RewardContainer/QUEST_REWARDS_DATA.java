@@ -84,6 +84,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.NEW_BALANCE)) gleamReward = 20;
         if (quest.equals(Quests.RED_CROSS)) gleamReward = 20;
         if (quest.equals(Quests.TEAM_TREES)) gleamReward = 20;
+        if (quest.equals(Quests.TAKE_OUT_THE_TRASH)) gleamReward = 20;
+        if (quest.equals(Quests.REFLEX)) gleamReward = 20;
+        if (quest.equals(Quests.RACOON_ACTIVITIES)) gleamReward = 20;
+        if (quest.equals(Quests.INSTINCT)) gleamReward = 20;
+        if (quest.equals(Quests.DUMPSTER_DIVING)) gleamReward = 20;
+        if (quest.equals(Quests.AUTOMATION)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -161,6 +167,12 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.CASINO_DEAL)) xpReward = 300;
         if (quest.equals(Quests.CHUBBY)) xpReward = 300;
         if (quest.equals(Quests.ADVENTURER)) xpReward = 300;
+        if (quest.equals(Quests.AUTOMATION)) xpReward = 300;
+        if (quest.equals(Quests.DUMPSTER_DIVING)) xpReward = 300;
+        if (quest.equals(Quests.INSTINCT)) xpReward = 300;
+        if (quest.equals(Quests.RACOON_ACTIVITIES)) xpReward = 300;
+        if (quest.equals(Quests.REFLEX)) xpReward = 300;
+        if (quest.equals(Quests.TAKE_OUT_THE_TRASH)) xpReward = 300;
 
         return xpReward;
     }

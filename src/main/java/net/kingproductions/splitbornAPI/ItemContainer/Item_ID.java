@@ -343,6 +343,8 @@ public enum Item_ID {
     MUSHROOM_SOUP,
 
     HELL_HORSE,
-    HOT_GUM
+    HOT_GUM,
+
+    ECLIPSE,
 
 }

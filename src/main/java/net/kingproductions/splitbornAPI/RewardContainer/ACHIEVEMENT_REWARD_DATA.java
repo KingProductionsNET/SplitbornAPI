@@ -29,6 +29,9 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.KINGSMAN)) gleamReward = 10;
         if (achievementId.equals(ACHIEVEMENT_ID.FORTY_TWO_KILOMETERS)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.MINIMALIST)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.JUYE)) gleamReward = 10;
+        if (achievementId.equals(ACHIEVEMENT_ID.STONESGATE)) gleamReward = 10;
         return gleamReward;
     }
 
@@ -46,6 +49,9 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.YAMAMOTO_SENKO)) xpReward = 1000;
         if (achievementId.equals(ACHIEVEMENT_ID.KINGSMAN)) xpReward = 1000;
         if (achievementId.equals(ACHIEVEMENT_ID.FORTY_TWO_KILOMETERS)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.MINIMALIST)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.JUYE)) xpReward = 1000;
+        if (achievementId.equals(ACHIEVEMENT_ID.STONESGATE)) xpReward = 1000;
 
         return xpReward;
     }

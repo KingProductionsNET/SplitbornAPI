@@ -79,6 +79,12 @@ public enum Quests {
     TEAM_TREES,
     HUNGRY,
     ADVENTURER,
+    REFLEX,
+    INSTINCT,
+    AUTOMATION,
+    TAKE_OUT_THE_TRASH,
+    DUMPSTER_DIVING,
+    RACOON_ACTIVITIES,
 
     DEFAULT_NONE;
 }

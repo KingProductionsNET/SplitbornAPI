@@ -33,4 +33,5 @@ public enum Curiosities {
     ROOTSHROOM,
     GAMMA_RAYS,
     COLWATCHER,
+    GARBAGE_MAN,
 }
