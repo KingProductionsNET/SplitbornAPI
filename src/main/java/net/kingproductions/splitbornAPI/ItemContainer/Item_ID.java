@@ -366,7 +366,9 @@ public enum Item_ID {
     CRYSTALWATER_BUCKET,
     DRYOAKS_BOUNTY,
 
-    ECLIPSE
+    ECLIPSE,
+
+    CINOS
 
 
 }
