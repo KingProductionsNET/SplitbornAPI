@@ -22,4 +22,11 @@ public interface RPGMobProvider {
      */
     void addKillToKillLog(Player player, Mob_ID mobId);
 
+    /**
+     *
+     * @param mobId The mod id.
+     * @return The level of the given mob id.
+     */
+    int getMobsLevel(Mob_ID mobId);
+
 }
