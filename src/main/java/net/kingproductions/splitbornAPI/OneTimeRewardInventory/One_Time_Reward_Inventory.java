@@ -167,6 +167,17 @@ public class One_Time_Reward_Inventory implements Listener {
                 Consumer<Player> c = on_Claim_Action.getOrDefault(player.getUniqueId(), null);
                 if (c != null) c.accept(player);
             } else {
+                Rarities rarity = SplitbornAPI.getHelper().getItemsRarity(SplitbornAPI.getItem(thisItem_ID));
+                if (rarity.equals(Rarities.QUEST_ITEM)){
+                    player.sendMessage("§cQuest items can't be transferred to the delivery box! Try again.");
+                    player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_CURSE, 1F, 2F);
+
+                    getRewardsItemAmount.remove(player.getUniqueId());
+                    getRewardsItemID.remove(player.getUniqueId());
+                    closeAnimation.add(player.getUniqueId());
+                    return;
+                }
+
                 player.sendMessage("§cYour inventory didn’t have enough free space to claim this reward, which is why it was transferred to the §6Delivery Box §cmenu.");
                 player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1F, 1F);
 
