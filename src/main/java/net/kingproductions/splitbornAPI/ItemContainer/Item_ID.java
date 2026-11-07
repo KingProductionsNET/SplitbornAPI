@@ -368,7 +368,9 @@ public enum Item_ID {
 
     ECLIPSE,
 
-    CINOS
+    CINOS,
+
+    REINFORCED_PICKAXE
 
 
 }
