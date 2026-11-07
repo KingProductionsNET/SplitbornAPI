@@ -174,6 +174,8 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.REFLEX)) xpReward = 300;
         if (quest.equals(Quests.TAKE_OUT_THE_TRASH)) xpReward = 300;
 
+        //affe
+
         return xpReward;
     }
 
