@@ -4,6 +4,7 @@ import net.kingproductions.splitbornAPI.LocationsContainer.Locations;
 import net.kingproductions.splitbornAPI.Main.SplitbornAPI;
 import net.kingproductions.splitbornAPI.NPC.NPC_ID;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.AshveinMines.*;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Auralith.Oh_Shiny;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Brinehollow.*;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Darkshaft.Automation;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Darkshaft.Instinct;
@@ -12,17 +13,23 @@ import net.kingproductions.splitbornAPI.QuestContainer.Quests.Dojo.*;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Doomrest.*;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Dryoak.*;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Hearthgrove.*;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Hollowdeep.Greenwashing;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Hollowdeep.Mine_for_Fun;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Hollowdeep.Small_Threat;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Junkyard.Dumpster_Diving;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Junkyard.Racoon_Activities;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Junkyard.Scrap_For_Pip;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Junkyard.Take_out_the_Trash;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.MoltenRing.*;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Ochrefall.Crackling_Depths;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.Ochrefall.Dusty_Caves;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Sporewood.*;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.SunkenTrenches.Cave_Visit;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Sunreach.Get_the_Chunky;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Sunreach.Radioactive_Ground;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.Sunreach.Shiny_Stone;
 import net.kingproductions.splitbornAPI.QuestContainer.Quests.The_Fold.*;
+import net.kingproductions.splitbornAPI.QuestContainer.Quests.The_Unfound.Oil_Rigs;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 
@@ -115,6 +122,14 @@ public class QuestCreator {
         set.add(new Racoon_Activities().build());
         set.add(new Reflex().build());
         set.add(new Take_out_the_Trash().build());
+        set.add(new Hot_Ones().build());
+        set.add(new Oh_Shiny().build());
+        set.add(new Dusty_Caves().build());
+        set.add(new Crackling_Depths().build());
+        set.add(new Small_Threat().build());
+        set.add(new Oil_Rigs().build());
+        set.add(new Greenwashing().build());
+        set.add(new Mine_for_Fun().build());
 
         return set;
     }
