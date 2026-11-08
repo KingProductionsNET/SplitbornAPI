@@ -1730,4 +1730,11 @@ public interface HelperProvider {
      * @return The required level to discover and enter this area.
      */
     int getRequiredLevel(Locations location);
+
+    /**
+     *
+     * @param itemId The item id of the item.
+     * @return The display name of the given item id.
+     */
+    String getItemsDisplayName(Item_ID itemId);
 }
