@@ -90,6 +90,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.INSTINCT)) gleamReward = 20;
         if (quest.equals(Quests.DUMPSTER_DIVING)) gleamReward = 20;
         if (quest.equals(Quests.AUTOMATION)) gleamReward = 20;
+        if (quest.equals(Quests.HUNDRED_METER_SPRINT)) gleamReward = 20;
+        if (quest.equals(Quests.CLEVER_CAT)) gleamReward = 20;
+        if (quest.equals(Quests.IT_IS_BLUE)) gleamReward = 20;
+        if (quest.equals(Quests.SUSHI_RESTARAUNT)) gleamReward = 20;
+        if (quest.equals(Quests.WATERBED)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -173,8 +178,11 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.RACOON_ACTIVITIES)) xpReward = 300;
         if (quest.equals(Quests.REFLEX)) xpReward = 300;
         if (quest.equals(Quests.TAKE_OUT_THE_TRASH)) xpReward = 300;
-
-        //affe
+        if (quest.equals(Quests.SUSHI_RESTARAUNT)) xpReward = 300;
+        if (quest.equals(Quests.WATERBED)) xpReward = 300;
+        if (quest.equals(Quests.IT_IS_BLUE)) xpReward = 300;
+        if (quest.equals(Quests.HUNDRED_METER_SPRINT)) xpReward = 300;
+        if (quest.equals(Quests.CLEVER_CAT)) xpReward = 300;
 
         return xpReward;
     }
