@@ -53,6 +53,7 @@ public class ACHIEVEMENT_REWARD_DATA {
         if (achievementId.equals(ACHIEVEMENT_ID.JUYE)) xpReward = 1000;
         if (achievementId.equals(ACHIEVEMENT_ID.STONESGATE)) xpReward = 1000;
 
+
         return xpReward;
     }
     public static Map<Essence_ID, Integer> getEssenceRewards(ACHIEVEMENT_ID achievementId){

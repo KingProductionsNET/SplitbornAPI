@@ -95,6 +95,14 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.IT_IS_BLUE)) gleamReward = 20;
         if (quest.equals(Quests.SUSHI_RESTARAUNT)) gleamReward = 20;
         if (quest.equals(Quests.WATERBED)) gleamReward = 20;
+        if (quest.equals(Quests.OH_SHINY)) gleamReward = 20;
+        if (quest.equals(Quests.HOT_ONES)) gleamReward = 20;
+        if (quest.equals(Quests.GREENWASHING)) gleamReward = 20;
+        if (quest.equals(Quests.MINE_FOR_FUN)) gleamReward = 20;
+        if (quest.equals(Quests.SMALL_THREAT)) gleamReward = 20;
+        if (quest.equals(Quests.DUSTY_CAVES)) gleamReward = 20;
+        if (quest.equals(Quests.CRACKLING_DEPTHS)) gleamReward = 20;
+        if (quest.equals(Quests.OIL_RIGS)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -183,6 +191,14 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.IT_IS_BLUE)) xpReward = 300;
         if (quest.equals(Quests.HUNDRED_METER_SPRINT)) xpReward = 300;
         if (quest.equals(Quests.CLEVER_CAT)) xpReward = 300;
+        if (quest.equals(Quests.OIL_RIGS)) xpReward = 300;
+        if (quest.equals(Quests.CRACKLING_DEPTHS)) xpReward = 300;
+        if (quest.equals(Quests.DUSTY_CAVES)) xpReward = 300;
+        if (quest.equals(Quests.GREENWASHING)) xpReward = 300;
+        if (quest.equals(Quests.MINE_FOR_FUN)) xpReward = 300;
+        if (quest.equals(Quests.SMALL_THREAT)) xpReward = 300;
+        if (quest.equals(Quests.HOT_ONES)) xpReward = 300;
+        if (quest.equals(Quests.OH_SHINY)) xpReward = 300;
 
         return xpReward;
     }
