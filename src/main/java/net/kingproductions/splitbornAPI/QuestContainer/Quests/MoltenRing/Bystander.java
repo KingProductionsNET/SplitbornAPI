@@ -43,7 +43,7 @@ public class Bystander extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Deal §b2000 §cDamage §7against §4Moltaso§7."
+                "§7Deal §b5000 §cDamage §7against §4Moltaso§7."
         );
     }
 

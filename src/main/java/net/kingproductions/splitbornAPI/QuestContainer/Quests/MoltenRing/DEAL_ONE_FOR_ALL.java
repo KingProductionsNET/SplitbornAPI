@@ -43,7 +43,7 @@ public class DEAL_ONE_FOR_ALL extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Deal §b15000 §cDamage §7against §4Moltaso§7."
+                "§7Deal §b35000 §cDamage §7against §4Moltaso§7."
         );
     }
 
