@@ -130,6 +130,11 @@ public class QuestCreator {
         set.add(new Oil_Rigs().build());
         set.add(new Greenwashing().build());
         set.add(new Mine_for_Fun().build());
+        set.add(new Clever_Cat().build());
+        set.add(new Waterbed().build());
+        set.add(new Sushi_Restaraunt().build());
+        set.add(new Hundred_Meter_Sprint().build());
+        set.add(new It_Is_Blue().build());
 
         return set;
     }
