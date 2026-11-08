@@ -62,5 +62,6 @@ public enum NPC_ID {
     COPO,
     CHAM,
     TOSH,
-    SOLVAR
+    SOLVAR,
+    AMETRA
 }

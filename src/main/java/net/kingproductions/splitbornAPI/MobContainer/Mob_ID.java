@@ -44,5 +44,7 @@ public enum Mob_ID {
     ROCKMAW,
 
     BAMBOO_BANDIT,
-    DEPTHSTALKER
+    DEPTHSTALKER,
+
+    DEPTH_SOUL
 }
