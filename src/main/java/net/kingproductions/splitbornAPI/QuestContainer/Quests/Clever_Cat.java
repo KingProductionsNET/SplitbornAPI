@@ -43,7 +43,7 @@ public class Clever_Cat extends QuestPreset {
     @Override
     public List<String> inventoryDescriptionText() {
         return List.of(
-                "§7Buy the §3Not-so-Lazy Rod§7."
+                "§7Fish with the §3Not-so-Lazy Rod§7."
         );
     }
 
