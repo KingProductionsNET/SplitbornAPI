@@ -1737,4 +1737,12 @@ public interface HelperProvider {
      * @return The display name of the given item id.
      */
     String getItemsDisplayName(Item_ID itemId);
+
+    /**
+     * Plays the totem pop animation, but with the specified item to the specified player.
+     * @param player The player which is going to see the animation.
+     * @param item The item which will be used for the animation.
+     *
+     */
+    void playCustomTotemPop(Player player, ItemStack item);
 }
