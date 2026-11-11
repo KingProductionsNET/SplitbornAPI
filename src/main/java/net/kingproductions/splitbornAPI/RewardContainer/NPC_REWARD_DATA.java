@@ -73,6 +73,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.TOSH)) gleamReward = 10;
         if (npcId.equals(NPC_ID.SOLVAR)) gleamReward = 10;
         if (npcId.equals(NPC_ID.AMETRA)) gleamReward = 100;
+        if (npcId.equals(NPC_ID.GURG)) gleamReward = 10;
 
         return gleamReward;
     }
@@ -139,6 +140,7 @@ public class NPC_REWARD_DATA {
         if (npcId.equals(NPC_ID.TOSH)) xpReward = 300;
         if (npcId.equals(NPC_ID.SOLVAR)) xpReward = 300;
         if (npcId.equals(NPC_ID.AMETRA)) xpReward = 300;
+        if (npcId.equals(NPC_ID.GURG)) xpReward = 100;
 
         return xpReward;
     }

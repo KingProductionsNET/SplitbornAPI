@@ -27,7 +27,7 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.CURIOUS_CAP)) gleamReward = 10;
         if (curiosities.equals(Curiosities.FLUFF_TOTEM)) gleamReward = 10;
         if (curiosities.equals(Curiosities.CAMEL_EGG)) gleamReward = 10;
-
+        if (curiosities.equals(Curiosities.SCARED_CHUP)) gleamReward = 10;
         if (curiosities.equals(Curiosities.MUSHROOM_PLUSHIE)) gleamReward = 10;
         if (curiosities.equals(Curiosities.FISH_IN_BUCKET)) gleamReward = 10;
         if (curiosities.equals(Curiosities.SWAMP_WATER)) gleamReward = 10;
@@ -87,6 +87,7 @@ public class CURIOSITIES_REWARD_DATA {
         if (curiosities.equals(Curiosities.GAMMA_RAYS)) xpReward = 100;
         if (curiosities.equals(Curiosities.COLWATCHER)) xpReward = 100;
         if (curiosities.equals(Curiosities.GARBAGE_MAN)) xpReward = 100;
+        if (curiosities.equals(Curiosities.SCARED_CHUP)) xpReward = 100;
 
         return xpReward;
     }
