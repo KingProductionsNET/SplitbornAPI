@@ -63,5 +63,6 @@ public enum NPC_ID {
     CHAM,
     TOSH,
     SOLVAR,
-    AMETRA
+    AMETRA,
+    GURG
 }

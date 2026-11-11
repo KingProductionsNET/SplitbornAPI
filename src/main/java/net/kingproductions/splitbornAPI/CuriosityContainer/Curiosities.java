@@ -34,4 +34,5 @@ public enum Curiosities {
     GAMMA_RAYS,
     COLWATCHER,
     GARBAGE_MAN,
+    SCARED_CHUP
 }
