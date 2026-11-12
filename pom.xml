@@ -117,15 +117,13 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.mongodb</groupId>
                 <artifactId>mongodb-driver-bom</artifactId>
-                <version>5.9.2</version>
+                <version>5.5.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -149,7 +147,8 @@
         </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver-sync</artifactId>
+            <artifactId>bson</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
