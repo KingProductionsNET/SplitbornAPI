@@ -6,6 +6,7 @@ import org.bukkit.event.HandlerList;
 
 public class AuctionBuyNowEvent extends Event {
 
+
     private static final HandlerList handlers = new HandlerList();
 
     private final Player buyer;
