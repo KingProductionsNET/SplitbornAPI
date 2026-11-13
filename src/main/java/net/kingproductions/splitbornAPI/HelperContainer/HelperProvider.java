@@ -17,6 +17,7 @@ import net.kingproductions.splitbornAPI.RarityContainer.Rarities;
 import net.kingproductions.splitbornAPI.StatContainer.Stat;
 import net.kingproductions.splitbornAPI.TalentContainer.TalentID;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bson.Document;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -1745,4 +1746,5 @@ public interface HelperProvider {
      *
      */
     void playCustomTotemPop(Player player, ItemStack item);
+    void sendPacketGlow(Player viewer, Entity entity, NamedTextColor color, boolean glowing);
 }
