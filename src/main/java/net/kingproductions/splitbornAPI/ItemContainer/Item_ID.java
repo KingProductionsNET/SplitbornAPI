@@ -389,5 +389,7 @@ public enum Item_ID {
     RAVAGER,
     CRYSTALLIZED_DEPTH,
 
-    MINER_HANDS
+    MINER_HANDS,
+
+    ASH_BOW
 }
