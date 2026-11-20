@@ -175,6 +175,7 @@ public class One_Time_Reward_Inventory implements Listener {
                     getRewardsItemAmount.remove(player.getUniqueId());
                     getRewardsItemID.remove(player.getUniqueId());
                     closeAnimation.add(player.getUniqueId());
+                    claimedReward.remove(player.getUniqueId());
                     return;
                 }
 
@@ -210,6 +211,7 @@ public class One_Time_Reward_Inventory implements Listener {
             getRewardsItemAmount.remove(player.getUniqueId());
             getRewardsItemID.remove(player.getUniqueId());
             closeAnimation.add(player.getUniqueId());
+            claimedReward.remove(player.getUniqueId());
             return;
         }
 
@@ -224,6 +226,7 @@ public class One_Time_Reward_Inventory implements Listener {
         player.sendTitle("§8[§c§l!§8]", "", 10, 30, 10);
 
         closeAnimation.add(player.getUniqueId());
+        claimedReward.remove(player.getUniqueId());
 
         Consumer<Player> c = on_Claim_Action.getOrDefault(player.getUniqueId(), null);
         if (c != null) c.accept(player);
