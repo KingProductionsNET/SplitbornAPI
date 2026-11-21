@@ -1,3 +1,4 @@
+
 package net.kingproductions.splitbornAPI.HideManagerContainer;
 
 import org.bukkit.Bukkit;
@@ -14,45 +15,59 @@ import java.util.*;
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
 public class HideManager implements Listener {
-    private static final Map<UUID, Set<UUID>> entityAllowedPlayers = new HashMap<>();
+
+    private static final Map<UUID, VisibilityData> entityVisibility = new HashMap<>();
     private static BukkitTask visibilityTask;
 
-    /**
-     * Hides an entity from everyone except the worthy player.
-     * Calling this again replaces the existing allowed-player list.
-     */
-    public static void HideEntityForUnworthy(Entity entity, Player worthyPlayer) {
-        entityAllowedPlayers.put(entity.getUniqueId(), new HashSet<>(Set.of(worthyPlayer.getUniqueId())));
-        applyEntityVisibility(entity);
+    private static class VisibilityData {
+        boolean visibleByDefault;
+        Map<UUID, Boolean> overrides = new HashMap<>();
+
+        VisibilityData(boolean visibleByDefault) {
+            this.visibleByDefault = visibleByDefault;
+        }
+
+        boolean isVisible(UUID playerUUID) {
+            return overrides.getOrDefault(playerUUID, visibleByDefault);
+        }
     }
 
     /**
-     * Makes an entity visible to everyone, as far as this manager is concerned.
+     * Hides the entity for everyone except for the worthy player.
+     * @param entity The entity.
+     * @param worthyPlayer The only player which will see the entity.
      */
+    public static void HideEntityForUnworthy(Entity entity, Player worthyPlayer) {
+        VisibilityData data = new VisibilityData(false);
+        data.overrides.put(worthyPlayer.getUniqueId(), true);
+        entityVisibility.put(entity.getUniqueId(), data);
+        applyEntityVisibility(entity);
+    }
+
+    public static void HideEntityForPlayer(Entity entity, Player player) {
+        VisibilityData data = entityVisibility.computeIfAbsent(entity.getUniqueId(), k -> new VisibilityData(true));
+        data.overrides.put(player.getUniqueId(), false);
+        applyVisibility(player, entity);
+    }
+
     public static void UnhideEntityForEveryone(Entity entity) {
-        entityAllowedPlayers.remove(entity.getUniqueId());
+        entityVisibility.remove(entity.getUniqueId());
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.showEntity(plugin, entity);
         }
     }
 
-    /**
-     * Allows one player to see an entity without changing visibility for other players.
-     */
     public static void UnhideEntityForPlayer(Entity entity, Player player) {
-        Set<UUID> allowedPlayers = entityAllowedPlayers.get(entity.getUniqueId());
+        VisibilityData data = entityVisibility.get(entity.getUniqueId());
 
-        if (allowedPlayers != null) {
-            allowedPlayers.add(player.getUniqueId());
+        if (data != null) {
+            data.overrides.put(player.getUniqueId(), true);
         }
 
         player.showEntity(plugin, entity);
     }
 
-    /**
-     * Returns whether the player can currently see the entity.
-     */
     public static boolean canSeeEntity(Player player, Entity entity) {
         return player.canSee(entity);
     }
@@ -61,30 +76,21 @@ public class HideManager implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
-        for (UUID entityUUID : new HashSet<>(entityAllowedPlayers.keySet())) {
+        for (UUID entityUUID : new HashSet<>(entityVisibility.keySet())) {
             Entity entity = Bukkit.getEntity(entityUUID);
-            if (entity == null) continue;
-
-            applyVisibility(player, entity);
+            if (entity != null) applyVisibility(player, entity);
         }
     }
 
-    /**
-     * Starts the visibility reconciliation task.
-     * Call this once during plugin startup, after registering this listener.
-     */
     public static void orderHiddenEntities() {
         if (visibilityTask != null && !visibilityTask.isCancelled()) return;
 
         visibilityTask = new BukkitRunnable() {
             @Override
             public void run() {
-                for (UUID entityUUID : new HashSet<>(entityAllowedPlayers.keySet())) {
+                for (UUID entityUUID : new HashSet<>(entityVisibility.keySet())) {
                     Entity entity = Bukkit.getEntity(entityUUID);
-
-                    if (entity == null) continue;
-
-                    applyEntityVisibility(entity);
+                    if (entity != null) applyEntityVisibility(entity);
                 }
             }
         }.runTaskTimer(plugin, 1L, 25L);
@@ -97,12 +103,10 @@ public class HideManager implements Listener {
     }
 
     private static void applyVisibility(Player player, Entity entity) {
-        Set<UUID> allowedPlayers = entityAllowedPlayers.get(entity.getUniqueId());
+        VisibilityData data = entityVisibility.get(entity.getUniqueId());
+        boolean visible = data == null || data.isVisible(player.getUniqueId());
 
-        if (allowedPlayers == null || allowedPlayers.contains(player.getUniqueId())) {
-            player.showEntity(plugin, entity);
-        } else {
-            player.hideEntity(plugin, entity);
-        }
+        if (visible) player.showEntity(plugin, entity);
+        else player.hideEntity(plugin, entity);
     }
 }

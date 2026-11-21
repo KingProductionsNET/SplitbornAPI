@@ -216,7 +216,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (armorStand.isDead()){
+                    if (!armorStand.isValid()){
                         this.cancel();
                         return;
                     }
@@ -226,7 +226,7 @@ public class ArmorStandBuilder{
 
                     ticks++;
                 }
-            }.runTaskTimer(plugin, 0, 1);
+            }.runTaskTimer(plugin, 20, 1);
         }
         if (enableHover){
             new BukkitRunnable(){
@@ -235,7 +235,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (armorStand.isDead()){
+                    if (!armorStand.isValid()){
                         this.cancel();
                         return;
                     }
@@ -249,7 +249,7 @@ public class ArmorStandBuilder{
 
                     ticks++;
                 }
-            }.runTaskTimer(plugin, 0, 1);
+            }.runTaskTimer(plugin, 20, 1);
         }
         if (spinAndHover){
             new BukkitRunnable(){
@@ -258,7 +258,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (armorStand.isDead()){
+                    if (!armorStand.isValid()){
                         this.cancel();
                         return;
                     }
@@ -276,7 +276,7 @@ public class ArmorStandBuilder{
 
                     ticks++;
                 }
-            }.runTaskTimer(plugin, 0, 1);
+            }.runTaskTimer(plugin, 20, 1);
         }
 
         return armorStand;
