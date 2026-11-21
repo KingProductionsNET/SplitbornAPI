@@ -98,6 +98,10 @@ public enum Quests {
     DUSTY_CAVES,
     CRACKLING_DEPTHS,
     OIL_RIGS,
+    FIRST_BABY_STEPS,
+    S_RANK_HUNTER,
+    CONQUER_BRITANNIA,
+    RING_THE_BELL,
 
     DEFAULT_NONE;
 }
