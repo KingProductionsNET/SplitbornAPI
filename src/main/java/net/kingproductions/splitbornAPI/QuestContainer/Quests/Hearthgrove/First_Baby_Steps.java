@@ -17,27 +17,29 @@ public class First_Baby_Steps extends QuestPreset {
 
     @Override
     public Quests questID() {
-        return null;
+        return Quests.FIRST_BABY_STEPS;
     }
 
     @Override
     public String questDisplayName() {
-        return "";
+        return "§3First Baby Steps";
     }
 
     @Override
     public Locations questLocation() {
-        return null;
+        return Locations.Hearthgrove;
     }
 
     @Override
     public Material displayMaterial() {
-        return null;
+        return Material.PUMPKIN_PIE;
     }
 
     @Override
     public List<String> inQuestDescriptionText() {
-        return List.of();
+        return List.of(
+                "§7Wear full §3Challenger Armor §7and have atleast §b35 §cAttack Damage§7."
+        );
     }
 
     @Override
@@ -53,5 +55,10 @@ public class First_Baby_Steps extends QuestPreset {
     @Override
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
         return List.of();
+    }
+
+    @Override
+    public boolean isAreaKeyQuest(){
+        return true;
     }
 }

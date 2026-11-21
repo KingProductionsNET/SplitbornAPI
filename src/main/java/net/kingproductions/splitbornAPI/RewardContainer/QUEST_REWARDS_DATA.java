@@ -103,6 +103,10 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.DUSTY_CAVES)) gleamReward = 20;
         if (quest.equals(Quests.CRACKLING_DEPTHS)) gleamReward = 20;
         if (quest.equals(Quests.OIL_RIGS)) gleamReward = 20;
+        if (quest.equals(Quests.RING_THE_BELL)) gleamReward = 20;
+        if (quest.equals(Quests.FIRST_BABY_STEPS)) gleamReward = 20;
+        if (quest.equals(Quests.CONQUER_BRITANNIA)) gleamReward = 20;
+        if (quest.equals(Quests.S_RANK_HUNTER)) gleamReward = 20;
 
         return gleamReward;
     }
@@ -199,6 +203,10 @@ public class QUEST_REWARDS_DATA {
         if (quest.equals(Quests.SMALL_THREAT)) xpReward = 300;
         if (quest.equals(Quests.HOT_ONES)) xpReward = 300;
         if (quest.equals(Quests.OH_SHINY)) xpReward = 300;
+        if (quest.equals(Quests.FIRST_BABY_STEPS)) xpReward = 300;
+        if (quest.equals(Quests.CONQUER_BRITANNIA)) xpReward = 300;
+        if (quest.equals(Quests.S_RANK_HUNTER)) xpReward = 300;
+        if (quest.equals(Quests.RING_THE_BELL)) xpReward = 300;
 
         return xpReward;
     }

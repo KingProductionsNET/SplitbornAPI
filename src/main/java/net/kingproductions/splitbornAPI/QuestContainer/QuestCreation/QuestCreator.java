@@ -135,6 +135,10 @@ public class QuestCreator {
         set.add(new Sushi_Restaraunt().build());
         set.add(new Hundred_Meter_Sprint().build());
         set.add(new It_Is_Blue().build());
+        set.add(new First_Baby_Steps().build());
+        set.add(new S_Rank_Hunter().build());
+        set.add(new Conquer_Britannia().build());
+        set.add(new Ring_The_Bell().build());
 
         return set;
     }
