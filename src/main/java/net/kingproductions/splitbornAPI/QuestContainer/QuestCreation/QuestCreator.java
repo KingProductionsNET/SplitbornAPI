@@ -162,6 +162,7 @@ public class QuestCreator {
                 final Map<String, Object> questRelatedValues = questData.getQuestRelatedValues();
                 final List<NPC_ID> whitelistedNPCs = questData.getWhitelistedNPCsWhileQuestIsActive();
                 final String displayName = questData.getDisplayName();
+                final boolean isAreaKeyQuest = questData.getIsAreaKey();
 
                 if (questID != null) SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "ID", questID.toString(), true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "isMainQuest", isMainQuest, true);
@@ -172,6 +173,7 @@ public class QuestCreator {
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "questRelatedValues", questRelatedValues, true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "whitelistedNPCs", whitelistedNPCs, true);
                 SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "displayName", displayName, true);
+                SplitbornAPI.getUtil().setObjectIntoDB(collectionName, questID.toString(), "isAreaKeyQuest", isAreaKeyQuest, true);
             }
         });
     }

@@ -19,10 +19,15 @@ public abstract class QuestPreset {
     public abstract Map<String, Object> questRelatedValues();
     public abstract List<NPC_ID> whitelistedNPCsWhileQuestIsActive();
 
+    public boolean isAreaKeyQuest() {
+        return false;
+    }
+
     public QuestData build(){
         return new QuestData()
                 .setIsMainQuest(isMainQuest())
                 .setQuestID(questID())
+                .setAreaKeyQuest(isAreaKeyQuest())
                 .setQuestLocation(questLocation())
                 .setDisplayMaterial(displayMaterial())
                 .setInQuestDescriptionText(inQuestDescriptionText())
@@ -31,5 +36,4 @@ public abstract class QuestPreset {
                 .setWhitelistedNPCs(whitelistedNPCsWhileQuestIsActive())
                 .setDisplayName(questDisplayName());
     }
-
 }
