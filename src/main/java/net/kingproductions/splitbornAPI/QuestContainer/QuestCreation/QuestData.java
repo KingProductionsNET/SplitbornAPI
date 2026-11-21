@@ -20,6 +20,7 @@ public class QuestData {
     private Map<String, Object> questRelatedValues = new HashMap<>();
     private List<NPC_ID> whitelistedNPCsWhileQuestIsActive = new ArrayList<>();
     private String displayName;
+    private boolean isAreaKeyQuest = false;
 
     public QuestData setIsMainQuest(boolean b){
         this.isMainQuest = b;
@@ -59,6 +60,11 @@ public class QuestData {
         return this;
     }
 
+    public QuestData setAreaKeyQuest(boolean areaKeyQuest) {
+        isAreaKeyQuest = areaKeyQuest;
+        return this;
+    }
+
     public boolean getIsMainQuest(){
         return isMainQuest;
     }
@@ -70,6 +76,10 @@ public class QuestData {
     }
     public Material getDisplayMaterial(){
         return material;
+    }
+
+    public boolean getIsAreaKey() {
+        return isAreaKeyQuest;
     }
 
     public List<String> getInQuestDescriptionText() {
