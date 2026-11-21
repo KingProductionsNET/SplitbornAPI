@@ -57,8 +57,4 @@ public class A_Fisher extends QuestPreset {
         return List.of();
     }
 
-    @Override
-    public boolean isAreaKeyQuest(){
-        return true;
-    }
 }
