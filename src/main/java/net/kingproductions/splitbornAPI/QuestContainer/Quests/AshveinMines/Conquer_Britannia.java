@@ -27,7 +27,7 @@ public class Conquer_Britannia extends QuestPreset {
 
     @Override
     public Locations questLocation() {
-        return Locations.Sporewood;
+        return Locations.Ashvein_Mine;
     }
 
     @Override
