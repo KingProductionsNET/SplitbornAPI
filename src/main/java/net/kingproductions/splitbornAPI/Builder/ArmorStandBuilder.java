@@ -216,7 +216,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid()){
+                    if (!armorStand.isValid() && armorStand.isDead()){
                         this.cancel();
                         return;
                     }
@@ -235,7 +235,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid()){
+                    if (!armorStand.isValid() && armorStand.isDead()){
                         this.cancel();
                         return;
                     }
@@ -258,7 +258,7 @@ public class ArmorStandBuilder{
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid()){
+                    if (!armorStand.isValid() && armorStand.isDead()){
                         this.cancel();
                         return;
                     }

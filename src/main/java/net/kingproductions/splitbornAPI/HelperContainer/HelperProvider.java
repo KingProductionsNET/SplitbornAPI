@@ -1748,5 +1748,6 @@ public interface HelperProvider {
     void playCustomTotemPop(Player player, ItemStack item);
     void sendPacketGlow(Player viewer, Entity entity, NamedTextColor color, boolean glowing);
     void grantAreaKey(Player player);
+    String getAreaKeySymbol();
 
 }

@@ -38,13 +38,13 @@ public class Conquer_Britannia extends QuestPreset {
     @Override
     public List<String> inQuestDescriptionText() {
         return List.of(
-                "§7Wear the §dChosni Armor §7and have atleast §b130 §cAttack Damage§7."
         );
     }
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Wear the §dChosni Armor §7and",
+                "§7have at least §b130 §cAttack Damage§7.");
     }
 
     @Override
