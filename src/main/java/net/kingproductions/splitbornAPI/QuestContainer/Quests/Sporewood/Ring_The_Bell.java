@@ -38,7 +38,8 @@ public class Ring_The_Bell extends QuestPreset {
     @Override
     public List<String> inQuestDescriptionText() {
         return List.of(
-                "§7Wear full §dCharoom Armor §7and have atleast §b260 §cAttack Damage§7."
+                "§7Wear full §dCharoom Armor",
+                "§7and have at least §b260 §cAttack Damage§7."
         );
     }
 
