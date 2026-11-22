@@ -391,5 +391,7 @@ public enum Item_ID {
 
     MINER_HANDS,
 
-    ASH_BOW
+    ASH_BOW,
+
+    LIQUID_HONEY
 }
