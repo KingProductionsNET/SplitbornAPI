@@ -56,4 +56,9 @@ public class Ring_The_Bell extends QuestPreset {
     public List<NPC_ID> whitelistedNPCsWhileQuestIsActive() {
         return List.of();
     }
+
+    @Override
+    public boolean isAreaKeyQuest(){
+        return true;
+    }
 }
