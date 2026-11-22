@@ -38,13 +38,14 @@ public class First_Baby_Steps extends QuestPreset {
     @Override
     public List<String> inQuestDescriptionText() {
         return List.of(
-                "§7Wear full §3Challenger Armor §7and have atleast §b35 §cAttack Damage§7."
+
         );
     }
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Wear full §3Challenger Armor §7and",
+                "§7have at least §b35 §cAttack Damage§7.");
     }
 
     @Override

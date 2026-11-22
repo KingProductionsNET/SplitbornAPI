@@ -38,13 +38,13 @@ public class S_Rank_Hunter extends QuestPreset {
     @Override
     public List<String> inQuestDescriptionText() {
         return List.of(
-                "§7Wear the fully upgraded §dAbyss Stalker Armor and have atleast §b70 §cAttack Damage§7."
         );
     }
 
     @Override
     public List<String> inventoryDescriptionText() {
-        return List.of();
+        return List.of("§7Wear the fully upgraded §dAbyss Stalker Armor",
+                "§7and have at least §b70 §cAttack Damage§7.");
     }
 
     @Override
