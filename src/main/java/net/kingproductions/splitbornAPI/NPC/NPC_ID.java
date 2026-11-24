@@ -64,5 +64,6 @@ public enum NPC_ID {
     TOSH,
     SOLVAR,
     AMETRA,
-    GURG
+    GURG,
+    BEE_WHISPERER
 }

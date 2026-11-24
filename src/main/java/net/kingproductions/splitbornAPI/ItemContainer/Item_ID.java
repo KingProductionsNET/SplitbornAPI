@@ -393,5 +393,7 @@ public enum Item_ID {
 
     ASH_BOW,
 
-    LIQUID_HONEY
+    LIQUID_HONEY,
+    HARMONIC_FLUTE,
+    LUCKY_FEATHER
 }
