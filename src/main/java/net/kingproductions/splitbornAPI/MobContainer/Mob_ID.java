@@ -47,6 +47,6 @@ public enum Mob_ID {
     DEPTHSTALKER,
 
     DEPTH_SOUL,
-
-    HONEY_BEE
+    HONEY_BEE,
+    HELIUM_HORSE
 }
