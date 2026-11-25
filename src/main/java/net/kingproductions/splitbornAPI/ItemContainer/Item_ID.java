@@ -395,5 +395,8 @@ public enum Item_ID {
 
     LIQUID_HONEY,
     HARMONIC_FLUTE,
-    LUCKY_FEATHER
+    LUCKY_FEATHER,
+
+    SKYBOUND_HOOF,
+    HELIUM_MANE
 }

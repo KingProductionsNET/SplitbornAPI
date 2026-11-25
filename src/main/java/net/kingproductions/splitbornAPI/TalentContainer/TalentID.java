@@ -13,6 +13,7 @@ public enum TalentID {
     DRYOAK_SLAYER,
     MOLTEN_SLAYER,
     DRYOAKS_BLESSING,
-    FREE_PASSAGE
+    FREE_PASSAGE,
+    SWIFTSTEP
 
 }
