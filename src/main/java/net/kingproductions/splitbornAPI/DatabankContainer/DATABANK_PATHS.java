@@ -244,5 +244,6 @@ public enum DATABANK_PATHS {
 
     FLEX_PASS_BOW_TRIAL,
 
-    AREA_KEY
+    AREA_KEY,
+    GIFT_AMOUNT
 }
