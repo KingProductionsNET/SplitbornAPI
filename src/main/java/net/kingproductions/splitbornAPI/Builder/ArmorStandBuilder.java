@@ -1,5 +1,6 @@
 package net.kingproductions.splitbornAPI.Builder;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -12,6 +13,8 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.EulerAngle;
+
+import java.util.UUID;
 
 import static net.kingproductions.splitbornAPI.Main.SplitbornAPI.plugin;
 
@@ -156,10 +159,19 @@ public class ArmorStandBuilder{
         return this;
     }
 
-    public ArmorStand build(World world) {
-        if (location == null) throw new IllegalStateException("ERROR - PLEASE REPORT THIS (135 - ArmorStandBuilder)");
+    private static void keepChunksLoaded(Location center, int radius) {
+        for (int x = (center.getBlockX() - radius) >> 4; x <= (center.getBlockX() + radius) >> 4; x++) {
+            for (int z = (center.getBlockZ() - radius) >> 4; z <= (center.getBlockZ() + radius) >> 4; z++) {
+                center.getWorld().addPluginChunkTicket(x, z, plugin);
+            }
+        }
+    }
 
-        ArmorStand armorStand = (ArmorStand) world.spawnEntity(location, EntityType.ARMOR_STAND);
+    public ArmorStand build(World world) {
+        if (location == null) throw new IllegalStateException("-");
+        keepChunksLoaded(location, 5);
+
+        ArmorStand armorStand = world.spawn(location, ArmorStand.class);
 
         if (displayName != null) {
             armorStand.setCustomName(displayName);
@@ -210,14 +222,21 @@ public class ArmorStandBuilder{
         armorStand.addEquipmentLock(EquipmentSlot.SADDLE, ArmorStand.LockType.REMOVING_OR_CHANGING);
         armorStand.addEquipmentLock(EquipmentSlot.SADDLE, ArmorStand.LockType.ADDING_OR_CHANGING);
 
+        UUID armorStandUUID = armorStand.getUniqueId();
+
         if (enabledSpin){
             new BukkitRunnable(){
                 int ticks = 0;
+                int iterations = 0;
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid() && armorStand.isDead()){
+                    ArmorStand upToDateArmorStand = Bukkit.getEntity(armorStandUUID) != null ? (ArmorStand) Bukkit.getEntity(armorStandUUID) : null;
+                    if (iterations == 20*20 && upToDateArmorStand == null || iterations == 20*20 && upToDateArmorStand.isDead()){
                         this.cancel();
+                        return;
+                    }
+                    if (upToDateArmorStand == null || upToDateArmorStand.isDead()){
                         return;
                     }
                     EulerAngle oldRot = armorStand.getHeadPose();
@@ -225,6 +244,7 @@ public class ArmorStandBuilder{
                     armorStand.setHeadPose(newRot);
 
                     ticks++;
+                    iterations ++;
                 }
             }.runTaskTimer(plugin, 20, 1);
         }
@@ -232,11 +252,16 @@ public class ArmorStandBuilder{
             new BukkitRunnable(){
                 int ticks = 0;
                 boolean goingUp = true;
+                int iterations = 0;
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid() && armorStand.isDead()){
+                    ArmorStand upToDateArmorStand = Bukkit.getEntity(armorStandUUID) != null ? (ArmorStand) Bukkit.getEntity(armorStandUUID) : null;
+                    if (iterations == 20*20 && upToDateArmorStand == null || iterations == 20*20 && upToDateArmorStand.isDead()){
                         this.cancel();
+                        return;
+                    }
+                    if (upToDateArmorStand == null || upToDateArmorStand.isDead()){
                         return;
                     }
                     if (ticks >= 20) {
@@ -248,6 +273,7 @@ public class ArmorStandBuilder{
                     armorStand.teleport(armorStand.getLocation().clone().add(0, yOffset, 0));
 
                     ticks++;
+                    iterations ++;
                 }
             }.runTaskTimer(plugin, 20, 1);
         }
@@ -255,11 +281,16 @@ public class ArmorStandBuilder{
             new BukkitRunnable(){
                 int ticks = 0;
                 boolean goingUp = true;
+                int iterations = 0;
 
                 @Override
                 public void run() {
-                    if (!armorStand.isValid() && armorStand.isDead()){
+                    ArmorStand upToDateArmorStand = Bukkit.getEntity(armorStandUUID) != null ? (ArmorStand) Bukkit.getEntity(armorStandUUID) : null;
+                    if (iterations == 20*20 && upToDateArmorStand == null || iterations == 20*20 && upToDateArmorStand.isDead()){
                         this.cancel();
+                        return;
+                    }
+                    if (upToDateArmorStand == null || upToDateArmorStand.isDead()){
                         return;
                     }
                     EulerAngle oldRot = armorStand.getHeadPose();
@@ -275,6 +306,7 @@ public class ArmorStandBuilder{
                     armorStand.teleport(armorStand.getLocation().clone().add(0, yOffset, 0));
 
                     ticks++;
+                    iterations ++;
                 }
             }.runTaskTimer(plugin, 20, 1);
         }

@@ -1000,10 +1000,13 @@ public interface HelperProvider {
      * when the player parameter is null. The supplied ChatColor determines
      * the glow color through the player's scoreboard team.
      *
+     * Use {@link net.kingproductions.splitbornAPI.HelperContainer.HelperProvider#sendPacketGlow(Player, Entity, NamedTextColor, boolean)} instead.
+     *
      * @param entity the entity that should glow
      * @param chatColor the color of the entity's glow
      * @param player the player who should see the glow, or null for everyone
      */
+    @Deprecated
     void applyGlowToEntity(Entity entity, ChatColor chatColor, Player player);
 
     /**
