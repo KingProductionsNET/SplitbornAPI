@@ -1752,5 +1752,6 @@ public interface HelperProvider {
     void sendPacketGlow(Player viewer, Entity entity, NamedTextColor color, boolean glowing);
     void grantAreaKey(Player player);
     String getAreaKeySymbol();
+    NamedTextColor convertBukkitChatColorToNamedTextColor(ChatColor chatColor);
 
 }
